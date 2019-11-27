@@ -18,13 +18,19 @@
     [super viewDidLoad];
     CGRect layoutFrame;
     if (@available(iOS 11.0, *)) {
-        layoutFrame = self.view.safeAreaLayoutGuide.layoutFrame;
+        layoutFrame = CGRectMake(0, self.view.safeAreaInsets.top, self.view.bounds.size.width, self.view.bounds.size.height - self.view.safeAreaInsets.bottom - self.view.safeAreaInsets.top);
     } else {
         layoutFrame = self.view.frame;
     }
-    self.contentView = [[UIView alloc] initWithFrame:layoutFrame];
-    [self.contentView setBackgroundColor:[UIColor redColor]];
+    self.contentView = [[UIView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.contentView];
+    [self.view setBackgroundColor:[UIColor blackColor]];
+}
+
+-(void)viewSafeAreaInsetsDidChange{
+    [super viewSafeAreaInsetsDidChange];
+    UIEdgeInsets safeAreaInsets = self.view.safeAreaInsets;
+    [self.contentView setFrame:CGRectMake(0, safeAreaInsets.top, self.view.bounds.size.width, self.view.bounds.size.height - safeAreaInsets.bottom - safeAreaInsets.top)];
 }
 
 /*

@@ -494,6 +494,7 @@
 		B68F61C5238D0837004C3DB6 /* rj_cell_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F61AF238D0837004C3DB6 /* rj_cell_selected@3x.png */; };
 		B68F61C6238D0837004C3DB6 /* rj_arrowLeft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F61B0238D0837004C3DB6 /* rj_arrowLeft@3x.png */; };
 		B68F61CA238D1BD7004C3DB6 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F61C9238D1BD7004C3DB6 /* BasicViewController.m */; };
+		B6C38F38238E2900004797DD /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1278,6 +1279,8 @@
 		B68F61C7238D08C1004C3DB6 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		B68F61C8238D1BD7004C3DB6 /* BasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
 		B68F61C9238D1BD7004C3DB6 /* BasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1683,6 +1686,8 @@
 				B68F61C9238D1BD7004C3DB6 /* BasicViewController.m */,
 				B68F5D6D238CB331004C3DB6 /* ViewController.h */,
 				B68F5D6E238CB331004C3DB6 /* ViewController.m */,
+				B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */,
+				B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */,
 				B68F6188238D0837004C3DB6 /* RJPhotoPicker */,
 				B68F5DD2238CBF36004C3DB6 /* HCPhotoEdit */,
 				B68F60C8238CBF3C004C3DB6 /* Payment */,
@@ -3067,6 +3072,7 @@
 				B68F5FC3238CBF37004C3DB6 /* FWNashvilleFilter.m in Sources */,
 				B68F6018238CBF37004C3DB6 /* GPUImageDifferenceBlendFilter.m in Sources */,
 				B67B74EF238D20DE001B1F60 /* UIImage+ANImageBitmapRep.m in Sources */,
+				B6C38F38238E2900004797DD /* HomeCollectionViewCell.m in Sources */,
 				B68F6061238CBF38004C3DB6 /* GPUImageColourFASTSamplingOperation.m in Sources */,
 				B68F6085238CBF38004C3DB6 /* HCPhotoEditViewController.m in Sources */,
 				B67B74DB238D20DE001B1F60 /* PCShareViewController.m in Sources */,

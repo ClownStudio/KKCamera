@@ -9,6 +9,8 @@
 #ifndef Macro_h
 #define Macro_h
 
+#define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
+
 #define ALL_PRODUCT_ID [NSString stringWithFormat:@"%@.pro",[[NSBundle mainBundle] bundleIdentifier]]
 
 #define HIDE_SETTING_ANIMATION @"HIDE_SETTING_ANIMATION"

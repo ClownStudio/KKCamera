@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BasicViewController.h"
 
-@interface ViewController : BasicViewController
+@interface ViewController : BasicViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 
 @end
