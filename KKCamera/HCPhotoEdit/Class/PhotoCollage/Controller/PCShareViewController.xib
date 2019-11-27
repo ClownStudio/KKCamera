@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PCShareViewController">
+            <connections>
+                <outlet property="imageView" destination="53w-Ew-JZV" id="26U-sa-xXT"/>
+                <outlet property="shareButton" destination="MkN-u5-NXY" id="5ar-WY-FmL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQI-Fh-X75" userLabel="header">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-9X-Ldq" userLabel="cancel">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="u8m-hp-gK5"/>
+                                <constraint firstAttribute="width" constant="46" id="ww2-3J-1E7"/>
+                            </constraints>
+                            <state key="normal" image="close_off"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="a3h-bS-OZ5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkN-u5-NXY" userLabel="done">
+                            <rect key="frame" x="328" y="0.0" width="47" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="47" id="FbK-Hb-Ghc"/>
+                            </constraints>
+                            <state key="normal" image="save_default"/>
+                            <connections>
+                                <action selector="shareAction:" destination="-1" eventType="touchUpInside" id="t8w-F0-g3l"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="uiG-9X-Ldq" firstAttribute="leading" secondItem="BQI-Fh-X75" secondAttribute="leading" id="2av-0r-wpG"/>
+                        <constraint firstAttribute="trailing" secondItem="MkN-u5-NXY" secondAttribute="trailing" id="9rz-nW-iTP"/>
+                        <constraint firstAttribute="bottom" secondItem="MkN-u5-NXY" secondAttribute="bottom" id="Br5-Pe-g3P"/>
+                        <constraint firstItem="MkN-u5-NXY" firstAttribute="top" secondItem="BQI-Fh-X75" secondAttribute="top" id="F6c-cd-3F3"/>
+                        <constraint firstAttribute="height" constant="47" id="ULQ-rv-jZc"/>
+                        <constraint firstItem="uiG-9X-Ldq" firstAttribute="top" secondItem="BQI-Fh-X75" secondAttribute="top" id="boi-4H-KQP"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="53w-Ew-JZV">
+                    <rect key="frame" x="8" y="55" width="359" height="604"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="BQI-Fh-X75" secondAttribute="trailing" id="Dji-Ib-VVy"/>
+                <constraint firstItem="53w-Ew-JZV" firstAttribute="top" secondItem="BQI-Fh-X75" secondAttribute="bottom" constant="8" id="IKy-U8-9fn"/>
+                <constraint firstItem="53w-Ew-JZV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="NNv-th-Bra"/>
+                <constraint firstItem="BQI-Fh-X75" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O9Q-gH-Jis"/>
+                <constraint firstAttribute="bottom" secondItem="53w-Ew-JZV" secondAttribute="bottom" constant="8" id="ODj-1X-vDs"/>
+                <constraint firstAttribute="trailing" secondItem="53w-Ew-JZV" secondAttribute="trailing" constant="8" id="gfT-YM-NlZ"/>
+                <constraint firstItem="BQI-Fh-X75" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sRg-Pe-4N4"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="324" y="402"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_off" width="44" height="44"/>
+        <image name="save_default" width="46" height="46"/>
+    </resources>
+</document>

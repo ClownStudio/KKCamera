@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>views</key>
+	<array>
+		<array>
+			<dict>
+				<key>point</key>
+				<string>{20,20}</string>
+			</dict>
+			<dict>
+				<key>point</key>
+				<string>{700,20}</string>
+			</dict>
+			<dict>
+				<key>point</key>
+				<string>{700,615}</string>
+			</dict>
+			<dict>
+				<key>point</key>
+				<string>{20,615}</string>
+			</dict>
+		</array>
+		<array>
+			<dict>
+				<key>point</key>
+				<string>{20,630}</string>
+			</dict>
+			<dict>
+				<key>point</key>
+				<string>{700,630}</string>
+			</dict>
+			<dict>
+				<key>point</key>
+				<string>{700,936}</string>
+			</dict>
+			<dict>
+				<key>point</key>
+				<string>{20,936}</string>
+			</dict>
+		</array>
+	</array>
+	<key>contentSize</key>
+	<string>{720,960}</string>
+</dict>
+</plist>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>file</key>
+		<string>Filter 0.acv</string>
+		<key>name</key>
+		<string>B1</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 1.acv</string>
+		<key>name</key>
+		<string>B2</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 2.acv</string>
+		<key>name</key>
+		<string>B3</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 3.acv</string>
+		<key>name</key>
+		<string>B4</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 4.acv</string>
+		<key>name</key>
+		<string>B5</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 5.acv</string>
+		<key>name</key>
+		<string>B6</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 6.acv</string>
+		<key>name</key>
+		<string>B7</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 7.acv</string>
+		<key>name</key>
+		<string>B8</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 8.acv</string>
+		<key>name</key>
+		<string>B9</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 9.acv</string>
+		<key>name</key>
+		<string>B10</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 10.acv</string>
+		<key>name</key>
+		<string>B11</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 11.acv</string>
+		<key>name</key>
+		<string>B12</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 12.acv</string>
+		<key>name</key>
+		<string>B13</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 13.acv</string>
+		<key>name</key>
+		<string>B14</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 14.acv</string>
+		<key>name</key>
+		<string>B15</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 15.acv</string>
+		<key>name</key>
+		<string>B16</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 16.acv</string>
+		<key>name</key>
+		<string>B17</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 17.acv</string>
+		<key>name</key>
+		<string>B18</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 18.acv</string>
+		<key>name</key>
+		<string>B19</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 19.acv</string>
+		<key>name</key>
+		<string>B20</string>
+	</dict>
+	<dict>
+		<key>file</key>
+		<string>Filter 20.acv</string>
+		<key>name</key>
+		<string>B21</string>
+	</dict>
+</array>
+</plist>
