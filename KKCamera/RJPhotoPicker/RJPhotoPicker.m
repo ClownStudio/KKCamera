@@ -173,7 +173,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
     CGFloat y = 0;
     if (isShow) {
         [self.view addSubview:[self getAlbumView]];
-        y = DEVICE_NAV_HEIGHT;
+        y = DEVICE_NAV_HEIGHT - 2;
     } else {
         y = SCHeight;
     }

@@ -470,7 +470,7 @@
 		B68F6183238CD017004C3DB6 /* item2.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F617F238CD017004C3DB6 /* item2.png */; };
 		B68F6184238CD017004C3DB6 /* item3.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F6180238CD017004C3DB6 /* item3.png */; };
 		B68F6185238CD017004C3DB6 /* item4.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F6181238CD017004C3DB6 /* item4.png */; };
-		B68F6187238CD054004C3DB6 /* homePage.plist in Resources */ = {isa = PBXBuildFile; fileRef = B68F6186238CD054004C3DB6 /* homePage.plist */; };
+		B68F6187238CD054004C3DB6 /* HomePage.plist in Resources */ = {isa = PBXBuildFile; fileRef = B68F6186238CD054004C3DB6 /* HomePage.plist */; };
 		B68F61B1238D0837004C3DB6 /* RJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F618C238D0837004C3DB6 /* RJCollectionView.m */; };
 		B68F61B2238D0837004C3DB6 /* RJControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F618D238D0837004C3DB6 /* RJControl.m */; };
 		B68F61B3238D0837004C3DB6 /* RJPhotoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F618F238D0837004C3DB6 /* RJPhotoHelper.m */; };
@@ -1241,7 +1241,7 @@
 		B68F617F238CD017004C3DB6 /* item2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item2.png; sourceTree = "<group>"; };
 		B68F6180238CD017004C3DB6 /* item3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item3.png; sourceTree = "<group>"; };
 		B68F6181238CD017004C3DB6 /* item4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item4.png; sourceTree = "<group>"; };
-		B68F6186238CD054004C3DB6 /* homePage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = homePage.plist; sourceTree = "<group>"; };
+		B68F6186238CD054004C3DB6 /* HomePage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HomePage.plist; sourceTree = "<group>"; };
 		B68F618A238D0837004C3DB6 /* RJMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMacro.h; sourceTree = "<group>"; };
 		B68F618B238D0837004C3DB6 /* RJControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJControl.h; sourceTree = "<group>"; };
 		B68F618C238D0837004C3DB6 /* RJCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJCollectionView.m; sourceTree = "<group>"; };
@@ -1697,7 +1697,7 @@
 				B68F5D75238CB333004C3DB6 /* LaunchScreen.storyboard */,
 				B68F5D78238CB333004C3DB6 /* Info.plist */,
 				B68F5D79238CB333004C3DB6 /* main.m */,
-				B68F6186238CD054004C3DB6 /* homePage.plist */,
+				B68F6186238CD054004C3DB6 /* HomePage.plist */,
 			);
 			path = KKCamera;
 			sourceTree = "<group>";
@@ -2643,7 +2643,7 @@
 				B68F6137238CBF49004C3DB6 /* H_1_10.jpg in Resources */,
 				B68F60BA238CBF38004C3DB6 /* toasterColorShift.png in Resources */,
 				B68F6165238CBF49004C3DB6 /* L_2_8.png in Resources */,
-				B68F6187238CD054004C3DB6 /* homePage.plist in Resources */,
+				B68F6187238CD054004C3DB6 /* HomePage.plist in Resources */,
 				B68F60C1238CBF38004C3DB6 /* brannanContrast.png in Resources */,
 				B68F6159238CBF49004C3DB6 /* L_2_10.png in Resources */,
 				B68F6169238CBF49004C3DB6 /* Segment7Standard.otf in Resources */,

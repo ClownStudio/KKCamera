@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "HomeCollectionViewCell.h"
+#import <StoreKit/StoreKit.h>
+#import "MBProgressHUD+RJHUD.h"
+#import "RJPhotoPicker.h"
 
-@interface ViewController ()
+@interface ViewController () <SKStoreProductViewControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
 
@@ -18,12 +21,13 @@
     UIImageView *_logoView;
     UIButton *_takePhotoBtn;
     UIButton *_settingBtn;
+    UIButton *_cameraRollBtn;
     NSArray *_homePageContent;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *homePageFilePath = [[NSBundle mainBundle] pathForResource:@"homePage" ofType:@"plist"];
+    NSString *homePageFilePath = [[NSBundle mainBundle] pathForResource:@"HomePage" ofType:@"plist"];
     _homePageContent = [NSArray arrayWithContentsOfFile:homePageFilePath];
     
     _logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
@@ -34,15 +38,20 @@
     
     _takePhotoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.contentView.bounds.size.height - 60, 60, 60)];
     [_takePhotoBtn setImage:[UIImage imageNamed:@"takephoto"] forState:UIControlStateNormal];
-    [_takePhotoBtn addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTakePhoto:)]];
-    [_takePhotoBtn setUserInteractionEnabled:YES];
+    [_takePhotoBtn addTarget:self action:@selector(onTakePhoto:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_takePhotoBtn];
     
     _settingBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.bounds.size.width - 60, self.contentView.bounds.size.height - 60, 60, 60)];
     [_settingBtn setImage:[UIImage imageNamed:@"setting"] forState:UIControlStateNormal];
-    [_settingBtn addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onSetting:)]];
-    [_settingBtn setUserInteractionEnabled:YES];
+    [_settingBtn addTarget:self action:@selector(onSetting:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_settingBtn];
+    
+    _cameraRollBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - 100)/2, self.contentView.bounds.size.height - 60, 100, 60)];
+    [_cameraRollBtn setTintColor:[UIColor whiteColor]];
+    [_cameraRollBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
+    [_cameraRollBtn setTitle:@"CAMERA  ROLL" forState:UIControlStateNormal];
+    [_cameraRollBtn addTarget:self action:@selector(onCameraRoll:) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView addSubview:_cameraRollBtn];
     
     CGRect collectionRect = CGRectMake(15, logoTemp.size.height, self.contentView.bounds.size.width - 30, self.contentView.frame.size.height - _logoView.bounds.size.height - _settingBtn.bounds.size.height);
     
@@ -81,8 +90,32 @@
     }else if ([@"purchase" isEqualToString:type]){
         
     }else if ([@"recommend" isEqualToString:type]){
-        
+        [self recommendToAppStoreWithAppId:[data objectForKey:@"content"]];
     }
+}
+
+- (void)recommendToAppStoreWithAppId:(NSString *)appid {
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:appid forKey:SKStoreProductParameterITunesItemIdentifier];
+    SKStoreProductViewController *vc = [[SKStoreProductViewController alloc] init];
+    vc.delegate = self;
+    [MBProgressHUD showWaitingWithText:@"Loading..."];
+    [vc loadProductWithParameters:dict completionBlock:^(BOOL result, NSError * _Nullable error) {
+        [MBProgressHUD hide];
+        if(error) {
+            NSLog(@"Error：%@",error.userInfo);
+        }
+        else {
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+    }];
+}
+
+#pragma mark - SKStoreProductViewControllerDelegate
+ 
+- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController {
+    [viewController dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"productViewControllerDidFinish");
+    }];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -91,16 +124,29 @@
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-     HomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionViewCell" forIndexPath:indexPath];
+    HomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionViewCell" forIndexPath:indexPath];
     [cell setContentWithData:[_homePageContent objectAtIndex:indexPath.row]];
     return cell;
 }
 
-- (void)onTakePhoto:(id)sender{
+-(IBAction)onCameraRoll:(id)sender{
+    RJPhotoPicker * picker = [[RJPhotoPicker alloc] init];
+    [picker.view setBackgroundColor:[UIColor blackColor]];
+    [picker setLineNumber:4];
+    [picker setMaxSelectedNum:1];
+    [picker setModalPresentationStyle:UIModalPresentationFullScreen];
+    __weak typeof(self) weakSelf = self;
+    [picker setFinishBlock:^(NSArray *assets) {
+//        [weakSelf reloadImageViewWithAssets:assets];
+    }];
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (IBAction)onTakePhoto:(id)sender{
     
 }
 
-- (void)onSetting:(id)sender{
+- (IBAction)onSetting:(id)sender{
     
 }
 
@@ -113,6 +159,10 @@
     CGRect settingTemp = _settingBtn.frame;
     settingTemp.origin.y = self.contentView.bounds.size.height - 60;
     _settingBtn.frame = settingTemp;
+    
+    CGRect cameraRollTemp = _cameraRollBtn.frame;
+    cameraRollTemp.origin.y = self.contentView.bounds.size.height - 60;
+    _cameraRollBtn.frame = cameraRollTemp;
     
     CGRect collectionTemp = _collectionView.frame;
     collectionTemp.size.height = self.contentView.frame.size.height - _logoView.bounds.size.height - _settingBtn.bounds.size.height;

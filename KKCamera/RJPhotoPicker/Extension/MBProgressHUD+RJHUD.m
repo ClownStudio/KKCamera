@@ -11,12 +11,17 @@
     }
     MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:view];
     hud.removeFromSuperViewOnHide = YES;
+    hud.contentColor = [UIColor whiteColor];
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    hud.bezelView.backgroundColor = RJRGB(0, 0, 0, 0.4);
+    hud.bezelView.backgroundColor = RJRGB(0, 0, 0, 0.6);
     [view addSubview:hud];
     [hud showAnimated:YES];
     hud.minSize = CGSizeMake(100, 40);
     return hud;
+}
+
++ (BOOL)hide {
+    return [self hideHUDForView:SysWindow animated:YES];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

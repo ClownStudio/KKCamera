@@ -11,7 +11,7 @@
  *  @param image  icon
  */
 - (void)showCustomView:(NSString *)text detail:(NSString *)detail image:(UIImage *)image;
-
++ (BOOL)hide;
 
 /**
  *  @brief 等待视图（菊花）
