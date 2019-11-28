@@ -22,9 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.contentView setHidden:YES];
     if (@available(iOS 13.0, *)) {
         self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
     }
+    
     [self.btn1 setOn:[[SettingModel sharedInstance] isStamp]];
     [self.btn2 setOn:[[SettingModel sharedInstance] isRandom]];
     [self.btn3 setTitle:[[SettingModel sharedInstance] customDate] forState:UIControlStateNormal];
@@ -33,7 +35,6 @@
     for (UIView *view in self.view.subviews) {
         if([view isMemberOfClass:[UIScrollView class]]){
             [(UIScrollView *)view setContentSize:CGSizeMake(0, 565)];
-            break;
         }
     }
 }

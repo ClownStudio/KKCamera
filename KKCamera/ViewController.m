@@ -135,7 +135,7 @@
     [picker.view setBackgroundColor:[UIColor blackColor]];
     [picker setLineNumber:4];
     [picker setMaxSelectedNum:1];
-    [picker setModalPresentationStyle:UIModalPresentationOverFullScreen];
+    [picker setModalPresentationStyle:UIModalPresentationFullScreen];
     __weak typeof(self) weakSelf = self;
     [picker setFinishBlock:^(NSArray *assets) {
         [weakSelf reloadImageViewWithAssets:assets];
@@ -152,7 +152,7 @@
 }
 
 - (IBAction)onSetting:(id)sender{
-    SettingViewController *settingViewController = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+    SettingViewController *settingViewController = [[SettingViewController alloc] init];
     settingViewController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self.navigationController pushViewController:settingViewController animated:YES];
 }

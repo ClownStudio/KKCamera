@@ -162,9 +162,12 @@
 }
 
 - (IBAction)pressBottomLeftButton:(UIButton *)sender {
+    CGSize size = [self getScaleSizeWithSize:_scaleSize boxSize:_scrollView.frame.size isFullAspect:_isFullImageBtn];
+    if (isnan(size.width) || isnan(size.height) ) {
+        return;
+    }
     [sender setSelected:!sender.selected];
     _isFullImageBtn = !sender.selected;
-    CGSize size = [self getScaleSizeWithSize:_scaleSize boxSize:_scrollView.frame.size isFullAspect:_isFullImageBtn];
     [self configLayoutWithSize:size];
 }
 

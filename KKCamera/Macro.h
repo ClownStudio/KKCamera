@@ -9,6 +9,7 @@
 #ifndef Macro_h
 #define Macro_h
 
+#define SEARCH_ALBUM @[@"Camera Roll", @"Screenshots", @"Recently Added", @"All Photos",@"最近项目",@"截屏"]
 #define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 
 #define ALL_PRODUCT_ID [NSString stringWithFormat:@"%@.pro",[[NSBundle mainBundle] bundleIdentifier]]

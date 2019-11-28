@@ -16,6 +16,9 @@
 @implementation CGXPickerUIBaseView
 
 - (void)initUI {
+    if (@available(iOS 13.0, *)) {
+        self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
+    }
     self.frame = SCREEN_BOUNDS;
     // 背景遮罩图层
     [self addSubview:self.backgroundView];

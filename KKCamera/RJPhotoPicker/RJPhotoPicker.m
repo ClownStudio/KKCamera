@@ -94,6 +94,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
                 [weakself configNav];
                 [weakself configCollectionView];
                 [weakself changeAlbumWithCount:0];
+                
             });
             dispatch_async(dispatch_get_main_queue(), ^{
                 [hud hideAnimated:YES];
@@ -267,12 +268,12 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
                     if (isCloud) {
                         [MBProgressHUD showInfo:@"Please Donwload iCloud Image"];
                     } else {
-                        [self->_helper setSelectIndex:self->_currentSelectedIndexPath];
-                        NSArray * datas = [self->_helper getAllAssetWithSelectedArray];
+                        [_helper setSelectIndex:_currentSelectedIndexPath];
+                        NSArray * datas = [_helper getAllAssetWithSelectedArray];
                         if (datas.count == 0) {
                             [MBProgressHUD showInfo:@"Please choose Image"];
                         }
-                        self->_finishBlock(datas);
+                        _finishBlock(datas);
                         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
                     }
                 }];

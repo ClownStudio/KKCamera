@@ -9,7 +9,7 @@
 #import "RJPhotoHelper.h"
 #import <Photos/Photos.h>
 #import "RJMacro.h"
-#import <UIKit/UIKit.h>
+#import "Macro.h"
 
 @implementation RJPhotoHelper
 - (instancetype)init {
@@ -61,7 +61,7 @@
     options.synchronous = YES;
     
     [options setProgressHandler:^(double progress, NSError *error, BOOL *stop, NSDictionary *info) {
-        //        [weakself requestProgress:progress];
+//        [weakself requestProgress:progress];
     }];
     _imagesArray = [NSMutableArray array];
     for (PHAsset * asset in _currentCollectionData) {
@@ -70,7 +70,7 @@
                                                   contentMode:PHImageContentModeAspectFill
                                                       options:options
                                                 resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-            [self->_imagesArray addObject:result];
+            [_imagesArray addObject:result];
         }];
     }
     
@@ -84,9 +84,10 @@
     PHFetchResult * sysfetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
     
     //get system collection , set higher level
-    NSArray * titlesArray = @[@"Camera Roll", @"Screenshots", @"Recently Added", @"All Photos"];
+    NSArray * titlesArray = SEARCH_ALBUM;
     for (PHAssetCollection * assetCollection in sysfetchResult) {
         NSString * collectionTitle = assetCollection.localizedTitle;
+        NSLog(@"%@",collectionTitle);
         NSArray* data = [self getAssetWithCollection:assetCollection];
         if (data.count == 0) {
             continue;
@@ -155,9 +156,16 @@
 /**check permission*/
 - (void)getPhotoPermission:(void(^)(BOOL havePower))resultBlock {
     if (NSClassFromString(@"PHAsset")) {
-        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-            resultBlock(status == PHAuthorizationStatusAuthorized);
-        }];
+//        PHAuthorizationStatus state = [PHPhotoLibrary authorizationStatus];
+//        if (state == PHAuthorizationStatusAuthorized) {
+//            resultBlock(YES);
+//        } else if (state == PHAuthorizationStatusNotDetermined) {
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                resultBlock(status == PHAuthorizationStatusAuthorized);
+            }];
+//        } else {
+//            resultBlock(NO);
+//        }
     } else {
         resultBlock(NO);
     }

@@ -7,43 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12F4DF6557CFA1CE90B17A1443F6B36C /* CGXPickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 349C085D455B52DE08B3C58FCAA9271F /* CGXPickerViewManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		223F74E3E4E30BEC4B6C8025D3B12D89 /* CGXPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9791817BCA72E6B8CDD50755582F01 /* CGXPickerView-dummy.m */; };
-		22B4060860C2CBB390BE084DCF3D226D /* CGXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A10744359F6D818D17A36C72E4551 /* CGXDatePickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		24EAE7A7EFC1CF8745BE7991824DD440 /* CGXAddressPcikerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8B577A43870A9DD38A7976DFC74221 /* CGXAddressPcikerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		27F353B72A82319F43155AE1E1DCDF6D /* CGXPickerViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F9197D4DCFFDD175A5F3B38BB1E5210 /* CGXPickerViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		31385F10C1C832456A6E47EA73026761 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 764500F11165FFBE6E19037AC882FBB1 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3E16BA3AD1C81A75B4552776E627CF1C /* CGXPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 708B9AB5153404B0B63874F8C2F6F5AD /* CGXPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4DE0E730CDFB0CBB905A21C14CFB6A13 /* CGXStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DC888E43CB1A2DA301EAB0F59883D /* CGXStringPickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5A1B9BA72161B57A43420B08E1F7E27C /* CGXPickerUIBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D139291049B13C17ED731DC7B47C35 /* CGXPickerUIBaseView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5D96BBDDB2212B09B8BFEEAA4775A10F /* CGXStringPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = E5AD2F1CB7DE407BE6DD5132687ED6EA /* CGXStringPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7F7B162426A9033F79821A601A93785C /* CGXAddressModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 39DEE022C89E43BAB0C84994254FF035 /* CGXAddressModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		92471D23CFDE5599F6FCC865EC711808 /* CGXDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A373B27404FF30CF022206F4305305B2 /* CGXDatePickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		99B62555D7C3BF2B98DFCB7334CEBF6D /* NSDate+CGXPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F53A803A966B42B9D444BAB844D86 /* NSDate+CGXPicker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A93E115C9F100EBEE870A6E45C102BA2 /* CGXAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3502514B6ED4F391692FED4DF9309147 /* CGXAddressModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AC59005EDDF0427B0D6BD020991AF224 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893A36FA2D5D338E2BC5E9D76B2D226 /* MBProgressHUD-dummy.m */; };
-		ACED52CF045730B51EB22C047A370A59 /* NSDate+CGXPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 240EF589FE59F311D914325996458D42 /* NSDate+CGXPicker.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B20994F712F2B6A540216D3FD2BF612D /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE844E04D8E94253347FA72B8C73BD5 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B844CFBFB2698700C47EE9FCA181A270 /* Pods-KKCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E82DEBF4507FF5288ACABAEA91607E15 /* Pods-KKCamera-dummy.m */; };
-		CF2D2B858F46D667DBA7E97A917D90A9 /* CGXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B9DFBD6F879BC3A37230E66B2A7C /* CGXPickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DAF9131F1E53462480882E4C9651F582 /* CGXAddressPcikerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E623962820F792C6B565562290CB578A /* CGXAddressPcikerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FD74D3F19733DF9046E4199F7E67B8F7 /* CGXPickerUIBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0064BED88A572F5B37F955EA792DEA /* CGXPickerUIBaseView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		055CE6EF1DBFC46CDAFB09026D7C8DA5 /* NSDate+CGXPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 240EF589FE59F311D914325996458D42 /* NSDate+CGXPicker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0904BEF4FF0B7D72D30689E99146BFAE /* CGXPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 708B9AB5153404B0B63874F8C2F6F5AD /* CGXPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		19019AE2EA8B13338DBCEE256D51C68C /* CGXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A10744359F6D818D17A36C72E4551 /* CGXDatePickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1BB0CF322DFDEC7B9231E60512B4E509 /* CGXStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DC888E43CB1A2DA301EAB0F59883D /* CGXStringPickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		28903904746BA694271AA9F9B50358CA /* CGXPickerUIBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0064BED88A572F5B37F955EA792DEA /* CGXPickerUIBaseView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		34FAE22326468C1A2519D1EA75F476DD /* CGXStringPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = E5AD2F1CB7DE407BE6DD5132687ED6EA /* CGXStringPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		381FADC73C7E224520FE96E540330724 /* CGXAddressModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 39DEE022C89E43BAB0C84994254FF035 /* CGXAddressModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A3E297705F3A4547756B09B4044B940 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893A36FA2D5D338E2BC5E9D76B2D226 /* MBProgressHUD-dummy.m */; };
+		6FEE3FB7B20C7981A479E4215065A412 /* CGXDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A373B27404FF30CF022206F4305305B2 /* CGXDatePickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		75899AAFE0BBB695B41F38768F043F06 /* CGXAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3502514B6ED4F391692FED4DF9309147 /* CGXAddressModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A2AF00EE363E1234C4A60C45405288DF /* CGXPickerUIBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D139291049B13C17ED731DC7B47C35 /* CGXPickerUIBaseView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AAA71A9048B26AD442747ABE245A3316 /* CGXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B9DFBD6F879BC3A37230E66B2A7C /* CGXPickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B10D11FC6935D2AD2444894A9FD5F5A1 /* CGXAddressPcikerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8B577A43870A9DD38A7976DFC74221 /* CGXAddressPcikerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BDC86E9D8B124CEAB1909C4E0F6960DE /* CGXPickerViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F9197D4DCFFDD175A5F3B38BB1E5210 /* CGXPickerViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C23E7750CECD9E2D9FE5683079ED3F86 /* CGXAddressPcikerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E623962820F792C6B565562290CB578A /* CGXAddressPcikerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C3A08C3DBB5436AB883686B87C4612E9 /* CGXPickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 349C085D455B52DE08B3C58FCAA9271F /* CGXPickerViewManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE844E04D8E94253347FA72B8C73BD5 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CCFCA1732D2FE82FD7D8F635BC652E39 /* Pods-KKCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E82DEBF4507FF5288ACABAEA91607E15 /* Pods-KKCamera-dummy.m */; };
+		E5C693D8B512EBA68ED04D0F06237E21 /* CGXPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9791817BCA72E6B8CDD50755582F01 /* CGXPickerView-dummy.m */; };
+		E61EF8695C44F38024CB070B111F9AD2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 764500F11165FFBE6E19037AC882FBB1 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD20624AF5C37C138F8FB811D5EF25E8 /* NSDate+CGXPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F53A803A966B42B9D444BAB844D86 /* NSDate+CGXPicker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2A5B3F0C92C922AF8D5E602B94895392 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D67AE43388D579E67C485C2A6D8D124B;
-			remoteInfo = CGXPickerView;
-		};
-		87840045171849B00FE94723ABBB3FEA /* PBXContainerItemProxy */ = {
+		021C1AF8E6145EDA5871AABE3392B07E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
 			remoteInfo = MBProgressHUD;
+		};
+		224076F3178918E82F2F087050B611A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D67AE43388D579E67C485C2A6D8D124B;
+			remoteInfo = CGXPickerView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,7 +53,6 @@
 		19507DF3176F82C9B858814C544C4682 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		1AEFBAA09271D239B864D55843F880B2 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		1BA872BA50D15531A817262BEEC201F2 /* Pods-KKCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKCamera.release.xcconfig"; sourceTree = "<group>"; };
-		2346DD1642F687C42B17269193A61C49 /* libPods-KKCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-KKCamera.a"; path = "libPods-KKCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		240EF589FE59F311D914325996458D42 /* NSDate+CGXPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+CGXPicker.h"; path = "CGXPickerView/NSDate+CGXPicker.h"; sourceTree = "<group>"; };
 		2C7F53A803A966B42B9D444BAB844D86 /* NSDate+CGXPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CGXPicker.m"; path = "CGXPickerView/NSDate+CGXPicker.m"; sourceTree = "<group>"; };
 		349C085D455B52DE08B3C58FCAA9271F /* CGXPickerViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXPickerViewManager.m; path = CGXPickerView/CGXPickerViewManager.m; sourceTree = "<group>"; };
@@ -61,7 +60,6 @@
 		38ABDDA66EC6B208C30CA9D825CA2009 /* Pods-KKCamera-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KKCamera-acknowledgements.plist"; sourceTree = "<group>"; };
 		39DEE022C89E43BAB0C84994254FF035 /* CGXAddressModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGXAddressModel.h; path = CGXPickerView/CGXAddressModel.h; sourceTree = "<group>"; };
 		3C9DC888E43CB1A2DA301EAB0F59883D /* CGXStringPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXStringPickerView.m; path = CGXPickerView/CGXStringPickerView.m; sourceTree = "<group>"; };
-		3E2CF9BF395FBD2D9B528DB4C64837EF /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		588A10744359F6D818D17A36C72E4551 /* CGXDatePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXDatePickerView.m; path = CGXPickerView/CGXDatePickerView.m; sourceTree = "<group>"; };
 		5A70B77AFEE2399BA92302B84809475C /* Pods-KKCamera-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KKCamera-resources.sh"; sourceTree = "<group>"; };
 		650BEC26EBA528AC488D18A2DE74957A /* CGXPickerViewBundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = CGXPickerViewBundle.bundle; path = CGXPickerView/CGXPickerViewBundle.bundle; sourceTree = "<group>"; };
@@ -71,14 +69,16 @@
 		764500F11165FFBE6E19037AC882FBB1 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		7F9197D4DCFFDD175A5F3B38BB1E5210 /* CGXPickerViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGXPickerViewManager.h; path = CGXPickerView/CGXPickerViewManager.h; sourceTree = "<group>"; };
 		80D7ABED03A824C9BB0B23D3F308A720 /* CGXPickerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGXPickerView-prefix.pch"; sourceTree = "<group>"; };
-		843393A7DECD703EE1C07ADB0C484080 /* libCGXPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCGXPickerView.a; path = libCGXPickerView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8893A36FA2D5D338E2BC5E9D76B2D226 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A373B27404FF30CF022206F4305305B2 /* CGXDatePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGXDatePickerView.h; path = CGXPickerView/CGXDatePickerView.h; sourceTree = "<group>"; };
 		A8C9B9DFBD6F879BC3A37230E66B2A7C /* CGXPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXPickerView.m; path = CGXPickerView/CGXPickerView.m; sourceTree = "<group>"; };
 		B089A197A081AB6E64D3F6BE7198B5B5 /* CGXPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CGXPickerView.xcconfig; sourceTree = "<group>"; };
+		BB0139E99DE8F513A2214540E8CA586F /* libPods-KKCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-KKCamera.a"; path = "libPods-KKCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC5C8D3DA83B588D2662FC1FC425085 /* Pods-KKCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		CA9791817BCA72E6B8CDD50755582F01 /* CGXPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CGXPickerView-dummy.m"; sourceTree = "<group>"; };
+		D73BD00ADA696D632A4FFC3C31C4D57D /* libCGXPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCGXPickerView.a; path = libCGXPickerView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AD2F1CB7DE407BE6DD5132687ED6EA /* CGXStringPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGXStringPickerView.h; path = CGXPickerView/CGXStringPickerView.h; sourceTree = "<group>"; };
 		E623962820F792C6B565562290CB578A /* CGXAddressPcikerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXAddressPcikerView.m; path = CGXPickerView/CGXAddressPcikerView.m; sourceTree = "<group>"; };
 		E82DEBF4507FF5288ACABAEA91607E15 /* Pods-KKCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KKCamera-dummy.m"; sourceTree = "<group>"; };
@@ -86,21 +86,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		274C7A016FC8A143FFA4B3786E2BB198 /* Frameworks */ = {
+		13FC6D05F4065F4D497602292360E119 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C7782DA735F86B7213898A88A3A0037 /* Frameworks */ = {
+		DCBC7FE987FB53FBB71A9E7155D9E871 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC3C683DC3BF70356C73B06AF45F5109 /* Frameworks */ = {
+		F1BA94C36DC7A235872B5C45702A4961 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,9 +135,9 @@
 		850E991AF1C196F740BF26ACF84C8B6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				843393A7DECD703EE1C07ADB0C484080 /* libCGXPickerView.a */,
-				3E2CF9BF395FBD2D9B528DB4C64837EF /* libMBProgressHUD.a */,
-				2346DD1642F687C42B17269193A61C49 /* libPods-KKCamera.a */,
+				D73BD00ADA696D632A4FFC3C31C4D57D /* libCGXPickerView.a */,
+				8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */,
+				BB0139E99DE8F513A2214540E8CA586F /* libPods-KKCamera.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,33 +239,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2425069E1817FFDB335016709C58D53F /* Headers */ = {
+		31ABDFC74D139077B51C45A3BCCF0654 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381FADC73C7E224520FE96E540330724 /* CGXAddressModel.h in Headers */,
+				B10D11FC6935D2AD2444894A9FD5F5A1 /* CGXAddressPcikerView.h in Headers */,
+				6FEE3FB7B20C7981A479E4215065A412 /* CGXDatePickerView.h in Headers */,
+				A2AF00EE363E1234C4A60C45405288DF /* CGXPickerUIBaseView.h in Headers */,
+				0904BEF4FF0B7D72D30689E99146BFAE /* CGXPickerView.h in Headers */,
+				BDC86E9D8B124CEAB1909C4E0F6960DE /* CGXPickerViewManager.h in Headers */,
+				34FAE22326468C1A2519D1EA75F476DD /* CGXStringPickerView.h in Headers */,
+				055CE6EF1DBFC46CDAFB09026D7C8DA5 /* NSDate+CGXPicker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F060BF98E3F37F766473EB49F885A12 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EFB610621D9BAC75FB625CEB4BF9CB6 /* Headers */ = {
+		F69A1D7D9933B5C2BFB41B06C24EC219 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F7B162426A9033F79821A601A93785C /* CGXAddressModel.h in Headers */,
-				24EAE7A7EFC1CF8745BE7991824DD440 /* CGXAddressPcikerView.h in Headers */,
-				92471D23CFDE5599F6FCC865EC711808 /* CGXDatePickerView.h in Headers */,
-				5A1B9BA72161B57A43420B08E1F7E27C /* CGXPickerUIBaseView.h in Headers */,
-				3E16BA3AD1C81A75B4552776E627CF1C /* CGXPickerView.h in Headers */,
-				27F353B72A82319F43155AE1E1DCDF6D /* CGXPickerViewManager.h in Headers */,
-				5D96BBDDB2212B09B8BFEEAA4775A10F /* CGXStringPickerView.h in Headers */,
-				ACED52CF045730B51EB22C047A370A59 /* NSDate+CGXPicker.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5321840230BB6C85C88122814CDDA46 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B20994F712F2B6A540216D3FD2BF612D /* MBProgressHUD.h in Headers */,
+				C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +274,11 @@
 /* Begin PBXNativeTarget section */
 		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EBB0D07912895BC979026B645CEDF00C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildConfigurationList = 20217F7F18136BEC6503B8147352D3E3 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				F5321840230BB6C85C88122814CDDA46 /* Headers */,
-				CA806A7E89902EAD71AAC07418CFADE6 /* Sources */,
-				EC3C683DC3BF70356C73B06AF45F5109 /* Frameworks */,
+				F69A1D7D9933B5C2BFB41B06C24EC219 /* Headers */,
+				39261A3821EA0B45F95301099852B974 /* Sources */,
+				DCBC7FE987FB53FBB71A9E7155D9E871 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,16 +286,16 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = 3E2CF9BF395FBD2D9B528DB4C64837EF /* libMBProgressHUD.a */;
+			productReference = 8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D67AE43388D579E67C485C2A6D8D124B /* CGXPickerView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 367FA5FE95726FD416F63F47E03BBBB2 /* Build configuration list for PBXNativeTarget "CGXPickerView" */;
+			buildConfigurationList = B1034E189FE1C14AA423BCEF910A51F9 /* Build configuration list for PBXNativeTarget "CGXPickerView" */;
 			buildPhases = (
-				4EFB610621D9BAC75FB625CEB4BF9CB6 /* Headers */,
-				C7EA6A2B70D094DDCF54797F2EDC4DD1 /* Sources */,
-				274C7A016FC8A143FFA4B3786E2BB198 /* Frameworks */,
+				31ABDFC74D139077B51C45A3BCCF0654 /* Headers */,
+				DD763F308572564F6B6780EFD60DBFBB /* Sources */,
+				F1BA94C36DC7A235872B5C45702A4961 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,26 +303,26 @@
 			);
 			name = CGXPickerView;
 			productName = CGXPickerView;
-			productReference = 843393A7DECD703EE1C07ADB0C484080 /* libCGXPickerView.a */;
+			productReference = D73BD00ADA696D632A4FFC3C31C4D57D /* libCGXPickerView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F488FA555DC1BC4C7DAD11F00BEF4E3D /* Pods-KKCamera */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D04282F1CBFA1A347A767B272B27AD62 /* Build configuration list for PBXNativeTarget "Pods-KKCamera" */;
+			buildConfigurationList = 6A14DA43A5330CA8FD7E1759D8F15130 /* Build configuration list for PBXNativeTarget "Pods-KKCamera" */;
 			buildPhases = (
-				2425069E1817FFDB335016709C58D53F /* Headers */,
-				97FDDCED6D8DCE38808C421F086D0689 /* Sources */,
-				5C7782DA735F86B7213898A88A3A0037 /* Frameworks */,
+				8F060BF98E3F37F766473EB49F885A12 /* Headers */,
+				8AC264BC9A3A2FCF3A35FE6BC49A3FAB /* Sources */,
+				13FC6D05F4065F4D497602292360E119 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2172D9322C12D282E8AF99F706ACDA30 /* PBXTargetDependency */,
-				53F672BFBBD029FFE32BF4872EA55EE3 /* PBXTargetDependency */,
+				4284E086E3F3450A52547223BE5FE90C /* PBXTargetDependency */,
+				7190B442CB3BE06C944D11E799FD6351 /* PBXTargetDependency */,
 			);
 			name = "Pods-KKCamera";
 			productName = "Pods-KKCamera";
-			productReference = 2346DD1642F687C42B17269193A61C49 /* libPods-KKCamera.a */;
+			productReference = BB0139E99DE8F513A2214540E8CA586F /* libPods-KKCamera.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -331,8 +331,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -340,6 +340,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 850E991AF1C196F740BF26ACF84C8B6F /* Products */;
@@ -354,100 +355,80 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		97FDDCED6D8DCE38808C421F086D0689 /* Sources */ = {
+		39261A3821EA0B45F95301099852B974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B844CFBFB2698700C47EE9FCA181A270 /* Pods-KKCamera-dummy.m in Sources */,
+				5A3E297705F3A4547756B09B4044B940 /* MBProgressHUD-dummy.m in Sources */,
+				E61EF8695C44F38024CB070B111F9AD2 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7EA6A2B70D094DDCF54797F2EDC4DD1 /* Sources */ = {
+		8AC264BC9A3A2FCF3A35FE6BC49A3FAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A93E115C9F100EBEE870A6E45C102BA2 /* CGXAddressModel.m in Sources */,
-				DAF9131F1E53462480882E4C9651F582 /* CGXAddressPcikerView.m in Sources */,
-				22B4060860C2CBB390BE084DCF3D226D /* CGXDatePickerView.m in Sources */,
-				FD74D3F19733DF9046E4199F7E67B8F7 /* CGXPickerUIBaseView.m in Sources */,
-				223F74E3E4E30BEC4B6C8025D3B12D89 /* CGXPickerView-dummy.m in Sources */,
-				CF2D2B858F46D667DBA7E97A917D90A9 /* CGXPickerView.m in Sources */,
-				12F4DF6557CFA1CE90B17A1443F6B36C /* CGXPickerViewManager.m in Sources */,
-				4DE0E730CDFB0CBB905A21C14CFB6A13 /* CGXStringPickerView.m in Sources */,
-				99B62555D7C3BF2B98DFCB7334CEBF6D /* NSDate+CGXPicker.m in Sources */,
+				CCFCA1732D2FE82FD7D8F635BC652E39 /* Pods-KKCamera-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA806A7E89902EAD71AAC07418CFADE6 /* Sources */ = {
+		DD763F308572564F6B6780EFD60DBFBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC59005EDDF0427B0D6BD020991AF224 /* MBProgressHUD-dummy.m in Sources */,
-				31385F10C1C832456A6E47EA73026761 /* MBProgressHUD.m in Sources */,
+				75899AAFE0BBB695B41F38768F043F06 /* CGXAddressModel.m in Sources */,
+				C23E7750CECD9E2D9FE5683079ED3F86 /* CGXAddressPcikerView.m in Sources */,
+				19019AE2EA8B13338DBCEE256D51C68C /* CGXDatePickerView.m in Sources */,
+				28903904746BA694271AA9F9B50358CA /* CGXPickerUIBaseView.m in Sources */,
+				E5C693D8B512EBA68ED04D0F06237E21 /* CGXPickerView-dummy.m in Sources */,
+				AAA71A9048B26AD442747ABE245A3316 /* CGXPickerView.m in Sources */,
+				C3A08C3DBB5436AB883686B87C4612E9 /* CGXPickerViewManager.m in Sources */,
+				1BB0CF322DFDEC7B9231E60512B4E509 /* CGXStringPickerView.m in Sources */,
+				FD20624AF5C37C138F8FB811D5EF25E8 /* NSDate+CGXPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2172D9322C12D282E8AF99F706ACDA30 /* PBXTargetDependency */ = {
+		4284E086E3F3450A52547223BE5FE90C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CGXPickerView;
 			target = D67AE43388D579E67C485C2A6D8D124B /* CGXPickerView */;
-			targetProxy = 2A5B3F0C92C922AF8D5E602B94895392 /* PBXContainerItemProxy */;
+			targetProxy = 224076F3178918E82F2F087050B611A9 /* PBXContainerItemProxy */;
 		};
-		53F672BFBBD029FFE32BF4872EA55EE3 /* PBXTargetDependency */ = {
+		7190B442CB3BE06C944D11E799FD6351 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = 87840045171849B00FE94723ABBB3FEA /* PBXContainerItemProxy */;
+			targetProxy = 021C1AF8E6145EDA5871AABE3392B07E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02E4A115A76E49D8C37BF250F4E9EE75 /* Debug */ = {
+		2713A1AD3CC7005816E6C476FEBAD19D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B089A197A081AB6E64D3F6BE7198B5B5 /* CGXPickerView.xcconfig */;
+			baseConfigurationReference = 1AEFBAA09271D239B864D55843F880B2 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CGXPickerView/CGXPickerView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CGXPickerView;
-				PRODUCT_NAME = CGXPickerView;
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
-		};
-		2BBDA5FF84F621EE64C75BE7363450B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFC5C8D3DA83B588D2662FC1FC425085 /* Pods-KKCamera.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
+			name = Release;
 		};
 		39769C66FA8FB99B807E0CA1F02C1A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -513,31 +494,7 @@
 			};
 			name = Debug;
 		};
-		6208D2133997CD893AFE9358377C4BC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B089A197A081AB6E64D3F6BE7198B5B5 /* CGXPickerView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CGXPickerView/CGXPickerView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CGXPickerView;
-				PRODUCT_NAME = CGXPickerView;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		917083227127CE8897278BFF86277F6E /* Release */ = {
+		51F00031ABBB3504FB435308094AD9E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1BA872BA50D15531A817262BEEC201F2 /* Pods-KKCamera.release.xcconfig */;
 			buildSettings = {
@@ -559,7 +516,28 @@
 			};
 			name = Release;
 		};
-		A125ED06451AC6537CED51E940505244 /* Debug */ = {
+		5E0AFAAB0CC62D27EE9940108BC65F9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFC5C8D3DA83B588D2662FC1FC425085 /* Pods-KKCamera.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		690C1B11780ABBA0F742607D082E784B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1AEFBAA09271D239B864D55843F880B2 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
@@ -582,21 +560,44 @@
 			};
 			name = Debug;
 		};
-		DA717E491C58378E1A2B63B1254947EE /* Release */ = {
+		70D30245065102AF528181C3F4C56E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AEFBAA09271D239B864D55843F880B2 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = B089A197A081AB6E64D3F6BE7198B5B5 /* CGXPickerView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = "Target Support Files/CGXPickerView/CGXPickerView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MBProgressHUD;
-				PRODUCT_NAME = MBProgressHUD;
+				PRODUCT_MODULE_NAME = CGXPickerView;
+				PRODUCT_NAME = CGXPickerView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B649B55B3AC88F0F387822DE71CB39D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B089A197A081AB6E64D3F6BE7198B5B5 /* CGXPickerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CGXPickerView/CGXPickerView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CGXPickerView;
+				PRODUCT_NAME = CGXPickerView;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -669,11 +670,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		367FA5FE95726FD416F63F47E03BBBB2 /* Build configuration list for PBXNativeTarget "CGXPickerView" */ = {
+		20217F7F18136BEC6503B8147352D3E3 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02E4A115A76E49D8C37BF250F4E9EE75 /* Debug */,
-				6208D2133997CD893AFE9358377C4BC8 /* Release */,
+				690C1B11780ABBA0F742607D082E784B /* Debug */,
+				2713A1AD3CC7005816E6C476FEBAD19D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -687,20 +688,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D04282F1CBFA1A347A767B272B27AD62 /* Build configuration list for PBXNativeTarget "Pods-KKCamera" */ = {
+		6A14DA43A5330CA8FD7E1759D8F15130 /* Build configuration list for PBXNativeTarget "Pods-KKCamera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2BBDA5FF84F621EE64C75BE7363450B3 /* Debug */,
-				917083227127CE8897278BFF86277F6E /* Release */,
+				5E0AFAAB0CC62D27EE9940108BC65F9F /* Debug */,
+				51F00031ABBB3504FB435308094AD9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBB0D07912895BC979026B645CEDF00C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+		B1034E189FE1C14AA423BCEF910A51F9 /* Build configuration list for PBXNativeTarget "CGXPickerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A125ED06451AC6537CED51E940505244 /* Debug */,
-				DA717E491C58378E1A2B63B1254947EE /* Release */,
+				70D30245065102AF528181C3F4C56E81 /* Debug */,
+				9B649B55B3AC88F0F387822DE71CB39D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

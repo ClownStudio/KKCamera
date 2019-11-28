@@ -10,7 +10,6 @@
 		81A60D8374B2F853C6217ACE /* libPods-KKCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5AB7619E7A8D9CE4CFABD0 /* libPods-KKCamera.a */; };
 		B60197F7238F6DCC006ADFA7 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60197F5238F6DCC006ADFA7 /* SettingViewController.xib */; };
 		B60197FD238F6DE4006ADFA7 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B60197F9238F6DE4006ADFA7 /* SettingModel.m */; };
-		B6019803238F7B18006ADFA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6019805238F7B18006ADFA7 /* InfoPlist.strings */; };
 		B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B601980D238F7BF7006ADFA7 /* Localizable.strings */; };
 		B6019811238FAF93006ADFA7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6019810238FAF93006ADFA7 /* SettingViewController.m */; };
 		B67B73E1238D20A5001B1F60 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */; };
@@ -512,8 +511,6 @@
 		B60197FE238F6FEB006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SettingViewController.strings"; sourceTree = "<group>"; };
 		B60197FF238F6FEB006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B6019800238F6FEC006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		B6019804238F7B18006ADFA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B6019806238F7B1E006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		B601980D238F7BF7006ADFA7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B601980F238FAF93006ADFA7 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		B6019810238FAF93006ADFA7 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
@@ -1702,10 +1699,10 @@
 				B68F61C9238D1BD7004C3DB6 /* BasicViewController.m */,
 				B68F5D6D238CB331004C3DB6 /* ViewController.h */,
 				B68F5D6E238CB331004C3DB6 /* ViewController.m */,
-				B60197FA238F6DE4006ADFA7 /* SettingModel.h */,
-				B60197F9238F6DE4006ADFA7 /* SettingModel.m */,
 				B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */,
 				B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */,
+				B60197FA238F6DE4006ADFA7 /* SettingModel.h */,
+				B60197F9238F6DE4006ADFA7 /* SettingModel.m */,
 				B601980F238FAF93006ADFA7 /* SettingViewController.h */,
 				B6019810238FAF93006ADFA7 /* SettingViewController.m */,
 				B60197F5238F6DCC006ADFA7 /* SettingViewController.xib */,
@@ -1719,7 +1716,6 @@
 				B68F5D78238CB333004C3DB6 /* Info.plist */,
 				B68F5D79238CB333004C3DB6 /* main.m */,
 				B68F6186238CD054004C3DB6 /* HomePage.plist */,
-				B6019805238F7B18006ADFA7 /* InfoPlist.strings */,
 				B601980D238F7BF7006ADFA7 /* Localizable.strings */,
 			);
 			path = KKCamera;
@@ -2480,8 +2476,8 @@
 			isa = PBXGroup;
 			children = (
 				B68F6198238D0837004C3DB6 /* RJTopView.h */,
-				B68F6199238D0837004C3DB6 /* RJTopView.xib */,
 				B68F619A238D0837004C3DB6 /* RJTopView.m */,
+				B68F6199238D0837004C3DB6 /* RJTopView.xib */,
 			);
 			path = TopShowView;
 			sourceTree = "<group>";
@@ -2664,7 +2660,6 @@
 				B68F60B7238CBF38004C3DB6 /* earlybirdMap.png in Resources */,
 				B67B74D5238D20DE001B1F60 /* style4_6.plist in Resources */,
 				B68F613E238CBF49004C3DB6 /* H_1_7.jpg in Resources */,
-				B6019803238F7B18006ADFA7 /* InfoPlist.strings in Resources */,
 				B67B74AA238D20DE001B1F60 /* Filter 13.acv in Resources */,
 				B68F6137238CBF49004C3DB6 /* H_1_10.jpg in Resources */,
 				B68F60BA238CBF38004C3DB6 /* toasterColorShift.png in Resources */,
@@ -3148,15 +3143,6 @@
 				B60197FE238F6FEB006ADFA7 /* zh-Hans */,
 			);
 			name = SettingViewController.xib;
-			sourceTree = "<group>";
-		};
-		B6019805238F7B18006ADFA7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6019804238F7B18006ADFA7 /* en */,
-				B6019806238F7B1E006ADFA7 /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		B68F5D70238CB331004C3DB6 /* Main.storyboard */ = {
