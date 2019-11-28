@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  KKCamera
+
+  Created by Jam Zhang on 2019/11/28.
+  Copyright © 2019 Jam Zhang. All rights reserved.
+*/
+NSPhotoLibraryUsageDescription = "NSPhotoLibraryUsageDescription";
+NSCameraUsageDescription = "NSCameraUsageDescription";
+NSPhotoLibraryAddUsageDescription = "NSPhotoLibraryAddUsageDescription";

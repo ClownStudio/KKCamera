@@ -13,7 +13,7 @@
 #import "RJPhotoPicker.h"
 #import "SettingViewController.h"
 
-@interface ViewController () <SKStoreProductViewControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ViewController () <SKStoreProductViewControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @end
 
@@ -148,7 +148,22 @@
 }
 
 - (IBAction)onTakePhoto:(id)sender{
-    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+    imagePicker.delegate = self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:imagePicker animated:YES completion:^{
+        
+    }];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    @autoreleasepool {
+        UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    }
+    [picker dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (IBAction)onSetting:(id)sender{
