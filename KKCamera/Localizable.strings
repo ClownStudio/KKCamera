@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  KKCamera
+
+  Created by Jam Zhang on 2019/11/28.
+  Copyright © 2019 Jam Zhang. All rights reserved.
+*/
+"DisablePurchases" = "You've disabled in-app purchases";
+"UnablePurchases" = "Unable to buy, please try again later";
+"RestoreSuccess" = "Restore success";
+"PurchaseSuccess" = "Purchase success,thank you!";
+"Loading" = "Loading...";
+"NotSupportAlbum" = "Not Support Album";
+"NoCamera" = "No Camera Device";
+"NoMailAccount" = "No Mail Account";
+"FeedbackError" = "Feedback Error";
+"RestoreError" = "Restore Error";
+
+"Tip" = "Tips";
+"Evaluate" = "Can you evaluate us?";
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Share" = "Share";
+"Saved" = "Saved successfully";

@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BasicViewController : UIViewController
 
 @property (nonatomic,strong) UIView *contentView;
+@property (nonatomic, strong) ProManager *proManager;
+
+- (void)onFeedback;
+- (void)onRestore;
 
 @end
 

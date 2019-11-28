@@ -94,7 +94,6 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
                 [weakself configNav];
                 [weakself configCollectionView];
                 [weakself changeAlbumWithCount:0];
-                
             });
             dispatch_async(dispatch_get_main_queue(), ^{
                 [hud hideAnimated:YES];

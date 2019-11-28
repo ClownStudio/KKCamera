@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		81A60D8374B2F853C6217ACE /* libPods-KKCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5AB7619E7A8D9CE4CFABD0 /* libPods-KKCamera.a */; };
+		B60197F7238F6DCC006ADFA7 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60197F5238F6DCC006ADFA7 /* SettingViewController.xib */; };
+		B60197FD238F6DE4006ADFA7 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B60197F9238F6DE4006ADFA7 /* SettingModel.m */; };
+		B6019803238F7B18006ADFA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6019805238F7B18006ADFA7 /* InfoPlist.strings */; };
+		B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B601980D238F7BF7006ADFA7 /* Localizable.strings */; };
+		B6019811238FAF93006ADFA7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6019810238FAF93006ADFA7 /* SettingViewController.m */; };
 		B67B73E1238D20A5001B1F60 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */; };
 		B67B73E2238D20A5001B1F60 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73DA238D20A5001B1F60 /* UIView+Frame.m */; };
 		B67B73E3238D20A5001B1F60 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73DC238D20A5001B1F60 /* CircleView.m */; };
@@ -501,6 +506,17 @@
 		2A96CCB6AD5E90255D358851 /* Pods-KKCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKCamera.release.xcconfig"; path = "Target Support Files/Pods-KKCamera/Pods-KKCamera.release.xcconfig"; sourceTree = "<group>"; };
 		597AC82817830E42E08ABE37 /* Pods-KKCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKCamera.debug.xcconfig"; path = "Target Support Files/Pods-KKCamera/Pods-KKCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		AC5AB7619E7A8D9CE4CFABD0 /* libPods-KKCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KKCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60197F6238F6DCC006ADFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SettingViewController.xib; sourceTree = "<group>"; };
+		B60197F9238F6DE4006ADFA7 /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
+		B60197FA238F6DE4006ADFA7 /* SettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
+		B60197FE238F6FEB006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SettingViewController.strings"; sourceTree = "<group>"; };
+		B60197FF238F6FEB006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		B6019800238F6FEC006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B6019804238F7B18006ADFA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6019806238F7B1E006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B601980D238F7BF7006ADFA7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B601980F238FAF93006ADFA7 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		B6019810238FAF93006ADFA7 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
 		B67B73DA238D20A5001B1F60 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		B67B73DB238D20A5001B1F60 /* StickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerView.h; sourceTree = "<group>"; };
@@ -1686,8 +1702,13 @@
 				B68F61C9238D1BD7004C3DB6 /* BasicViewController.m */,
 				B68F5D6D238CB331004C3DB6 /* ViewController.h */,
 				B68F5D6E238CB331004C3DB6 /* ViewController.m */,
+				B60197FA238F6DE4006ADFA7 /* SettingModel.h */,
+				B60197F9238F6DE4006ADFA7 /* SettingModel.m */,
 				B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */,
 				B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */,
+				B601980F238FAF93006ADFA7 /* SettingViewController.h */,
+				B6019810238FAF93006ADFA7 /* SettingViewController.m */,
+				B60197F5238F6DCC006ADFA7 /* SettingViewController.xib */,
 				B68F6188238D0837004C3DB6 /* RJPhotoPicker */,
 				B68F5DD2238CBF36004C3DB6 /* HCPhotoEdit */,
 				B68F60C8238CBF3C004C3DB6 /* Payment */,
@@ -1698,6 +1719,8 @@
 				B68F5D78238CB333004C3DB6 /* Info.plist */,
 				B68F5D79238CB333004C3DB6 /* main.m */,
 				B68F6186238CD054004C3DB6 /* HomePage.plist */,
+				B6019805238F7B18006ADFA7 /* InfoPlist.strings */,
+				B601980D238F7BF7006ADFA7 /* Localizable.strings */,
 			);
 			path = KKCamera;
 			sourceTree = "<group>";
@@ -2519,6 +2542,7 @@
 				B68F5D60238CB331004C3DB6 /* Sources */,
 				B68F5D61238CB331004C3DB6 /* Frameworks */,
 				B68F5D62238CB331004C3DB6 /* Resources */,
+				42A96330B82F1F5F3B107BD8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2550,6 +2574,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = B68F5D5B238CB330004C3DB6;
 			productRefGroup = B68F5D65238CB331004C3DB6 /* Products */;
@@ -2639,6 +2664,7 @@
 				B68F60B7238CBF38004C3DB6 /* earlybirdMap.png in Resources */,
 				B67B74D5238D20DE001B1F60 /* style4_6.plist in Resources */,
 				B68F613E238CBF49004C3DB6 /* H_1_7.jpg in Resources */,
+				B6019803238F7B18006ADFA7 /* InfoPlist.strings in Resources */,
 				B67B74AA238D20DE001B1F60 /* Filter 13.acv in Resources */,
 				B68F6137238CBF49004C3DB6 /* H_1_10.jpg in Resources */,
 				B68F60BA238CBF38004C3DB6 /* toasterColorShift.png in Resources */,
@@ -2720,6 +2746,7 @@
 				B68F60B4238CBF38004C3DB6 /* hudsonBackground.png in Resources */,
 				B68F609D238CBF38004C3DB6 /* CHPhotoEditResource.bundle in Resources */,
 				B67B74C2238D20DE001B1F60 /* style3_7.plist in Resources */,
+				B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */,
 				B67B74B1238D20DE001B1F60 /* A_Marks_5.png in Resources */,
 				B67B74E6238D20DE001B1F60 /* iRate.bundle in Resources */,
 				B67B749F238D20DE001B1F60 /* Filter 14.acv in Resources */,
@@ -2735,6 +2762,7 @@
 				B68F6150238CBF49004C3DB6 /* L_3_3.png in Resources */,
 				B67B749D238D20DE001B1F60 /* Filter 9.acv in Resources */,
 				B67B74CF238D20DE001B1F60 /* style4_5.plist in Resources */,
+				B60197F7238F6DCC006ADFA7 /* SettingViewController.xib in Resources */,
 				B68F60A5238CBF38004C3DB6 /* xproMap.png in Resources */,
 				B68F616E238CBF49004C3DB6 /* SFDigitalReadout-Heavy.ttf in Resources */,
 				B68F61B7238D0837004C3DB6 /* RJTopView.xib in Resources */,
@@ -2774,6 +2802,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		42A96330B82F1F5F3B107BD8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KKCamera/Pods-KKCamera-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KKCamera/Pods-KKCamera-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KKCamera/Pods-KKCamera-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EFEE214B5D38DCE767089904 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2880,6 +2925,7 @@
 				B68F5FE8238CBF37004C3DB6 /* GPUImageWeakPixelInclusionFilter.m in Sources */,
 				B68F5FDD238CBF37004C3DB6 /* GPUImageChromaKeyFilter.m in Sources */,
 				B67B74F1238D20DE001B1F60 /* OSCommonImage.m in Sources */,
+				B60197FD238F6DE4006ADFA7 /* SettingModel.m in Sources */,
 				B68F604C238CBF37004C3DB6 /* GPUImagePerlinNoiseFilter.m in Sources */,
 				B68F5FD5238CBF37004C3DB6 /* FWFiveInputFilter.m in Sources */,
 				B68F603F238CBF37004C3DB6 /* GPUImageRGBErosionFilter.m in Sources */,
@@ -3040,6 +3086,7 @@
 				B68F6084238CBF38004C3DB6 /* GPUImageStillCamera.m in Sources */,
 				B68F6063238CBF38004C3DB6 /* GPUImageLightenBlendFilter.m in Sources */,
 				B68F6074238CBF38004C3DB6 /* GPUImagePicture.m in Sources */,
+				B6019811238FAF93006ADFA7 /* SettingViewController.m in Sources */,
 				B68F6097238CBF38004C3DB6 /* PhotoEditFrameItemView.m in Sources */,
 				B68F5FC7238CBF37004C3DB6 /* FWRiseFilter.m in Sources */,
 				B68F6031238CBF37004C3DB6 /* GPUImageCrosshairGenerator.m in Sources */,
@@ -3094,10 +3141,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B60197F5238F6DCC006ADFA7 /* SettingViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B60197F6238F6DCC006ADFA7 /* Base */,
+				B60197FE238F6FEB006ADFA7 /* zh-Hans */,
+			);
+			name = SettingViewController.xib;
+			sourceTree = "<group>";
+		};
+		B6019805238F7B18006ADFA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6019804238F7B18006ADFA7 /* en */,
+				B6019806238F7B1E006ADFA7 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		B68F5D70238CB331004C3DB6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B68F5D71238CB331004C3DB6 /* Base */,
+				B60197FF238F6FEB006ADFA7 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -3106,6 +3172,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B68F5D76238CB333004C3DB6 /* Base */,
+				B6019800238F6FEC006ADFA7 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -3117,6 +3184,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -3175,6 +3243,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

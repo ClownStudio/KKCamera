@@ -11,6 +11,7 @@
 #import <StoreKit/StoreKit.h>
 #import "MBProgressHUD+RJHUD.h"
 #import "RJPhotoPicker.h"
+#import "SettingViewController.h"
 
 @interface ViewController () <SKStoreProductViewControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -98,7 +99,7 @@
     NSDictionary *dict = [NSDictionary dictionaryWithObject:appid forKey:SKStoreProductParameterITunesItemIdentifier];
     SKStoreProductViewController *vc = [[SKStoreProductViewController alloc] init];
     vc.delegate = self;
-    [MBProgressHUD showWaitingWithText:@"Loading..."];
+    [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
     [vc loadProductWithParameters:dict completionBlock:^(BOOL result, NSError * _Nullable error) {
         [MBProgressHUD hide];
         if(error) {
@@ -134,12 +135,16 @@
     [picker.view setBackgroundColor:[UIColor blackColor]];
     [picker setLineNumber:4];
     [picker setMaxSelectedNum:1];
-    [picker setModalPresentationStyle:UIModalPresentationFullScreen];
+    [picker setModalPresentationStyle:UIModalPresentationOverFullScreen];
     __weak typeof(self) weakSelf = self;
     [picker setFinishBlock:^(NSArray *assets) {
-//        [weakSelf reloadImageViewWithAssets:assets];
+        [weakSelf reloadImageViewWithAssets:assets];
     }];
     [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)reloadImageViewWithAssets:(NSArray *)assets{
+    
 }
 
 - (IBAction)onTakePhoto:(id)sender{
@@ -147,7 +152,9 @@
 }
 
 - (IBAction)onSetting:(id)sender{
-    
+    SettingViewController *settingViewController = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+    settingViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self.navigationController pushViewController:settingViewController animated:YES];
 }
 
 - (void)viewSafeAreaInsetsDidChange{

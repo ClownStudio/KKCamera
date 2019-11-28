@@ -61,7 +61,7 @@
     options.synchronous = YES;
     
     [options setProgressHandler:^(double progress, NSError *error, BOOL *stop, NSDictionary *info) {
-//        [weakself requestProgress:progress];
+        //        [weakself requestProgress:progress];
     }];
     _imagesArray = [NSMutableArray array];
     for (PHAsset * asset in _currentCollectionData) {
@@ -155,16 +155,9 @@
 /**check permission*/
 - (void)getPhotoPermission:(void(^)(BOOL havePower))resultBlock {
     if (NSClassFromString(@"PHAsset")) {
-//        PHAuthorizationStatus state = [PHPhotoLibrary authorizationStatus];
-//        if (state == PHAuthorizationStatusAuthorized) {
-//            resultBlock(YES);
-//        } else if (state == PHAuthorizationStatusNotDetermined) {
-            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-                resultBlock(status == PHAuthorizationStatusAuthorized);
-            }];
-//        } else {
-//            resultBlock(NO);
-//        }
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            resultBlock(status == PHAuthorizationStatusAuthorized);
+        }];
     } else {
         resultBlock(NO);
     }

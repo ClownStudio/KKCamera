@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Random date"; ObjectID = "CGg-SN-0Fm"; */
+"CGg-SN-0Fm.text" = "Random date";
+
+/* Class = "UIButton"; normalTitle = "Follow"; ObjectID = "S8n-eb-sWM"; */
+"S8n-eb-sWM.normalTitle" = "Follow";
+
+/* Class = "UIButton"; normalTitle = "1 9 9 7 / 0 7 / 2 6"; ObjectID = "XgX-VF-NT6"; */
+"XgX-VF-NT6.normalTitle" = "1 9 9 7 / 0 7 / 2 6";
+
+/* Class = "UIButton"; normalTitle = "Restore Purchase"; ObjectID = "XiA-Aa-3uq"; */
+"XiA-Aa-3uq.normalTitle" = "Restore Purchase";
+
+/* Class = "UILabel"; text = "Add date stamp"; ObjectID = "cTk-Bg-Zd6"; */
+"cTk-Bg-Zd6.text" = "Add date stamp";
+
+/* Class = "UILabel"; text = "Sound Enable"; ObjectID = "ciW-g8-zus"; */
+"ciW-g8-zus.text" = "Sound Enable";
+
+/* Class = "UILabel"; text = "Custom date"; ObjectID = "eGX-CX-fbW"; */
+"eGX-CX-fbW.text" = "Custom date";
+
+/* Class = "UILabel"; text = "S  E  T  T  I  N  G  S"; ObjectID = "jLi-wN-Kgr"; */
+"jLi-wN-Kgr.text" = "S  E  T  T  I  N  G  S";
+
+/* Class = "UIButton"; normalTitle = "Rate and Review"; ObjectID = "oaF-lb-FRB"; */
+"oaF-lb-FRB.normalTitle" = "Rate and Review";
+
+/* Class = "UIButton"; normalTitle = "Feedback"; ObjectID = "xge-4Y-ptq"; */
+"xge-4Y-ptq.normalTitle" = "Feedback";
