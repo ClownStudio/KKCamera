@@ -32,19 +32,19 @@
     NSString *homePageFilePath = [[NSBundle mainBundle] pathForResource:@"HomePage" ofType:@"plist"];
     _homePageContent = [NSArray arrayWithContentsOfFile:homePageFilePath];
     
-    _logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
+    _logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"kk_logo"]];
     [self.contentView addSubview:_logoView];
     CGRect logoTemp = _logoView.frame;
     logoTemp.origin.x = (self.contentView.bounds.size.width - logoTemp.size.width)/2;
     _logoView.frame = logoTemp;
     
     _takePhotoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.contentView.bounds.size.height - 60, 60, 60)];
-    [_takePhotoBtn setImage:[UIImage imageNamed:@"takephoto"] forState:UIControlStateNormal];
+    [_takePhotoBtn setImage:[UIImage imageNamed:@"kk_takephoto"] forState:UIControlStateNormal];
     [_takePhotoBtn addTarget:self action:@selector(onTakePhoto:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_takePhotoBtn];
     
     _settingBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.bounds.size.width - 60, self.contentView.bounds.size.height - 60, 60, 60)];
-    [_settingBtn setImage:[UIImage imageNamed:@"setting"] forState:UIControlStateNormal];
+    [_settingBtn setImage:[UIImage imageNamed:@"kk_setting"] forState:UIControlStateNormal];
     [_settingBtn addTarget:self action:@selector(onSetting:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_settingBtn];
     
@@ -139,7 +139,9 @@
     [picker setModalPresentationStyle:UIModalPresentationFullScreen];
     __weak typeof(self) weakSelf = self;
     [picker setFinishBlock:^(NSArray *assets) {
-        [weakSelf reloadImageViewWithAsset:[assets firstObject]];
+        [weakSelf dismissViewControllerAnimated:YES completion:^{
+            [weakSelf reloadImageViewWithAsset:[assets firstObject]];
+        }];
     }];
     [self presentViewController:picker animated:YES completion:nil];
 }

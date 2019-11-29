@@ -14,10 +14,15 @@
 
 @implementation EditViewController{
     UIImage *_oriImage;
+    UIButton *_backBtn;
+    UIButton *_nextBtn;
+    UIButton *_settingBtn;
+    UIButton *_iapBtn;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 
 -(void)setOriginImage:(UIImage *)originImage{

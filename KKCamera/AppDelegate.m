@@ -26,7 +26,7 @@
             printf( "\tFont: %s \n", [fontName UTF8String] );
         }
     }
-    
+
     ViewController *viewController = [[ViewController alloc] init];
     UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [rootViewController setNavigationBarHidden:YES];

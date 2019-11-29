@@ -32,6 +32,10 @@
     self.proManager.delegate = self;
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 -(void)viewSafeAreaInsetsDidChange{
     [super viewSafeAreaInsetsDidChange];
     UIEdgeInsets safeAreaInsets = self.view.safeAreaInsets;
