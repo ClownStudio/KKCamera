@@ -19,6 +19,7 @@
     UIButton *_settingBtn;
     UIButton *_iapBtn;
     UIButton *_nextBtn;
+    UIButton *_resetBtn;
 }
 
 - (void)viewDidLoad {
@@ -40,6 +41,15 @@
     _nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.bounds.size.width - 40, 0, 40, 40)];
     [_nextBtn setImage:[UIImage imageNamed:@"kk_next"] forState:UIControlStateNormal];
     [self.contentView addSubview:_nextBtn];
+    
+    _resetBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - 100)/2, 5, 100, 30)];
+    [_resetBtn setTitle:@"RESET" forState:UIControlStateNormal];
+    [_resetBtn.titleLabel setFont:[UIFont systemFontOfSize:11]];
+    [_resetBtn.layer setMasksToBounds:YES];
+    [_resetBtn.layer setBorderWidth:1];
+    [_resetBtn.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [_resetBtn.layer setCornerRadius:15];
+    [self.contentView addSubview:_resetBtn];
 }
 
 -(void)setOriginImage:(UIImage *)originImage{
