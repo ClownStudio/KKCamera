@@ -158,7 +158,7 @@
         EditViewController *editViewController = [[EditViewController alloc] init];
         [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
         [editViewController setOriginImage:image];
-        [self presentViewController:editViewController animated:YES completion:nil];
+        [self.navigationController pushViewController:editViewController animated:YES];
     }];
 }
 
@@ -179,7 +179,7 @@
         EditViewController *editViewController = [[EditViewController alloc] init];
         [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
         [editViewController setOriginImage:image];
-        [self presentViewController:editViewController animated:YES completion:nil];
+        [self.navigationController pushViewController:editViewController animated:YES];
     }];
 }
 
