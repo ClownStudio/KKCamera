@@ -12,6 +12,7 @@
 #import "MBProgressHUD+RJHUD.h"
 #import "RJPhotoPicker.h"
 #import "SettingViewController.h"
+#import "EditViewController.h"
 
 @interface ViewController () <SKStoreProductViewControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -138,31 +139,45 @@
     [picker setModalPresentationStyle:UIModalPresentationFullScreen];
     __weak typeof(self) weakSelf = self;
     [picker setFinishBlock:^(NSArray *assets) {
-        [weakSelf reloadImageViewWithAssets:assets];
+        [weakSelf reloadImageViewWithAsset:[assets firstObject]];
     }];
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-- (void)reloadImageViewWithAssets:(NSArray *)assets{
-    
+- (void)reloadImageViewWithAsset:(PHAsset *)asset{
+    PHImageManager *manager = [PHImageManager defaultManager];
+    PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
+    option.resizeMode = PHImageRequestOptionsResizeModeExact;//控制照片尺寸
+    //option.deliveryMode = PHImageRequestOptionsDeliveryModeOpportunistic;//控制照片质量
+    option.synchronous = YES;//主要是这个设为YES这样才会只走一次
+    option.networkAccessAllowed = YES;
+    [manager requestImageForAsset:asset targetSize:CGSizeMake(asset.pixelWidth, asset.pixelHeight) contentMode:PHImageContentModeDefault options:option resultHandler:^(UIImage *resultImage, NSDictionary *info){
+        UIImage *image = resultImage;
+        EditViewController *editViewController = [[EditViewController alloc] init];
+        [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
+        [editViewController setOriginImage:image];
+        [self presentViewController:editViewController animated:YES completion:nil];
+    }];
 }
 
 - (IBAction)onTakePhoto:(id)sender{
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
     imagePicker.delegate = self;
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentViewController:imagePicker animated:YES completion:^{
-        
-    }];
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
+    UIImage *image;
     @autoreleasepool {
-        UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+        image = [info valueForKey:UIImagePickerControllerOriginalImage];
     }
     [picker dismissViewControllerAnimated:YES completion:^{
-        
+        EditViewController *editViewController = [[EditViewController alloc] init];
+        [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
+        [editViewController setOriginImage:image];
+        [self presentViewController:editViewController animated:YES completion:nil];
     }];
 }
 
