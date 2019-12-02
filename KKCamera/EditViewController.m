@@ -8,6 +8,7 @@
 
 #import "EditViewController.h"
 #import "SettingViewController.h"
+#import <Masonry.h>
 
 @interface EditViewController ()
 
@@ -20,6 +21,7 @@
     UIButton *_iapBtn;
     UIButton *_nextBtn;
     UIButton *_resetBtn;
+    UIView *_editorView;
 }
 
 - (void)viewDidLoad {
@@ -50,6 +52,43 @@
     [_resetBtn.layer setBorderColor:[UIColor whiteColor].CGColor];
     [_resetBtn.layer setCornerRadius:15];
     [self.contentView addSubview:_resetBtn];
+    
+    int distance = 10;
+    int gap = 5;
+    CGFloat itemHeight = (self.contentView.bounds.size.width - 7 * distance)/6;
+    _editorView = [[UIView alloc] init];
+    [_editorView setBackgroundColor:[UIColor colorWithRed:0.114 green:0.133 blue:0.137 alpha:1.000]];
+    [self.contentView addSubview:_editorView];
+    [_editorView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.contentView);
+        make.size.mas_equalTo(itemHeight + gap * 2);
+    }];
+
+    int position = 0;
+    int tag = 1;
+    NSArray *items = @[@"cut",@"film",@"filter",@"light",@"edit",@"texture"];
+    for (NSString *name in items) {
+        position += distance;
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, gap, itemHeight, itemHeight)];
+        [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"kk_%@",name]] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"kk_%@_selected",name]] forState:UIControlStateSelected];
+        button.tag = tag;
+        [_editorView addSubview:button];
+        tag++;
+        position += itemHeight;
+    }
+    UIButton *button = [_editorView viewWithTag:1];
+    [button setSelected:YES];
+}
+
+-(void)viewSafeAreaInsetsDidChange{
+    [super viewSafeAreaInsetsDidChange];
+    UIEdgeInsets safeAreaInsets = self.view.safeAreaInsets;
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - safeAreaInsets.bottom, self.view.bounds.size.width, safeAreaInsets.bottom)];
+    [bottomView setBackgroundColor:[UIColor colorWithRed:0.114 green:0.133 blue:0.137 alpha:1.000]];
+    [self.view insertSubview:bottomView atIndex:0];
+    
+    [_editorView updateConstraintsIfNeeded];
 }
 
 -(void)setOriginImage:(UIImage *)originImage{
