@@ -13,6 +13,8 @@
 		B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B601980D238F7BF7006ADFA7 /* Localizable.strings */; };
 		B6019811238FAF93006ADFA7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6019810238FAF93006ADFA7 /* SettingViewController.m */; };
 		B60E14E62390159000DF057F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B60E14E82390159000DF057F /* InfoPlist.strings */; };
+		B6557EF2239601B000636C7F /* WSLPhotoZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = B6557EF0239601B000636C7F /* WSLPhotoZoom.m */; };
+		B6557EF52396023000636C7F /* UIImageView+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = B6557EF42396022F00636C7F /* UIImageView+GIF.m */; };
 		B67B73E1238D20A5001B1F60 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */; };
 		B67B73E2238D20A5001B1F60 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73DA238D20A5001B1F60 /* UIView+Frame.m */; };
 		B67B73E3238D20A5001B1F60 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73DC238D20A5001B1F60 /* CircleView.m */; };
@@ -518,6 +520,10 @@
 		B6019810238FAF93006ADFA7 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		B60E14E72390159000DF057F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B60E14E92390159400DF057F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B6557EF0239601B000636C7F /* WSLPhotoZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLPhotoZoom.m; sourceTree = "<group>"; };
+		B6557EF1239601B000636C7F /* WSLPhotoZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLPhotoZoom.h; sourceTree = "<group>"; };
+		B6557EF32396022F00636C7F /* UIImageView+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GIF.h"; sourceTree = "<group>"; };
+		B6557EF42396022F00636C7F /* UIImageView+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GIF.m"; sourceTree = "<group>"; };
 		B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
 		B67B73DA238D20A5001B1F60 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		B67B73DB238D20A5001B1F60 /* StickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerView.h; sourceTree = "<group>"; };
@@ -1707,6 +1713,10 @@
 				B68F5D6E238CB331004C3DB6 /* ViewController.m */,
 				B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */,
 				B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */,
+				B6557EF32396022F00636C7F /* UIImageView+GIF.h */,
+				B6557EF42396022F00636C7F /* UIImageView+GIF.m */,
+				B6557EF1239601B000636C7F /* WSLPhotoZoom.h */,
+				B6557EF0239601B000636C7F /* WSLPhotoZoom.m */,
 				B6D672C62390A6C5007C9136 /* EditViewController.h */,
 				B6D672C72390A6C5007C9136 /* EditViewController.m */,
 				B60197FA238F6DE4006ADFA7 /* SettingModel.h */,
@@ -3010,6 +3020,7 @@
 				B68F6083238CBF38004C3DB6 /* GPUImageFilter.m in Sources */,
 				B67B74FD238D20DE001B1F60 /* RSSelectionLayer.m in Sources */,
 				B68F5FD2238CBF37004C3DB6 /* FWValenciaFilter.m in Sources */,
+				B6557EF2239601B000636C7F /* WSLPhotoZoom.m in Sources */,
 				B68F601A238CBF37004C3DB6 /* GPUImageDivideBlendFilter.m in Sources */,
 				B67B74EC238D20DE001B1F60 /* RSColorFunctions.m in Sources */,
 				B68F6011238CBF37004C3DB6 /* GPUImageOpacityFilter.m in Sources */,
@@ -3055,6 +3066,7 @@
 				B68F602C238CBF37004C3DB6 /* GPUImageGaussianSelectiveBlurFilter.m in Sources */,
 				B67B74F5238D20DE001B1F60 /* BitmapScaleManipulator.m in Sources */,
 				B68F61BF238D0837004C3DB6 /* RJPhotoPicker.m in Sources */,
+				B6557EF52396023000636C7F /* UIImageView+GIF.m in Sources */,
 				B68F6060238CBF38004C3DB6 /* GPUImageLookupFilter.m in Sources */,
 				B68F604E238CBF37004C3DB6 /* GPUImageHSBFilter.m in Sources */,
 				B68F5FF6238CBF37004C3DB6 /* GPUImageHistogramEqualizationFilter.m in Sources */,
