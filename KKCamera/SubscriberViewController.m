@@ -12,11 +12,25 @@
 
 @end
 
-@implementation SubscriberViewController
+@implementation SubscriberViewController{
+    UIImageView *_imageView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    CGFloat imageWidth;
+    CGFloat imageHeight;
+    if (IS_PAD) {
+        
+    }else{
+        
+    }
+    
+    _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    [_imageView.layer setMasksToBounds:YES];
+    _imageView.layer.cornerRadius = 5;
+    [self.contentView addSubview:_imageView];
 }
 
 /*

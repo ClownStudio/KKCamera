@@ -17,6 +17,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        [_imageView.layer setMasksToBounds:YES];
+        _imageView.layer.cornerRadius = 5;
         [self addSubview:_imageView];
     }
     return self;

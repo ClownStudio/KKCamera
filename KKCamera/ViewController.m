@@ -55,16 +55,20 @@
     [_cameraRollBtn addTarget:self action:@selector(onCameraRoll:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_cameraRollBtn];
     
-    CGRect collectionRect = CGRectMake(15, logoTemp.size.height, self.contentView.bounds.size.width - 30, self.contentView.frame.size.height - _logoView.bounds.size.height - _settingBtn.bounds.size.height);
-    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
 
     // 设置item的行间距和列间距
     layout.minimumInteritemSpacing = 10;
     layout.minimumLineSpacing = 10;
 
-    // 设置item的大小
-    CGFloat itemW = collectionRect.size.width;
+    CGRect collectionRect = CGRectMake(15, logoTemp.size.height, self.contentView.bounds.size.width - 30, self.contentView.frame.size.height - _logoView.bounds.size.height - _settingBtn.bounds.size.height);
+    
+    CGFloat itemW;
+    if (!IS_PAD) {
+        itemW = collectionRect.size.width;
+    }else{
+        itemW = (collectionRect.size.width - 10)/2;
+    }
     CGFloat itemH = itemW/1039*754;
     layout.itemSize = CGSizeMake(itemW, itemH);
     
