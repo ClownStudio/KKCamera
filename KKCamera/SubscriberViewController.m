@@ -19,19 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGFloat imageWidth;
-    CGFloat imageHeight;
-    
     UIImage *image = [UIImage imageNamed:[self getAssetWithName:@"kk_unlock"]];
-    if (image.size.width/self.contentView.bounds.size.width * self.contentView.bounds.size.height > image.size.height) {
-        imageWidth = self.contentView.bounds.size.width;
-        imageHeight = imageWidth/self.contentView.bounds.size.width * self.contentView.bounds.size.height;
-    }else{
-        imageHeight = self.contentView.bounds.size.height;
-        imageWidth = imageHeight/self.contentView.bounds.size.height * self.contentView.bounds.size.width;
-    }
+    CGSize size = [self getSizeWithImage:image];
     
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - imageWidth)/2, (self.contentView.bounds.size.height - imageHeight)/2, imageWidth, imageHeight)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - size.width)/2, (self.contentView.bounds.size.height - size.height)/2, size.width, size.height)];
     [_imageView setImage:image];
     [_imageView.layer setMasksToBounds:YES];
     _imageView.layer.cornerRadius = 5;
@@ -39,11 +30,10 @@
     [self.contentView addSubview:_imageView];
 }
 
--(void)viewSafeAreaInsetsDidChange{
-    [super viewSafeAreaInsetsDidChange];
+-(CGSize)getSizeWithImage:(UIImage *)image{
     CGFloat imageWidth;
     CGFloat imageHeight;
-    UIImage *image = [UIImage imageNamed:[self getAssetWithName:@"kk_unlock"]];
+    
     if (image.size.width/self.contentView.bounds.size.width * self.contentView.bounds.size.height > image.size.height) {
         imageWidth = self.contentView.bounds.size.width;
         imageHeight = imageWidth/self.contentView.bounds.size.width * self.contentView.bounds.size.height;
@@ -51,7 +41,14 @@
         imageHeight = self.contentView.bounds.size.height;
         imageWidth = imageHeight/self.contentView.bounds.size.height * self.contentView.bounds.size.width;
     }
-    [_imageView setFrame:CGRectMake((self.contentView.bounds.size.width - imageWidth)/2, (self.contentView.bounds.size.height - imageHeight)/2, imageWidth, imageHeight)];
+    return CGSizeMake(imageWidth, imageHeight);
+}
+
+-(void)viewSafeAreaInsetsDidChange{
+    [super viewSafeAreaInsetsDidChange];
+    UIImage *image = [UIImage imageNamed:[self getAssetWithName:@"kk_unlock"]];
+    CGSize size = [self getSizeWithImage:image];
+    [_imageView setFrame:CGRectMake((self.contentView.bounds.size.width - size.width)/2, (self.contentView.bounds.size.height - size.height)/2, size.width, size.height)];
 }
 
 - (NSString *)getAssetWithName:(NSString *)name{
