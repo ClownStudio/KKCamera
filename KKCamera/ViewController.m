@@ -69,7 +69,8 @@
     }else{
         itemW = (collectionRect.size.width - 10)/2;
     }
-    CGFloat itemH = itemW/1039*754;
+    UIImage *image = [UIImage imageNamed:@"kk_item"];
+    CGFloat itemH = itemW/image.size.width*image.size.height;
     layout.itemSize = CGSizeMake(itemW, itemH);
     
     // 设置分区的头视图和尾视图 是否始终固定在屏幕上边和下边

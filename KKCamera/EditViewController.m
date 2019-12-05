@@ -9,6 +9,7 @@
 #import "EditViewController.h"
 #import "SettingViewController.h"
 #import <Masonry.h>
+#import "SubscriberViewController.h"
 
 @interface EditViewController () <UIScrollViewDelegate>
 
@@ -41,6 +42,7 @@
     
     _iapBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.bounds.size.width - 90, 0, 40, 40)];
     [_iapBtn setImage:[UIImage imageNamed:@"kk_iap"] forState:UIControlStateNormal];
+    [_iapBtn addTarget:self action:@selector(onIap:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_iapBtn];
     
     _nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.bounds.size.width - 40, 0, 40, 40)];
@@ -108,6 +110,12 @@
         position += itemHeight;
     }
     [self selectEditorItemWithIndex:0];
+}
+
+-(IBAction)onIap:(id)sender{
+    SubscriberViewController *subViewController = [[SubscriberViewController alloc] init];
+    subViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self.navigationController pushViewController:subViewController animated:YES];
 }
 
 #pragma mark -- UIScrollViewDelegate
