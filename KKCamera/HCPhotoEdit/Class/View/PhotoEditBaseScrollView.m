@@ -11,7 +11,6 @@
 #import "HCPhotoEditCustomButton.h"
 #import "HCPhotoEditBaseItemView.h"
 #import "PhotoEditCustomButton.h"
-#import "PayViewController.h"
 #import "ProManager.h"
 #import "AssetBuffer.h"
 #import "UIImage+Utility.h"
@@ -373,13 +372,7 @@
 
 - (void)purchase
 {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    PayViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PayViewController"];
-    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self.parentController presentViewController:vc animated:YES completion:^{
-        ;
-    }];
+    
 }
 
 - (UIImage*)loadFilterImage:(NSDictionary*)data sourceImage:(UIImage*)sourceImage

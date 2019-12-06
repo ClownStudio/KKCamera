@@ -9,10 +9,16 @@
 #ifndef Macro_h
 #define Macro_h
 
+#define TERMS_OF_USE @"http://instagram.com"
+#define PRIVACY_POLICY @"http://instagram.com"
 #define SEARCH_ALBUM @[@"Camera Roll", @"Screenshots", @"Recently Added", @"All Photos",@"最近项目",@"截屏"]
 #define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 
 #define ALL_PRODUCT_ID [NSString stringWithFormat:@"%@.pro",[[NSBundle mainBundle] bundleIdentifier]]
+
+#define MONTH_ID [NSString stringWithFormat:@"%@.month",[[NSBundle mainBundle] bundleIdentifier]]
+
+#define YEAR_ID [NSString stringWithFormat:@"%@.year",[[NSBundle mainBundle] bundleIdentifier]]
 
 #define HIDE_SETTING_ANIMATION @"HIDE_SETTING_ANIMATION"
 

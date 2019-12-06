@@ -29,7 +29,7 @@
     [self.view setBackgroundColor:[UIColor blackColor]];
     
     self.proManager = [[ProManager alloc] init];
-    self.proManager.delegate = self;
+    self.proManager.managerDelegate = self;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -94,7 +94,6 @@
 
 -(void)didSuccessBuyProduct:(NSString*)productId
 {
-    [MBProgressHUD hide];
     [MBProgressHUD showSuccess:NSLocalizedString(@"PurchaseSuccess", nil)];
 }
 
@@ -103,8 +102,9 @@
     [MBProgressHUD hide];
     if ([ProManager isFullPaid])
     {
-        //全解锁
-        [MBProgressHUD showSuccess:NSLocalizedString(@"RestoreSuccess", nil)];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD showSuccess:NSLocalizedString(@"RestoreSuccess", nil)];
+        });
         return ;
     }
     
@@ -120,8 +120,9 @@
 
 -(void)didFailedBuyProduct:(NSString*)productId forReason:(NSString*)reason
 {
-    [MBProgressHUD hide];
-    [MBProgressHUD showError:reason];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD showError:reason];
+    });
 }
 
 -(void)didCancelBuyProduct:(NSString*)productId
@@ -137,14 +138,17 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (self.proManager) {
-        self.proManager.delegate = self;
+        self.proManager.managerDelegate = self;
     }
+    // 在所有需要隐藏导航栏的页面加上这两行代码，所有需要显示导航栏的页面不做任何操作即可
+    self.fd_prefersNavigationBarHidden = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     if (self.proManager) {
-        self.proManager.delegate = nil;
+        self.proManager.managerDelegate = nil;
     }
 }
 

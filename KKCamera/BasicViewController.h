@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ProManager.h"
+#import <UINavigationController+FDFullscreenPopGesture.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

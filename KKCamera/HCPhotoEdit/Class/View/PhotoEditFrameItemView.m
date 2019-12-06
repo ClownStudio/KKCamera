@@ -145,7 +145,7 @@
         [alert addAction:[UIAlertAction actionWithTitle:@"Purchases" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self showLoading];
             self.proManager = [[ProManager alloc] init];
-            self.proManager.delegate = self;
+            self.proManager.managerDelegate = self;
             //先尝试恢复
             [self.proManager restorePro];
         }]];

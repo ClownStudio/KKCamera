@@ -399,7 +399,6 @@
 		B68F60C5238CBF38004C3DB6 /* sierraVignette.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F5FBF238CBF37004C3DB6 /* sierraVignette.png */; };
 		B68F60C6238CBF38004C3DB6 /* earlybirdOverlayMap.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F5FC0238CBF37004C3DB6 /* earlybirdOverlayMap.png */; };
 		B68F60C7238CBF38004C3DB6 /* softLight.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F5FC1238CBF37004C3DB6 /* softLight.png */; };
-		B68F60CD238CBF3C004C3DB6 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F60C9238CBF3C004C3DB6 /* PayViewController.m */; };
 		B68F60CE238CBF3C004C3DB6 /* ProManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F60CA238CBF3C004C3DB6 /* ProManager.m */; };
 		B68F6135238CBF49004C3DB6 /* H_2_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B68F60DE238CBF48004C3DB6 /* H_2_8.jpg */; };
 		B68F6136238CBF49004C3DB6 /* H_2_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B68F60DF238CBF48004C3DB6 /* H_2_9.jpg */; };
@@ -1185,10 +1184,8 @@
 		B68F5FBF238CBF37004C3DB6 /* sierraVignette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sierraVignette.png; sourceTree = "<group>"; };
 		B68F5FC0238CBF37004C3DB6 /* earlybirdOverlayMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlybirdOverlayMap.png; sourceTree = "<group>"; };
 		B68F5FC1238CBF37004C3DB6 /* softLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = softLight.png; sourceTree = "<group>"; };
-		B68F60C9238CBF3C004C3DB6 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		B68F60CA238CBF3C004C3DB6 /* ProManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProManager.m; sourceTree = "<group>"; };
 		B68F60CB238CBF3C004C3DB6 /* ProManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProManager.h; sourceTree = "<group>"; };
-		B68F60CC238CBF3C004C3DB6 /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
 		B68F60DE238CBF48004C3DB6 /* H_2_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = H_2_8.jpg; sourceTree = "<group>"; };
 		B68F60DF238CBF48004C3DB6 /* H_2_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = H_2_9.jpg; sourceTree = "<group>"; };
 		B68F60E0238CBF48004C3DB6 /* H_1_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = H_1_10.jpg; sourceTree = "<group>"; };
@@ -2319,8 +2316,6 @@
 		B68F60C8238CBF3C004C3DB6 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
-				B68F60CC238CBF3C004C3DB6 /* PayViewController.h */,
-				B68F60C9238CBF3C004C3DB6 /* PayViewController.m */,
 				B68F60CB238CBF3C004C3DB6 /* ProManager.h */,
 				B68F60CA238CBF3C004C3DB6 /* ProManager.m */,
 			);
@@ -3014,7 +3009,6 @@
 				B68F5FD1238CBF37004C3DB6 /* FWToasterFilter.m in Sources */,
 				B68F6010238CBF37004C3DB6 /* GPUImageSaturationFilter.m in Sources */,
 				B68F5FF8238CBF37004C3DB6 /* GPUImageiOSBlurFilter.m in Sources */,
-				B68F60CD238CBF3C004C3DB6 /* PayViewController.m in Sources */,
 				B68F6029238CBF37004C3DB6 /* GPUImageGaussianBlurFilter.m in Sources */,
 				B68F5FCF238CBF37004C3DB6 /* FWEarlybirdFilter.m in Sources */,
 				B67B7505238D20DE001B1F60 /* PCSelectView.m in Sources */,

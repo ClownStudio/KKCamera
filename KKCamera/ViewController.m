@@ -13,6 +13,7 @@
 #import "RJPhotoPicker.h"
 #import "SettingViewController.h"
 #import "EditViewController.h"
+#import "SubscriberViewController.h"
 
 @interface ViewController () <SKStoreProductViewControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -37,6 +38,8 @@
     CGRect logoTemp = _logoView.frame;
     logoTemp.origin.x = (self.contentView.bounds.size.width - logoTemp.size.width)/2;
     _logoView.frame = logoTemp;
+    _logoView.userInteractionEnabled = YES;
+    [_logoView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onIap:)]];
     
     _takePhotoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.contentView.bounds.size.height - 60, 60, 60)];
     [_takePhotoBtn setImage:[UIImage imageNamed:@"kk_takephoto"] forState:UIControlStateNormal];
@@ -48,10 +51,12 @@
     [_settingBtn addTarget:self action:@selector(onSetting:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_settingBtn];
     
-    _cameraRollBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - 100)/2, self.contentView.bounds.size.height - 60, 100, 60)];
+    _cameraRollBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - 100)/2 - 5, self.contentView.bounds.size.height - 60, 100, 60)];
     [_cameraRollBtn setTintColor:[UIColor whiteColor]];
     [_cameraRollBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
     [_cameraRollBtn setTitle:@"CAMERA  ROLL" forState:UIControlStateNormal];
+    [_cameraRollBtn setImage:[UIImage imageNamed:@"kk_cameraroll"] forState:UIControlStateNormal];
+    [_cameraRollBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, -210)];
     [_cameraRollBtn addTarget:self action:@selector(onCameraRoll:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_cameraRollBtn];
     
@@ -84,6 +89,12 @@
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [self.contentView addSubview:_collectionView];
+}
+
+-(IBAction)onIap:(id)sender{
+    SubscriberViewController *subViewController = [[SubscriberViewController alloc] init];
+    subViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self.navigationController pushViewController:subViewController animated:YES];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

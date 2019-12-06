@@ -35,9 +35,9 @@
         [self getProductInfo:productId];
         NSLog(@"Start purchase：%@", productId);
     } else {
-        if ([self.delegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)])
+        if ([self.managerDelegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)])
         {
-            [self.delegate didFailedBuyProduct:self.currentProductId forReason:NSLocalizedString(@"DisablePurchases", nil)];
+            [self.managerDelegate didFailedBuyProduct:self.currentProductId forReason:NSLocalizedString(@"DisablePurchases", nil)];
         }
     }
 }
@@ -55,8 +55,8 @@
     NSArray *myProduct = response.products;
     if (myProduct.count == 0) {
         NSLog(@"Failed purchase：%@", self.currentProductId);
-        if ([self.delegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)]) {
-            [self.delegate didFailedBuyProduct:self.currentProductId forReason:NSLocalizedString(@"UnablePurchases", nil)];
+        if ([self.managerDelegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)]) {
+            [self.managerDelegate didFailedBuyProduct:self.currentProductId forReason:NSLocalizedString(@"UnablePurchases", nil)];
         }
         return;
     }
@@ -67,8 +67,8 @@
 
 //查询失败后的回调
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
-    if ([self.delegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)]) {
-        [self.delegate didFailedBuyProduct:self.currentProductId forReason:NSLocalizedString(@"UnablePurchases", nil)];
+    if ([self.managerDelegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)]) {
+        [self.managerDelegate didFailedBuyProduct:self.currentProductId forReason:NSLocalizedString(@"UnablePurchases", nil)];
     }
 }
 
@@ -106,20 +106,20 @@
     NSLog(@"Purchase successful：%@", transaction.payment.productIdentifier);
     [ProManager addProductId:transaction.payment.productIdentifier];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
-    if ([self.delegate respondsToSelector:@selector(didSuccessBuyProduct:)]) {
-        [self.delegate didSuccessBuyProduct:self.currentProductId];
+    if ([self.managerDelegate respondsToSelector:@selector(didSuccessBuyProduct:)]) {
+        [self.managerDelegate didSuccessBuyProduct:self.currentProductId];
     }
 }
 
 - (void)failedTransaction:(SKPaymentTransaction *)transaction {
     NSLog(@"Failed purchase：%@", transaction.error);
     if(transaction.error.code != SKErrorPaymentCancelled) {
-        if ([self.delegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)]) {
-            [self.delegate didFailedBuyProduct:transaction.payment.productIdentifier forReason:NSLocalizedString(@"UnablePurchases", nil)];
+        if ([self.managerDelegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)]) {
+            [self.managerDelegate didFailedBuyProduct:transaction.payment.productIdentifier forReason:NSLocalizedString(@"UnablePurchases", nil)];
         }
     } else {
-        if ([self.delegate respondsToSelector:@selector(didCancelBuyProduct:)]) {
-            [self.delegate didCancelBuyProduct:self.currentProductId];
+        if ([self.managerDelegate respondsToSelector:@selector(didCancelBuyProduct:)]) {
+            [self.managerDelegate didCancelBuyProduct:self.currentProductId];
         }
     }
     
@@ -131,8 +131,8 @@
     NSLog(@"Restore：");
     [ProManager addProductId:transaction.payment.productIdentifier];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
-    if ([self.delegate respondsToSelector:@selector(didSuccessRestoreProducts:)]) {
-        [self.delegate didSuccessRestoreProducts:@[transaction.payment.productIdentifier]];
+    if ([self.managerDelegate respondsToSelector:@selector(didSuccessRestoreProducts:)]) {
+        [self.managerDelegate didSuccessRestoreProducts:@[transaction.payment.productIdentifier]];
     }
 }
 
@@ -147,8 +147,8 @@
         [ProManager addProductId:productID];
         NSLog(@"%@",productID);
     }
-    if ([self.delegate respondsToSelector:@selector(didSuccessRestoreProducts:)]) {
-        [self.delegate didSuccessRestoreProducts:purchasedProducts];
+    if ([self.managerDelegate respondsToSelector:@selector(didSuccessRestoreProducts:)]) {
+        [self.managerDelegate didSuccessRestoreProducts:purchasedProducts];
     }
 }
 
@@ -158,8 +158,8 @@
     if (error.localizedDescription) {
         ;
     }
-    if ([self.delegate respondsToSelector:@selector(didFailRestore:)]) {
-        [self.delegate didFailRestore:@"Restore failed"];
+    if ([self.managerDelegate respondsToSelector:@selector(didFailRestore:)]) {
+        [self.managerDelegate didFailRestore:@"Restore failed"];
     }
 }
 

@@ -15,7 +15,6 @@
 //内购测试id
 //帐号：test@appstudio.com
 //密码：Hw20171122
-//#define kProDeluxeId    @"vc.youme.tt1"
 
 @protocol ProManagerDelegate <NSObject>
 
@@ -24,13 +23,14 @@
 -(void)didFailRestore:(NSString*)reason;
 -(void)didFailedBuyProduct:(NSString*)productId forReason:(NSString*)reason;
 -(void)didCancelBuyProduct:(NSString*)productId;
+
 @end
 
 @interface ProManager : NSObject<SKPaymentTransactionObserver,SKProductsRequestDelegate>
 {
     
 }
-@property (nonatomic, assign) id <ProManagerDelegate> delegate;
+@property (nonatomic, assign) id <ProManagerDelegate> managerDelegate;
 @property (nonatomic, strong) NSString *currentProductId;
 - (void)buyProduct:(NSString*)productId;
 - (void)restorePro;

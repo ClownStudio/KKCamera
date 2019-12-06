@@ -12,7 +12,7 @@
 
 @interface PhotoEditFrameItemView : HCPhotoEditBaseItemView<PhotoEditBaseScrollViewDelegate>
 
-@property (nonatomic, strong) NSMutableArray     *datas;
+@property (nonatomic, strong) NSMutableArray *datas;
 @property (nonatomic, weak) PhotoEditBaseScrollView *scrollView;
 @property (nonatomic, weak) UIViewController *parentController;
 @property (nonatomic, strong) MBProgressHUD *hud;

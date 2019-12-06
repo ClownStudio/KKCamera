@@ -7,4 +7,5 @@ target 'KKCamera' do
 	pod 'MBProgressHUD', '~> 1.1.0'
   pod 'CGXPickerView', '~> 2.4.0'
   pod 'Masonry', '~> 1.1.0'
+  pod 'FDFullscreenPopGesture', '1.1'
 end
