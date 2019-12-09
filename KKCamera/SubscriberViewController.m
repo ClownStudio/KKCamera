@@ -7,6 +7,7 @@
 //
 
 #import "SubscriberViewController.h"
+#import "MBProgressHUD+RJHUD.h"
 
 @interface SubscriberViewController ()
 
@@ -87,6 +88,7 @@
 }
 
 -(IBAction)onConfirm:(id)sender{
+    [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
     [self.proManager buyProduct:_subId];
 }
 
