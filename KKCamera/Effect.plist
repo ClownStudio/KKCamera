@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<string>cut</string>
+		<key>icon</key>
+		<string>kk_cut</string>
+		<key>iconSelected</key>
+		<string>kk_cut_selected</string>
+		<key>content</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>FAVORITES</string>
+				<key>effects</key>
+				<array>
+					<dict>
+						<key>picture</key>
+						<string></string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string></string>
+						<key>icon</key>
+						<string></string>
+						<key>iconSelected</key>
+						<string></string>
+						<key>color</key>
+						<string></string>
+						<key>color_selected</key>
+						<string></string>
+						<key>fontColor</key>
+						<string></string>
+						<key>fontColorSelected</key>
+						<string></string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
