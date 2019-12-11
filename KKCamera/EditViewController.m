@@ -26,11 +26,17 @@
     UIView *_groupView;
     UIScrollView *_imageScrollView;
     UIImageView *_imageView;
+    UIScrollView *_itemScrollView;
+    NSArray *_effectContent;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fd_interactivePopDisabled = YES;
+    
+    NSString *effectFilePath = [[NSBundle mainBundle] pathForResource:@"Effect" ofType:@"plist"];
+    _effectContent = [NSArray arrayWithContentsOfFile:effectFilePath];
+    
     _backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     [_backBtn setImage:[UIImage imageNamed:@"kk_back"] forState:UIControlStateNormal];
     [_backBtn addTarget:self action:@selector(onBack:) forControlEvents:UIControlEventTouchUpInside];
@@ -69,6 +75,15 @@
         make.left.right.bottom.equalTo(self.contentView);
         make.size.mas_equalTo(itemHeight + gap * 2);
     }];
+    
+    _itemScrollView = [[UIScrollView alloc] init];
+    [_editorView addSubview:_itemScrollView];
+    [_itemScrollView setShowsVerticalScrollIndicator:NO];
+    [_itemScrollView setShowsHorizontalScrollIndicator:NO];
+    [_itemScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.equalTo(self->_editorView).offset(5);
+        make.left.right.equalTo(self->_editorView);
+    }];
 
     _groupView = [[UIView alloc] init];
     [self.contentView addSubview:_groupView];
@@ -98,18 +113,19 @@
     
     int position = 0;
     int tag = 1;
-    NSArray *items = @[@"cut",@"film",@"filter",@"light",@"edit",@"texture"];
-    for (NSString *name in items) {
+    for (NSDictionary *dict in _effectContent) {
+        NSString *name = [dict objectForKey:@"icon"];
         position += distance;
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, gap, itemHeight, itemHeight)];
-        [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"kk_%@",name]] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"kk_%@_selected",name]] forState:UIControlStateSelected];
+        [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",name]] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",name]] forState:UIControlStateSelected];
         button.tag = tag;
         [button addTarget:self action:@selector(onSelectEditorItem:) forControlEvents:UIControlEventTouchUpInside];
-        [_editorView addSubview:button];
+        [_itemScrollView addSubview:button];
         tag++;
         position += itemHeight;
     }
+    [_itemScrollView setContentSize:CGSizeMake(position + distance, 0)];
     [self selectEditorItemWithIndex:0];
 }
 
@@ -156,7 +172,10 @@
 }
 
 - (void)selectEditorItemWithIndex:(int)index{
-    for (UIButton *button in _editorView.subviews) {
+    for (UIButton *button in _itemScrollView.subviews) {
+        if ([button isMemberOfClass:[UIButton class]] == NO) {
+            continue;
+        }
         if (index + 1 == button.tag) {
             [button setSelected:YES];
         }else{
