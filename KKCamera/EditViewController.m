@@ -23,11 +23,15 @@
     UIButton *_nextBtn;
     UIButton *_resetBtn;
     UIView *_editorView;
-    UIView *_groupView;
     UIScrollView *_imageScrollView;
     UIImageView *_imageView;
     UIScrollView *_itemScrollView;
     NSArray *_effectContent;
+    UIView *_groupView;
+    UIView *_toolView;
+    UIScrollView *_mainScrollView;
+    UIScrollView *_middleScrollView;
+    NSArray *_selectedMiddleContent;
 }
 
 - (void)viewDidLoad {
@@ -85,12 +89,20 @@
         make.left.right.equalTo(self->_editorView);
     }];
 
+    _middleScrollView = [[UIScrollView alloc] init];
+    [self.contentView addSubview:_middleScrollView];
+    [_middleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.contentView);
+        make.bottom.equalTo(_editorView.mas_top);
+        make.size.mas_equalTo(100);
+    }];
+    
     _groupView = [[UIView alloc] init];
     [self.contentView addSubview:_groupView];
     [_groupView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);
-        make.bottom.equalTo(_editorView.mas_top);
-        make.size.mas_equalTo(100);
+        make.bottom.equalTo(_middleScrollView.mas_top);
+        make.size.mas_equalTo(90);
     }];
     
     _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 100) - _settingBtn.bounds.size.height)];
@@ -110,6 +122,8 @@
     _imageView.userInteractionEnabled = YES;
     _imageView.clipsToBounds = YES;
     [_imageView setImage:_oriImage];
+    
+    [self.contentView insertSubview:_groupView aboveSubview:_imageScrollView];
     
     int position = 0;
     int tag = 1;
@@ -180,6 +194,21 @@
             [button setSelected:YES];
         }else{
             [button setSelected:NO];
+        }
+    }
+    [self refreshMainScrollViewWithIndex:index];
+}
+
+-(void)refreshMainScrollViewWithIndex:(int)index{
+    NSString *type = [[_effectContent objectAtIndex:index] objectForKey:@"type"];
+    if ([@"cut" isEqualToString:type]) {
+        
+    }else if ([@"edit" isEqualToString:type]){
+        
+    }else{
+        NSArray *content = [[_effectContent objectAtIndex:index] objectForKey:@"content"];
+        for (NSDictionary *dict in content) {
+            NSString *title = [dict objectForKey:@"title"];
         }
     }
 }
