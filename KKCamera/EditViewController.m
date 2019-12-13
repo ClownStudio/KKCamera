@@ -29,9 +29,10 @@
     NSArray *_effectContent;
     UIView *_groupView;
     UIView *_toolView;
-    UIScrollView *_mainScrollView;
+    UIScrollView *_topScrollView;
     UIScrollView *_middleScrollView;
     NSArray *_selectedMiddleContent;
+    NSArray *_selectedContent;
 }
 
 - (void)viewDidLoad {
@@ -98,11 +99,20 @@
     }];
     
     _groupView = [[UIView alloc] init];
+    [_groupView setBackgroundColor:[UIColor blackColor]];
     [self.contentView addSubview:_groupView];
     [_groupView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);
         make.bottom.equalTo(_middleScrollView.mas_top);
-        make.size.mas_equalTo(90);
+        make.size.mas_equalTo(70);
+    }];
+    
+    _topScrollView = [[UIScrollView alloc]init];
+    [self.contentView addSubview:_topScrollView];
+    [_topScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.contentView);
+        make.bottom.equalTo(_groupView.mas_top);
+        make.size.mas_equalTo(30);
     }];
     
     _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 100) - _settingBtn.bounds.size.height)];
@@ -124,6 +134,7 @@
     [_imageView setImage:_oriImage];
     
     [self.contentView insertSubview:_groupView aboveSubview:_imageScrollView];
+    [self.contentView insertSubview:_topScrollView aboveSubview:_imageScrollView];
     
     int position = 0;
     int tag = 1;
@@ -200,17 +211,55 @@
 }
 
 -(void)refreshMainScrollViewWithIndex:(int)index{
+    for (UIView * view in _topScrollView.subviews) {
+        [view removeFromSuperview];
+    }
     NSString *type = [[_effectContent objectAtIndex:index] objectForKey:@"type"];
     if ([@"cut" isEqualToString:type]) {
-        
+        [_topScrollView setHidden:YES];
+        [_groupView setHidden:YES];
     }else if ([@"edit" isEqualToString:type]){
-        
+        [_topScrollView setHidden:YES];
+        [_groupView setHidden:NO];
     }else{
-        NSArray *content = [[_effectContent objectAtIndex:index] objectForKey:@"content"];
-        for (NSDictionary *dict in content) {
+        [_topScrollView setHidden:NO];
+        [_groupView setHidden:NO];
+        _selectedContent = [[_effectContent objectAtIndex:index] objectForKey:@"content"];
+        CGFloat position = 0;
+        int tag = 1;
+        for (NSDictionary *dict in _selectedContent) {
             NSString *title = [dict objectForKey:@"title"];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, 0, 80, _topScrollView.bounds.size.height)];
+            [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.7]];
+            [button setTitle:title forState:UIControlStateNormal];
+            [button.titleLabel setFont:[UIFont systemFontOfSize:10]];
+            [button addTarget:self action:@selector(onSelectTop:) forControlEvents:UIControlEventTouchUpInside];
+            button.tag = tag;
+            [_topScrollView addSubview:button];
+            position += 80;
+            tag ++;
+        }
+        [_topScrollView setContentSize:CGSizeMake(position, 0)];
+        [self selectTopScrollViewWithIndex:0];
+    }
+}
+
+-(IBAction)onSelectTop:(UIButton *)sender{
+    [self selectTopScrollViewWithIndex:(int)sender.tag - 1];
+}
+
+-(void)selectTopScrollViewWithIndex:(int)index{
+    for (UIButton *button in _topScrollView.subviews) {
+        if ([button isMemberOfClass:[UIButton class]]) {
+            if (button.tag == index + 1) {
+                [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:1]];
+            }else{
+                [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.5]];
+            }
         }
     }
+    NSArray *middleContent = [[_selectedContent objectAtIndex:index] objectForKey:@"effects"];
+    
 }
 
 -(void)viewSafeAreaInsetsDidChange{
