@@ -10,6 +10,7 @@
 #import "SettingViewController.h"
 #import <Masonry.h>
 #import "SubscriberViewController.h"
+#import "EffectSliderView.h"
 
 @interface EditViewController () <UIScrollViewDelegate>
 
@@ -101,6 +102,7 @@
     _groupView = [[UIView alloc] init];
     [_groupView setBackgroundColor:[UIColor blackColor]];
     [self.contentView addSubview:_groupView];
+    [_groupView setUserInteractionEnabled:YES];
     [_groupView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);
         make.bottom.equalTo(_middleScrollView.mas_top);
@@ -219,9 +221,11 @@
         [_topScrollView setHidden:YES];
         [_groupView setHidden:YES];
     }else if ([@"edit" isEqualToString:type]){
+        [self refreshGroupViewWithRandom:NO];
         [_topScrollView setHidden:YES];
         [_groupView setHidden:NO];
     }else{
+        [self refreshGroupViewWithRandom:YES];
         [_topScrollView setHidden:NO];
         [_groupView setHidden:NO];
         _selectedContent = [[_effectContent objectAtIndex:index] objectForKey:@"content"];
@@ -242,6 +246,23 @@
         [_topScrollView setContentSize:CGSizeMake(position, 0)];
         [self selectTopScrollViewWithIndex:0];
     }
+}
+
+-(void)refreshGroupViewWithRandom:(BOOL)isRandom{
+    for (UIView * view in _groupView.subviews) {
+        [view removeFromSuperview];
+    }
+    if(isRandom){
+        
+    }else{
+        UIView *_sliderView = [self getSliderView];
+        [_groupView addSubview:_sliderView];
+    }
+}
+
+-(UIView *)getSliderView{
+    EffectSliderView *view = [[EffectSliderView alloc] initWithFrame:CGRectMake((_groupView.bounds.size.width - 230)/2, (_groupView.bounds.size.height - 35)/2, 230, 35)];
+    return view;
 }
 
 -(IBAction)onSelectTop:(UIButton *)sender{
