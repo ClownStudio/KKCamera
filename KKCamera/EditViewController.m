@@ -34,6 +34,7 @@
     UIScrollView *_middleScrollView;
     NSArray *_selectedMiddleContent;
     NSArray *_selectedContent;
+    NSString *_selectedType;
 }
 
 - (void)viewDidLoad {
@@ -216,11 +217,12 @@
     for (UIView * view in _topScrollView.subviews) {
         [view removeFromSuperview];
     }
-    NSString *type = [[_effectContent objectAtIndex:index] objectForKey:@"type"];
-    if ([@"cut" isEqualToString:type]) {
+    _selectedType = [[_effectContent objectAtIndex:index] objectForKey:@"type"];
+    _selectedContent = [[_effectContent objectAtIndex:index] objectForKey:_selectedType];
+    if ([@"cut" isEqualToString:_selectedType]) {
         [_topScrollView setHidden:YES];
         [_groupView setHidden:YES];
-    }else if ([@"edit" isEqualToString:type]){
+    }else if ([@"edit" isEqualToString:_selectedType]){
         [self refreshGroupViewWithRandom:NO];
         [_topScrollView setHidden:YES];
         [_groupView setHidden:NO];
@@ -228,7 +230,6 @@
         [self refreshGroupViewWithRandom:YES];
         [_topScrollView setHidden:NO];
         [_groupView setHidden:NO];
-        _selectedContent = [[_effectContent objectAtIndex:index] objectForKey:@"content"];
         CGFloat position = 0;
         int tag = 1;
         for (NSDictionary *dict in _selectedContent) {
