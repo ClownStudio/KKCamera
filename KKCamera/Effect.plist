@@ -3,18 +3,179 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>content</key>
+		<array>
+			<dict>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+			<dict>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+			<dict>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+			<dict>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+			<dict>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+			<dict>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+		</array>
 		<key>type</key>
 		<string>cut</string>
 		<key>icon</key>
 		<string>kk_cut</string>
+	</dict>
+	<dict>
 		<key>content</key>
 		<array>
 			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -39,6 +200,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -63,6 +226,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -87,6 +252,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -111,6 +278,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -135,6 +304,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -159,6 +330,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -183,6 +356,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -207,13 +382,230 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
+				<key>title</key>
+				<string>FAVORITES</string>
 			</dict>
 			<dict>
+				<key>effects</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<true/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>30</string>
+						<key>picture</key>
+						<string>item2</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.1</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LEAKAGE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>255,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,255,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,0,1</string>
+						<key>fontColorSelected</key>
+						<string>0,0,0,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item3</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.2</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<true/>
+						<key>name</key>
+						<string>MOJAVE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item4</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.3</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>ASHBURY</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.4</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.5</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.6</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.7</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+				</array>
 				<key>title</key>
 				<string>ORIGINAL</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -238,6 +630,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -262,6 +656,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -286,6 +682,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -310,6 +708,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -334,6 +734,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -358,6 +760,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -382,6 +786,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -406,13 +812,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>LEGACY</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -437,6 +845,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -461,6 +871,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -485,6 +897,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -509,6 +923,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -533,6 +949,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -557,6 +975,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -581,6 +1001,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -605,13 +1027,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>COLLECTION</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -636,6 +1060,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -660,6 +1086,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -684,6 +1112,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -708,6 +1138,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -732,6 +1164,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -756,6 +1190,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -780,6 +1216,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -804,212 +1242,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>FUSION</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1034,6 +1275,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -1058,6 +1301,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -1082,6 +1327,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -1106,6 +1353,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1130,6 +1379,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1154,6 +1405,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1178,6 +1431,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1202,22 +1457,239 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
+				<key>title</key>
+				<string>FAVORITES</string>
 			</dict>
 		</array>
-	</dict>
-	<dict>
 		<key>type</key>
 		<string>effect</string>
 		<key>icon</key>
 		<string>kk_film</string>
+	</dict>
+	<dict>
 		<key>content</key>
 		<array>
 			<dict>
+				<key>effects</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<true/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>30</string>
+						<key>picture</key>
+						<string>item2</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.1</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LEAKAGE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>255,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,255,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,0,1</string>
+						<key>fontColorSelected</key>
+						<string>0,0,0,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item3</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.2</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<true/>
+						<key>name</key>
+						<string>MOJAVE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item4</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.3</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>ASHBURY</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.4</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.5</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.6</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.7</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+				</array>
 				<key>title</key>
 				<string>FAVORITES</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1242,6 +1714,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -1266,6 +1740,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -1290,6 +1766,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -1314,6 +1792,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1338,6 +1818,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1362,6 +1844,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1386,6 +1870,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1410,212 +1896,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>ORIGINAL</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>LEGACY</string>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1640,6 +1929,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -1664,6 +1955,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -1688,6 +1981,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -1712,6 +2007,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1736,6 +2033,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1760,6 +2059,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1784,6 +2085,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1808,22 +2111,669 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
+				<key>title</key>
+				<string>LEGACY</string>
+			</dict>
+			<dict>
+				<key>effects</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<true/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>30</string>
+						<key>picture</key>
+						<string>item2</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.1</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LEAKAGE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>255,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,255,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,0,1</string>
+						<key>fontColorSelected</key>
+						<string>0,0,0,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item3</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.2</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<true/>
+						<key>name</key>
+						<string>MOJAVE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item4</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.3</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>ASHBURY</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.4</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.5</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.6</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.7</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>COLLECTION</string>
+			</dict>
+			<dict>
+				<key>effects</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<true/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>30</string>
+						<key>picture</key>
+						<string>item2</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.1</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LEAKAGE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>255,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,255,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,0,1</string>
+						<key>fontColorSelected</key>
+						<string>0,0,0,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item3</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.2</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<true/>
+						<key>name</key>
+						<string>MOJAVE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item4</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.3</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>ASHBURY</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.4</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.5</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.6</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.7</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>FUSION</string>
+			</dict>
+			<dict>
+				<key>effects</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<true/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>30</string>
+						<key>picture</key>
+						<string>item2</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.1</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LEAKAGE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>255,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,255,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,0,1</string>
+						<key>fontColorSelected</key>
+						<string>0,0,0,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item3</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.2</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<true/>
+						<key>name</key>
+						<string>MOJAVE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item4</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.3</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>ASHBURY</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.4</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.5</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.6</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.7</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>FAVORITES</string>
 			</dict>
 		</array>
-	</dict>
-	<dict>
 		<key>type</key>
 		<string>effect</string>
 		<key>icon</key>
 		<string>kk_filter</string>
+	</dict>
+	<dict>
 		<key>content</key>
 		<array>
 			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1848,6 +2798,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -1872,6 +2824,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -1896,6 +2850,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -1920,6 +2876,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1944,6 +2902,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1968,6 +2928,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -1992,6 +2954,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2016,13 +2980,230 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
+				<key>title</key>
+				<string>FAVORITES</string>
 			</dict>
 			<dict>
+				<key>effects</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<true/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>30</string>
+						<key>picture</key>
+						<string>item2</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.1</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LEAKAGE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>255,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,255,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,0,1</string>
+						<key>fontColorSelected</key>
+						<string>0,0,0,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item3</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.2</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<true/>
+						<key>name</key>
+						<string>MOJAVE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item4</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.3</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>ASHBURY</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.4</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.5</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.6</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.7</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+				</array>
 				<key>title</key>
 				<string>ORIGINAL</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2047,6 +3228,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -2071,6 +3254,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -2095,6 +3280,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -2119,6 +3306,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2143,6 +3332,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2167,6 +3358,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2191,6 +3384,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2215,13 +3410,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>LEGACY</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2246,6 +3443,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -2270,6 +3469,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -2294,6 +3495,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -2318,6 +3521,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2342,6 +3547,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2366,6 +3573,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2390,6 +3599,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2414,13 +3625,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>COLLECTION</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2445,6 +3658,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -2469,6 +3684,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -2493,6 +3710,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -2517,6 +3736,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2541,6 +3762,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2565,6 +3788,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2589,6 +3814,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2613,212 +3840,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>FUSION</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2843,6 +3873,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -2867,6 +3899,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -2891,6 +3925,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -2915,6 +3951,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2939,6 +3977,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2963,6 +4003,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -2987,6 +4029,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -3011,1225 +4055,201 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
+				<key>title</key>
+				<string>FAVORITES</string>
 			</dict>
 		</array>
-	</dict>
-	<dict>
 		<key>type</key>
 		<string>effect</string>
 		<key>icon</key>
 		<string>kk_light</string>
+	</dict>
+	<dict>
 		<key>content</key>
 		<array>
 			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
+				<key>value</key>
+				<string></string>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>ORIGINAL</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
+				<key>value</key>
+				<string></string>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>LEGACY</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
+				<key>value</key>
+				<string></string>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>COLLECTION</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
+				<key>value</key>
+				<string></string>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>FUSION</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
+				<key>value</key>
+				<string></string>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
+				<key>value</key>
+				<string></string>
+				<key>effect</key>
+				<string></string>
+				<key>picture</key>
+				<string>item1</string>
+				<key>productCode</key>
+				<string></string>
+				<key>isPurchase</key>
+				<true/>
+				<key>isAdAward</key>
+				<false/>
+				<key>name</key>
+				<string>LUMEN</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
 			</dict>
 		</array>
-	</dict>
-	<dict>
 		<key>type</key>
 		<string>edit</string>
 		<key>icon</key>
 		<string>kk_edit</string>
+	</dict>
+	<dict>
 		<key>content</key>
 		<array>
 			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4254,6 +4274,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -4278,6 +4300,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -4302,6 +4326,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -4326,6 +4352,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4350,6 +4378,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4374,6 +4404,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4398,6 +4430,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4422,13 +4456,230 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
+				<key>title</key>
+				<string>FAVORITES</string>
 			</dict>
 			<dict>
+				<key>effects</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<true/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>30</string>
+						<key>picture</key>
+						<string>item2</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.1</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LEAKAGE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>255,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,255,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,0,1</string>
+						<key>fontColorSelected</key>
+						<string>0,0,0,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item3</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.2</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<true/>
+						<key>name</key>
+						<string>MOJAVE</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item4</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.3</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>ASHBURY</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.4</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.5</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.6</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string>com.appstudio.X2.7</string>
+						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
+						<false/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>0,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,0,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+				</array>
 				<key>title</key>
 				<string>ORIGINAL</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4453,6 +4704,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -4477,6 +4730,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -4501,6 +4756,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -4525,6 +4782,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4549,6 +4808,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4573,6 +4834,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4597,6 +4860,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4621,13 +4886,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>LEGACY</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4652,6 +4919,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -4676,6 +4945,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -4700,6 +4971,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -4724,6 +4997,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4748,6 +5023,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4772,6 +5049,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4796,6 +5075,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4820,13 +5101,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>COLLECTION</string>
+			</dict>
+			<dict>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4851,6 +5134,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -4875,6 +5160,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -4899,6 +5186,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -4923,6 +5212,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4947,6 +5238,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4971,6 +5264,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -4995,6 +5290,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -5019,212 +5316,15 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
 				<key>title</key>
 				<string>FUSION</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
 			</dict>
 			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -5249,6 +5349,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>30</string>
 						<key>picture</key>
 						<string>item2</string>
 						<key>productCode</key>
@@ -5273,6 +5375,8 @@
 						<string>0,0,0,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item3</string>
 						<key>productCode</key>
@@ -5297,6 +5401,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item4</string>
 						<key>productCode</key>
@@ -5321,6 +5427,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -5345,6 +5453,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -5369,6 +5479,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -5393,6 +5505,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>value</key>
+						<string>50</string>
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
@@ -5417,1419 +5531,14 @@
 						<string>255,255,255,1</string>
 					</dict>
 				</array>
+				<key>title</key>
+				<string>FAVORITES</string>
 			</dict>
 		</array>
-	</dict>
-	<dict>
 		<key>type</key>
 		<string>effect</string>
 		<key>icon</key>
 		<string>kk_texture</string>
-		<key>content</key>
-		<array>
-			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>ORIGINAL</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>LEGACY</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>COLLECTION</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>FUSION</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>type</key>
-		<string>cut</string>
-		<key>icon</key>
-		<string>kk_cut</string>
-		<key>content</key>
-		<array>
-			<dict>
-				<key>title</key>
-				<string>FAVORITES</string>
-				<key>effects</key>
-				<array>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item2</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.1</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LEAKAGE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,0,1</string>
-						<key>fontColorSelected</key>
-						<string>0,0,0,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item3</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.2</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<true/>
-						<key>name</key>
-						<string>MOJAVE</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item4</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.3</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>ASHBURY</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.4</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.5</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.6</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string>com.appstudio.X2.7</string>
-						<key>isPurchase</key>
-						<false/>
-						<key>isAdAward</key>
-						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>0,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,0,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-				</array>
-			</dict>
-		</array>
 	</dict>
 </array>
 </plist>
