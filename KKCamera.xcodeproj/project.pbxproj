@@ -135,6 +135,14 @@
 		B67B7506238D20DE001B1F60 /* PCFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B7491238D20DD001B1F60 /* PCFilterView.m */; };
 		B67B7507238D20DE001B1F60 /* CollageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67B7493238D20DD001B1F60 /* CollageAssets.xcassets */; };
 		B67B7508238D20DE001B1F60 /* CollageMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67B7497238D20DD001B1F60 /* CollageMain.storyboard */; };
+		B68B5D8B23A9DF14007B7787 /* B_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8423A9DF14007B7787 /* B_1_1.png */; };
+		B68B5D8C23A9DF14007B7787 /* B_1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8523A9DF14007B7787 /* B_1_3.png */; };
+		B68B5D8D23A9DF14007B7787 /* B_1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8623A9DF14007B7787 /* B_1_2.png */; };
+		B68B5D8E23A9DF14007B7787 /* B_1_6.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8723A9DF14007B7787 /* B_1_6.png */; };
+		B68B5D8F23A9DF14007B7787 /* B_1_7.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8823A9DF14007B7787 /* B_1_7.png */; };
+		B68B5D9023A9DF14007B7787 /* B_1_5.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8923A9DF14007B7787 /* B_1_5.png */; };
+		B68B5D9123A9DF14007B7787 /* B_1_4.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8A23A9DF14007B7787 /* B_1_4.png */; };
+		B68B5D9423A9E213007B7787 /* EffectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B68B5D9323A9E213007B7787 /* EffectItemView.m */; };
 		B68F5D69238CB331004C3DB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F5D68238CB331004C3DB6 /* AppDelegate.m */; };
 		B68F5D6F238CB331004C3DB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F5D6E238CB331004C3DB6 /* ViewController.m */; };
 		B68F5D72238CB331004C3DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68F5D70238CB331004C3DB6 /* Main.storyboard */; };
@@ -699,6 +707,15 @@
 		B67B7496238D20DD001B1F60 /* CollageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollageViewController.h; sourceTree = "<group>"; };
 		B67B7497238D20DD001B1F60 /* CollageMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollageMain.storyboard; sourceTree = "<group>"; };
 		B67B7498238D20DD001B1F60 /* DDPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPurchase.h; sourceTree = "<group>"; };
+		B68B5D8423A9DF14007B7787 /* B_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_1.png; sourceTree = "<group>"; };
+		B68B5D8523A9DF14007B7787 /* B_1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_3.png; sourceTree = "<group>"; };
+		B68B5D8623A9DF14007B7787 /* B_1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_2.png; sourceTree = "<group>"; };
+		B68B5D8723A9DF14007B7787 /* B_1_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_6.png; sourceTree = "<group>"; };
+		B68B5D8823A9DF14007B7787 /* B_1_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_7.png; sourceTree = "<group>"; };
+		B68B5D8923A9DF14007B7787 /* B_1_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_5.png; sourceTree = "<group>"; };
+		B68B5D8A23A9DF14007B7787 /* B_1_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_4.png; sourceTree = "<group>"; };
+		B68B5D9223A9E213007B7787 /* EffectItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectItemView.h; sourceTree = "<group>"; };
+		B68B5D9323A9E213007B7787 /* EffectItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectItemView.m; sourceTree = "<group>"; };
 		B68F5D64238CB331004C3DB6 /* KKCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68F5D67238CB331004C3DB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B68F5D68238CB331004C3DB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1694,6 +1711,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B68B5D8323A9DF14007B7787 /* Bonder */ = {
+			isa = PBXGroup;
+			children = (
+				B68B5D8423A9DF14007B7787 /* B_1_1.png */,
+				B68B5D8523A9DF14007B7787 /* B_1_3.png */,
+				B68B5D8623A9DF14007B7787 /* B_1_2.png */,
+				B68B5D8723A9DF14007B7787 /* B_1_6.png */,
+				B68B5D8823A9DF14007B7787 /* B_1_7.png */,
+				B68B5D8923A9DF14007B7787 /* B_1_5.png */,
+				B68B5D8A23A9DF14007B7787 /* B_1_4.png */,
+			);
+			path = Bonder;
+			sourceTree = "<group>";
+		};
 		B68F5D5B238CB330004C3DB6 = {
 			isa = PBXGroup;
 			children = (
@@ -1739,6 +1770,8 @@
 				B63F19EB23A777BE00C127FB /* EffectSliderView.m */,
 				B63F19ED23A7811F00C127FB /* CustomSlider.h */,
 				B63F19EE23A7811F00C127FB /* CustomSlider.m */,
+				B68B5D9223A9E213007B7787 /* EffectItemView.h */,
+				B68B5D9323A9E213007B7787 /* EffectItemView.m */,
 				B68F6188238D0837004C3DB6 /* RJPhotoPicker */,
 				B68F5DD2238CBF36004C3DB6 /* HCPhotoEdit */,
 				B68F60C8238CBF3C004C3DB6 /* Payment */,
@@ -2343,6 +2376,7 @@
 			isa = PBXGroup;
 			children = (
 				B6EF3A282398FDEF00EE68A0 /* Asset */,
+				B68B5D8323A9DF14007B7787 /* Bonder */,
 				B68F60DD238CBF48004C3DB6 /* Halo */,
 				B68F60F2238CBF48004C3DB6 /* Lut */,
 				B68F6111238CBF48004C3DB6 /* Font */,
@@ -2651,6 +2685,7 @@
 				B68F6153238CBF49004C3DB6 /* L_1_2.png in Resources */,
 				B60E14E62390159000DF057F /* InfoPlist.strings in Resources */,
 				B67B74D4238D20DE001B1F60 /* style4_4.plist in Resources */,
+				B68B5D8B23A9DF14007B7787 /* B_1_1.png in Resources */,
 				B68F609F238CBF38004C3DB6 /* sutroMetal.png in Resources */,
 				B68F615D238CBF49004C3DB6 /* L_1_5.png in Resources */,
 				B68F60AA238CBF38004C3DB6 /* valenciaMap.png in Resources */,
@@ -2696,10 +2731,12 @@
 				B67B74AA238D20DE001B1F60 /* Filter 13.acv in Resources */,
 				B68F6137238CBF49004C3DB6 /* H_1_10.jpg in Resources */,
 				B68F60BA238CBF38004C3DB6 /* toasterColorShift.png in Resources */,
+				B68B5D8E23A9DF14007B7787 /* B_1_6.png in Resources */,
 				B68F6165238CBF49004C3DB6 /* L_2_8.png in Resources */,
 				B68F6187238CD054004C3DB6 /* HomePage.plist in Resources */,
 				B68F60C1238CBF38004C3DB6 /* brannanContrast.png in Resources */,
 				B68F6159238CBF49004C3DB6 /* L_2_10.png in Resources */,
+				B68B5D9123A9DF14007B7787 /* B_1_4.png in Resources */,
 				B68F6169238CBF49004C3DB6 /* Segment7Standard.otf in Resources */,
 				B67B74B7238D20DE001B1F60 /* A_Marks_1.png in Resources */,
 				B68F6142238CBF49004C3DB6 /* H_2_1.jpg in Resources */,
@@ -2707,10 +2744,12 @@
 				B68F60A3238CBF38004C3DB6 /* lomoMap.png in Resources */,
 				B68F61BB238D0837004C3DB6 /* RJAlbumCell.xib in Resources */,
 				B68F6172238CBF49004C3DB6 /* Digital.otf in Resources */,
+				B68B5D9023A9DF14007B7787 /* B_1_5.png in Resources */,
 				B68F616A238CBF49004C3DB6 /* CapsuleXProMediumUC.otf in Resources */,
 				B67B74CB238D20DE001B1F60 /* style3_8.plist in Resources */,
 				B68F614B238CBF49004C3DB6 /* L_2_2.png in Resources */,
 				B67B74BA238D20DE001B1F60 /* A_Marks_8.png in Resources */,
+				B68B5D8D23A9DF14007B7787 /* B_1_2.png in Resources */,
 				B67B74AE238D20DE001B1F60 /* Filter 10.acv in Resources */,
 				B67B74C3238D20DE001B1F60 /* style2_3.plist in Resources */,
 				B67B74A4238D20DE001B1F60 /* Filter 7.acv in Resources */,
@@ -2772,6 +2811,7 @@
 				B68F60BC238CBF38004C3DB6 /* hudsonMap.png in Resources */,
 				B68F60B4238CBF38004C3DB6 /* hudsonBackground.png in Resources */,
 				B68F609D238CBF38004C3DB6 /* CHPhotoEditResource.bundle in Resources */,
+				B68B5D8C23A9DF14007B7787 /* B_1_3.png in Resources */,
 				B67B74C2238D20DE001B1F60 /* style3_7.plist in Resources */,
 				B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */,
 				B67B74B1238D20DE001B1F60 /* A_Marks_5.png in Resources */,
@@ -2781,6 +2821,7 @@
 				B68F6177238CBF49004C3DB6 /* F_1_3.acv in Resources */,
 				B68F6143238CBF49004C3DB6 /* H_2_2.jpg in Resources */,
 				B68F6162238CBF49004C3DB6 /* L_3_8.png in Resources */,
+				B68B5D8F23A9DF14007B7787 /* B_1_7.png in Resources */,
 				B6EF3A492398FDEF00EE68A0 /* effect1.png in Resources */,
 				B67B749C238D20DE001B1F60 /* Filter 8.acv in Resources */,
 				B68F6148238CBF49004C3DB6 /* H_2_5.jpg in Resources */,
@@ -3098,6 +3139,7 @@
 				B68F6048238CBF37004C3DB6 /* GPUImageTwoInputCrossTextureSamplingFilter.m in Sources */,
 				B68F6043238CBF37004C3DB6 /* GPUImageDirectionalNonMaximumSuppressionFilter.m in Sources */,
 				B68F5FC4238CBF37004C3DB6 /* FWSierraFilter.m in Sources */,
+				B68B5D9423A9E213007B7787 /* EffectItemView.m in Sources */,
 				B68F6027238CBF37004C3DB6 /* GPUImageSaturationBlendFilter.m in Sources */,
 				B68F5FDB238CBF37004C3DB6 /* GPUImageUnsharpMaskFilter.m in Sources */,
 				B68F6026238CBF37004C3DB6 /* GPUImageTiltShiftFilter.m in Sources */,

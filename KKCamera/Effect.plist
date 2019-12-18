@@ -174,10 +174,12 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>filter</key>
+						<string>F_1_1.acv</string>
 						<key>bonder</key>
-						<string></string>
+						<string>B_1_1.png</string>
 						<key>texture</key>
-						<string></string>
+						<string>H_1_1.jpg</string>
 						<key>FontProperty</key>
 						<dict>
 							<key>position</key>
@@ -236,10 +238,12 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>filter</key>
+						<string>F_1_2.acv</string>
 						<key>bonder</key>
-						<string></string>
+						<string>B_1_2.png</string>
 						<key>texture</key>
-						<string></string>
+						<string>H_1_2.jpg</string>
 						<key>FontProperty</key>
 						<dict>
 							<key>position</key>
@@ -307,6 +311,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>filter</key>
+						<string>F_1_1.acv</string>
 						<key>bonder</key>
 						<string></string>
 						<key>texture</key>
@@ -369,6 +375,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>filter</key>
+						<string>F_1_1.acv</string>
 						<key>bonder</key>
 						<string></string>
 						<key>texture</key>
@@ -440,6 +448,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>filter</key>
+						<string>F_1_5.acv</string>
 						<key>bonder</key>
 						<string></string>
 						<key>texture</key>
@@ -502,6 +512,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>filter</key>
+						<string>F_1_1.acv</string>
 						<key>bonder</key>
 						<string></string>
 						<key>texture</key>
@@ -750,6 +762,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>filter</key>
+						<string>F_1_1.acv</string>
 						<key>bonder</key>
 						<string></string>
 						<key>texture</key>
@@ -812,6 +826,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>filter</key>
+						<string>F_1_1.acv</string>
 						<key>bonder</key>
 						<string></string>
 						<key>texture</key>

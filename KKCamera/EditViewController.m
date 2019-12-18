@@ -11,6 +11,7 @@
 #import <Masonry.h>
 #import "SubscriberViewController.h"
 #import "EffectSliderView.h"
+#import "EffectItemView.h"
 
 @interface EditViewController () <UIScrollViewDelegate>
 
@@ -281,7 +282,19 @@
         }
     }
     NSArray *middleContent = [[_selectedContent objectAtIndex:index] objectForKey:@"effects"];
-    
+    int position = 0;
+    int distance = 5;
+    int tag = 1;
+    for (NSDictionary *dict in middleContent) {
+        position += distance;
+        EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 5, 50, _middleScrollView.bounds.size.height - 10)];
+        button.tag = tag;
+        [button setItemWithData:dict];
+        [_middleScrollView addSubview:button];
+        tag++;
+        position += 50;
+    }
+    [_middleScrollView setContentSize:CGSizeMake(position, 0)];
 }
 
 -(void)viewSafeAreaInsetsDidChange{
