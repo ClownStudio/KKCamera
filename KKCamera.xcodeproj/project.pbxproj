@@ -14,6 +14,8 @@
 		B6019811238FAF93006ADFA7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6019810238FAF93006ADFA7 /* SettingViewController.m */; };
 		B609D7812397425600D2877D /* SubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B609D7802397425600D2877D /* SubscriberViewController.m */; };
 		B60E14E62390159000DF057F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B60E14E82390159000DF057F /* InfoPlist.strings */; };
+		B61C4EEB23AB5A490086995E /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = B61C4EEA23AB5A490086995E /* UIImage+Rotate.m */; };
+		B61C4EEE23AB5B1B0086995E /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B61C4EED23AB5B1A0086995E /* FBGlowLabel.m */; };
 		B63F19EC23A777BE00C127FB /* EffectSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B63F19EB23A777BE00C127FB /* EffectSliderView.m */; };
 		B63F19EF23A7811F00C127FB /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B63F19EE23A7811F00C127FB /* CustomSlider.m */; };
 		B6434E45239F833000778532 /* Effect.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6434E44239F833000778532 /* Effect.plist */; };
@@ -135,6 +137,14 @@
 		B67B7506238D20DE001B1F60 /* PCFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B7491238D20DD001B1F60 /* PCFilterView.m */; };
 		B67B7507238D20DE001B1F60 /* CollageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67B7493238D20DD001B1F60 /* CollageAssets.xcassets */; };
 		B67B7508238D20DE001B1F60 /* CollageMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67B7497238D20DD001B1F60 /* CollageMain.storyboard */; };
+		B68B5D8B23A9DF14007B7787 /* B_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8423A9DF14007B7787 /* B_1_1.png */; };
+		B68B5D8C23A9DF14007B7787 /* B_1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8523A9DF14007B7787 /* B_1_3.png */; };
+		B68B5D8D23A9DF14007B7787 /* B_1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8623A9DF14007B7787 /* B_1_2.png */; };
+		B68B5D8E23A9DF14007B7787 /* B_1_6.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8723A9DF14007B7787 /* B_1_6.png */; };
+		B68B5D8F23A9DF14007B7787 /* B_1_7.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8823A9DF14007B7787 /* B_1_7.png */; };
+		B68B5D9023A9DF14007B7787 /* B_1_5.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8923A9DF14007B7787 /* B_1_5.png */; };
+		B68B5D9123A9DF14007B7787 /* B_1_4.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B5D8A23A9DF14007B7787 /* B_1_4.png */; };
+		B68B5D9423A9E213007B7787 /* EffectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B68B5D9323A9E213007B7787 /* EffectItemView.m */; };
 		B68F5D69238CB331004C3DB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F5D68238CB331004C3DB6 /* AppDelegate.m */; };
 		B68F5D6F238CB331004C3DB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F5D6E238CB331004C3DB6 /* ViewController.m */; };
 		B68F5D72238CB331004C3DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68F5D70238CB331004C3DB6 /* Main.storyboard */; };
@@ -526,6 +536,10 @@
 		B609D7802397425600D2877D /* SubscriberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubscriberViewController.m; sourceTree = "<group>"; };
 		B60E14E72390159000DF057F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B60E14E92390159400DF057F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B61C4EE923AB5A490086995E /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		B61C4EEA23AB5A490086995E /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		B61C4EEC23AB5B1A0086995E /* FBGlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGlowLabel.h; sourceTree = "<group>"; };
+		B61C4EED23AB5B1A0086995E /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		B63F19EA23A777BE00C127FB /* EffectSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectSliderView.h; sourceTree = "<group>"; };
 		B63F19EB23A777BE00C127FB /* EffectSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectSliderView.m; sourceTree = "<group>"; };
 		B63F19ED23A7811F00C127FB /* CustomSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
@@ -699,6 +713,15 @@
 		B67B7496238D20DD001B1F60 /* CollageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollageViewController.h; sourceTree = "<group>"; };
 		B67B7497238D20DD001B1F60 /* CollageMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollageMain.storyboard; sourceTree = "<group>"; };
 		B67B7498238D20DD001B1F60 /* DDPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPurchase.h; sourceTree = "<group>"; };
+		B68B5D8423A9DF14007B7787 /* B_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_1.png; sourceTree = "<group>"; };
+		B68B5D8523A9DF14007B7787 /* B_1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_3.png; sourceTree = "<group>"; };
+		B68B5D8623A9DF14007B7787 /* B_1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_2.png; sourceTree = "<group>"; };
+		B68B5D8723A9DF14007B7787 /* B_1_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_6.png; sourceTree = "<group>"; };
+		B68B5D8823A9DF14007B7787 /* B_1_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_7.png; sourceTree = "<group>"; };
+		B68B5D8923A9DF14007B7787 /* B_1_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_5.png; sourceTree = "<group>"; };
+		B68B5D8A23A9DF14007B7787 /* B_1_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_1_4.png; sourceTree = "<group>"; };
+		B68B5D9223A9E213007B7787 /* EffectItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectItemView.h; sourceTree = "<group>"; };
+		B68B5D9323A9E213007B7787 /* EffectItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectItemView.m; sourceTree = "<group>"; };
 		B68F5D64238CB331004C3DB6 /* KKCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68F5D67238CB331004C3DB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B68F5D68238CB331004C3DB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1342,14 +1365,14 @@
 		B67B73D8238D20A5001B1F60 /* Stickers */ = {
 			isa = PBXGroup;
 			children = (
-				B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */,
-				B67B73DA238D20A5001B1F60 /* UIView+Frame.m */,
-				B67B73DB238D20A5001B1F60 /* StickerView.h */,
-				B67B73DC238D20A5001B1F60 /* CircleView.m */,
-				B67B73DD238D20A5001B1F60 /* UIImage+Utility.h */,
 				B67B73DE238D20A5001B1F60 /* CircleView.h */,
+				B67B73DC238D20A5001B1F60 /* CircleView.m */,
+				B67B73DB238D20A5001B1F60 /* StickerView.h */,
 				B67B73DF238D20A5001B1F60 /* StickerView.m */,
+				B67B73DD238D20A5001B1F60 /* UIImage+Utility.h */,
+				B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */,
 				B67B73E0238D20A5001B1F60 /* UIView+Frame.h */,
+				B67B73DA238D20A5001B1F60 /* UIView+Frame.m */,
 			);
 			path = Stickers;
 			sourceTree = "<group>";
@@ -1357,20 +1380,20 @@
 		B67B73E5238D20DD001B1F60 /* PhotoCollage */ = {
 			isa = PBXGroup;
 			children = (
-				B67B73E6238D20DD001B1F60 /* Resources */,
-				B67B7428238D20DD001B1F60 /* DDPurchase.m */,
+				B67B7493238D20DD001B1F60 /* CollageAssets.xcassets */,
+				B67B7497238D20DD001B1F60 /* CollageMain.storyboard */,
+				B67B7496238D20DD001B1F60 /* CollageViewController.h */,
 				B67B7429238D20DD001B1F60 /* CollageViewController.m */,
-				B67B742A238D20DD001B1F60 /* PCViewController.m */,
 				B67B742B238D20DD001B1F60 /* Controller */,
+				B67B7498238D20DD001B1F60 /* DDPurchase.h */,
+				B67B7428238D20DD001B1F60 /* DDPurchase.m */,
 				B67B7439238D20DD001B1F60 /* Libs */,
 				B67B7481238D20DD001B1F60 /* Model */,
-				B67B7484238D20DD001B1F60 /* View */,
-				B67B7493238D20DD001B1F60 /* CollageAssets.xcassets */,
-				B67B7494238D20DD001B1F60 /* Prefix.h */,
 				B67B7495238D20DD001B1F60 /* PCViewController.h */,
-				B67B7496238D20DD001B1F60 /* CollageViewController.h */,
-				B67B7497238D20DD001B1F60 /* CollageMain.storyboard */,
-				B67B7498238D20DD001B1F60 /* DDPurchase.h */,
+				B67B742A238D20DD001B1F60 /* PCViewController.m */,
+				B67B7494238D20DD001B1F60 /* Prefix.h */,
+				B67B73E6238D20DD001B1F60 /* Resources */,
+				B67B7484238D20DD001B1F60 /* View */,
 			);
 			path = PhotoCollage;
 			sourceTree = "<group>";
@@ -1694,6 +1717,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B68B5D8323A9DF14007B7787 /* Bonder */ = {
+			isa = PBXGroup;
+			children = (
+				B68B5D8423A9DF14007B7787 /* B_1_1.png */,
+				B68B5D8523A9DF14007B7787 /* B_1_3.png */,
+				B68B5D8623A9DF14007B7787 /* B_1_2.png */,
+				B68B5D8723A9DF14007B7787 /* B_1_6.png */,
+				B68B5D8823A9DF14007B7787 /* B_1_7.png */,
+				B68B5D8923A9DF14007B7787 /* B_1_5.png */,
+				B68B5D8A23A9DF14007B7787 /* B_1_4.png */,
+			);
+			path = Bonder;
+			sourceTree = "<group>";
+		};
 		B68F5D5B238CB330004C3DB6 = {
 			isa = PBXGroup;
 			children = (
@@ -1724,6 +1761,10 @@
 				B68F5D6E238CB331004C3DB6 /* ViewController.m */,
 				B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */,
 				B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */,
+				B61C4EEC23AB5B1A0086995E /* FBGlowLabel.h */,
+				B61C4EED23AB5B1A0086995E /* FBGlowLabel.m */,
+				B61C4EE923AB5A490086995E /* UIImage+Rotate.h */,
+				B61C4EEA23AB5A490086995E /* UIImage+Rotate.m */,
 				B6557EF32396022F00636C7F /* UIImageView+GIF.h */,
 				B6557EF42396022F00636C7F /* UIImageView+GIF.m */,
 				B6D672C62390A6C5007C9136 /* EditViewController.h */,
@@ -1739,6 +1780,8 @@
 				B63F19EB23A777BE00C127FB /* EffectSliderView.m */,
 				B63F19ED23A7811F00C127FB /* CustomSlider.h */,
 				B63F19EE23A7811F00C127FB /* CustomSlider.m */,
+				B68B5D9223A9E213007B7787 /* EffectItemView.h */,
+				B68B5D9323A9E213007B7787 /* EffectItemView.m */,
 				B68F6188238D0837004C3DB6 /* RJPhotoPicker */,
 				B68F5DD2238CBF36004C3DB6 /* HCPhotoEdit */,
 				B68F60C8238CBF3C004C3DB6 /* Payment */,
@@ -1783,50 +1826,50 @@
 		B68F5DD4238CBF36004C3DB6 /* CustomFilters */ = {
 			isa = PBXGroup;
 			children = (
-				B68F5DD5238CBF36004C3DB6 /* FWXproIIFilter.h */,
-				B68F5DD6238CBF36004C3DB6 /* FWBrannanFilter.h */,
-				B68F5DD7238CBF36004C3DB6 /* PhotoXHaloFilter.m */,
-				B68F5DD8238CBF36004C3DB6 /* FWNashvilleFilter.m */,
-				B68F5DD9238CBF36004C3DB6 /* FWLomofiFilter.h */,
-				B68F5DDA238CBF36004C3DB6 /* FWAmaroFilter.h */,
-				B68F5DDB238CBF36004C3DB6 /* FWHefeFilter.h */,
-				B68F5DDC238CBF36004C3DB6 /* FWSierraFilter.m */,
-				B68F5DDD238CBF36004C3DB6 /* FWWaldenFilter.m */,
-				B68F5DDE238CBF36004C3DB6 /* FWHudsonFilter.m */,
-				B68F5DDF238CBF36004C3DB6 /* FWRiseFilter.m */,
-				B68F5DE0238CBF36004C3DB6 /* FWEarlybirdFilter.h */,
-				B68F5DE1238CBF36004C3DB6 /* HCTestFilter.m */,
-				B68F5DE2238CBF36004C3DB6 /* HCCustomGPUImageTiltShiftFilter.h */,
-				B68F5DE3238CBF36004C3DB6 /* FWSutroFilter.h */,
-				B68F5DE4238CBF36004C3DB6 /* FW1977Filter.m */,
-				B68F5DE5238CBF36004C3DB6 /* FWInkwellFilter.h */,
-				B68F5DE6238CBF36004C3DB6 /* FWFiveInputFilter.h */,
-				B68F5DE7238CBF36004C3DB6 /* FWLordKelvinFilter.h */,
-				B68F5DE8238CBF36004C3DB6 /* FWValenciaFilter.h */,
-				B68F5DE9238CBF36004C3DB6 /* FWSixInputFilter.h */,
-				B68F5DEA238CBF36004C3DB6 /* FWToasterFilter.h */,
-				B68F5DEB238CBF36004C3DB6 /* FWNashvilleFilter.h */,
-				B68F5DEC238CBF36004C3DB6 /* PhotoXHaloFilter.h */,
-				B68F5DED238CBF36004C3DB6 /* FWBrannanFilter.m */,
-				B68F5DEE238CBF36004C3DB6 /* FWXproIIFilter.m */,
-				B68F5DEF238CBF36004C3DB6 /* FWWaldenFilter.h */,
-				B68F5DF0238CBF36004C3DB6 /* FWSierraFilter.h */,
-				B68F5DF1238CBF36004C3DB6 /* FWHefeFilter.m */,
-				B68F5DF2238CBF36004C3DB6 /* FWAmaroFilter.m */,
-				B68F5DF3238CBF36004C3DB6 /* FWLomofiFilter.m */,
-				B68F5DF4238CBF36004C3DB6 /* FWEarlybirdFilter.m */,
-				B68F5DF5238CBF36004C3DB6 /* FWRiseFilter.h */,
-				B68F5DF6238CBF36004C3DB6 /* FWHudsonFilter.h */,
-				B68F5DF7238CBF36004C3DB6 /* FWSixInputFilter.m */,
-				B68F5DF8238CBF36004C3DB6 /* FWToasterFilter.m */,
-				B68F5DF9238CBF36004C3DB6 /* FWValenciaFilter.m */,
-				B68F5DFA238CBF36004C3DB6 /* FWLordKelvinFilter.m */,
 				B68F5DFB238CBF36004C3DB6 /* FW1977Filter.h */,
-				B68F5DFC238CBF36004C3DB6 /* FWInkwellFilter.m */,
+				B68F5DE4238CBF36004C3DB6 /* FW1977Filter.m */,
+				B68F5DDA238CBF36004C3DB6 /* FWAmaroFilter.h */,
+				B68F5DF2238CBF36004C3DB6 /* FWAmaroFilter.m */,
+				B68F5DD6238CBF36004C3DB6 /* FWBrannanFilter.h */,
+				B68F5DED238CBF36004C3DB6 /* FWBrannanFilter.m */,
+				B68F5DE0238CBF36004C3DB6 /* FWEarlybirdFilter.h */,
+				B68F5DF4238CBF36004C3DB6 /* FWEarlybirdFilter.m */,
+				B68F5DE6238CBF36004C3DB6 /* FWFiveInputFilter.h */,
 				B68F5DFD238CBF36004C3DB6 /* FWFiveInputFilter.m */,
+				B68F5DDB238CBF36004C3DB6 /* FWHefeFilter.h */,
+				B68F5DF1238CBF36004C3DB6 /* FWHefeFilter.m */,
+				B68F5DF6238CBF36004C3DB6 /* FWHudsonFilter.h */,
+				B68F5DDE238CBF36004C3DB6 /* FWHudsonFilter.m */,
+				B68F5DE5238CBF36004C3DB6 /* FWInkwellFilter.h */,
+				B68F5DFC238CBF36004C3DB6 /* FWInkwellFilter.m */,
+				B68F5DD9238CBF36004C3DB6 /* FWLomofiFilter.h */,
+				B68F5DF3238CBF36004C3DB6 /* FWLomofiFilter.m */,
+				B68F5DE7238CBF36004C3DB6 /* FWLordKelvinFilter.h */,
+				B68F5DFA238CBF36004C3DB6 /* FWLordKelvinFilter.m */,
+				B68F5DEB238CBF36004C3DB6 /* FWNashvilleFilter.h */,
+				B68F5DD8238CBF36004C3DB6 /* FWNashvilleFilter.m */,
+				B68F5DF5238CBF36004C3DB6 /* FWRiseFilter.h */,
+				B68F5DDF238CBF36004C3DB6 /* FWRiseFilter.m */,
+				B68F5DF0238CBF36004C3DB6 /* FWSierraFilter.h */,
+				B68F5DDC238CBF36004C3DB6 /* FWSierraFilter.m */,
+				B68F5DE9238CBF36004C3DB6 /* FWSixInputFilter.h */,
+				B68F5DF7238CBF36004C3DB6 /* FWSixInputFilter.m */,
+				B68F5DE3238CBF36004C3DB6 /* FWSutroFilter.h */,
 				B68F5DFE238CBF36004C3DB6 /* FWSutroFilter.m */,
+				B68F5DEA238CBF36004C3DB6 /* FWToasterFilter.h */,
+				B68F5DF8238CBF36004C3DB6 /* FWToasterFilter.m */,
+				B68F5DE8238CBF36004C3DB6 /* FWValenciaFilter.h */,
+				B68F5DF9238CBF36004C3DB6 /* FWValenciaFilter.m */,
+				B68F5DEF238CBF36004C3DB6 /* FWWaldenFilter.h */,
+				B68F5DDD238CBF36004C3DB6 /* FWWaldenFilter.m */,
+				B68F5DD5238CBF36004C3DB6 /* FWXproIIFilter.h */,
+				B68F5DEE238CBF36004C3DB6 /* FWXproIIFilter.m */,
+				B68F5DE2238CBF36004C3DB6 /* HCCustomGPUImageTiltShiftFilter.h */,
 				B68F5DFF238CBF36004C3DB6 /* HCCustomGPUImageTiltShiftFilter.m */,
 				B68F5E00238CBF36004C3DB6 /* HCTestFilter.h */,
+				B68F5DE1238CBF36004C3DB6 /* HCTestFilter.m */,
+				B68F5DEC238CBF36004C3DB6 /* PhotoXHaloFilter.h */,
+				B68F5DD7238CBF36004C3DB6 /* PhotoXHaloFilter.m */,
 			);
 			path = CustomFilters;
 			sourceTree = "<group>";
@@ -1834,8 +1877,8 @@
 		B68F5E01238CBF36004C3DB6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				B68F5E02238CBF36004C3DB6 /* UIImage+HCImageConfig.m */,
 				B68F5E03238CBF36004C3DB6 /* UIImage+HCImageConfig.h */,
+				B68F5E02238CBF36004C3DB6 /* UIImage+HCImageConfig.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1843,61 +1886,61 @@
 		B68F5E04238CBF36004C3DB6 /* GPUImage */ = {
 			isa = PBXGroup;
 			children = (
-				B68F5E05238CBF36004C3DB6 /* GPUImageBuffer.h */,
-				B68F5E06238CBF36004C3DB6 /* GPUImageMovieComposition.h */,
 				B68F5E07238CBF36004C3DB6 /* filters */,
-				B68F5F22238CBF37004C3DB6 /* GPUImageRawDataOutput.h */,
-				B68F5F23238CBF37004C3DB6 /* GPUImageFilterGroup.m */,
-				B68F5F24238CBF37004C3DB6 /* GPUImageColorConversion.h */,
+				B68F5F63238CBF37004C3DB6 /* GLProgram.h */,
+				B68F5F34238CBF37004C3DB6 /* GLProgram.m */,
+				B68F5F5E238CBF37004C3DB6 /* GPUImage.h */,
 				B68F5F25238CBF37004C3DB6 /* GPUImageAverageColor.h */,
-				B68F5F26238CBF37004C3DB6 /* GPUImageLuminosity.h */,
-				B68F5F27238CBF37004C3DB6 /* GPUImageUIElement.m */,
-				B68F5F28238CBF37004C3DB6 /* GPUImageMovie.m */,
-				B68F5F29238CBF37004C3DB6 /* GPUImagePinchDistortionFilter.h */,
-				B68F5F2A238CBF37004C3DB6 /* GPUImageMotionDetector.h */,
-				B68F5F2B238CBF37004C3DB6 /* GPUImageHoughTransformLineDetector.h */,
+				B68F5F4B238CBF37004C3DB6 /* GPUImageAverageColor.m */,
+				B68F5E05238CBF36004C3DB6 /* GPUImageBuffer.h */,
+				B68F5F50238CBF37004C3DB6 /* GPUImageBuffer.m */,
+				B68F5F24238CBF37004C3DB6 /* GPUImageColorConversion.h */,
+				B68F5F4C238CBF37004C3DB6 /* GPUImageColorConversion.m */,
+				B68F5F38238CBF37004C3DB6 /* GPUImageFilter.h */,
+				B68F5F60238CBF37004C3DB6 /* GPUImageFilter.m */,
+				B68F5F4D238CBF37004C3DB6 /* GPUImageFilterGroup.h */,
+				B68F5F23238CBF37004C3DB6 /* GPUImageFilterGroup.m */,
+				B68F5F5F238CBF37004C3DB6 /* GPUImageFramebuffer.h */,
+				B68F5F37238CBF37004C3DB6 /* GPUImageFramebuffer.m */,
+				B68F5F5D238CBF37004C3DB6 /* GPUImageFramebufferCache.h */,
+				B68F5F39238CBF37004C3DB6 /* GPUImageFramebufferCache.m */,
+				B68F5F52238CBF37004C3DB6 /* GPUImageHistogramGenerator.h */,
 				B68F5F2C238CBF37004C3DB6 /* GPUImageHistogramGenerator.m */,
-				B68F5F2D238CBF37004C3DB6 /* GPUImageRawDataInput.h */,
-				B68F5F2E238CBF37004C3DB6 /* GPUImageSolidColorGenerator.m */,
+				B68F5F2B238CBF37004C3DB6 /* GPUImageHoughTransformLineDetector.h */,
+				B68F5F53238CBF37004C3DB6 /* GPUImageHoughTransformLineDetector.m */,
+				B68F5F57238CBF37004C3DB6 /* GPUImageLineGenerator.h */,
+				B68F5F32238CBF37004C3DB6 /* GPUImageLineGenerator.m */,
+				B68F5F26238CBF37004C3DB6 /* GPUImageLuminosity.h */,
+				B68F5F49238CBF37004C3DB6 /* GPUImageLuminosity.m */,
+				B68F5F2A238CBF37004C3DB6 /* GPUImageMotionDetector.h */,
+				B68F5F54238CBF37004C3DB6 /* GPUImageMotionDetector.m */,
+				B68F5F56238CBF37004C3DB6 /* GPUImageMovie.h */,
+				B68F5F28238CBF37004C3DB6 /* GPUImageMovie.m */,
+				B68F5E06238CBF36004C3DB6 /* GPUImageMovieComposition.h */,
+				B68F5F4F238CBF37004C3DB6 /* GPUImageMovieComposition.m */,
+				B68F5F62238CBF37004C3DB6 /* GPUImageOutput.h */,
+				B68F5F35238CBF37004C3DB6 /* GPUImageOutput.m */,
+				B68F5F29238CBF37004C3DB6 /* GPUImagePinchDistortionFilter.h */,
+				B68F5F55238CBF37004C3DB6 /* GPUImagePinchDistortionFilter.m */,
+				B68F5F5B238CBF37004C3DB6 /* GPUImagePixellateFilter.h */,
 				B68F5F2F238CBF37004C3DB6 /* GPUImagePixellateFilter.m */,
+				B68F5F2D238CBF37004C3DB6 /* GPUImageRawDataInput.h */,
+				B68F5F51238CBF37004C3DB6 /* GPUImageRawDataInput.m */,
+				B68F5F22238CBF37004C3DB6 /* GPUImageRawDataOutput.h */,
+				B68F5F4E238CBF37004C3DB6 /* GPUImageRawDataOutput.m */,
+				B68F5F5C238CBF37004C3DB6 /* GPUImageSolidColorGenerator.h */,
+				B68F5F2E238CBF37004C3DB6 /* GPUImageSolidColorGenerator.m */,
+				B68F5F36238CBF37004C3DB6 /* GPUImageStillCamera.h */,
+				B68F5F61238CBF37004C3DB6 /* GPUImageStillCamera.m */,
+				B68F5F5A238CBF37004C3DB6 /* GPUImageTextureInput.h */,
 				B68F5F30238CBF37004C3DB6 /* GPUImageTextureInput.m */,
 				B68F5F31238CBF37004C3DB6 /* GPUImageTextureOutput.h */,
-				B68F5F32238CBF37004C3DB6 /* GPUImageLineGenerator.m */,
-				B68F5F33238CBF37004C3DB6 /* GPUImageVideoCamera.h */,
-				B68F5F34238CBF37004C3DB6 /* GLProgram.m */,
-				B68F5F35238CBF37004C3DB6 /* GPUImageOutput.m */,
-				B68F5F36238CBF37004C3DB6 /* GPUImageStillCamera.h */,
-				B68F5F37238CBF37004C3DB6 /* GPUImageFramebuffer.m */,
-				B68F5F38238CBF37004C3DB6 /* GPUImageFilter.h */,
-				B68F5F39238CBF37004C3DB6 /* GPUImageFramebufferCache.m */,
-				B68F5F3A238CBF37004C3DB6 /* iOS */,
-				B68F5F49238CBF37004C3DB6 /* GPUImageLuminosity.m */,
-				B68F5F4A238CBF37004C3DB6 /* GPUImageUIElement.h */,
-				B68F5F4B238CBF37004C3DB6 /* GPUImageAverageColor.m */,
-				B68F5F4C238CBF37004C3DB6 /* GPUImageColorConversion.m */,
-				B68F5F4D238CBF37004C3DB6 /* GPUImageFilterGroup.h */,
-				B68F5F4E238CBF37004C3DB6 /* GPUImageRawDataOutput.m */,
-				B68F5F4F238CBF37004C3DB6 /* GPUImageMovieComposition.m */,
-				B68F5F50238CBF37004C3DB6 /* GPUImageBuffer.m */,
-				B68F5F51238CBF37004C3DB6 /* GPUImageRawDataInput.m */,
-				B68F5F52238CBF37004C3DB6 /* GPUImageHistogramGenerator.h */,
-				B68F5F53238CBF37004C3DB6 /* GPUImageHoughTransformLineDetector.m */,
-				B68F5F54238CBF37004C3DB6 /* GPUImageMotionDetector.m */,
-				B68F5F55238CBF37004C3DB6 /* GPUImagePinchDistortionFilter.m */,
-				B68F5F56238CBF37004C3DB6 /* GPUImageMovie.h */,
-				B68F5F57238CBF37004C3DB6 /* GPUImageLineGenerator.h */,
-				B68F5F58238CBF37004C3DB6 /* GPUImageVideoCamera.m */,
 				B68F5F59238CBF37004C3DB6 /* GPUImageTextureOutput.m */,
-				B68F5F5A238CBF37004C3DB6 /* GPUImageTextureInput.h */,
-				B68F5F5B238CBF37004C3DB6 /* GPUImagePixellateFilter.h */,
-				B68F5F5C238CBF37004C3DB6 /* GPUImageSolidColorGenerator.h */,
-				B68F5F5D238CBF37004C3DB6 /* GPUImageFramebufferCache.h */,
-				B68F5F5E238CBF37004C3DB6 /* GPUImage.h */,
-				B68F5F5F238CBF37004C3DB6 /* GPUImageFramebuffer.h */,
-				B68F5F60238CBF37004C3DB6 /* GPUImageFilter.m */,
-				B68F5F61238CBF37004C3DB6 /* GPUImageStillCamera.m */,
-				B68F5F62238CBF37004C3DB6 /* GPUImageOutput.h */,
-				B68F5F63238CBF37004C3DB6 /* GLProgram.h */,
+				B68F5F4A238CBF37004C3DB6 /* GPUImageUIElement.h */,
+				B68F5F27238CBF37004C3DB6 /* GPUImageUIElement.m */,
+				B68F5F33238CBF37004C3DB6 /* GPUImageVideoCamera.h */,
+				B68F5F58238CBF37004C3DB6 /* GPUImageVideoCamera.m */,
+				B68F5F3A238CBF37004C3DB6 /* iOS */,
 			);
 			path = GPUImage;
 			sourceTree = "<group>";
@@ -2343,6 +2386,7 @@
 			isa = PBXGroup;
 			children = (
 				B6EF3A282398FDEF00EE68A0 /* Asset */,
+				B68B5D8323A9DF14007B7787 /* Bonder */,
 				B68F60DD238CBF48004C3DB6 /* Halo */,
 				B68F60F2238CBF48004C3DB6 /* Lut */,
 				B68F6111238CBF48004C3DB6 /* Font */,
@@ -2354,26 +2398,26 @@
 		B68F60DD238CBF48004C3DB6 /* Halo */ = {
 			isa = PBXGroup;
 			children = (
-				B68F60DE238CBF48004C3DB6 /* H_2_8.jpg */,
-				B68F60DF238CBF48004C3DB6 /* H_2_9.jpg */,
-				B68F60E0238CBF48004C3DB6 /* H_1_10.jpg */,
-				B68F60E1238CBF48004C3DB6 /* H_1_9.jpg */,
-				B68F60E2238CBF48004C3DB6 /* H_1_8.jpg */,
 				B68F60E3238CBF48004C3DB6 /* H_1_1.jpg */,
-				B68F60E4238CBF48004C3DB6 /* H_1_3.jpg */,
 				B68F60E5238CBF48004C3DB6 /* H_1_2.jpg */,
+				B68F60E4238CBF48004C3DB6 /* H_1_3.jpg */,
+				B68F60EA238CBF48004C3DB6 /* H_1_4.jpg */,
+				B68F60E8238CBF48004C3DB6 /* H_1_5.jpg */,
 				B68F60E6238CBF48004C3DB6 /* H_1_6.jpg */,
 				B68F60E7238CBF48004C3DB6 /* H_1_7.jpg */,
-				B68F60E8238CBF48004C3DB6 /* H_1_5.jpg */,
-				B68F60E9238CBF48004C3DB6 /* H_2_10.jpg */,
-				B68F60EA238CBF48004C3DB6 /* H_1_4.jpg */,
+				B68F60E2238CBF48004C3DB6 /* H_1_8.jpg */,
+				B68F60E1238CBF48004C3DB6 /* H_1_9.jpg */,
+				B68F60E0238CBF48004C3DB6 /* H_1_10.jpg */,
 				B68F60EB238CBF48004C3DB6 /* H_2_1.jpg */,
 				B68F60EC238CBF48004C3DB6 /* H_2_2.jpg */,
 				B68F60ED238CBF48004C3DB6 /* H_2_3.jpg */,
-				B68F60EE238CBF48004C3DB6 /* H_2_7.jpg */,
-				B68F60EF238CBF48004C3DB6 /* H_2_6.jpg */,
 				B68F60F0238CBF48004C3DB6 /* H_2_4.jpg */,
 				B68F60F1238CBF48004C3DB6 /* H_2_5.jpg */,
+				B68F60EF238CBF48004C3DB6 /* H_2_6.jpg */,
+				B68F60EE238CBF48004C3DB6 /* H_2_7.jpg */,
+				B68F60DE238CBF48004C3DB6 /* H_2_8.jpg */,
+				B68F60DF238CBF48004C3DB6 /* H_2_9.jpg */,
+				B68F60E9238CBF48004C3DB6 /* H_2_10.jpg */,
 			);
 			path = Halo;
 			sourceTree = "<group>";
@@ -2381,35 +2425,35 @@
 		B68F60F2238CBF48004C3DB6 /* Lut */ = {
 			isa = PBXGroup;
 			children = (
-				B68F60F3238CBF48004C3DB6 /* L_2_1.png */,
-				B68F60F4238CBF48004C3DB6 /* L_2_3.png */,
-				B68F60F5238CBF48004C3DB6 /* L_2_2.png */,
-				B68F60F6238CBF48004C3DB6 /* L_2_6.png */,
-				B68F60F7238CBF48004C3DB6 /* L_2_7.png */,
-				B68F60F8238CBF48004C3DB6 /* L_2_5.png */,
-				B68F60F9238CBF48004C3DB6 /* L_2_4.png */,
-				B68F60FA238CBF48004C3DB6 /* L_3_3.png */,
 				B68F60FB238CBF48004C3DB6 /* L_1_1.png */,
-				B68F60FC238CBF48004C3DB6 /* L_3_2.png */,
 				B68F60FD238CBF48004C3DB6 /* L_1_2.png */,
 				B68F60FE238CBF48004C3DB6 /* L_1_3.png */,
-				B68F60FF238CBF48004C3DB6 /* L_3_1.png */,
-				B68F6100238CBF48004C3DB6 /* L_3_5.png */,
-				B68F6101238CBF48004C3DB6 /* L_1_7.png */,
-				B68F6102238CBF48004C3DB6 /* L_1_6.png */,
-				B68F6103238CBF48004C3DB6 /* L_2_10.png */,
-				B68F6104238CBF48004C3DB6 /* L_3_4.png */,
-				B68F6105238CBF48004C3DB6 /* L_3_6.png */,
 				B68F6106238CBF48004C3DB6 /* L_1_4.png */,
 				B68F6107238CBF48004C3DB6 /* L_1_5.png */,
-				B68F6108238CBF48004C3DB6 /* L_3_7.png */,
+				B68F6102238CBF48004C3DB6 /* L_1_6.png */,
+				B68F6101238CBF48004C3DB6 /* L_1_7.png */,
 				B68F6109238CBF48004C3DB6 /* L_1_8.png */,
 				B68F610A238CBF48004C3DB6 /* L_1_9.png */,
-				B68F610B238CBF48004C3DB6 /* L_3_9.png */,
-				B68F610C238CBF48004C3DB6 /* L_3_8.png */,
-				B68F610D238CBF48004C3DB6 /* L_2_9.png */,
 				B68F610E238CBF48004C3DB6 /* L_1_10.png */,
+				B68F60F3238CBF48004C3DB6 /* L_2_1.png */,
+				B68F60F5238CBF48004C3DB6 /* L_2_2.png */,
+				B68F60F4238CBF48004C3DB6 /* L_2_3.png */,
+				B68F60F9238CBF48004C3DB6 /* L_2_4.png */,
+				B68F60F8238CBF48004C3DB6 /* L_2_5.png */,
+				B68F60F6238CBF48004C3DB6 /* L_2_6.png */,
+				B68F60F7238CBF48004C3DB6 /* L_2_7.png */,
 				B68F610F238CBF48004C3DB6 /* L_2_8.png */,
+				B68F610D238CBF48004C3DB6 /* L_2_9.png */,
+				B68F6103238CBF48004C3DB6 /* L_2_10.png */,
+				B68F60FF238CBF48004C3DB6 /* L_3_1.png */,
+				B68F60FC238CBF48004C3DB6 /* L_3_2.png */,
+				B68F60FA238CBF48004C3DB6 /* L_3_3.png */,
+				B68F6104238CBF48004C3DB6 /* L_3_4.png */,
+				B68F6100238CBF48004C3DB6 /* L_3_5.png */,
+				B68F6105238CBF48004C3DB6 /* L_3_6.png */,
+				B68F6108238CBF48004C3DB6 /* L_3_7.png */,
+				B68F610C238CBF48004C3DB6 /* L_3_8.png */,
+				B68F610B238CBF48004C3DB6 /* L_3_9.png */,
 				B68F6110238CBF48004C3DB6 /* L_3_10.png */,
 			);
 			path = Lut;
@@ -2437,16 +2481,16 @@
 		B68F611E238CBF48004C3DB6 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				B68F611F238CBF48004C3DB6 /* F_1_9.acv */,
-				B68F6120238CBF48004C3DB6 /* F_1_8.acv */,
-				B68F6121238CBF48004C3DB6 /* F_1_10.acv */,
 				B68F6122238CBF48004C3DB6 /* F_1_1.acv */,
-				B68F6123238CBF48004C3DB6 /* F_1_3.acv */,
 				B68F6124238CBF48004C3DB6 /* F_1_2.acv */,
+				B68F6123238CBF48004C3DB6 /* F_1_3.acv */,
+				B68F6128238CBF48004C3DB6 /* F_1_4.acv */,
+				B68F6127238CBF48004C3DB6 /* F_1_5.acv */,
 				B68F6125238CBF48004C3DB6 /* F_1_6.acv */,
 				B68F6126238CBF48004C3DB6 /* F_1_7.acv */,
-				B68F6127238CBF48004C3DB6 /* F_1_5.acv */,
-				B68F6128238CBF48004C3DB6 /* F_1_4.acv */,
+				B68F6120238CBF48004C3DB6 /* F_1_8.acv */,
+				B68F611F238CBF48004C3DB6 /* F_1_9.acv */,
+				B68F6121238CBF48004C3DB6 /* F_1_10.acv */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -2651,6 +2695,7 @@
 				B68F6153238CBF49004C3DB6 /* L_1_2.png in Resources */,
 				B60E14E62390159000DF057F /* InfoPlist.strings in Resources */,
 				B67B74D4238D20DE001B1F60 /* style4_4.plist in Resources */,
+				B68B5D8B23A9DF14007B7787 /* B_1_1.png in Resources */,
 				B68F609F238CBF38004C3DB6 /* sutroMetal.png in Resources */,
 				B68F615D238CBF49004C3DB6 /* L_1_5.png in Resources */,
 				B68F60AA238CBF38004C3DB6 /* valenciaMap.png in Resources */,
@@ -2696,10 +2741,12 @@
 				B67B74AA238D20DE001B1F60 /* Filter 13.acv in Resources */,
 				B68F6137238CBF49004C3DB6 /* H_1_10.jpg in Resources */,
 				B68F60BA238CBF38004C3DB6 /* toasterColorShift.png in Resources */,
+				B68B5D8E23A9DF14007B7787 /* B_1_6.png in Resources */,
 				B68F6165238CBF49004C3DB6 /* L_2_8.png in Resources */,
 				B68F6187238CD054004C3DB6 /* HomePage.plist in Resources */,
 				B68F60C1238CBF38004C3DB6 /* brannanContrast.png in Resources */,
 				B68F6159238CBF49004C3DB6 /* L_2_10.png in Resources */,
+				B68B5D9123A9DF14007B7787 /* B_1_4.png in Resources */,
 				B68F6169238CBF49004C3DB6 /* Segment7Standard.otf in Resources */,
 				B67B74B7238D20DE001B1F60 /* A_Marks_1.png in Resources */,
 				B68F6142238CBF49004C3DB6 /* H_2_1.jpg in Resources */,
@@ -2707,10 +2754,12 @@
 				B68F60A3238CBF38004C3DB6 /* lomoMap.png in Resources */,
 				B68F61BB238D0837004C3DB6 /* RJAlbumCell.xib in Resources */,
 				B68F6172238CBF49004C3DB6 /* Digital.otf in Resources */,
+				B68B5D9023A9DF14007B7787 /* B_1_5.png in Resources */,
 				B68F616A238CBF49004C3DB6 /* CapsuleXProMediumUC.otf in Resources */,
 				B67B74CB238D20DE001B1F60 /* style3_8.plist in Resources */,
 				B68F614B238CBF49004C3DB6 /* L_2_2.png in Resources */,
 				B67B74BA238D20DE001B1F60 /* A_Marks_8.png in Resources */,
+				B68B5D8D23A9DF14007B7787 /* B_1_2.png in Resources */,
 				B67B74AE238D20DE001B1F60 /* Filter 10.acv in Resources */,
 				B67B74C3238D20DE001B1F60 /* style2_3.plist in Resources */,
 				B67B74A4238D20DE001B1F60 /* Filter 7.acv in Resources */,
@@ -2772,6 +2821,7 @@
 				B68F60BC238CBF38004C3DB6 /* hudsonMap.png in Resources */,
 				B68F60B4238CBF38004C3DB6 /* hudsonBackground.png in Resources */,
 				B68F609D238CBF38004C3DB6 /* CHPhotoEditResource.bundle in Resources */,
+				B68B5D8C23A9DF14007B7787 /* B_1_3.png in Resources */,
 				B67B74C2238D20DE001B1F60 /* style3_7.plist in Resources */,
 				B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */,
 				B67B74B1238D20DE001B1F60 /* A_Marks_5.png in Resources */,
@@ -2781,6 +2831,7 @@
 				B68F6177238CBF49004C3DB6 /* F_1_3.acv in Resources */,
 				B68F6143238CBF49004C3DB6 /* H_2_2.jpg in Resources */,
 				B68F6162238CBF49004C3DB6 /* L_3_8.png in Resources */,
+				B68B5D8F23A9DF14007B7787 /* B_1_7.png in Resources */,
 				B6EF3A492398FDEF00EE68A0 /* effect1.png in Resources */,
 				B67B749C238D20DE001B1F60 /* Filter 8.acv in Resources */,
 				B68F6148238CBF49004C3DB6 /* H_2_5.jpg in Resources */,
@@ -2931,6 +2982,7 @@
 				B68F6028238CBF37004C3DB6 /* GPUImageToneCurveFilter.m in Sources */,
 				B68F608E238CBF38004C3DB6 /* PhotoEditAcvItemView.m in Sources */,
 				B68F5FF2238CBF37004C3DB6 /* GPUImageHistogramFilter.m in Sources */,
+				B61C4EEE23AB5B1B0086995E /* FBGlowLabel.m in Sources */,
 				B68F601E238CBF37004C3DB6 /* GPUImageLanczosResamplingFilter.m in Sources */,
 				B68F5FCD238CBF37004C3DB6 /* FWAmaroFilter.m in Sources */,
 				B68F6030238CBF37004C3DB6 /* GPUImageSubtractBlendFilter.m in Sources */,
@@ -2981,6 +3033,7 @@
 				B68F6044238CBF37004C3DB6 /* GPUImageLinearBurnBlendFilter.m in Sources */,
 				B68F6076238CBF38004C3DB6 /* GPUImageView.m in Sources */,
 				B68F5FCC238CBF37004C3DB6 /* FWHefeFilter.m in Sources */,
+				B61C4EEB23AB5A490086995E /* UIImage+Rotate.m in Sources */,
 				B67B74DA238D20DE001B1F60 /* PCMenuViewController.m in Sources */,
 				B67B74FF238D20DE001B1F60 /* AppManager.m in Sources */,
 				B68F606E238CBF38004C3DB6 /* GLProgram.m in Sources */,
@@ -3098,6 +3151,7 @@
 				B68F6048238CBF37004C3DB6 /* GPUImageTwoInputCrossTextureSamplingFilter.m in Sources */,
 				B68F6043238CBF37004C3DB6 /* GPUImageDirectionalNonMaximumSuppressionFilter.m in Sources */,
 				B68F5FC4238CBF37004C3DB6 /* FWSierraFilter.m in Sources */,
+				B68B5D9423A9E213007B7787 /* EffectItemView.m in Sources */,
 				B68F6027238CBF37004C3DB6 /* GPUImageSaturationBlendFilter.m in Sources */,
 				B68F5FDB238CBF37004C3DB6 /* GPUImageUnsharpMaskFilter.m in Sources */,
 				B68F6026238CBF37004C3DB6 /* GPUImageTiltShiftFilter.m in Sources */,

@@ -11,6 +11,13 @@
 #import <Masonry.h>
 #import "SubscriberViewController.h"
 #import "EffectSliderView.h"
+#import "EffectItemView.h"
+#import "UIImage+Rotate.h"
+#import "GPUImage.h"
+#import "PhotoXAcvFilter.h"
+#import "HCTestFilter.h"
+#import "FBGlowLabel.h"
+#import "SettingModel.h"
 
 @interface EditViewController () <UIScrollViewDelegate>
 
@@ -32,8 +39,9 @@
     UIView *_toolView;
     UIScrollView *_topScrollView;
     UIScrollView *_middleScrollView;
+    NSArray *_selectedMainContent;
     NSArray *_selectedMiddleContent;
-    NSArray *_selectedContent;
+    NSString *_selectedType;
 }
 
 - (void)viewDidLoad {
@@ -90,13 +98,13 @@
         make.top.bottom.equalTo(self->_editorView).offset(5);
         make.left.right.equalTo(self->_editorView);
     }];
-
+    
     _middleScrollView = [[UIScrollView alloc] init];
     [self.contentView addSubview:_middleScrollView];
     [_middleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);
         make.bottom.equalTo(_editorView.mas_top);
-        make.size.mas_equalTo(100);
+        make.size.mas_equalTo(120);
     }];
     
     _groupView = [[UIView alloc] init];
@@ -117,7 +125,7 @@
         make.size.mas_equalTo(30);
     }];
     
-    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 100) - _settingBtn.bounds.size.height)];
+    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 120) - _settingBtn.bounds.size.height)];
     [self.contentView addSubview:_imageScrollView];
     if (@available(iOS 11.0, *)) {
         _imageScrollView.contentInsetAdjustmentBehavior =  UIScrollViewContentInsetAdjustmentNever;
@@ -216,11 +224,12 @@
     for (UIView * view in _topScrollView.subviews) {
         [view removeFromSuperview];
     }
-    NSString *type = [[_effectContent objectAtIndex:index] objectForKey:@"type"];
-    if ([@"cut" isEqualToString:type]) {
+    _selectedType = [[_effectContent objectAtIndex:index] objectForKey:@"type"];
+    _selectedMainContent = [[_effectContent objectAtIndex:index] objectForKey:_selectedType];
+    if ([@"cut" isEqualToString:_selectedType]) {
         [_topScrollView setHidden:YES];
         [_groupView setHidden:YES];
-    }else if ([@"edit" isEqualToString:type]){
+    }else if ([@"edit" isEqualToString:_selectedType]){
         [self refreshGroupViewWithRandom:NO];
         [_topScrollView setHidden:YES];
         [_groupView setHidden:NO];
@@ -228,10 +237,9 @@
         [self refreshGroupViewWithRandom:YES];
         [_topScrollView setHidden:NO];
         [_groupView setHidden:NO];
-        _selectedContent = [[_effectContent objectAtIndex:index] objectForKey:@"content"];
         CGFloat position = 0;
         int tag = 1;
-        for (NSDictionary *dict in _selectedContent) {
+        for (NSDictionary *dict in _selectedMainContent) {
             NSString *title = [dict objectForKey:@"title"];
             UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, 0, 80, _topScrollView.bounds.size.height)];
             [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.7]];
@@ -279,8 +287,232 @@
             }
         }
     }
-    NSArray *middleContent = [[_selectedContent objectAtIndex:index] objectForKey:@"effects"];
     
+    for (UIView *view in _middleScrollView.subviews) {
+        [view removeFromSuperview];
+    }
+    _selectedMiddleContent = [[_selectedMainContent objectAtIndex:index] objectForKey:@"effects"];
+    int position = 0;
+    int distance = 8;
+    int tag = 1;
+    for (NSDictionary *dict in _selectedMiddleContent) {
+        position += distance;
+        EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, _middleScrollView.bounds.size.height - 16)];
+        button.tag = tag;
+        [button addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)]];
+        [button.layer setMasksToBounds:YES];
+        [button.layer setCornerRadius:5];
+        [button setItemWithData:dict];
+        [_middleScrollView addSubview:button];
+        tag++;
+        position += button.bounds.size.width;
+    }
+    [_middleScrollView setContentSize:CGSizeMake(position, 0)];
+}
+
+- (void)onTap:(UIGestureRecognizer *)gesture{
+    [self selectMiddleWithIndex:(int)gesture.view.tag];
+}
+
+- (void)selectMiddleWithIndex:(int)index{
+    for (EffectItemView *btn in _middleScrollView.subviews) {
+        if([btn isMemberOfClass:[EffectItemView class]] == NO){
+            continue;
+        }
+        if (btn.tag == index) {
+            [btn setItemSelected:YES];
+        }else{
+            [btn setItemSelected:NO];
+        }
+    }
+    [self refreshImageViewWithContent:[_selectedMiddleContent objectAtIndex:index - 1]];
+}
+
+- (UIImage *)createFilterWithImage:(UIImage *)image andFilterName:(NSString *)filterName{
+    GPUImagePicture *pic = [[GPUImagePicture alloc] initWithImage:image];
+    if ([filterName hasSuffix:@".acv"]) {
+        PhotoXAcvFilter *acvFilter = [[PhotoXAcvFilter alloc]initWithACVData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:filterName ofType:nil]]];
+        acvFilter.mix = 1;
+        [pic addTarget:acvFilter];
+        [acvFilter useNextFrameForImageCapture];
+        [pic processImage];
+        UIImage *newImage = [acvFilter imageFromCurrentFramebuffer];
+        if (newImage) {
+            return newImage;
+        }
+    }else{
+        GPUImageFilter *outFilter = [[[NSClassFromString(filterName) class] alloc] init];
+        [pic addTarget:outFilter];
+        [outFilter useNextFrameForImageCapture];
+        [pic processImage];
+        UIImage *newImage = [outFilter imageFromCurrentFramebuffer];
+        if(newImage){
+            return newImage;
+        }
+    }
+    
+    return image;
+}
+
+- (UIImage *)createTextureWithImage:(UIImage *)image andTextureName:(NSString *)textureName{
+    GPUImagePicture *pic = [[GPUImagePicture alloc] initWithImage:image];
+    UIImage *textureImage = [UIImage imageNamed:textureName];
+    HCTestFilter *texture = [[HCTestFilter alloc] initWithTextureImage:textureImage];
+    [pic addTarget:texture];
+    [texture useNextFrameForImageCapture];
+    [pic processImage];
+    UIImage *newImage = [texture imageFromCurrentFramebuffer];
+    if(image.size.width == newImage.size.height){
+        newImage = [newImage imageRotatedByDegrees:270];
+    }
+    if (newImage) {
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(newImage.size.width, newImage.size.height), NO, newImage.scale);
+        [image drawInRect:CGRectMake(0, 0, newImage.size.width, newImage.size.height)];
+        [newImage drawInRect:CGRectMake(0, 0, newImage.size.width, newImage.size.height) blendMode:kCGBlendModePlusLighter alpha:1.0];
+        UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return resultImage;
+    }
+    return image;
+}
+
+-(void)refreshImageViewWithContent:(NSDictionary *)content{
+    NSString *selectFilter = [content objectForKey:@"filter"];
+    NSString *selectTexture = [content objectForKey:@"texture"];
+    NSDictionary *fontProperty = [content objectForKey:@"FontProperty"];
+    UIImage *image = _oriImage;
+    image = [image fixOrientation];
+    
+    if ([@"" isEqualToString:selectFilter] == NO) {
+        image = [self createFilterWithImage:image andFilterName:selectFilter];
+    }
+    
+    if ([@"" isEqualToString:selectTexture] == NO) {
+        image = [self createTextureWithImage:image andTextureName:selectTexture];
+    }
+    
+    if ([[SettingModel sharedInstance] isStamp] && nil != fontProperty) {
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        FBGlowLabel *label = [[FBGlowLabel alloc] init];
+        
+        CGFloat value = imageView.frame.size.width > imageView.frame.size.height ? imageView.frame.size.width : imageView.frame.size.height;
+        CGFloat base = value/1920;
+        
+        UIFont *font = [UIFont fontWithName:[fontProperty objectForKey:@"fontName"] size:[[fontProperty objectForKey:@"fontSize"] floatValue] * base];
+        if (font == nil) {
+            font = [UIFont fontWithName:@"DS-Digital" size:[[fontProperty objectForKey:@"fontSize"] floatValue] * base];
+        }
+        [label setFont:font];
+        //描边
+        NSArray *strokes = [[fontProperty objectForKey:@"strokeColor"] componentsSeparatedByString:@","];
+        if (strokes!=nil && [strokes count] == 4) {
+            label.strokeColor = [UIColor colorWithRed:[strokes[0] floatValue]/255 green:[strokes[1] floatValue]/255 blue:[strokes[2] floatValue]/255 alpha:[strokes[3] floatValue]];
+        }else{
+            label.strokeColor = [UIColor colorWithRed:0.937 green:0.337 blue:0.157 alpha:0.7];
+        }
+        
+        label.strokeWidth = [[fontProperty objectForKey:@"strokeWidth"] floatValue];
+        //发光
+        label.layer.shadowRadius = [[fontProperty objectForKey:@"shadowRadius"] floatValue];
+        
+        NSArray *shadows = [[fontProperty objectForKey:@"shadowColor"] componentsSeparatedByString:@","];
+        if (shadows!=nil && [shadows count] == 4) {
+            label.layer.shadowColor = [UIColor colorWithRed:[shadows[0] floatValue]/255 green:[shadows[1] floatValue]/255 blue:[shadows[2] floatValue]/255 alpha:[shadows[3] floatValue]].CGColor;
+        }else{
+            label.layer.shadowColor = [UIColor colorWithRed:0.937 green:0.337 blue:0.157 alpha:1].CGColor;
+        }
+        
+        label.layer.shadowOffset = CGSizeFromString([fontProperty objectForKey:@"shadowOffset"]);
+        label.layer.shadowOpacity = [[fontProperty objectForKey:@"shadowOpacity"] floatValue];
+        
+        NSArray *fontColors = [[fontProperty objectForKey:@"fontColor"] componentsSeparatedByString:@","];
+        if (fontColors!=nil && [fontColors count] == 4) {
+            [label setTextColor:[UIColor colorWithRed:[fontColors[0] floatValue]/255 green:[fontColors[1] floatValue]/255 blue:[fontColors[2] floatValue]/255 alpha:[fontColors[3] floatValue]]];
+        }else{
+            [label setTextColor:[UIColor colorWithRed:0.937 green:0.337 blue:0.157 alpha:0.7]];
+        }
+        
+        NSMutableString *whiteSpace = [NSMutableString new];
+        NSInteger count = [[fontProperty objectForKey:@"distance"] integerValue];
+        for (int i = 0; i < count; i++) {
+            [whiteSpace appendString:@" "];
+        }
+        
+        NSMutableString *dateString = [NSMutableString new];
+        if ([[SettingModel sharedInstance] isRandom]) {
+            NSString *year = [self getRandomNumber:0 to:99];
+            NSString *month = [self getRandomNumber:1 to:12];
+            NSString *day = [self getRandomNumber:1 to:31];
+            dateString = [[NSMutableString alloc]initWithString:@"'"];
+            [dateString appendString:year];
+            [dateString appendString:whiteSpace];
+            [dateString appendString:month];
+            [dateString appendString:whiteSpace];
+            [dateString appendString:day];
+        }else{
+            NSString *dateStr = [[SettingModel sharedInstance] customDate];
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+            [dateFormat setDateFormat:@"yyyy / MM / dd"];
+            NSDate *date = [dateFormat dateFromString:dateStr];
+            dateString = [[NSMutableString alloc] initWithString:[self getCurrentTimeWithDate:date andWhiteSpace:whiteSpace]];
+        }
+        [label setText:dateString];
+        [imageView addSubview:label];
+        CGSize size = [label.text sizeWithAttributes:@{NSFontAttributeName: font}];
+        CGSize adaptionSize = CGSizeMake(ceilf(size.width), ceilf(size.height));
+        CGSize gap = CGSizeFromString([fontProperty objectForKey:@"position"]);
+        label.frame = CGRectMake(imageView.frame.size.width - adaptionSize.width - gap.width*base, imageView.frame.size.height - gap.height*base, adaptionSize.width, adaptionSize.height);
+        UIImage *resultImage = [self convertViewToImage:imageView andScale:image.scale];
+        image = resultImage;
+    }
+    
+    BOOL isBonderRotate = NO;
+    if(image.size.height > image.size.width){
+        image = [image imageRotatedByDegrees:270];
+        isBonderRotate = YES;
+    }
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
+    [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    NSString *bonderName = [content objectForKey:@"bonder"];
+    UIImage *bonderImage = [UIImage imageNamed:bonderName];
+    [bonderImage drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    if (isBonderRotate) {
+        newImage = [newImage imageRotatedByDegrees:90];
+    }
+    image = newImage;
+    [_imageView setImage:image];
+}
+
+-(NSString *)getRandomNumber:(int)from to:(int)to
+{
+    int randomNum = (int)(from + (arc4random() % (to - from + 1)));
+    NSLog(@"随机到的数值：%d",randomNum);
+    if (randomNum < 10 && randomNum >= 0) {
+        return [NSString stringWithFormat:@"0%d",randomNum];
+    }
+    return [NSString stringWithFormat:@"%d",randomNum];
+}
+
+- (UIImage*)convertViewToImage:(UIImageView *)view andScale:(CGFloat)scale{
+    CGSize size = view.bounds.size;
+    // 下面方法，第一个参数表示区域大小。第二个参数表示是否是非透明的。如果需要显示半透明效果，需要传NO，否则传YES。第三个参数就是屏幕密度了
+    UIGraphicsBeginImageContextWithOptions(size, NO, scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImage *resultImage = [[UIImage alloc] initWithCGImage:image.CGImage scale:scale orientation:view.image.imageOrientation];
+    return resultImage;
+}
+
+//获取当地时间
+- (NSString *)getCurrentTimeWithDate:(NSDate *)date andWhiteSpace:(NSString *)whiteSpace{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:[NSString stringWithFormat:@"MM%@dd%@yy",whiteSpace,whiteSpace]];
+    NSString *dateTime = [formatter stringFromDate:date];
+    NSString *result = [NSString stringWithFormat:@"' %@",dateTime];
+    return result;
 }
 
 -(void)viewSafeAreaInsetsDidChange{
