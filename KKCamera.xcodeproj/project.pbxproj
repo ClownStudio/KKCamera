@@ -14,6 +14,8 @@
 		B6019811238FAF93006ADFA7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6019810238FAF93006ADFA7 /* SettingViewController.m */; };
 		B609D7812397425600D2877D /* SubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B609D7802397425600D2877D /* SubscriberViewController.m */; };
 		B60E14E62390159000DF057F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B60E14E82390159000DF057F /* InfoPlist.strings */; };
+		B61C4EEB23AB5A490086995E /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = B61C4EEA23AB5A490086995E /* UIImage+Rotate.m */; };
+		B61C4EEE23AB5B1B0086995E /* FBGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B61C4EED23AB5B1A0086995E /* FBGlowLabel.m */; };
 		B63F19EC23A777BE00C127FB /* EffectSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B63F19EB23A777BE00C127FB /* EffectSliderView.m */; };
 		B63F19EF23A7811F00C127FB /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B63F19EE23A7811F00C127FB /* CustomSlider.m */; };
 		B6434E45239F833000778532 /* Effect.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6434E44239F833000778532 /* Effect.plist */; };
@@ -534,6 +536,10 @@
 		B609D7802397425600D2877D /* SubscriberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubscriberViewController.m; sourceTree = "<group>"; };
 		B60E14E72390159000DF057F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B60E14E92390159400DF057F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B61C4EE923AB5A490086995E /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		B61C4EEA23AB5A490086995E /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		B61C4EEC23AB5B1A0086995E /* FBGlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGlowLabel.h; sourceTree = "<group>"; };
+		B61C4EED23AB5B1A0086995E /* FBGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGlowLabel.m; sourceTree = "<group>"; };
 		B63F19EA23A777BE00C127FB /* EffectSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectSliderView.h; sourceTree = "<group>"; };
 		B63F19EB23A777BE00C127FB /* EffectSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectSliderView.m; sourceTree = "<group>"; };
 		B63F19ED23A7811F00C127FB /* CustomSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
@@ -1755,6 +1761,10 @@
 				B68F5D6E238CB331004C3DB6 /* ViewController.m */,
 				B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */,
 				B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */,
+				B61C4EEC23AB5B1A0086995E /* FBGlowLabel.h */,
+				B61C4EED23AB5B1A0086995E /* FBGlowLabel.m */,
+				B61C4EE923AB5A490086995E /* UIImage+Rotate.h */,
+				B61C4EEA23AB5A490086995E /* UIImage+Rotate.m */,
 				B6557EF32396022F00636C7F /* UIImageView+GIF.h */,
 				B6557EF42396022F00636C7F /* UIImageView+GIF.m */,
 				B6D672C62390A6C5007C9136 /* EditViewController.h */,
@@ -2972,6 +2982,7 @@
 				B68F6028238CBF37004C3DB6 /* GPUImageToneCurveFilter.m in Sources */,
 				B68F608E238CBF38004C3DB6 /* PhotoEditAcvItemView.m in Sources */,
 				B68F5FF2238CBF37004C3DB6 /* GPUImageHistogramFilter.m in Sources */,
+				B61C4EEE23AB5B1B0086995E /* FBGlowLabel.m in Sources */,
 				B68F601E238CBF37004C3DB6 /* GPUImageLanczosResamplingFilter.m in Sources */,
 				B68F5FCD238CBF37004C3DB6 /* FWAmaroFilter.m in Sources */,
 				B68F6030238CBF37004C3DB6 /* GPUImageSubtractBlendFilter.m in Sources */,
@@ -3022,6 +3033,7 @@
 				B68F6044238CBF37004C3DB6 /* GPUImageLinearBurnBlendFilter.m in Sources */,
 				B68F6076238CBF38004C3DB6 /* GPUImageView.m in Sources */,
 				B68F5FCC238CBF37004C3DB6 /* FWHefeFilter.m in Sources */,
+				B61C4EEB23AB5A490086995E /* UIImage+Rotate.m in Sources */,
 				B67B74DA238D20DE001B1F60 /* PCMenuViewController.m in Sources */,
 				B67B74FF238D20DE001B1F60 /* AppManager.m in Sources */,
 				B68F606E238CBF38004C3DB6 /* GLProgram.m in Sources */,
