@@ -98,7 +98,7 @@
     [_middleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);
         make.bottom.equalTo(_editorView.mas_top);
-        make.size.mas_equalTo(100);
+        make.size.mas_equalTo(120);
     }];
     
     _groupView = [[UIView alloc] init];
@@ -119,7 +119,7 @@
         make.size.mas_equalTo(30);
     }];
     
-    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 100) - _settingBtn.bounds.size.height)];
+    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 120) - _settingBtn.bounds.size.height)];
     [self.contentView addSubview:_imageScrollView];
     if (@available(iOS 11.0, *)) {
         _imageScrollView.contentInsetAdjustmentBehavior =  UIScrollViewContentInsetAdjustmentNever;
@@ -281,20 +281,45 @@
             }
         }
     }
+    
+    for (UIView *view in _middleScrollView.subviews) {
+        [view removeFromSuperview];
+    }
     NSArray *middleContent = [[_selectedContent objectAtIndex:index] objectForKey:@"effects"];
     int position = 0;
-    int distance = 5;
+    int distance = 8;
     int tag = 1;
     for (NSDictionary *dict in middleContent) {
         position += distance;
-        EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 5, 50, _middleScrollView.bounds.size.height - 10)];
+        EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, _middleScrollView.bounds.size.height - 16)];
         button.tag = tag;
+        [button addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)]];
+        [button.layer setMasksToBounds:YES];
+        [button.layer setCornerRadius:5];
         [button setItemWithData:dict];
         [_middleScrollView addSubview:button];
         tag++;
-        position += 50;
+        position += button.bounds.size.width;
     }
     [_middleScrollView setContentSize:CGSizeMake(position, 0)];
+    [self selectMiddleWithIndex:1];
+}
+
+- (void)onTap:(UIGestureRecognizer *)gesture{
+    [self selectMiddleWithIndex:(int)gesture.view.tag];
+}
+
+- (void)selectMiddleWithIndex:(int)index{
+    for (EffectItemView *btn in _middleScrollView.subviews) {
+        if([btn isMemberOfClass:[EffectItemView class]] == NO){
+            continue;
+        }
+        if (btn.tag == index) {
+            [btn setItemSelected:YES];
+        }else{
+            [btn setItemSelected:NO];
+        }
+    }
 }
 
 -(void)viewSafeAreaInsetsDidChange{
