@@ -1038,20 +1038,8 @@
 		<key>edit</key>
 		<array>
 			<dict>
-				<key>value</key>
-				<string></string>
-				<key>effect</key>
-				<string></string>
-				<key>picture</key>
-				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
-				<string>LUMEN</string>
+				<string>LEVEL</string>
 				<key>icon</key>
 				<string>effect1</string>
 				<key>iconSelected</key>
@@ -1066,20 +1054,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>value</key>
-				<string></string>
-				<key>effect</key>
-				<string></string>
-				<key>picture</key>
-				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
-				<string>LUMEN</string>
+				<string>SHARPNESS</string>
 				<key>icon</key>
 				<string>effect1</string>
 				<key>iconSelected</key>
@@ -1094,20 +1070,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>value</key>
-				<string></string>
-				<key>effect</key>
-				<string></string>
-				<key>picture</key>
-				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
-				<string>LUMEN</string>
+				<string>COLOR</string>
 				<key>icon</key>
 				<string>effect1</string>
 				<key>iconSelected</key>
@@ -1122,20 +1086,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>value</key>
-				<string></string>
-				<key>effect</key>
-				<string></string>
-				<key>picture</key>
-				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
-				<string>LUMEN</string>
+				<string>EXPOSURE</string>
 				<key>icon</key>
 				<string>effect1</string>
 				<key>iconSelected</key>
@@ -1150,20 +1102,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>value</key>
-				<string></string>
-				<key>effect</key>
-				<string></string>
-				<key>picture</key>
-				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
-				<string>LUMEN</string>
+				<string>CONTRAST</string>
 				<key>icon</key>
 				<string>effect1</string>
 				<key>iconSelected</key>
@@ -1178,20 +1118,56 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>value</key>
-				<string></string>
-				<key>effect</key>
-				<string></string>
-				<key>picture</key>
-				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
-				<string>LUMEN</string>
+				<string>SATURATION</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>BRIGHTNESS</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>SHADOW</string>
+				<key>icon</key>
+				<string>effect1</string>
+				<key>iconSelected</key>
+				<string>effect1</string>
+				<key>color</key>
+				<string>0,0,0,1</string>
+				<key>color_selected</key>
+				<string>0,0,0,1</string>
+				<key>fontColor</key>
+				<string>255,255,255,1</string>
+				<key>fontColorSelected</key>
+				<string>255,255,255,1</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>VIGNETTE</string>
 				<key>icon</key>
 				<string>effect1</string>
 				<key>iconSelected</key>

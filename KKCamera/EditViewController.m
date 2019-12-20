@@ -226,6 +226,9 @@
     }
     _selectedType = [[_effectContent objectAtIndex:index] objectForKey:@"type"];
     _selectedMainContent = [[_effectContent objectAtIndex:index] objectForKey:_selectedType];
+    for (UIView * view in _groupView.subviews) {
+        [view removeFromSuperview];
+    }
     if ([@"cut" isEqualToString:_selectedType]) {
         [_topScrollView setHidden:YES];
         [_groupView setHidden:YES];
@@ -257,14 +260,11 @@
 }
 
 -(void)refreshGroupViewWithRandom:(BOOL)isRandom{
-    for (UIView * view in _groupView.subviews) {
-        [view removeFromSuperview];
-    }
     if(isRandom){
-        
+        UIView *sliderView = [self getSliderView];
+        [_groupView addSubview:sliderView];
     }else{
-        UIView *_sliderView = [self getSliderView];
-        [_groupView addSubview:_sliderView];
+        
     }
 }
 
