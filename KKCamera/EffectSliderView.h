@@ -7,13 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomSlider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol EffectSliderViewDelegate;
+
 @interface EffectSliderView : UIView
 
-@property (nonatomic,assign) int precent;
+@property (nonatomic,strong) CustomSlider *slider;
+@property (nonatomic,assign) id<EffectSliderViewDelegate> delegate;
+
+@end
+
+@protocol EffectSliderViewDelegate <NSObject>
+
+- (void)effectSliderValueChanged:(CGFloat)value;
+- (void)effectCancel;
+- (void)effectConfirm;
 
 @end
 
 NS_ASSUME_NONNULL_END
+
+
