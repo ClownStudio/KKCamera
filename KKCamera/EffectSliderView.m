@@ -38,7 +38,7 @@
         [_label setTextColor:[UIColor whiteColor]];
         [_label setFont:[UIFont systemFontOfSize:10]];
         [_label setTextAlignment:NSTextAlignmentCenter];
-        [_label setText:[NSString stringWithFormat:@"%d%%",(int)self.slider.value]];
+        [_label setText:[NSString stringWithFormat:@"%.0f%%",self.slider.value]];
         [self addSubview:_label];
         
         _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(190, 0, 35, 35)];
@@ -51,6 +51,7 @@
 }
 
 -(IBAction)valueChanged:(UISlider *)sender{
+    [_label setText:[NSString stringWithFormat:@"%.0f%%",self.slider.value]];
     if (_delegate && [_delegate respondsToSelector:@selector(effectSliderValueChanged:)]) {
         [_delegate effectSliderValueChanged:sender.value];
     }

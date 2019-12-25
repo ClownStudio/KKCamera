@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EditViewController : BasicViewController
 
--(void)setOriginImage:(UIImage *)originImage;
+-(void)setOrignImage:(UIImage *)orignImage;
 
 @end
 

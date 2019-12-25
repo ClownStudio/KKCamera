@@ -173,7 +173,7 @@
         UIImage *image = resultImage;
         EditViewController *editViewController = [[EditViewController alloc] init];
         [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
-        [editViewController setOriginImage:image];
+        [editViewController setOrignImage:image];
         [self.navigationController pushViewController:editViewController animated:YES];
     }];
 }
@@ -194,7 +194,7 @@
     [picker dismissViewControllerAnimated:YES completion:^{
         EditViewController *editViewController = [[EditViewController alloc] init];
         [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
-        [editViewController setOriginImage:image];
+        [editViewController setOrignImage:image];
         [self.navigationController pushViewController:editViewController animated:YES];
     }];
 }

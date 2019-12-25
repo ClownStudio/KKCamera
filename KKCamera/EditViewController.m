@@ -43,6 +43,18 @@
     NSArray *_selectedMiddleContent;
     NSString *_selectedType;
     NSMutableArray *_editContents;
+    NSInteger _selectEditIndex;
+    EffectSliderView *_effectSliderView;
+    
+    GPUImageHighlightShadowFilter *_levelFilter;
+    GPUImageSharpenFilter *_sharpenFilter;
+    GPUImageWhiteBalanceFilter *_balanceFilter;
+    GPUImageExposureFilter *_exposureFilter;
+    GPUImageContrastFilter *_contrastFilter;
+    GPUImageSaturationFilter *_saturationFilter;
+    GPUImageBrightnessFilter *_brightnessFilter;
+    GPUImageVignetteFilter *_vignetteFilter;
+    GPUImageHighlightShadowFilter *_shadowFilter;
 }
 
 - (void)viewDidLoad {
@@ -235,6 +247,7 @@
     _selectedMainContent = [[_effectContent objectAtIndex:index] objectForKey:_selectedType];
     
     if ([@"cut" isEqualToString:_selectedType]) {
+        [self clearEditFilters];
         [_topScrollView setHidden:YES];
         [_groupView setHidden:YES];
     }else if ([@"edit" isEqualToString:_selectedType]){
@@ -260,6 +273,7 @@
         }
         [_middleScrollView setContentSize:CGSizeMake(position, 0)];
     }else{
+        [self clearEditFilters];
         [self refreshGroupViewWithRandom:YES];
         [_topScrollView setHidden:NO];
         [_groupView setHidden:NO];
@@ -282,30 +296,195 @@
     }
 }
 
--(IBAction)onEdit:(EffectItemView *)sender{
+-(IBAction)onEdit:(UIGestureRecognizer *)sender{
+    [self selectEditButtonWithIndex:sender.view.tag - 1];
+    [self updateEdit];
+}
+
+- (void)selectEditButtonWithIndex:(NSInteger)index{
+    _selectEditIndex = index;
+    for (EffectItemView *btn in _middleScrollView.subviews) {
+        if([btn isMemberOfClass:[EffectItemView class]] == NO){
+            continue;
+        }
+        if (btn.tag == index + 1) {
+            [btn setItemSelected:YES];
+        }else{
+            [btn setItemSelected:NO];
+        }
+    }
+}
+
+- (void)updateEdit{
+    NSString *type = [_editContents objectAtIndex:_selectEditIndex];
+    GPUImagePicture *picture =  [[GPUImagePicture alloc] initWithImage:_imageView.image];
+    NSInteger index = -1;
+    if ([@"LEVEL" isEqualToString:type]) {
+        index = 0;
+    }else if ([@"SHARPNESS" isEqualToString:type]){
+        index = 1;
+    }else if ([@"COLOR" isEqualToString:type]){
+        index = 2;
+    }else if ([@"EXPOSURE" isEqualToString:type]){
+        index = 3;
+    }else if ([@"CONTRAST" isEqualToString:type]){
+        index = 4;
+    }else if ([@"SATURATION" isEqualToString:type]){
+        index = 5;
+    }else if ([@"SHADOW" isEqualToString:type]){
+        index = 6;
+    }else if ([@"VIGNETTE" isEqualToString:type]){
+        index = 7;
+    }
     
+    switch (index) {
+        case 0:
+            //层次
+        {
+            if (!_levelFilter) {
+                _levelFilter = [[GPUImageHighlightShadowFilter alloc] init];
+                [picture addTarget:_levelFilter];
+            }
+            
+//            _levelFilter.shadows += (slider.value - _lastSliderValue);
+//            _levelFilter.highlights -= (slider.value - _lastSliderValue);
+            [self updateImage:_levelFilter andPicture:picture];
+        }
+            
+            break;
+        case 1:
+            //清晰度
+        {
+            if (!_sharpenFilter) {
+                _sharpenFilter = [[GPUImageSharpenFilter alloc] init];
+                [picture addTarget:_sharpenFilter];
+            }
+//            _sharpenFilter.sharpness = slider.value;
+            [self updateImage:_sharpenFilter andPicture:picture];
+        }
+            
+            break;
+        case 2:
+            //色温
+        {
+            if (!_balanceFilter) {
+                _balanceFilter = [[GPUImageWhiteBalanceFilter alloc] init];
+                [picture addTarget:_balanceFilter];
+            }
+//            _balanceFilter.temperature = slider.value;
+            [self updateImage:_balanceFilter andPicture:picture];
+        }
+            
+            break;
+        case 3:
+            //曝光度
+        {
+            if (!_exposureFilter) {
+                _exposureFilter = [[GPUImageExposureFilter alloc] init];
+                [picture addTarget:_exposureFilter];
+            }
+            
+//            _exposureFilter.exposure = slider.value;
+            [self updateImage:_exposureFilter andPicture:picture];
+        }
+            break;
+        case 4:
+            //对比度
+        {
+            if (!_contrastFilter) {
+                _contrastFilter = [[GPUImageContrastFilter alloc] init];
+                [picture addTarget:_contrastFilter];
+            }
+//            _contrastFilter.contrast = slider.value;
+            [self updateImage:_contrastFilter andPicture:picture];
+        }
+            break;
+        case 5:
+            //饱和度
+        {
+            if (!_saturationFilter) {
+                _saturationFilter = [[GPUImageSaturationFilter alloc] init];
+                [picture addTarget:_saturationFilter];
+            }
+//            _saturationFilter.saturation = slider.value;
+            [self updateImage:_saturationFilter andPicture:picture];
+        }
+            break;
+        case 6:
+            //高光
+        {
+            if (!_brightnessFilter) {
+                _brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
+                [picture addTarget:_brightnessFilter];
+            }
+//            _brightnessFilter.brightness = slider.value;
+            [self updateImage:_brightnessFilter andPicture:picture];
+        }
+            
+            break;
+        case 7:
+            //阴影
+        {
+            if (!_shadowFilter) {
+                _shadowFilter = [[GPUImageHighlightShadowFilter alloc] init];
+                [picture addTarget:_shadowFilter];
+            }
+//            _shadowFilter.shadows = slider.value;
+            [self updateImage:_shadowFilter andPicture:picture];
+        }
+            break;
+        case 8:
+            //暗角
+        {
+            if (!_vignetteFilter) {
+                _vignetteFilter = [[GPUImageVignetteFilter alloc] init];
+                [picture addTarget:_vignetteFilter];
+            }
+            
+//            _vignetteFilter.vignetteStart = slider.value;
+//            _vignetteFilter.vignetteEnd = slider.value + 0.25;
+            [self updateImage:_vignetteFilter andPicture:picture];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+-(void)updateImage:(GPUImageOutput*)filter andPicture:(GPUImagePicture *)picture
+{
+    [filter useNextFrameForImageCapture];
+    [picture processImage];
+    UIImage *newImage = [filter imageFromCurrentFramebufferWithOrientation:_imageView.image.imageOrientation];
+    if (newImage) {
+        [_imageView setImage:newImage];
+    }
 }
 
 -(void)refreshGroupViewWithRandom:(BOOL)isRandom{
     if(isRandom){
         
     }else{
-        UIView *sliderView = [self getSliderView];
-        [_groupView addSubview:sliderView];
+        if (_effectSliderView == nil) {
+            _effectSliderView = [self getSliderView];
+        }
+        [_effectSliderView.slider setValue:50];
+        [_groupView addSubview:_effectSliderView];
     }
 }
 
--(UIView *)getSliderView{
+- (EffectSliderView *)getSliderView{
     EffectSliderView *view = [[EffectSliderView alloc] initWithFrame:CGRectMake(0, (_groupView.bounds.size.height - 35)/2, _groupView.bounds.size.width, 35)];
     view.delegate = self;
     return view;
 }
 
 -(IBAction)onSelectTop:(UIButton *)sender{
-    [self selectTopScrollViewWithIndex:(int)sender.tag - 1];
+    [self selectTopScrollViewWithIndex:sender.tag - 1];
 }
 
--(void)selectTopScrollViewWithIndex:(int)index{
+-(void)selectTopScrollViewWithIndex:(NSInteger)index{
     for (UIButton *button in _topScrollView.subviews) {
         if ([button isMemberOfClass:[UIButton class]]) {
             if (button.tag == index + 1) {
@@ -338,6 +517,18 @@
     [_middleScrollView setContentSize:CGSizeMake(position, 0)];
 }
 
+-(void)clearEditFilters{
+    _levelFilter = nil;
+    _saturationFilter = nil;
+    _contrastFilter = nil;
+    _exposureFilter = nil;
+    _brightnessFilter = nil;
+    _sharpenFilter = nil;
+    _vignetteFilter = nil;
+    _balanceFilter = nil;
+    _shadowFilter = nil;
+}
+
 - (void)effectSliderValueChanged:(CGFloat)value{
     
 }
@@ -351,10 +542,10 @@
 }
 
 - (void)onTap:(UIGestureRecognizer *)gesture{
-    [self selectMiddleWithIndex:(int)gesture.view.tag];
+    [self selectMiddleWithIndex:gesture.view.tag];
 }
 
-- (void)selectMiddleWithIndex:(int)index{
+- (void)selectMiddleWithIndex:(NSInteger)index{
     for (EffectItemView *btn in _middleScrollView.subviews) {
         if([btn isMemberOfClass:[EffectItemView class]] == NO){
             continue;
@@ -568,8 +759,8 @@
     [_imageView setFrame:_imageScrollView.bounds];
 }
 
--(void)setOriginImage:(UIImage *)originImage{
-    _oriImage = originImage;
+-(void)setOrignImage:(UIImage *)orignImage{
+    _oriImage = orignImage;
     if (_imageView) {
         _imageView.image = _oriImage;
     }
