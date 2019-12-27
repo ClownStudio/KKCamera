@@ -55,6 +55,8 @@
     GPUImageBrightnessFilter *_brightnessFilter;
     GPUImageVignetteFilter *_vignetteFilter;
     GPUImageHighlightShadowFilter *_shadowFilter;
+    CGFloat _lastSliderValue;
+    GPUImagePicture *_picture;
 }
 
 - (void)viewDidLoad {
@@ -316,146 +318,58 @@
 }
 
 - (void)updateEdit{
+    _picture =  [[GPUImagePicture alloc] initWithImage:_imageView.image];
+    [_picture removeAllTargets];
     NSString *type = [_editContents objectAtIndex:_selectEditIndex];
-    GPUImagePicture *picture =  [[GPUImagePicture alloc] initWithImage:_imageView.image];
-    NSInteger index = -1;
+    CGFloat value = 0;
+    CGFloat maximumValue = 0;
+    CGFloat minimumValue = 0;
     if ([@"LEVEL" isEqualToString:type]) {
-        index = 0;
+        maximumValue = 1;
+        minimumValue = 0;
+        value = 0;
     }else if ([@"SHARPNESS" isEqualToString:type]){
-        index = 1;
+        minimumValue = 0.0;
+        maximumValue = 1.5;
+        value = 0;
     }else if ([@"COLOR" isEqualToString:type]){
-        index = 2;
+        minimumValue = 0;
+        maximumValue = 10000.0;
+        value = 5000;
     }else if ([@"EXPOSURE" isEqualToString:type]){
-        index = 3;
+        maximumValue = 1;
+        minimumValue = -1;
+        value = 0;
     }else if ([@"CONTRAST" isEqualToString:type]){
-        index = 4;
+        maximumValue = 3;
+        minimumValue = 0.3;
+        value = 1;
     }else if ([@"SATURATION" isEqualToString:type]){
-        index = 5;
+        maximumValue = 2;
+        minimumValue = 0;
+        value = 1;
+    }else if ([@"BRIGHTNESS" isEqualToString:type]){
+        maximumValue = 0.8;
+        minimumValue = -0.8;
+        value = 0;
     }else if ([@"SHADOW" isEqualToString:type]){
-        index = 6;
+        maximumValue = 1;
+        minimumValue = 0;
+        value = 0;
     }else if ([@"VIGNETTE" isEqualToString:type]){
-        index = 7;
+        maximumValue = 0.6;
+        minimumValue = 0.4;
+        value = 0.5;
     }
-    
-    switch (index) {
-        case 0:
-            //层次
-        {
-            if (!_levelFilter) {
-                _levelFilter = [[GPUImageHighlightShadowFilter alloc] init];
-                [picture addTarget:_levelFilter];
-            }
-            
-//            _levelFilter.shadows += (slider.value - _lastSliderValue);
-//            _levelFilter.highlights -= (slider.value - _lastSliderValue);
-            [self updateImage:_levelFilter andPicture:picture];
-        }
-            
-            break;
-        case 1:
-            //清晰度
-        {
-            if (!_sharpenFilter) {
-                _sharpenFilter = [[GPUImageSharpenFilter alloc] init];
-                [picture addTarget:_sharpenFilter];
-            }
-//            _sharpenFilter.sharpness = slider.value;
-            [self updateImage:_sharpenFilter andPicture:picture];
-        }
-            
-            break;
-        case 2:
-            //色温
-        {
-            if (!_balanceFilter) {
-                _balanceFilter = [[GPUImageWhiteBalanceFilter alloc] init];
-                [picture addTarget:_balanceFilter];
-            }
-//            _balanceFilter.temperature = slider.value;
-            [self updateImage:_balanceFilter andPicture:picture];
-        }
-            
-            break;
-        case 3:
-            //曝光度
-        {
-            if (!_exposureFilter) {
-                _exposureFilter = [[GPUImageExposureFilter alloc] init];
-                [picture addTarget:_exposureFilter];
-            }
-            
-//            _exposureFilter.exposure = slider.value;
-            [self updateImage:_exposureFilter andPicture:picture];
-        }
-            break;
-        case 4:
-            //对比度
-        {
-            if (!_contrastFilter) {
-                _contrastFilter = [[GPUImageContrastFilter alloc] init];
-                [picture addTarget:_contrastFilter];
-            }
-//            _contrastFilter.contrast = slider.value;
-            [self updateImage:_contrastFilter andPicture:picture];
-        }
-            break;
-        case 5:
-            //饱和度
-        {
-            if (!_saturationFilter) {
-                _saturationFilter = [[GPUImageSaturationFilter alloc] init];
-                [picture addTarget:_saturationFilter];
-            }
-//            _saturationFilter.saturation = slider.value;
-            [self updateImage:_saturationFilter andPicture:picture];
-        }
-            break;
-        case 6:
-            //高光
-        {
-            if (!_brightnessFilter) {
-                _brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
-                [picture addTarget:_brightnessFilter];
-            }
-//            _brightnessFilter.brightness = slider.value;
-            [self updateImage:_brightnessFilter andPicture:picture];
-        }
-            
-            break;
-        case 7:
-            //阴影
-        {
-            if (!_shadowFilter) {
-                _shadowFilter = [[GPUImageHighlightShadowFilter alloc] init];
-                [picture addTarget:_shadowFilter];
-            }
-//            _shadowFilter.shadows = slider.value;
-            [self updateImage:_shadowFilter andPicture:picture];
-        }
-            break;
-        case 8:
-            //暗角
-        {
-            if (!_vignetteFilter) {
-                _vignetteFilter = [[GPUImageVignetteFilter alloc] init];
-                [picture addTarget:_vignetteFilter];
-            }
-            
-//            _vignetteFilter.vignetteStart = slider.value;
-//            _vignetteFilter.vignetteEnd = slider.value + 0.25;
-            [self updateImage:_vignetteFilter andPicture:picture];
-        }
-            break;
-            
-        default:
-            break;
-    }
+    [_effectSliderView.slider setMaximumValue:maximumValue];
+    [_effectSliderView.slider setMinimumValue:minimumValue];
+    [_effectSliderView.slider setValue:value];
 }
 
--(void)updateImage:(GPUImageOutput*)filter andPicture:(GPUImagePicture *)picture
+-(void)updateImage:(GPUImageOutput*)filter
 {
     [filter useNextFrameForImageCapture];
-    [picture processImage];
+    [_picture processImage];
     UIImage *newImage = [filter imageFromCurrentFramebufferWithOrientation:_imageView.image.imageOrientation];
     if (newImage) {
         [_imageView setImage:newImage];
@@ -530,7 +444,120 @@
 }
 
 - (void)effectSliderValueChanged:(CGFloat)value{
-    
+    switch (_selectEditIndex) {
+        case 0:
+            //层次
+        {
+            if (!_levelFilter) {
+                _levelFilter = [[GPUImageHighlightShadowFilter alloc] init];
+                [_picture addTarget:_levelFilter];
+            }
+            
+            _levelFilter.shadows += (_effectSliderView.slider.value - _lastSliderValue);
+            _levelFilter.highlights -= (_effectSliderView.slider.value - _lastSliderValue);
+            [self updateImage:_levelFilter];
+            _lastSliderValue = _effectSliderView.slider.value;
+        }
+            
+            break;
+        case 1:
+            //清晰度
+        {
+            if (!_sharpenFilter) {
+                _sharpenFilter = [[GPUImageSharpenFilter alloc] init];
+                [_picture addTarget:_sharpenFilter];
+            }
+            _sharpenFilter.sharpness = _effectSliderView.slider.value;
+            [self updateImage:_sharpenFilter];
+        }
+            
+            break;
+        case 2:
+            //色温
+        {
+            if (!_balanceFilter) {
+                _balanceFilter = [[GPUImageWhiteBalanceFilter alloc] init];
+                [_picture addTarget:_balanceFilter];
+            }
+            _balanceFilter.temperature = _effectSliderView.slider.value;
+            [self updateImage:_balanceFilter];
+        }
+            
+            break;
+        case 3:
+            //曝光度
+        {
+            if (!_exposureFilter) {
+                _exposureFilter = [[GPUImageExposureFilter alloc] init];
+                [_picture addTarget:_exposureFilter];
+            }
+            
+            _exposureFilter.exposure = _effectSliderView.slider.value;
+            [self updateImage:_exposureFilter];
+        }
+            break;
+        case 4:
+            //对比度
+        {
+            if (!_contrastFilter) {
+                _contrastFilter = [[GPUImageContrastFilter alloc] init];
+                [_picture addTarget:_contrastFilter];
+            }
+            _contrastFilter.contrast = _effectSliderView.slider.value;
+            [self updateImage:_contrastFilter];
+        }
+            break;
+        case 5:
+            //饱和度
+        {
+            if (!_saturationFilter) {
+                _saturationFilter = [[GPUImageSaturationFilter alloc] init];
+                [_picture addTarget:_saturationFilter];
+            }
+            _saturationFilter.saturation = _effectSliderView.slider.value;
+            [self updateImage:_saturationFilter];
+        }
+            break;
+        case 6:
+            //高光
+        {
+            if (!_brightnessFilter) {
+                _brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
+                [_picture addTarget:_brightnessFilter];
+            }
+            _brightnessFilter.brightness = _effectSliderView.slider.value;
+            [self updateImage:_brightnessFilter];
+        }
+            
+            break;
+        case 7:
+            //阴影
+        {
+            if (!_shadowFilter) {
+                _shadowFilter = [[GPUImageHighlightShadowFilter alloc] init];
+                [_picture addTarget:_shadowFilter];
+            }
+            _shadowFilter.shadows = _effectSliderView.slider.value;
+            [self updateImage:_shadowFilter];
+        }
+            break;
+        case 8:
+            //暗角
+        {
+            if (!_vignetteFilter) {
+                _vignetteFilter = [[GPUImageVignetteFilter alloc] init];
+                [_picture addTarget:_vignetteFilter];
+            }
+            
+            _vignetteFilter.vignetteStart = _effectSliderView.slider.value;
+            _vignetteFilter.vignetteEnd = _effectSliderView.slider.value + 0.25;
+            [self updateImage:_vignetteFilter];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)effectCancel{

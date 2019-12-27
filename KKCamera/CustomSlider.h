@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CustomSlider : UISlider
 
+@property(nonatomic, copy) void(^customSliderValueChangedBlock)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END
