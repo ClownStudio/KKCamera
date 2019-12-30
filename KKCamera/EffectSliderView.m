@@ -28,12 +28,7 @@
         self.slider = [[CustomSlider alloc] initWithFrame:CGRectMake(75, 0, frame.size.width - 165, 35)];
         [self.slider setUserInteractionEnabled:YES];
         [self.slider setThumbImage:[UIImage imageNamed:@"kk_slider_circle"] forState:UIControlStateNormal];
-        [self.slider setCustomSliderValueChangedBlock:^{
-//            [self->_label setText:[NSString stringWithFormat:@"%.0f%%",self.slider.value]];
-            if (self.delegate && [self->_delegate respondsToSelector:@selector(effectSliderValueChanged:)]) {
-                [self.delegate effectSliderValueChanged:self.slider.value];
-            }
-        }];
+        [self.slider addTarget:self action:@selector(onChange:) forControlEvents:UIControlEventValueChanged];
         [self addSubview:self.slider];
         
         _label = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width - 90, 0, 35, 35)];
@@ -49,6 +44,13 @@
         [self addSubview:_confirmBtn];
     }
     return self;
+}
+
+-(IBAction)onChange:(id)sender{
+    [_label setText:[NSString stringWithFormat:@"%d%%",(int)((_slider.value - _slider.minimumValue)/(_slider.maximumValue - _slider.minimumValue)*100)]];
+    if (self.delegate && [self->_delegate respondsToSelector:@selector(effectSliderValueChanged:)]) {
+        [self.delegate effectSliderValueChanged:self.slider.value];
+    }
 }
 
 -(IBAction)onCancel:(id)sender{

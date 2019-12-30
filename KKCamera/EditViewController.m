@@ -46,7 +46,6 @@
     NSInteger _selectEditIndex;
     EffectSliderView *_effectSliderView;
     
-    GPUImageHighlightShadowFilter *_levelFilter;
     GPUImageSharpenFilter *_sharpenFilter;
     GPUImageWhiteBalanceFilter *_balanceFilter;
     GPUImageExposureFilter *_exposureFilter;
@@ -57,12 +56,14 @@
     GPUImageHighlightShadowFilter *_shadowFilter;
     CGFloat _lastSliderValue;
     GPUImagePicture *_picture;
+    UIImage *_editImage;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fd_interactivePopDisabled = YES;
     
+    _editImage = _oriImage;
     NSString *effectFilePath = [[NSBundle mainBundle] pathForResource:@"Effect" ofType:@"plist"];
     _effectContent = [NSArray arrayWithContentsOfFile:effectFilePath];
     
@@ -248,6 +249,7 @@
     _selectedType = [[_effectContent objectAtIndex:index] objectForKey:@"type"];
     _selectedMainContent = [[_effectContent objectAtIndex:index] objectForKey:_selectedType];
     
+    [_imageView setImage:_editImage];
     if ([@"cut" isEqualToString:_selectedType]) {
         [self clearEditFilters];
         [_topScrollView setHidden:YES];
@@ -255,7 +257,7 @@
     }else if ([@"edit" isEqualToString:_selectedType]){
         [self refreshGroupViewWithRandom:NO];
         [_topScrollView setHidden:YES];
-        [_groupView setHidden:NO];
+        [_groupView setHidden:YES];
         _editContents = [NSMutableArray new];
         int position = 0;
         int distance = 8;
@@ -299,11 +301,13 @@
 }
 
 -(IBAction)onEdit:(UIGestureRecognizer *)sender{
+    [_groupView setHidden:NO];
     [self selectEditButtonWithIndex:sender.view.tag - 1];
     [self updateEdit];
 }
 
 - (void)selectEditButtonWithIndex:(NSInteger)index{
+    [_imageView setImage:_editImage];
     _selectEditIndex = index;
     for (EffectItemView *btn in _middleScrollView.subviews) {
         if([btn isMemberOfClass:[EffectItemView class]] == NO){
@@ -318,17 +322,15 @@
 }
 
 - (void)updateEdit{
-    _picture =  [[GPUImagePicture alloc] initWithImage:_imageView.image];
-    [_picture removeAllTargets];
+    if (_picture == nil) {
+        _picture =  [[GPUImagePicture alloc] initWithImage:_editImage];
+    }
+    
     NSString *type = [_editContents objectAtIndex:_selectEditIndex];
     CGFloat value = 0;
     CGFloat maximumValue = 0;
     CGFloat minimumValue = 0;
-    if ([@"LEVEL" isEqualToString:type]) {
-        maximumValue = 1;
-        minimumValue = 0;
-        value = 0;
-    }else if ([@"SHARPNESS" isEqualToString:type]){
+    if ([@"SHARPNESS" isEqualToString:type]){
         minimumValue = 0.0;
         maximumValue = 1.5;
         value = 0;
@@ -370,7 +372,7 @@
 {
     [filter useNextFrameForImageCapture];
     [_picture processImage];
-    UIImage *newImage = [filter imageFromCurrentFramebufferWithOrientation:_imageView.image.imageOrientation];
+    UIImage *newImage = [filter imageFromCurrentFramebuffer];
     if (newImage) {
         [_imageView setImage:newImage];
     }
@@ -432,7 +434,6 @@
 }
 
 -(void)clearEditFilters{
-    _levelFilter = nil;
     _saturationFilter = nil;
     _contrastFilter = nil;
     _exposureFilter = nil;
@@ -441,131 +442,82 @@
     _vignetteFilter = nil;
     _balanceFilter = nil;
     _shadowFilter = nil;
+    _picture = nil;
 }
 
 - (void)effectSliderValueChanged:(CGFloat)value{
-    switch (_selectEditIndex) {
-        case 0:
-            //层次
-        {
-            if (!_levelFilter) {
-                _levelFilter = [[GPUImageHighlightShadowFilter alloc] init];
-                [_picture addTarget:_levelFilter];
-            }
-            
-            _levelFilter.shadows += (_effectSliderView.slider.value - _lastSliderValue);
-            _levelFilter.highlights -= (_effectSliderView.slider.value - _lastSliderValue);
-            [self updateImage:_levelFilter];
-            _lastSliderValue = _effectSliderView.slider.value;
+    NSString *type = [_editContents objectAtIndex:_selectEditIndex];
+    if ([@"SHARPNESS" isEqualToString:type]){
+        if (!_sharpenFilter) {
+            _sharpenFilter = [[GPUImageSharpenFilter alloc] init];
+            [_picture addTarget:_sharpenFilter];
         }
-            
-            break;
-        case 1:
-            //清晰度
-        {
-            if (!_sharpenFilter) {
-                _sharpenFilter = [[GPUImageSharpenFilter alloc] init];
-                [_picture addTarget:_sharpenFilter];
-            }
-            _sharpenFilter.sharpness = _effectSliderView.slider.value;
-            [self updateImage:_sharpenFilter];
+        _sharpenFilter.sharpness = value;
+        [self updateImage:_sharpenFilter];
+    }else if ([@"COLOR" isEqualToString:type]){
+        if (!_balanceFilter) {
+            _balanceFilter = [[GPUImageWhiteBalanceFilter alloc] init];
+            [_picture addTarget:_balanceFilter];
         }
-            
-            break;
-        case 2:
-            //色温
-        {
-            if (!_balanceFilter) {
-                _balanceFilter = [[GPUImageWhiteBalanceFilter alloc] init];
-                [_picture addTarget:_balanceFilter];
-            }
-            _balanceFilter.temperature = _effectSliderView.slider.value;
-            [self updateImage:_balanceFilter];
+        _balanceFilter.temperature = value;
+        [self updateImage:_balanceFilter];
+    }else if ([@"EXPOSURE" isEqualToString:type]){
+        if (!_exposureFilter) {
+            _exposureFilter = [[GPUImageExposureFilter alloc] init];
+            [_picture addTarget:_exposureFilter];
         }
-            
-            break;
-        case 3:
-            //曝光度
-        {
-            if (!_exposureFilter) {
-                _exposureFilter = [[GPUImageExposureFilter alloc] init];
-                [_picture addTarget:_exposureFilter];
-            }
-            
-            _exposureFilter.exposure = _effectSliderView.slider.value;
-            [self updateImage:_exposureFilter];
+        _exposureFilter.exposure = value;
+        [self updateImage:_exposureFilter];
+    }else if ([@"CONTRAST" isEqualToString:type]){
+        if (!_contrastFilter) {
+            _contrastFilter = [[GPUImageContrastFilter alloc] init];
+            [_picture addTarget:_contrastFilter];
         }
-            break;
-        case 4:
-            //对比度
-        {
-            if (!_contrastFilter) {
-                _contrastFilter = [[GPUImageContrastFilter alloc] init];
-                [_picture addTarget:_contrastFilter];
-            }
-            _contrastFilter.contrast = _effectSliderView.slider.value;
-            [self updateImage:_contrastFilter];
+        _contrastFilter.contrast = value;
+        [self updateImage:_contrastFilter];
+    }else if ([@"SATURATION" isEqualToString:type]){
+        if (!_saturationFilter) {
+            _saturationFilter = [[GPUImageSaturationFilter alloc] init];
+            [_picture addTarget:_saturationFilter];
         }
-            break;
-        case 5:
-            //饱和度
-        {
-            if (!_saturationFilter) {
-                _saturationFilter = [[GPUImageSaturationFilter alloc] init];
-                [_picture addTarget:_saturationFilter];
-            }
-            _saturationFilter.saturation = _effectSliderView.slider.value;
-            [self updateImage:_saturationFilter];
+        _saturationFilter.saturation = value;
+        [self updateImage:_saturationFilter];
+    }else if ([@"BRIGHTNESS" isEqualToString:type]){
+        if (!_brightnessFilter) {
+            _brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
+            [_picture addTarget:_brightnessFilter];
         }
-            break;
-        case 6:
-            //高光
-        {
-            if (!_brightnessFilter) {
-                _brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
-                [_picture addTarget:_brightnessFilter];
-            }
-            _brightnessFilter.brightness = _effectSliderView.slider.value;
-            [self updateImage:_brightnessFilter];
+        _brightnessFilter.brightness = value;
+        [self updateImage:_brightnessFilter];
+    }else if ([@"SHADOW" isEqualToString:type]){
+        if (!_shadowFilter) {
+            _shadowFilter = [[GPUImageHighlightShadowFilter alloc] init];
+            [_picture addTarget:_shadowFilter];
         }
-            
-            break;
-        case 7:
-            //阴影
-        {
-            if (!_shadowFilter) {
-                _shadowFilter = [[GPUImageHighlightShadowFilter alloc] init];
-                [_picture addTarget:_shadowFilter];
-            }
-            _shadowFilter.shadows = _effectSliderView.slider.value;
-            [self updateImage:_shadowFilter];
+        _shadowFilter.shadows = value;
+        [self updateImage:_shadowFilter];
+    }else if ([@"VIGNETTE" isEqualToString:type]){
+        if (!_vignetteFilter) {
+            _vignetteFilter = [[GPUImageVignetteFilter alloc] init];
+            [_picture addTarget:_vignetteFilter];
         }
-            break;
-        case 8:
-            //暗角
-        {
-            if (!_vignetteFilter) {
-                _vignetteFilter = [[GPUImageVignetteFilter alloc] init];
-                [_picture addTarget:_vignetteFilter];
-            }
-            
-            _vignetteFilter.vignetteStart = _effectSliderView.slider.value;
-            _vignetteFilter.vignetteEnd = _effectSliderView.slider.value + 0.25;
-            [self updateImage:_vignetteFilter];
-        }
-            break;
-            
-        default:
-            break;
+        
+        _vignetteFilter.vignetteStart = value;
+        _vignetteFilter.vignetteEnd = value + 0.25;
+        [self updateImage:_vignetteFilter];
     }
 }
 
 - (void)effectCancel{
-    
+    [_groupView setHidden:YES];
+    [_imageView setImage:_editImage];
+    [(EffectItemView *)[_middleScrollView viewWithTag:_selectEditIndex + 1] setItemSelected:NO];
 }
 
 - (void)effectConfirm{
-    
+    _editImage = _imageView.image;
+    [_groupView setHidden:YES];
+    [(EffectItemView *)[_middleScrollView viewWithTag:_selectEditIndex + 1] setItemSelected:NO];
 }
 
 - (void)onTap:(UIGestureRecognizer *)gesture{
@@ -573,6 +525,7 @@
 }
 
 - (void)selectMiddleWithIndex:(NSInteger)index{
+    [_imageView setImage:_editImage];
     for (EffectItemView *btn in _middleScrollView.subviews) {
         if([btn isMemberOfClass:[EffectItemView class]] == NO){
             continue;

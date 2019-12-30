@@ -1039,22 +1039,6 @@
 		<array>
 			<dict>
 				<key>name</key>
-				<string>LEVEL</string>
-				<key>icon</key>
-				<string>effect1</string>
-				<key>iconSelected</key>
-				<string>effect1</string>
-				<key>color</key>
-				<string>0,0,0,1</string>
-				<key>color_selected</key>
-				<string>0,0,0,1</string>
-				<key>fontColor</key>
-				<string>255,255,255,1</string>
-				<key>fontColorSelected</key>
-				<string>255,255,255,1</string>
-			</dict>
-			<dict>
-				<key>name</key>
 				<string>SHARPNESS</string>
 				<key>icon</key>
 				<string>effect1</string>
