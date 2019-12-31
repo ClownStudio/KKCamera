@@ -18,8 +18,9 @@
 #import "HCTestFilter.h"
 #import "FBGlowLabel.h"
 #import "SettingModel.h"
+#import "RandomSliderView.h"
 
-@interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate>
+@interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate>
 
 @end
 
@@ -45,6 +46,7 @@
     NSMutableArray *_editContents;
     NSInteger _selectEditIndex;
     EffectSliderView *_effectSliderView;
+    RandomSliderView *_randomSliderView;
     
     GPUImageSharpenFilter *_sharpenFilter;
     GPUImageWhiteBalanceFilter *_balanceFilter;
@@ -57,6 +59,18 @@
     CGFloat _lastSliderValue;
     GPUImagePicture *_picture;
     UIImage *_editImage;
+}
+
+- (void)randomSliderValueChanged:(CGFloat)value{
+    
+}
+
+- (void)randomForEffect{
+    
+}
+
+- (void)randomConfirm{
+    
 }
 
 - (void)viewDidLoad {
@@ -385,14 +399,22 @@
 
 -(void)refreshGroupViewWithRandom:(BOOL)isRandom{
     if(isRandom){
-        
+        if (_randomSliderView == nil) {
+            _randomSliderView = [self getRandomSliderView];
+        }
+        [_groupView addSubview:_randomSliderView];
     }else{
         if (_effectSliderView == nil) {
             _effectSliderView = [self getSliderView];
         }
-        [_effectSliderView.slider setValue:50];
         [_groupView addSubview:_effectSliderView];
     }
+}
+
+- (RandomSliderView *)getRandomSliderView{
+    RandomSliderView *view = [[RandomSliderView alloc] initWithFrame:CGRectMake(0, (_groupView.bounds.size.height - 35)/2, _groupView.bounds.size.width, 35)];
+    view.delegate = self;
+    return view;
 }
 
 - (EffectSliderView *)getSliderView{

@@ -510,6 +510,7 @@
 		B68F61C5238D0837004C3DB6 /* rj_cell_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F61AF238D0837004C3DB6 /* rj_cell_selected@3x.png */; };
 		B68F61C6238D0837004C3DB6 /* rj_arrowLeft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68F61B0238D0837004C3DB6 /* rj_arrowLeft@3x.png */; };
 		B68F61CA238D1BD7004C3DB6 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F61C9238D1BD7004C3DB6 /* BasicViewController.m */; };
+		B698C7BE23BB2B7C00083FE6 /* RandomSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B698C7BD23BB2B7C00083FE6 /* RandomSliderView.m */; };
 		B6C38F38238E2900004797DD /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */; };
 		B6D672C82390A6C5007C9136 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D672C72390A6C5007C9136 /* EditViewController.m */; };
 		B6EF3A3E2398FDEF00EE68A0 /* item1.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EF3A2B2398FDEF00EE68A0 /* item1.png */; };
@@ -1329,6 +1330,8 @@
 		B68F61C7238D08C1004C3DB6 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		B68F61C8238D1BD7004C3DB6 /* BasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
 		B68F61C9238D1BD7004C3DB6 /* BasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		B698C7BC23BB2B7C00083FE6 /* RandomSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomSliderView.h; sourceTree = "<group>"; };
+		B698C7BD23BB2B7C00083FE6 /* RandomSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomSliderView.m; sourceTree = "<group>"; };
 		B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
 		B6D672C62390A6C5007C9136 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
@@ -1776,6 +1779,8 @@
 				B60197F5238F6DCC006ADFA7 /* SettingViewController.xib */,
 				B609D77F2397425600D2877D /* SubscriberViewController.h */,
 				B609D7802397425600D2877D /* SubscriberViewController.m */,
+				B698C7BC23BB2B7C00083FE6 /* RandomSliderView.h */,
+				B698C7BD23BB2B7C00083FE6 /* RandomSliderView.m */,
 				B63F19EA23A777BE00C127FB /* EffectSliderView.h */,
 				B63F19EB23A777BE00C127FB /* EffectSliderView.m */,
 				B63F19ED23A7811F00C127FB /* CustomSlider.h */,
@@ -3182,6 +3187,7 @@
 				B68F61B2238D0837004C3DB6 /* RJControl.m in Sources */,
 				B68F6088238CBF38004C3DB6 /* HCPhotoEditSpecialEffectsItemView.m in Sources */,
 				B6D672C82390A6C5007C9136 /* EditViewController.m in Sources */,
+				B698C7BE23BB2B7C00083FE6 /* RandomSliderView.m in Sources */,
 				B68F604B238CBF37004C3DB6 /* GPUImagePrewittEdgeDetectionFilter.m in Sources */,
 				B67B74F2238D20DE001B1F60 /* BitmapDrawManipulator.m in Sources */,
 				B68F6079238CBF38004C3DB6 /* GPUImageColorConversion.m in Sources */,
