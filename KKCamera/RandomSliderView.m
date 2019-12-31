@@ -32,7 +32,6 @@
         [_label setTextColor:[UIColor whiteColor]];
         [_label setFont:[UIFont systemFontOfSize:10]];
         [_label setTextAlignment:NSTextAlignmentCenter];
-        [_label setText:@"50%"];
         [self addSubview:_label];
         
         self.slider = [[CustomSlider alloc] initWithFrame:CGRectMake(145, 0, frame.size.width - 200, 35)];
