@@ -93,6 +93,7 @@
     [_resetBtn.layer setBorderWidth:1];
     [_resetBtn.layer setBorderColor:[UIColor whiteColor].CGColor];
     [_resetBtn.layer setCornerRadius:15];
+    [_resetBtn addTarget:self action:@selector(onReset:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_resetBtn];
     
     int distance = 10;
@@ -178,6 +179,11 @@
     }
     [_itemScrollView setContentSize:CGSizeMake(position + distance, 0)];
     [self selectEditorItemWithIndex:0];
+}
+
+-(IBAction)onReset:(id)sender{
+    _editImage = _oriImage;
+    [_imageView setImage:_editImage];
 }
 
 -(IBAction)onIap:(id)sender{
@@ -322,9 +328,8 @@
 }
 
 - (void)updateEdit{
-    if (_picture == nil) {
-        _picture =  [[GPUImagePicture alloc] initWithImage:_editImage];
-    }
+    [self clearEditFilters];
+    _picture =  [[GPUImagePicture alloc] initWithImage:_editImage];
     
     NSString *type = [_editContents objectAtIndex:_selectEditIndex];
     CGFloat value = 0;
@@ -515,7 +520,7 @@
 }
 
 - (void)effectConfirm{
-    _editImage = _imageView.image;
+    _editImage = _imageView.image.copy;
     [_groupView setHidden:YES];
     [(EffectItemView *)[_middleScrollView viewWithTag:_selectEditIndex + 1] setItemSelected:NO];
 }

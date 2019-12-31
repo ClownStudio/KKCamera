@@ -42,8 +42,16 @@
         [_confirmBtn setContentMode:UIViewContentModeScaleAspectFit];
         [_confirmBtn addTarget:self action:@selector(onConfirm:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_confirmBtn];
+        
+        [self.slider addObserver:self forKeyPath:@"value" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([@"value" isEqualToString:keyPath]) {
+        [_label setText:[NSString stringWithFormat:@"%d%%",(int)((_slider.value - _slider.minimumValue)/(_slider.maximumValue - _slider.minimumValue)*100)]];
+    }
 }
 
 -(IBAction)onChange:(id)sender{
@@ -63,6 +71,10 @@
     if (_delegate && [_delegate respondsToSelector:@selector(effectConfirm)]) {
         [_delegate effectConfirm];
     }
+}
+
+-(void)dealloc{
+    [self.slider removeObserver:self forKeyPath:@"value"];
 }
 
 @end
