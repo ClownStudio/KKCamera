@@ -18,7 +18,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.userInteractionEnabled = YES;
-        _randomBtn = [[UIButton alloc] initWithFrame:CGRectMake(5, 0, 90, frame.size.height)];
+        _randomBtn = [[UIButton alloc] initWithFrame:CGRectMake(5, 0, 110, frame.size.height)];
         [_randomBtn.layer setMasksToBounds:YES];
         [_randomBtn.layer setCornerRadius:frame.size.height/2];
         [_randomBtn.layer setBorderWidth:1];
@@ -26,15 +26,16 @@
         [_randomBtn.titleLabel setFont:[UIFont systemFontOfSize:10]];
         [_randomBtn setTitle:@"AUTO RANDOM" forState:UIControlStateNormal];
         [_randomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_randomBtn addTarget:self action:@selector(onRandom:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_randomBtn];
         
-        _label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 35, 35)];
+        _label = [[UILabel alloc] initWithFrame:CGRectMake(125, 0, 35, 35)];
         [_label setTextColor:[UIColor whiteColor]];
         [_label setFont:[UIFont systemFontOfSize:10]];
         [_label setTextAlignment:NSTextAlignmentCenter];
         [self addSubview:_label];
         
-        self.slider = [[CustomSlider alloc] initWithFrame:CGRectMake(145, 0, frame.size.width - 200, 35)];
+        self.slider = [[CustomSlider alloc] initWithFrame:CGRectMake(170, 0, frame.size.width - 225, 35)];
         [self.slider setUserInteractionEnabled:YES];
         [self.slider setThumbImage:[UIImage imageNamed:@"kk_slider_circle"] forState:UIControlStateNormal];
         [self.slider addTarget:self action:@selector(onChange:) forControlEvents:UIControlEventValueChanged];

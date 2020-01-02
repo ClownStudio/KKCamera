@@ -59,6 +59,9 @@
     CGFloat _lastSliderValue;
     GPUImagePicture *_picture;
     UIImage *_editImage;
+    
+    GPUImageLookupFilter *_lutFilter;
+    
 }
 
 - (void)randomSliderValueChanged:(CGFloat)value{
@@ -402,6 +405,7 @@
         if (_randomSliderView == nil) {
             _randomSliderView = [self getRandomSliderView];
         }
+        [_randomSliderView.slider setValue:50];
         [_groupView addSubview:_randomSliderView];
     }else{
         if (_effectSliderView == nil) {

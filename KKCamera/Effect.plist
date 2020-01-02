@@ -174,6 +174,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -231,6 +233,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>lut</key>
+						<string>L_1_2.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -288,6 +292,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>lut</key>
+						<string>L_1_3.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -345,6 +351,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>lut</key>
+						<string>L_1_4.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -402,6 +410,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>lut</key>
+						<string>L_1_5.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -466,6 +476,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_2.acv</string>
 						<key>bonder</key>
@@ -523,6 +535,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -580,6 +594,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -637,6 +653,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -694,6 +712,8 @@
 						<string>255,255,255,1</string>
 					</dict>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -767,6 +787,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -831,6 +853,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -904,6 +928,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_5.acv</string>
 						<key>bonder</key>
@@ -968,6 +994,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -1178,6 +1206,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
@@ -1242,6 +1272,8 @@
 				<key>effects</key>
 				<array>
 					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
 						<key>filter</key>
 						<string>F_1_1.acv</string>
 						<key>bonder</key>
