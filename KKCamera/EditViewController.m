@@ -308,7 +308,7 @@
             UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, 0, 80, _topScrollView.bounds.size.height)];
             [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
             [button setTitle:title forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
             [button.titleLabel setFont:[UIFont boldSystemFontOfSize:10]];
             [button addTarget:self action:@selector(onSelectTop:) forControlEvents:UIControlEventTouchUpInside];
             button.tag = tag;
@@ -437,7 +437,7 @@
                 [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
                 [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:1]];
             }else{
-                [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+                [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
                 [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0]];
             }
         }
