@@ -33,12 +33,21 @@
         [_label setTextColor:[UIColor whiteColor]];
         [_label setFont:[UIFont systemFontOfSize:10]];
         [_label setTextAlignment:NSTextAlignmentCenter];
+        [_label setText:@"50%"];
         [self addSubview:_label];
         
         self.slider = [[CustomSlider alloc] initWithFrame:CGRectMake(170, 0, frame.size.width - 225, 35)];
         [self.slider setUserInteractionEnabled:YES];
+        [self.slider setMaximumValue:1];
+        [self.slider setMinimumValue:0];
+        [self.slider setValue:0.5];
         [self.slider setThumbImage:[UIImage imageNamed:@"kk_slider_circle"] forState:UIControlStateNormal];
-        [self.slider addTarget:self action:@selector(onChange:) forControlEvents:UIControlEventValueChanged];
+        [self.slider setValueChangedBlock:^{
+            if (_delegate && [_delegate respondsToSelector:@selector(randomSliderValueChanged:)]) {
+                [_label setText:[NSString stringWithFormat:@"%d%%",(int)((_slider.value)*100)]];
+                [_delegate randomSliderValueChanged:self.slider.value];
+            }
+        }];
         [self addSubview:self.slider];
         
         _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - 45, 0, 35, 35)];
@@ -46,28 +55,16 @@
         [_confirmBtn setContentMode:UIViewContentModeScaleAspectFit];
         [_confirmBtn addTarget:self action:@selector(onConfirm:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_confirmBtn];
-        
-        [self.slider addObserver:self forKeyPath:@"value" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    if ([@"value" isEqualToString:keyPath]) {
-        [_label setText:[NSString stringWithFormat:@"%d%%",(int)((_slider.value - _slider.minimumValue)/(_slider.maximumValue - _slider.minimumValue)*100)]];
-    }
+-(void)reset{
+    [_label setText:@"50%"];
 }
 
 -(void)dealloc{
     [self.slider removeObserver:self forKeyPath:@"value"];
-}
-
-
--(IBAction)onChange:(id)sender{
-    [_label setText:[NSString stringWithFormat:@"%d%%",(int)((_slider.value - _slider.minimumValue)/(_slider.maximumValue - _slider.minimumValue)*100)]];
-    if (self.delegate && [self->_delegate respondsToSelector:@selector(randomSliderValueChanged:)]) {
-        [self.delegate randomSliderValueChanged:self.slider.value];
-    }
 }
 
 -(IBAction)onRandom:(id)sender{

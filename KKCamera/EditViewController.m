@@ -18,6 +18,7 @@
 #import "HCTestFilter.h"
 #import "FBGlowLabel.h"
 #import "SettingModel.h"
+#import "PhotoXHaloFilter.h"
 #import "RandomSliderView.h"
 
 @interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate>
@@ -59,13 +60,13 @@
     CGFloat _lastSliderValue;
     GPUImagePicture *_picture;
     UIImage *_editImage;
-    
-    GPUImageLookupFilter *_lutFilter;
-    
+    NSInteger _selectRandomIndex;
+    CGFloat _effectValue;
 }
 
 - (void)randomSliderValueChanged:(CGFloat)value{
-    
+    _effectValue = value;
+    [self refreshImageViewWithContent:[_selectedMiddleContent objectAtIndex:_selectRandomIndex]];
 }
 
 - (void)randomForEffect{
@@ -73,7 +74,11 @@
 }
 
 - (void)randomConfirm{
-    
+    _editImage = _imageView.image.copy;
+    [(EffectItemView *)[_middleScrollView viewWithTag:_selectRandomIndex + 1] setItemSelected:NO];
+    [_randomSliderView.slider setValue:0.5];
+    [_randomSliderView reset];
+    [_randomSliderView.slider setEnabled:NO];
 }
 
 - (void)viewDidLoad {
@@ -152,6 +157,7 @@
     }];
     
     _topScrollView = [[UIScrollView alloc]init];
+    [_topScrollView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
     [self.contentView addSubview:_topScrollView];
     [_topScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);
@@ -214,15 +220,6 @@
 //返回需要缩放的视图控件 缩放过程中
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return _imageView;
-}
-
-//开始缩放
-- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view{
-    NSLog(@"开始缩放");
-}
-//结束缩放
-- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale{
-    NSLog(@"结束缩放");
 }
 
 //缩放中
@@ -309,9 +306,10 @@
         for (NSDictionary *dict in _selectedMainContent) {
             NSString *title = [dict objectForKey:@"title"];
             UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, 0, 80, _topScrollView.bounds.size.height)];
-            [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.7]];
+            [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
             [button setTitle:title forState:UIControlStateNormal];
-            [button.titleLabel setFont:[UIFont systemFontOfSize:10]];
+            [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [button.titleLabel setFont:[UIFont boldSystemFontOfSize:10]];
             [button addTarget:self action:@selector(onSelectTop:) forControlEvents:UIControlEventTouchUpInside];
             button.tag = tag;
             [_topScrollView addSubview:button];
@@ -405,9 +403,10 @@
         if (_randomSliderView == nil) {
             _randomSliderView = [self getRandomSliderView];
         }
-        [_randomSliderView.slider setValue:50];
+        _randomSliderView.slider.enabled = NO;
         [_groupView addSubview:_randomSliderView];
     }else{
+        //编辑
         if (_effectSliderView == nil) {
             _effectSliderView = [self getSliderView];
         }
@@ -435,9 +434,11 @@
     for (UIButton *button in _topScrollView.subviews) {
         if ([button isMemberOfClass:[UIButton class]]) {
             if (button.tag == index + 1) {
+                [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
                 [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:1]];
             }else{
-                [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.5]];
+                [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+                [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0]];
             }
         }
     }
@@ -552,29 +553,33 @@
 }
 
 - (void)onTap:(UIGestureRecognizer *)gesture{
-    [self selectMiddleWithIndex:gesture.view.tag];
+    [self selectMiddleWithIndex:gesture.view.tag - 1];
 }
 
 - (void)selectMiddleWithIndex:(NSInteger)index{
     [_imageView setImage:_editImage];
+    [_randomSliderView reset];
+    [_randomSliderView.slider setValue:0.5];
     for (EffectItemView *btn in _middleScrollView.subviews) {
         if([btn isMemberOfClass:[EffectItemView class]] == NO){
             continue;
         }
-        if (btn.tag == index) {
+        if (btn.tag == index + 1) {
             [btn setItemSelected:YES];
         }else{
             [btn setItemSelected:NO];
         }
     }
-    [self refreshImageViewWithContent:[_selectedMiddleContent objectAtIndex:index - 1]];
+    _selectRandomIndex = index;
+    [self refreshImageViewWithContent:[_selectedMiddleContent objectAtIndex:_selectRandomIndex]];
 }
 
 - (UIImage *)createFilterWithImage:(UIImage *)image andFilterName:(NSString *)filterName{
     GPUImagePicture *pic = [[GPUImagePicture alloc] initWithImage:image];
     if ([filterName hasSuffix:@".acv"]) {
+        _randomSliderView.slider.enabled = YES;
         PhotoXAcvFilter *acvFilter = [[PhotoXAcvFilter alloc]initWithACVData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:filterName ofType:nil]]];
-        acvFilter.mix = 1;
+        acvFilter.mix = 0.5 + _effectValue;
         [pic addTarget:acvFilter];
         [acvFilter useNextFrameForImageCapture];
         [pic processImage];
@@ -583,6 +588,7 @@
             return newImage;
         }
     }else{
+        _randomSliderView.slider.enabled = NO;
         GPUImageFilter *outFilter = [[[NSClassFromString(filterName) class] alloc] init];
         [pic addTarget:outFilter];
         [outFilter useNextFrameForImageCapture];
@@ -596,31 +602,46 @@
     return image;
 }
 
-- (UIImage *)createTextureWithImage:(UIImage *)image andTextureName:(NSString *)textureName{
-    GPUImagePicture *pic = [[GPUImagePicture alloc] initWithImage:image];
-    UIImage *textureImage = [UIImage imageNamed:textureName];
-    HCTestFilter *texture = [[HCTestFilter alloc] initWithTextureImage:textureImage];
-    [pic addTarget:texture];
-    [texture useNextFrameForImageCapture];
-    [pic processImage];
-    UIImage *newImage = [texture imageFromCurrentFramebuffer];
-    if(image.size.width == newImage.size.height){
-        newImage = [newImage imageRotatedByDegrees:270];
+- (UIImage *)createLutWithImage:(UIImage *)image andLutName:(NSString *)lutName{
+    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:image];
+    GPUImageLookupFilter *lookUpFilter = [[GPUImageLookupFilter alloc] init];
+    GPUImagePicture *lookupImg = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed: lutName]];
+    [lookUpFilter setIntensity:_effectValue];
+    [lookupImg addTarget:lookUpFilter atTextureLocation:1];
+    [stillImageSource addTarget:lookUpFilter atTextureLocation:0];
+    [lookUpFilter useNextFrameForImageCapture];
+    [lookupImg processImage];
+    [stillImageSource processImage];
+    UIImage *newImage = [lookUpFilter imageFromCurrentFramebuffer];
+    if(newImage){
+        return newImage;
     }
+    return image;
+}
+
+- (UIImage *)createHaloWithImage:(UIImage *)image andHaloName:(NSString *)haloName{
+    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:image];
+    PhotoXHaloFilter *blendTextureFilter = [[PhotoXHaloFilter alloc] init];
+    [stillImageSource addTarget:blendTextureFilter atTextureLocation:0];
+    GPUImagePicture *overImageSource = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:haloName]];
+    [overImageSource addTarget:blendTextureFilter atTextureLocation:1];
+    
+    blendTextureFilter.mix = 0.1 + 0.9*_effectValue;
+    [blendTextureFilter useNextFrameForImageCapture];
+    
+    [stillImageSource processImage];
+    [overImageSource processImage];
+    UIImage *newImage = [blendTextureFilter imageFromCurrentFramebufferWithOrientation:_oriImage.imageOrientation];
     if (newImage) {
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(newImage.size.width, newImage.size.height), NO, newImage.scale);
-        [image drawInRect:CGRectMake(0, 0, newImage.size.width, newImage.size.height)];
-        [newImage drawInRect:CGRectMake(0, 0, newImage.size.width, newImage.size.height) blendMode:kCGBlendModePlusLighter alpha:1.0];
-        UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        return resultImage;
+        return newImage;
     }
     return image;
 }
 
 -(void)refreshImageViewWithContent:(NSDictionary *)content{
     NSString *selectFilter = [content objectForKey:@"filter"];
-    NSString *selectTexture = [content objectForKey:@"texture"];
+    NSString *selectHalo = [content objectForKey:@"halo"];
+    NSString *selectLut = [content objectForKey:@"lut"];
     NSDictionary *fontProperty = [content objectForKey:@"FontProperty"];
     UIImage *image = _oriImage;
     image = [image fixOrientation];
@@ -629,8 +650,14 @@
         image = [self createFilterWithImage:image andFilterName:selectFilter];
     }
     
-    if ([@"" isEqualToString:selectTexture] == NO) {
-        image = [self createTextureWithImage:image andTextureName:selectTexture];
+    if ([@"" isEqualToString:selectHalo] == NO) {
+        _randomSliderView.slider.enabled = YES;
+        image = [self createHaloWithImage:image andHaloName:selectHalo];
+    }
+    
+    if ([@"" isEqualToString:selectLut] == NO) {
+        _randomSliderView.slider.enabled = YES;
+        image = [self createLutWithImage:image andLutName:selectLut];
     }
     
     if ([[SettingModel sharedInstance] isStamp] && nil != fontProperty) {

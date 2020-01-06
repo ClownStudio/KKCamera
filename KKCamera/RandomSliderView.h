@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong) CustomSlider *slider;
 @property (nonatomic,assign) id<RandomSliderViewDelegate> delegate;
+-(void)reset;
 
 @end
 

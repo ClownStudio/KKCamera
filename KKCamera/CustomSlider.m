@@ -16,4 +16,23 @@
     return CGRectInset ([super thumbRectForBounds:bounds trackRect:rect value:value], 10 , 10);
 }
 
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesEnded:touches withEvent:event];
+    [self valueChanged];
+}
+
+-(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesCancelled:touches withEvent:event];
+    [self valueChanged];
+}
+
+-(void)valueChanged
+{
+    if (self.valueChangedBlock) {
+        self.valueChangedBlock();
+    }
+}
+
 @end
