@@ -139,7 +139,7 @@
 - (NSArray *)getAssetWithCollection:(PHAssetCollection *)collection {
     //set fetchoptions
     PHFetchOptions * options = [[PHFetchOptions alloc] init];
-    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
+    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     
     //search
     NSMutableArray * assetArray = [NSMutableArray array];
