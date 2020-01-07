@@ -7,9 +7,11 @@
 //
 
 #import "EffectItemView.h"
+#import "ProManager.h"
 
 @implementation EffectItemView{
     UIImageView *_imageView;
+    UIImageView *_lockView;
     UILabel *_label;
     BOOL _isSelected;
     NSDictionary *_content;
@@ -23,6 +25,14 @@
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.width)];
         [_imageView setUserInteractionEnabled:YES];
         [self addSubview:_imageView];
+        
+        _lockView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"kk_lock"]];
+        CGRect temp = _lockView.frame;
+        temp.origin.x = frame.size.width - temp.size.width - 2;
+        temp.origin.y = 2;
+        _lockView.frame = temp;
+        [_lockView setHidden:YES];
+        [self addSubview:_lockView];
         
         _label = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.width, frame.size.width, frame.size.height - frame.size.width)];
         [_label setFont:[UIFont systemFontOfSize:12]];
@@ -51,6 +61,19 @@
 
 - (void)setItemWithData:(NSDictionary *)dict{
     _content = dict;
+    NSString *isPurchase = [dict objectForKey:@"isPurchase"];
+    if([@"YES" isEqualToString:isPurchase]){
+        [_lockView setHidden:YES];
+    }else{
+        if ([@"" isEqualToString:[dict objectForKey:@"productCode"]]) {
+            [_lockView setHidden:YES];
+        }else if ([ProManager isProductPaid:[dict objectForKey:@"productCode"]]){
+            [_lockView setHidden:YES];
+        }else{
+            [_lockView setHidden:NO];
+        }
+    }
+    self.isAward = [@"YES" isEqualToString:[dict objectForKey:@"isAward"]]? YES : NO;
     [_imageView setImage:[UIImage imageNamed:[_content objectForKey:@"icon"]]];
     [_label setBackgroundColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"color"]]]];
     [_label setTextColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"fontColor"]]]];

@@ -271,9 +271,9 @@
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
-						<string></string>
+						<string>com.appstudio.X2.1</string>
 						<key>isPurchase</key>
-						<true/>
+						<false/>
 						<key>isAdAward</key>
 						<false/>
 						<key>name</key>
@@ -330,7 +330,7 @@
 						<key>picture</key>
 						<string>item1</string>
 						<key>productCode</key>
-						<string></string>
+						<string>com.appstudio.X2.2</string>
 						<key>isPurchase</key>
 						<true/>
 						<key>isAdAward</key>
@@ -1066,6 +1066,10 @@
 		<key>edit</key>
 		<array>
 			<dict>
+				<key>isPurchase</key>
+				<true/>
+				<key>productCode</key>
+				<string></string>
 				<key>name</key>
 				<string>SHARPNESS</string>
 				<key>icon</key>
@@ -1082,6 +1086,10 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
+				<key>isPurchase</key>
+				<true/>
+				<key>productCode</key>
+				<string></string>
 				<key>name</key>
 				<string>COLOR</string>
 				<key>icon</key>
@@ -1098,6 +1106,10 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
+				<key>isPurchase</key>
+				<true/>
+				<key>productCode</key>
+				<string></string>
 				<key>name</key>
 				<string>EXPOSURE</string>
 				<key>icon</key>
@@ -1114,6 +1126,10 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
+				<key>isPurchase</key>
+				<true/>
+				<key>productCode</key>
+				<string></string>
 				<key>name</key>
 				<string>CONTRAST</string>
 				<key>icon</key>
@@ -1130,6 +1146,10 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
+				<key>isPurchase</key>
+				<true/>
+				<key>productCode</key>
+				<string></string>
 				<key>name</key>
 				<string>SATURATION</string>
 				<key>icon</key>
@@ -1146,6 +1166,10 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
+				<key>isPurchase</key>
+				<true/>
+				<key>productCode</key>
+				<string></string>
 				<key>name</key>
 				<string>BRIGHTNESS</string>
 				<key>icon</key>
@@ -1162,6 +1186,10 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
+				<key>isPurchase</key>
+				<true/>
+				<key>productCode</key>
+				<string></string>
 				<key>name</key>
 				<string>SHADOW</string>
 				<key>icon</key>
@@ -1178,6 +1206,10 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
+				<key>isPurchase</key>
+				<true/>
+				<key>productCode</key>
+				<string></string>
 				<key>name</key>
 				<string>VIGNETTE</string>
 				<key>icon</key>
