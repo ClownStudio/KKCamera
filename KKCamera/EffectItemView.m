@@ -21,6 +21,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         _isSelected = NO;
+        self.isAward = NO;
+        self.isPurchase = YES;
         [self setUserInteractionEnabled:YES];
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.width)];
         [_imageView setUserInteractionEnabled:YES];
@@ -63,16 +65,17 @@
     _content = dict;
     NSString *isPurchase = [dict objectForKey:@"isPurchase"];
     if([@"YES" isEqualToString:isPurchase]){
-        [_lockView setHidden:YES];
+        self.isPurchase = YES;
     }else{
         if ([@"" isEqualToString:[dict objectForKey:@"productCode"]]) {
-            [_lockView setHidden:YES];
+            self.isPurchase = YES;
         }else if ([ProManager isProductPaid:[dict objectForKey:@"productCode"]]){
-            [_lockView setHidden:YES];
+            self.isPurchase = YES;
         }else{
-            [_lockView setHidden:NO];
+            self.isPurchase = NO;
         }
     }
+    [_lockView setHidden:self.isPurchase];
     self.isAward = [@"YES" isEqualToString:[dict objectForKey:@"isAward"]]? YES : NO;
     [_imageView setImage:[UIImage imageNamed:[_content objectForKey:@"icon"]]];
     [_label setBackgroundColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"color"]]]];
