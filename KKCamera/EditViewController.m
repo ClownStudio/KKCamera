@@ -20,6 +20,7 @@
 #import "SettingModel.h"
 #import "PhotoXHaloFilter.h"
 #import "RandomSliderView.h"
+#import "HCPhotoEditCustomCutFrameView.h"
 
 @interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate>
 
@@ -62,6 +63,7 @@
     UIImage *_editImage;
     NSInteger _selectRandomIndex;
     CGFloat _effectValue;
+    HCPhotoEditCustomCutFrameView *_cutView;
 }
 
 - (void)randomSliderValueChanged:(CGFloat)value{
@@ -165,7 +167,7 @@
         make.size.mas_equalTo(30);
     }];
     
-    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 120) - _settingBtn.bounds.size.height)];
+    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 190) - _settingBtn.bounds.size.height)];
     [self.contentView addSubview:_imageScrollView];
     if (@available(iOS 11.0, *)) {
         _imageScrollView.contentInsetAdjustmentBehavior =  UIScrollViewContentInsetAdjustmentNever;

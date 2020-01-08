@@ -50,10 +50,6 @@
         UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGestureSelector:)];
         pinch.delegate = self;
         [self addGestureRecognizer:pinch];
-        //旋转手势
-//        UIRotationGestureRecognizer *rotate = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotateGestureSelector:)];
-//        rotate.delegate = self;
-//        [self addGestureRecognizer:rotate];
     }
     return self;
 }
