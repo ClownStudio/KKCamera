@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81A60D8374B2F853C6217ACE /* libPods-KKCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5AB7619E7A8D9CE4CFABD0 /* libPods-KKCamera.a */; };
+		B6011C4523C6F9E60058925C /* TKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6011C4323C6F9E60058925C /* TKImageView.m */; };
 		B60197F7238F6DCC006ADFA7 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60197F5238F6DCC006ADFA7 /* SettingViewController.xib */; };
 		B60197FD238F6DE4006ADFA7 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B60197F9238F6DE4006ADFA7 /* SettingModel.m */; };
 		B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B601980D238F7BF7006ADFA7 /* Localizable.strings */; };
@@ -524,6 +525,8 @@
 		2A96CCB6AD5E90255D358851 /* Pods-KKCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKCamera.release.xcconfig"; path = "Target Support Files/Pods-KKCamera/Pods-KKCamera.release.xcconfig"; sourceTree = "<group>"; };
 		597AC82817830E42E08ABE37 /* Pods-KKCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKCamera.debug.xcconfig"; path = "Target Support Files/Pods-KKCamera/Pods-KKCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		AC5AB7619E7A8D9CE4CFABD0 /* libPods-KKCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KKCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6011C4323C6F9E60058925C /* TKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKImageView.m; sourceTree = "<group>"; };
+		B6011C4423C6F9E60058925C /* TKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKImageView.h; sourceTree = "<group>"; };
 		B60197F6238F6DCC006ADFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SettingViewController.xib; sourceTree = "<group>"; };
 		B60197F9238F6DE4006ADFA7 /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
 		B60197FA238F6DE4006ADFA7 /* SettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
@@ -1770,6 +1773,8 @@
 				B61C4EEA23AB5A490086995E /* UIImage+Rotate.m */,
 				B6557EF32396022F00636C7F /* UIImageView+GIF.h */,
 				B6557EF42396022F00636C7F /* UIImageView+GIF.m */,
+				B6011C4423C6F9E60058925C /* TKImageView.h */,
+				B6011C4323C6F9E60058925C /* TKImageView.m */,
 				B6D672C62390A6C5007C9136 /* EditViewController.h */,
 				B6D672C72390A6C5007C9136 /* EditViewController.m */,
 				B60197FA238F6DE4006ADFA7 /* SettingModel.h */,
@@ -3085,6 +3090,7 @@
 				B68F603B238CBF37004C3DB6 /* GPUImageShiTomasiFeatureDetectionFilter.m in Sources */,
 				B68F5FD1238CBF37004C3DB6 /* FWToasterFilter.m in Sources */,
 				B68F6010238CBF37004C3DB6 /* GPUImageSaturationFilter.m in Sources */,
+				B6011C4523C6F9E60058925C /* TKImageView.m in Sources */,
 				B68F5FF8238CBF37004C3DB6 /* GPUImageiOSBlurFilter.m in Sources */,
 				B68F6029238CBF37004C3DB6 /* GPUImageGaussianBlurFilter.m in Sources */,
 				B68F5FCF238CBF37004C3DB6 /* FWEarlybirdFilter.m in Sources */,

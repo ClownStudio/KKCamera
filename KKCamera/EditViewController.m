@@ -20,7 +20,7 @@
 #import "SettingModel.h"
 #import "PhotoXHaloFilter.h"
 #import "RandomSliderView.h"
-#import "HCPhotoEditCustomCutFrameView.h"
+#import "TKImageView.h"
 
 @interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate>
 
@@ -63,7 +63,7 @@
     UIImage *_editImage;
     NSInteger _selectRandomIndex;
     CGFloat _effectValue;
-    HCPhotoEditCustomCutFrameView *_cutView;
+    TKImageView *_cutView;
 }
 
 - (void)randomSliderValueChanged:(CGFloat)value{
@@ -187,6 +187,11 @@
     
     [self.contentView insertSubview:_groupView aboveSubview:_imageScrollView];
     [self.contentView insertSubview:_topScrollView aboveSubview:_imageScrollView];
+    [_imageScrollView setHidden:YES];
+    
+    _cutView = [[TKImageView alloc] initWithFrame:_imageScrollView.bounds];
+    [_cutView setToCropImage:_imageView.image];
+    [self.contentView insertSubview:_cutView belowSubview:_imageScrollView];
     
     int position = 0;
     int tag = 1;
