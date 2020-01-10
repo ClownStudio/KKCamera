@@ -46,7 +46,9 @@
     NSArray *_selectedMiddleContent;
     NSString *_selectedType;
     NSMutableArray *_editContents;
+    NSMutableArray *_cutContents;
     NSInteger _selectEditIndex;
+    NSInteger _selectCutIndex;
     EffectSliderView *_effectSliderView;
     RandomSliderView *_randomSliderView;
     
@@ -63,7 +65,7 @@
     UIImage *_editImage;
     NSInteger _selectRandomIndex;
     CGFloat _effectValue;
-    TKImageView *_cutView;
+    TKImageView *_tkImageView;
 }
 
 - (void)randomSliderValueChanged:(CGFloat)value{
@@ -187,11 +189,17 @@
     
     [self.contentView insertSubview:_groupView aboveSubview:_imageScrollView];
     [self.contentView insertSubview:_topScrollView aboveSubview:_imageScrollView];
-    [_imageScrollView setHidden:YES];
     
-    _cutView = [[TKImageView alloc] initWithFrame:_imageScrollView.bounds];
-    [_cutView setToCropImage:_imageView.image];
-    [self.contentView insertSubview:_cutView belowSubview:_imageScrollView];
+    _tkImageView = [[TKImageView alloc] initWithFrame:_imageScrollView.frame];
+    _tkImageView.cornerBorderInImage = NO;
+    [_tkImageView setNeedScaleCrop:YES];
+    _tkImageView.minSpace = 30;
+    _tkImageView.cropAreaCornerLineWidth = 6;
+    _tkImageView.cropAreaBorderLineWidth = 3;
+    _tkImageView.initialScaleFactor = .8f;
+    [_tkImageView setToCropImage:_imageView.image];
+    [_tkImageView setHidden:YES];
+    [self.contentView insertSubview:_tkImageView belowSubview:_imageScrollView];
     
     int position = 0;
     int tag = 1;
@@ -277,10 +285,31 @@
     _selectedMainContent = [[_effectContent objectAtIndex:index] objectForKey:_selectedType];
     
     [_imageView setImage:_editImage];
+    [_imageScrollView setHidden:NO];
+    [_tkImageView setHidden:YES];
     if ([@"cut" isEqualToString:_selectedType]) {
         [self clearEditFilters];
         [_topScrollView setHidden:YES];
         [_groupView setHidden:YES];
+        
+        _cutContents = [NSMutableArray new];
+        int position = 0;
+        int distance = 8;
+        int tag = 1;
+        for (NSDictionary *dict in _selectedMainContent) {
+            [_cutContents addObject:[dict objectForKey:@"name"]];
+            position += distance;
+            EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, _middleScrollView.bounds.size.height - 16)];
+            button.tag = tag;
+            [button addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onCut:)]];
+            [button.layer setMasksToBounds:YES];
+            [button.layer setCornerRadius:5];
+            [button setItemWithData:dict];
+            [_middleScrollView addSubview:button];
+            tag++;
+            position += button.bounds.size.width;
+        }
+        [_middleScrollView setContentSize:CGSizeMake(position, 0)];
     }else if ([@"edit" isEqualToString:_selectedType]){
         [self refreshGroupViewWithRandom:NO];
         [_topScrollView setHidden:YES];
@@ -325,6 +354,42 @@
         }
         [_topScrollView setContentSize:CGSizeMake(position, 0)];
         [self selectTopScrollViewWithIndex:0];
+    }
+}
+
+-(IBAction)onCut:(UIGestureRecognizer *)sender{
+    [_imageScrollView setHidden:YES];
+    [_tkImageView setHidden:NO];
+    [self selectCutButtonWithIndex:sender.view.tag - 1];
+}
+
+- (void)selectCutButtonWithIndex:(NSInteger)index{
+    [_imageView setImage:_editImage];
+    [_tkImageView setToCropImage:_editImage];
+    _selectCutIndex = index;
+    NSString *cutType = [_cutContents objectAtIndex:index];
+    if ([@"1:1" isEqualToString:cutType]) {
+        [_tkImageView setCropAspectRatio:[@1 floatValue]];
+    }else if ([@"16:9" isEqualToString:cutType]){
+        [_tkImageView setCropAspectRatio:[@(16.0/9.0) floatValue]];
+    }else if ([@"9:16" isEqualToString:cutType]){
+        [_tkImageView setCropAspectRatio:[@(9.0/16.0) floatValue]];
+    }else if ([@"3:4" isEqualToString:cutType]){
+        [_tkImageView setCropAspectRatio:[@(3.0/4.0) floatValue]];
+    }else if ([@"4:3" isEqualToString:cutType]){
+        [_tkImageView setCropAspectRatio:[@(4.0/3.0) floatValue]];
+    }else{
+        [_tkImageView setCropAspectRatio:[@0 floatValue]];
+    }
+    for (EffectItemView *btn in _middleScrollView.subviews) {
+        if([btn isMemberOfClass:[EffectItemView class]] == NO){
+            continue;
+        }
+        if (btn.tag == index + 1) {
+            [btn setItemSelected:YES];
+        }else{
+            [btn setItemSelected:NO];
+        }
     }
 }
 
@@ -802,6 +867,7 @@
     scrollTemp.size.height = _imageScrollView.frame.size.height - safeAreaInsets.top - safeAreaInsets.bottom;
     _imageScrollView.frame = scrollTemp;
     [_imageView setFrame:_imageScrollView.bounds];
+    [_tkImageView setFrame:_imageScrollView.frame];
 }
 
 -(void)setOrignImage:(UIImage *)orignImage{
