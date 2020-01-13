@@ -39,40 +39,72 @@
     [self.view addSubview:_imageView];
     
     _closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(_imageView.frame.origin.x + _imageView.frame.size.width * 0.05, _imageView.frame.origin.y + _imageView.frame.size.height * 0.08, 35, 35)];
-    [_closeBtn setImage:[UIImage imageNamed:@"kk_iap_close"] forState:UIControlStateNormal];
+    [_closeBtn setBackgroundImage:[UIImage imageNamed:@"kk_iap_close"] forState:UIControlStateNormal];
     [_closeBtn setContentMode:UIViewContentModeScaleAspectFit];
     [_closeBtn addTarget:self action:@selector(onClose:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_closeBtn];
     
-    UIImage *monthImage = [UIImage imageNamed:[self getAssetWithName:@"kk_month"]];
-    UIImage *monthImageSelected = [UIImage imageNamed:[self getAssetWithName:@"kk_month_selected"]];
-    _monthBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, _imageView.bounds.size.height * 0.63, _imageView.bounds.size.width/2, _imageView.bounds.size.width/2/monthImage.size.width*monthImage.size.height)];
-    [_monthBtn setImage:monthImage forState:UIControlStateNormal];
-    [_monthBtn setImage:monthImageSelected forState:UIControlStateSelected];
-    [_monthBtn addTarget:self action:@selector(onSelectMonth:) forControlEvents:UIControlEventTouchUpInside];
-    [_monthBtn setSelected:YES];
-    _subId = MONTH_ID;
-    [_imageView addSubview:_monthBtn];
-    
-    UIImage *yearImage = [UIImage imageNamed:[self getAssetWithName:@"kk_year"]];
-    UIImage *yearImageSelected = [UIImage imageNamed:[self getAssetWithName:@"kk_year_selected"]];
-    _yearBtn = [[UIButton alloc] initWithFrame:CGRectMake(_imageView.bounds.size.width/2, _imageView.bounds.size.height * 0.63, _imageView.bounds.size.width/2, _imageView.bounds.size.width/2/yearImage.size.width*yearImage.size.height)];
-    [_yearBtn setImage:yearImage forState:UIControlStateNormal];
-    [_yearBtn setImage:yearImageSelected forState:UIControlStateSelected];
-    [_yearBtn addTarget:self action:@selector(onSelectYear:) forControlEvents:UIControlEventTouchUpInside];
-    [_imageView addSubview:_yearBtn];
-    
-    UIImage *confirmImage;
-    if ([ProManager isProductPaid:MONTH_ID]) {
-        confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_sub"]];
+    if(IS_PAD){
+        UIImage *monthImage = [UIImage imageNamed:[self getAssetWithName:@"kk_month"]];
+        UIImage *monthImageSelected = [UIImage imageNamed:[self getAssetWithName:@"kk_month_selected"]];
+        _monthBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, _imageView.bounds.size.height * 0.71, _imageView.bounds.size.width/2, _imageView.bounds.size.width/2/monthImage.size.width*monthImage.size.height)];
+        [_monthBtn setBackgroundImage:monthImage forState:UIControlStateNormal];
+        [_monthBtn setBackgroundImage:monthImageSelected forState:UIControlStateSelected];
+        [_monthBtn addTarget:self action:@selector(onSelectMonth:) forControlEvents:UIControlEventTouchUpInside];
+        [_monthBtn setSelected:YES];
+        _subId = MONTH_ID;
+        [_imageView addSubview:_monthBtn];
+        
+        UIImage *yearImage = [UIImage imageNamed:[self getAssetWithName:@"kk_year"]];
+        UIImage *yearImageSelected = [UIImage imageNamed:[self getAssetWithName:@"kk_year_selected"]];
+        _yearBtn = [[UIButton alloc] initWithFrame:CGRectMake(_imageView.bounds.size.width/2, _imageView.bounds.size.height * 0.71, _imageView.bounds.size.width/2, _imageView.bounds.size.width/2/yearImage.size.width*yearImage.size.height)];
+        [_yearBtn setBackgroundImage:yearImage forState:UIControlStateNormal];
+        [_yearBtn setBackgroundImage:yearImageSelected forState:UIControlStateSelected];
+        [_yearBtn addTarget:self action:@selector(onSelectYear:) forControlEvents:UIControlEventTouchUpInside];
+        [_imageView addSubview:_yearBtn];
+        
+        UIImage *confirmImage;
+        if ([ProManager isProductPaid:MONTH_ID]) {
+            confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_sub"]];
+        }else{
+            confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_trial"]];
+        }
+        
+        _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, _monthBtn.frame.origin.y + _monthBtn.frame.size.height + 10, _imageView.frame.size.width - 40, (_imageView.frame.size.width - 40)/confirmImage.size.width * confirmImage.size.height)];
+        [_confirmBtn setBackgroundImage:confirmImage forState:UIControlStateNormal];
+        [_confirmBtn addTarget:self action:@selector(onConfirm:) forControlEvents:UIControlEventTouchUpInside];
+        [_imageView addSubview:_confirmBtn];
     }else{
-        confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_trial"]];
+        UIImage *monthImage = [UIImage imageNamed:[self getAssetWithName:@"kk_month"]];
+        UIImage *monthImageSelected = [UIImage imageNamed:[self getAssetWithName:@"kk_month_selected"]];
+        _monthBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, _imageView.bounds.size.height * 0.63, _imageView.bounds.size.width/2, _imageView.bounds.size.width/2/monthImage.size.width*monthImage.size.height)];
+        [_monthBtn setBackgroundImage:monthImage forState:UIControlStateNormal];
+        [_monthBtn setBackgroundImage:monthImageSelected forState:UIControlStateSelected];
+        [_monthBtn addTarget:self action:@selector(onSelectMonth:) forControlEvents:UIControlEventTouchUpInside];
+        [_monthBtn setSelected:YES];
+        _subId = MONTH_ID;
+        [_imageView addSubview:_monthBtn];
+        
+        UIImage *yearImage = [UIImage imageNamed:[self getAssetWithName:@"kk_year"]];
+        UIImage *yearImageSelected = [UIImage imageNamed:[self getAssetWithName:@"kk_year_selected"]];
+        _yearBtn = [[UIButton alloc] initWithFrame:CGRectMake(_imageView.bounds.size.width/2, _imageView.bounds.size.height * 0.63, _imageView.bounds.size.width/2, _imageView.bounds.size.width/2/yearImage.size.width*yearImage.size.height)];
+        [_yearBtn setBackgroundImage:yearImage forState:UIControlStateNormal];
+        [_yearBtn setBackgroundImage:yearImageSelected forState:UIControlStateSelected];
+        [_yearBtn addTarget:self action:@selector(onSelectYear:) forControlEvents:UIControlEventTouchUpInside];
+        [_imageView addSubview:_yearBtn];
+        
+        UIImage *confirmImage;
+        if ([ProManager isProductPaid:MONTH_ID]) {
+            confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_sub"]];
+        }else{
+            confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_trial"]];
+        }
+        
+        _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, _monthBtn.frame.origin.y + _monthBtn.frame.size.height + 10, _imageView.frame.size.width - 40, (_imageView.frame.size.width - 40)/confirmImage.size.width * confirmImage.size.height)];
+        [_confirmBtn setBackgroundImage:confirmImage forState:UIControlStateNormal];
+        [_confirmBtn addTarget:self action:@selector(onConfirm:) forControlEvents:UIControlEventTouchUpInside];
+        [_imageView addSubview:_confirmBtn];
     }
-    
-    _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, _monthBtn.frame.origin.y + _monthBtn.frame.size.height + 10, _imageView.frame.size.width - 40, (_imageView.frame.size.width - 40)/confirmImage.size.width * confirmImage.size.height)];
-    [_confirmBtn setImage:confirmImage forState:UIControlStateNormal];
-    [_confirmBtn addTarget:self action:@selector(onConfirm:) forControlEvents:UIControlEventTouchUpInside];
-    [_imageView addSubview:_confirmBtn];
     
     _restoreBtn = [[UIButton alloc] initWithFrame:CGRectMake(_imageView.bounds.size.width * 0.17, _imageView.bounds.size.height * 0.93, _imageView.bounds.size.width * 0.26, _imageView.bounds.size.height * 0.05)];
     [_restoreBtn addTarget:self action:@selector(onRestore) forControlEvents:UIControlEventTouchUpInside];
@@ -121,7 +153,7 @@
     }else{
         confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_trial"]];
     }
-    [_confirmBtn setImage:confirmImage forState:UIControlStateNormal];
+    [_confirmBtn setBackgroundImage:confirmImage forState:UIControlStateNormal];
 }
 
 -(IBAction)onClose:(id)sender{
