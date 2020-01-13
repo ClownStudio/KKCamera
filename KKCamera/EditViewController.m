@@ -222,6 +222,16 @@
 -(IBAction)onReset:(id)sender{
     _editImage = _oriImage;
     [_imageView setImage:_editImage];
+    if([@"edit" isEqualToString:_selectedType]){
+        [self effectCancel];
+    }else if ([@"cut" isEqualToString:_selectedType]){
+        [self onCutCancel:nil];
+    }else{
+        [_randomSliderView reset];
+        [_randomSliderView.slider setValue:0.5];
+        _randomSliderView.slider.enabled = NO;
+        [(EffectItemView *)[_middleScrollView viewWithTag:_selectRandomIndex + 1] setItemSelected:NO];
+    }
 }
 
 -(IBAction)onIap:(id)sender{
@@ -290,6 +300,16 @@
     if ([@"cut" isEqualToString:_selectedType]) {
         [self clearEditFilters];
         [_topScrollView setHidden:YES];
+        
+        UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.frame.size.width/4 - 35, 0, 70, 70)];
+        [cancel setImage:[UIImage imageNamed:@"kk_slider_cancel"] forState:UIControlStateNormal];
+        [cancel addTarget:self action:@selector(onCutCancel:) forControlEvents:UIControlEventTouchUpInside];
+        [_groupView addSubview:cancel];
+        
+        UIButton *ok = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.frame.size.width/4*3 - 35, 0, 70, 70)];
+        [ok setImage:[UIImage imageNamed:@"kk_slider_done"] forState:UIControlStateNormal];
+        [ok addTarget:self action:@selector(onCutOk:) forControlEvents:UIControlEventTouchUpInside];
+        [_groupView addSubview:ok];
         [_groupView setHidden:YES];
         
         _cutContents = [NSMutableArray new];
@@ -299,7 +319,7 @@
         for (NSDictionary *dict in _selectedMainContent) {
             [_cutContents addObject:[dict objectForKey:@"name"]];
             position += distance;
-            EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, _middleScrollView.bounds.size.height - 16)];
+            EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, 120 - 16)];
             button.tag = tag;
             [button addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onCut:)]];
             [button.layer setMasksToBounds:YES];
@@ -357,8 +377,26 @@
     }
 }
 
+-(IBAction)onCutOk:(id)sender{
+    [_imageScrollView setHidden:NO];
+    [_groupView setHidden:YES];
+    [_tkImageView setHidden:YES];
+    [(EffectItemView *)[_middleScrollView viewWithTag:_selectCutIndex + 1] setItemSelected:NO];
+    _editImage = [_tkImageView currentCroppedImage].copy;
+    [_imageView setImage:_editImage];
+    [_tkImageView setToCropImage:_editImage];
+}
+
+-(IBAction)onCutCancel:(id)sender{
+    [_imageScrollView setHidden:NO];
+    [_groupView setHidden:YES];
+    [_tkImageView setHidden:YES];
+    [(EffectItemView *)[_middleScrollView viewWithTag:_selectCutIndex + 1] setItemSelected:NO];
+}
+
 -(IBAction)onCut:(UIGestureRecognizer *)sender{
     [_imageScrollView setHidden:YES];
+    [_groupView setHidden:NO];
     [_tkImageView setHidden:NO];
     [self selectCutButtonWithIndex:sender.view.tag - 1];
 }
@@ -526,7 +564,7 @@
         position += distance;
         EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, _middleScrollView.bounds.size.height - 16)];
         button.tag = tag;
-        [button addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)]];
+        [button addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapEffect:)]];
         [button.layer setMasksToBounds:YES];
         [button.layer setCornerRadius:5];
         [button setItemWithData:dict];
@@ -624,7 +662,7 @@
     [(EffectItemView *)[_middleScrollView viewWithTag:_selectEditIndex + 1] setItemSelected:NO];
 }
 
-- (void)onTap:(UIGestureRecognizer *)gesture{
+- (void)onTapEffect:(UIGestureRecognizer *)gesture{
     [self selectMiddleWithIndex:gesture.view.tag - 1];
 }
 
@@ -715,7 +753,7 @@
     NSString *selectHalo = [content objectForKey:@"halo"];
     NSString *selectLut = [content objectForKey:@"lut"];
     NSDictionary *fontProperty = [content objectForKey:@"FontProperty"];
-    UIImage *image = _oriImage;
+    UIImage *image = _imageView.image;
     image = [image fixOrientation];
     
     if ([@"" isEqualToString:selectFilter] == NO) {
