@@ -21,6 +21,7 @@
 #import "PhotoXHaloFilter.h"
 #import "RandomSliderView.h"
 #import "TKImageView.h"
+#import "MBProgressHUD+RJHUD.h"
 
 @interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate>
 
@@ -66,6 +67,8 @@
     NSInteger _selectRandomIndex;
     CGFloat _effectValue;
     TKImageView *_tkImageView;
+    UIView *_alphaView;
+    UIImageView *_purchaseImageView;
 }
 
 - (void)randomSliderValueChanged:(CGFloat)value{
@@ -74,7 +77,23 @@
 }
 
 - (void)randomForEffect{
-    
+    NSInteger index = 0;
+    NSMutableArray *content = [NSMutableArray new];
+    for(NSDictionary *dict in _selectedMiddleContent){
+        NSString *isPurchase = [dict objectForKey:@"isPurchase"];
+        NSString *productId = [dict objectForKey:@"productCode"];
+        if ([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase]) {
+            NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithDictionary:dict];
+            [data setValue:[NSString stringWithFormat:@"%zd",index] forKey:@"index"];
+            [content addObject:data];
+        }
+        index++;
+    }
+    if ([content count] > 0) {
+        NSDictionary *result = content[arc4random_uniform((uint32_t)[content count])];
+        NSInteger index = [[result objectForKey:@"index"] integerValue];
+        [self selectMiddleWithIndex:index];
+    }
 }
 
 - (void)randomConfirm{
@@ -666,7 +685,19 @@
     [self selectMiddleWithIndex:gesture.view.tag - 1];
 }
 
+- (void)showBuyAlertWithIndex:(NSInteger)index{
+    //todo:
+    [self showPurchasePageWithIndex:index];
+}
+
 - (void)selectMiddleWithIndex:(NSInteger)index{
+    NSDictionary *content = [_selectedMiddleContent objectAtIndex:index];
+    NSString *isPurchase = [content objectForKey:@"isPurchase"];
+    NSString *productId = [content objectForKey:@"productCode"];
+    if (!([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase])) {
+        [self showBuyAlertWithIndex:index];
+        return;
+    }
     [_imageView setImage:_editImage];
     [_randomSliderView reset];
     [_randomSliderView.slider setValue:0.5];
@@ -681,7 +712,44 @@
         }
     }
     _selectRandomIndex = index;
-    [self refreshImageViewWithContent:[_selectedMiddleContent objectAtIndex:_selectRandomIndex]];
+    [self refreshImageViewWithContent:content];
+}
+
+- (void)showPurchasePageWithIndex:(NSInteger)index{
+    NSDictionary *content = [_selectedMiddleContent objectAtIndex:index];
+    if ([content objectForKey:@"picture"] == nil || [@"" isEqualToString:[content objectForKey:@"picture"]]) {
+        [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+        [self.proManager buyProduct:[content objectForKey:@"productCode"]];
+        return;
+    }
+    _alphaView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [_alphaView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.8]];
+    [_alphaView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onHidePurchasePage)]];
+    [self.view addSubview:_alphaView];
+    UIImage *image = [UIImage imageNamed:[content objectForKey:@"picture"]];
+    _purchaseImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 10, (self.view.frame.size.width - 10)/image.size.width * image.size.height)];
+    [_purchaseImageView setContentMode:UIViewContentModeScaleAspectFit];
+    [_purchaseImageView setImage:image];
+    _purchaseImageView.tag = index + 1;
+    [_purchaseImageView setUserInteractionEnabled:YES];
+    [_purchaseImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onPurchase:)]];
+    [_alphaView addSubview:_purchaseImageView];
+    _purchaseImageView.center = _alphaView.center;
+}
+
+- (void)onHidePurchasePage{
+    [_purchaseImageView removeFromSuperview];
+    [_alphaView removeFromSuperview];
+    _purchaseImageView = nil;
+    _alphaView = nil;
+}
+
+- (void)onPurchase:(UIGestureRecognizer *)tap{
+    [self onHidePurchasePage];
+    NSInteger tag = tap.view.tag;
+    NSDictionary *content = [_selectedMiddleContent objectAtIndex:tag - 1];
+    [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+    [self.proManager buyProduct:[content objectForKey:@"productCode"]];
 }
 
 - (UIImage *)createFilterWithImage:(UIImage *)image andFilterName:(NSString *)filterName{
