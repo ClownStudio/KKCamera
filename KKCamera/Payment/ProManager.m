@@ -79,7 +79,13 @@
         switch (transaction.transactionState)
         {
             case SKPaymentTransactionStatePurchased://交易完成
-                [self completeTransaction:transaction];
+                if(transaction.originalTransaction){
+                     //如果是自动续费的订单originalTransaction会有内容
+                    NSLog(@"自动续费的订单,originalTransaction = %@",transaction.originalTransaction);
+                }else{
+                     //普通购买，以及 第一次购买 自动订阅
+                    [self completeTransaction:transaction];
+                }
                 break;
                 
             case SKPaymentTransactionStateFailed://交易失败
@@ -87,12 +93,13 @@
                 break;
                 
             case SKPaymentTransactionStateRestored://已经购买过该商品
+                [self restoreTransaction:transaction];
                 break;
                 
             case SKPaymentTransactionStatePurchasing://商品添加进列表
-            {
-                NSLog(@"Requesting payment：%@", self.currentProductId);
-            }
+                {
+                    NSLog(@"Requesting payment：%@", self.currentProductId);
+                }
                 break;
                 
             default:
