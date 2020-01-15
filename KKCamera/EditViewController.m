@@ -350,7 +350,7 @@
         int distance = 8;
         int tag = 1;
         for (NSDictionary *dict in _selectedMainContent) {
-            [_cutContents addObject:[dict objectForKey:@"name"]];
+            [_cutContents addObject:[dict objectForKey:@"effect"]];
             position += distance;
             EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, 120 - 16)];
             button.tag = tag;
@@ -372,7 +372,7 @@
         int distance = 8;
         int tag = 1;
         for (NSDictionary *dict in _selectedMainContent) {
-            [_editContents addObject:[dict objectForKey:@"name"]];
+            [_editContents addObject:[dict objectForKey:@"effect"]];
             position += distance;
             EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, _middleScrollView.bounds.size.height - 16)];
             button.tag = tag;
@@ -747,9 +747,8 @@
 
 - (void)selectMiddleWithIndex:(NSInteger)index{
     NSDictionary *content = [_selectedMiddleContent objectAtIndex:index];
-    NSString *isPurchase = [content objectForKey:@"isPurchase"];
     NSString *productId = [content objectForKey:@"productCode"];
-    if (!([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase] || [ProManager isProductPaid:ALL_PRODUCT_ID])) {
+    if (!([@"" isEqualToString:productId] || [ProManager isProductPaid:productId] || [@1 isEqual:[content objectForKey:@"isPurchase"]] || [ProManager isProductPaid:ALL_PRODUCT_ID])) {
         [self showBuyAlertWithIndex:index];
         return;
     }

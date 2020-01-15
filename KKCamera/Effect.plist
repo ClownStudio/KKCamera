@@ -7,15 +7,9 @@
 		<array>
 			<dict>
 				<key>effect</key>
-				<string></string>
+				<string>1:1</string>
 				<key>picture</key>
 				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
 				<string>1:1</string>
 				<key>icon</key>
@@ -32,14 +26,10 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
+				<key>effect</key>
+				<string>9:16</string>
 				<key>picture</key>
 				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
 				<string>9:16</string>
 				<key>icon</key>
@@ -57,15 +47,9 @@
 			</dict>
 			<dict>
 				<key>effect</key>
-				<string></string>
+				<string>16:9</string>
 				<key>picture</key>
 				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
 				<string>16:9</string>
 				<key>icon</key>
@@ -83,15 +67,9 @@
 			</dict>
 			<dict>
 				<key>effect</key>
-				<string></string>
+				<string>FREEDOM</string>
 				<key>picture</key>
 				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
 				<string>FREEDOM</string>
 				<key>icon</key>
@@ -109,15 +87,9 @@
 			</dict>
 			<dict>
 				<key>effect</key>
-				<string></string>
+				<string>3:4</string>
 				<key>picture</key>
 				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
 				<string>3:4</string>
 				<key>icon</key>
@@ -135,15 +107,9 @@
 			</dict>
 			<dict>
 				<key>effect</key>
-				<string></string>
+				<string>4:3</string>
 				<key>picture</key>
 				<string>item1</string>
-				<key>productCode</key>
-				<string></string>
-				<key>isPurchase</key>
-				<true/>
-				<key>isAdAward</key>
-				<false/>
 				<key>name</key>
 				<string>4:3</string>
 				<key>icon</key>
@@ -1064,12 +1030,8 @@
 		<key>edit</key>
 		<array>
 			<dict>
-				<key>isAdAward</key>
-				<false/>
-				<key>isPurchase</key>
-				<true/>
-				<key>productCode</key>
-				<string></string>
+				<key>effect</key>
+				<string>SHARPNESS</string>
 				<key>name</key>
 				<string>SHARPNESS</string>
 				<key>icon</key>
@@ -1086,12 +1048,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>isAdAward</key>
-				<false/>
-				<key>isPurchase</key>
-				<true/>
-				<key>productCode</key>
-				<string></string>
+				<key>effect</key>
+				<string>COLOR</string>
 				<key>name</key>
 				<string>COLOR</string>
 				<key>icon</key>
@@ -1108,12 +1066,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>isAdAward</key>
-				<false/>
-				<key>isPurchase</key>
-				<true/>
-				<key>productCode</key>
-				<string></string>
+				<key>effect</key>
+				<string>EXPOSURE</string>
 				<key>name</key>
 				<string>EXPOSURE</string>
 				<key>icon</key>
@@ -1130,12 +1084,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>isAdAward</key>
-				<false/>
-				<key>isPurchase</key>
-				<true/>
-				<key>productCode</key>
-				<string></string>
+				<key>effect</key>
+				<string>CONTRAST</string>
 				<key>name</key>
 				<string>CONTRAST</string>
 				<key>icon</key>
@@ -1152,12 +1102,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>isAdAward</key>
-				<false/>
-				<key>isPurchase</key>
-				<true/>
-				<key>productCode</key>
-				<string></string>
+				<key>effect</key>
+				<string>SATURATION</string>
 				<key>name</key>
 				<string>SATURATION</string>
 				<key>icon</key>
@@ -1174,12 +1120,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>isAdAward</key>
-				<false/>
-				<key>isPurchase</key>
-				<true/>
-				<key>productCode</key>
-				<string></string>
+				<key>effect</key>
+				<string>BRIGHTNESS</string>
 				<key>name</key>
 				<string>BRIGHTNESS</string>
 				<key>icon</key>
@@ -1196,12 +1138,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>isAdAward</key>
-				<false/>
-				<key>isPurchase</key>
-				<true/>
-				<key>productCode</key>
-				<string></string>
+				<key>effect</key>
+				<string>SHADOW</string>
 				<key>name</key>
 				<string>SHADOW</string>
 				<key>icon</key>
@@ -1218,12 +1156,8 @@
 				<string>255,255,255,1</string>
 			</dict>
 			<dict>
-				<key>isAdAward</key>
-				<false/>
-				<key>isPurchase</key>
-				<true/>
-				<key>productCode</key>
-				<string></string>
+				<key>effect</key>
+				<string>VIGNETTE</string>
 				<key>name</key>
 				<string>VIGNETTE</string>
 				<key>icon</key>

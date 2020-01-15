@@ -208,49 +208,30 @@
     [[NSUserDefaults standardUserDefaults] setValue:ma forKey:key];
 }
 
++(void)removeProductId:(NSString*)productId
+{
+    NSMutableArray *content = [NSMutableArray array];
+    NSString *key = @"paid_products";
+    NSArray *paid_products = [[NSUserDefaults standardUserDefaults] arrayForKey:key];
+    
+    if (paid_products) {
+        [content setArray:paid_products];
+    }
+    
+    for (int i=0; i<content.count; i++) {
+        NSString *pid = content[i];
+        if ([pid isEqualToString:productId]) {
+            [content removeObject:pid];
+            return;
+        }
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:content forKey:key];
+}
+
 +(BOOL)isFullPaid
 {
     return [self isProductPaid:kProDeluxeId];
 }
 
-+(NSArray*)haloItems
-{
-    NSMutableArray *halo = [NSMutableArray array];
-    
-#pragma mark 封面1
-    NSMutableDictionary *item = [NSMutableDictionary dictionary];
-    [item setDictionary:@{@"isPurchase":@YES,
-                          @"name":@"Leak",
-                          @"icon":@"halo_cover_1.png",
-                          @"productId":@"com.puti104.N007.1"
-                          }];
-    NSMutableArray *sub_items = [NSMutableArray array];
-    [sub_items addObject:@{@"isPurchase":@NO,
-                             @"name":@"Leak 1",
-                             @"icon":@"halo_icon1_1.png",
-                             @"source":@"halo_1_1.png"
-                             }];
-    [sub_items addObject:@{@"isPurchase":@YES,
-                           @"name":@"Leak 2",
-                           @"icon":@"halo_icon1_2.png",
-                           @"source":@"halo_1_2.png"
-                           }];
-    [sub_items addObject:@{@"isPurchase":@YES,
-                           @"name":@"Leak 3",
-                           @"icon":@"halo_icon1_3.png",
-                           @"source":@"halo_1_3.png"
-                           }];
-    [sub_items addObject:@{@"isPurchase":@YES,
-                           @"name":@"Leak 4",
-                           @"icon":@"halo_icon1_4.png",
-                           @"source":@"halo_1_4.png"
-                           }];
-    [sub_items addObject:@{@"isPurchase":@YES,
-                           @"name":@"Leak 5",
-                           @"icon":@"halo_icon1_5.png",
-                           @"source":@"halo_1_5.png"
-                           }];
-    
-    return halo;
-}
 @end

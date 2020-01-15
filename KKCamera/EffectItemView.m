@@ -63,11 +63,10 @@
 
 - (void)setItemWithData:(NSDictionary *)dict{
     _content = dict;
-    NSString *isPurchase = [dict objectForKey:@"isPurchase"];
-    if([@"YES" isEqualToString:isPurchase]){
+    if([@1 isEqual:[dict objectForKey:@"isPurchase"]]){
         self.isPurchase = YES;
     }else{
-        if ([@"" isEqualToString:[dict objectForKey:@"productCode"]] || [ProManager isProductPaid:[dict objectForKey:@"productCode"]] || [ProManager isProductPaid:ALL_PRODUCT_ID]) {
+        if ([dict objectForKey:@"productCode"] == nil || [@"" isEqualToString:[dict objectForKey:@"productCode"]] || [ProManager isProductPaid:[dict objectForKey:@"productCode"]] || [ProManager isProductPaid:ALL_PRODUCT_ID]) {
             self.isPurchase = YES;
         }else{
             self.isPurchase = NO;

@@ -38,6 +38,7 @@
 +(BOOL)canPay;
 +(BOOL)isProductPaid:(NSString*)productId;
 +(void)addProductId:(NSString*)productId;
++(void)removeProductId:(NSString*)productId;
 +(BOOL)isFullPaid;
 
 
