@@ -103,10 +103,9 @@
 
 - (void)selectItemWithData:(NSDictionary *)data{
     NSString *type = [data objectForKey:@"type"];
-    if ([@"subscriber" isEqualToString:type]) {
-        
-    }else if ([@"purchase" isEqualToString:type]){
-        
+    if ([@"purchase" isEqualToString:type]) {
+        [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+        [self.proManager buyProduct:[data objectForKey:@"content"]];
     }else if ([@"recommend" isEqualToString:type]){
         [self recommendToAppStoreWithAppId:[data objectForKey:@"content"]];
     }

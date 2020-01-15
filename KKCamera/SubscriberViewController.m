@@ -120,7 +120,7 @@
 }
 
 -(IBAction)onConfirm:(id)sender{
-    if (!([ProManager isProductPaid:_subId] || [ProManager isProductPaid:ALL_PRODUCT_ID])) {
+    if ([ProManager isProductPaid:_subId] || [ProManager isProductPaid:ALL_PRODUCT_ID]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tip", nil)  message:NSLocalizedString(@"AlreadyPurchase", nil) preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil)
                                                                style:UIAlertActionStyleCancel

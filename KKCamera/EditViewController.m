@@ -876,7 +876,7 @@
     NSString *selectHalo = [content objectForKey:@"halo"];
     NSString *selectLut = [content objectForKey:@"lut"];
     NSDictionary *fontProperty = [content objectForKey:@"FontProperty"];
-    UIImage *image = _imageView.image;
+    UIImage *image = _editImage;
     image = [image fixOrientation];
     
     if ([@"" isEqualToString:selectFilter] == NO) {

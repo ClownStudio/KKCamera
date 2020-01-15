@@ -60,6 +60,7 @@
         _isFullImageBtn = YES;
         
         [_bottomLeftButton.layer setCornerRadius:20];
+        [_bottomLeftButton setHidden:YES];
     }
     return self;
 }
