@@ -22,8 +22,9 @@
 #import "RandomSliderView.h"
 #import "TKImageView.h"
 #import "MBProgressHUD+RJHUD.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
-@interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate>
+@interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate,GADRewardBasedVideoAdDelegate>
 
 @end
 
@@ -69,6 +70,7 @@
     TKImageView *_tkImageView;
     UIView *_alphaView;
     UIImageView *_purchaseImageView;
+    NSInteger _preSelectIndex;
 }
 
 - (void)randomSliderValueChanged:(CGFloat)value{
@@ -82,7 +84,7 @@
     for(NSDictionary *dict in _selectedMiddleContent){
         NSString *isPurchase = [dict objectForKey:@"isPurchase"];
         NSString *productId = [dict objectForKey:@"productCode"];
-        if ([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase]) {
+        if ([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase] || [ProManager isProductPaid:ALL_PRODUCT_ID]) {
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithDictionary:dict];
             [data setValue:[NSString stringWithFormat:@"%zd",index] forKey:@"index"];
             [content addObject:data];
@@ -107,6 +109,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fd_interactivePopDisabled = YES;
+    
+    [GADRewardBasedVideoAd sharedInstance].delegate = self;
+    
+    if (![[GADRewardBasedVideoAd sharedInstance] isReady]) {
+        [self requestRewardedVideo];
+    }
     
     _editImage = _oriImage;
     NSString *effectFilePath = [[NSBundle mainBundle] pathForResource:@"Effect" ofType:@"plist"];
@@ -236,6 +244,12 @@
     }
     [_itemScrollView setContentSize:CGSizeMake(position + distance, 0)];
     [self selectEditorItemWithIndex:0];
+}
+
+- (void)requestRewardedVideo {
+    GADRequest *request = [GADRequest request];
+    [[GADRewardBasedVideoAd sharedInstance] loadRequest:request
+                                           withAdUnitID:AD_AWARD_ID];
 }
 
 -(IBAction)onReset:(id)sender{
@@ -686,15 +700,56 @@
 }
 
 - (void)showBuyAlertWithIndex:(NSInteger)index{
-    //todo:
-    [self showPurchasePageWithIndex:index];
+    NSDictionary *content = [_selectedMiddleContent objectAtIndex:index];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tip", nil)
+                                                                   message:NSLocalizedString(@"Unlock", nil)
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil)
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:nil];
+    [alert addAction:cancelAction];
+    if ([@1 isEqual:[content objectForKey:@"isAdAward"]]) {
+        UIAlertAction *moreAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"UnlockByAwardAd", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            if ([[GADRewardBasedVideoAd sharedInstance] isReady]) {
+                self->_preSelectIndex = index;
+                [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:self];
+            }else{
+                [MBProgressHUD showError:NSLocalizedString(@"RequestRewardVideoError", nil)];
+            }
+        }];
+        [alert addAction:moreAction];
+    }
+    
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"UnlockByPurchase", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self showPurchasePageWithIndex:index];
+    }];
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma 奖励广告反馈
+- (void)rewardBasedVideoAdDidClose:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
+    NSLog(@"Reward based video ad is closed.");
+    if (![[GADRewardBasedVideoAd sharedInstance] isReady]) {
+        [self requestRewardedVideo];
+    }
+}
+
+- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
+   didRewardUserWithReward:(GADAdReward *)reward {
+    [MBProgressHUD showSuccess:NSLocalizedString(@"UnlockSuccess", nil)];
+    NSDictionary *content = [_selectedMiddleContent objectAtIndex:_preSelectIndex];
+    [ProManager addProductId:[content objectForKey:@"productCode"]];
+    EffectItemView *item = [_middleScrollView viewWithTag:_preSelectIndex + 1];
+    [item setItemWithData:content];
+    [self selectMiddleWithIndex:_preSelectIndex];
 }
 
 - (void)selectMiddleWithIndex:(NSInteger)index{
     NSDictionary *content = [_selectedMiddleContent objectAtIndex:index];
     NSString *isPurchase = [content objectForKey:@"isPurchase"];
     NSString *productId = [content objectForKey:@"productCode"];
-    if (!([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase])) {
+    if (!([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase] || [ProManager isProductPaid:ALL_PRODUCT_ID])) {
         [self showBuyAlertWithIndex:index];
         return;
     }

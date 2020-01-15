@@ -120,6 +120,15 @@
 }
 
 -(IBAction)onConfirm:(id)sender{
+    if (!([ProManager isProductPaid:_subId] || [ProManager isProductPaid:ALL_PRODUCT_ID])) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tip", nil)  message:NSLocalizedString(@"AlreadyPurchase", nil) preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil)
+                                                               style:UIAlertActionStyleCancel
+                                                             handler:nil];
+        [alert addAction:cancelAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
     [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
     [self.proManager buyProduct:_subId];
 }

@@ -273,7 +273,7 @@
 						<key>isPurchase</key>
 						<false/>
 						<key>isAdAward</key>
-						<false/>
+						<true/>
 						<key>name</key>
 						<string>LUMEN</string>
 						<key>icon</key>
@@ -332,7 +332,7 @@
 						<key>isPurchase</key>
 						<true/>
 						<key>isAdAward</key>
-						<false/>
+						<true/>
 						<key>name</key>
 						<string>LUMEN</string>
 						<key>icon</key>

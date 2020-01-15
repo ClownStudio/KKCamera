@@ -119,7 +119,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
     _canDragLink = NO;
     _helper.lineNum = 4;
     _canShowImage = YES;
-    _currentSelectedIndexPath = nil;
+    _currentSelectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     _dragDirection = RJDirectionUnknow;
     CGFloat size = [UIScreen mainScreen].bounds.size.width / _helper.lineNum;
     _targetSize = CGSizeMake(size, size);
@@ -165,7 +165,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
     if (_helper.currentCollectionCount == count) {
         return;
     }
-    _currentSelectedIndexPath = nil;
+    _currentSelectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [_helper setSelectCollectionCount:count];
 }
 

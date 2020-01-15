@@ -1,12 +1,14 @@
 PODS:
   - CGXPickerView (2.4.0)
   - FDFullscreenPopGesture (1.1)
+  - Google-Mobile-Ads-SDK (7.30.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
 
 DEPENDENCIES:
   - CGXPickerView (~> 2.4.0)
   - FDFullscreenPopGesture (= 1.1)
+  - Google-Mobile-Ads-SDK (~> 7.30.0)
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.1.0)
 
@@ -14,15 +16,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CGXPickerView
     - FDFullscreenPopGesture
+    - Google-Mobile-Ads-SDK
     - Masonry
     - MBProgressHUD
 
 SPEC CHECKSUMS:
   CGXPickerView: a3eaff9c999ea82ab0efcedb3aeb0c90b615663b
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
 
-PODFILE CHECKSUM: 95bd359548f192b758ba25b6a209aee2be1404c4
+PODFILE CHECKSUM: c1b39164a43223d72d7d7f3349365d351eaa7eeb
 
 COCOAPODS: 1.7.0

@@ -67,9 +67,7 @@
     if([@"YES" isEqualToString:isPurchase]){
         self.isPurchase = YES;
     }else{
-        if ([@"" isEqualToString:[dict objectForKey:@"productCode"]]) {
-            self.isPurchase = YES;
-        }else if ([ProManager isProductPaid:[dict objectForKey:@"productCode"]]){
+        if ([@"" isEqualToString:[dict objectForKey:@"productCode"]] || [ProManager isProductPaid:[dict objectForKey:@"productCode"]] || [ProManager isProductPaid:ALL_PRODUCT_ID]) {
             self.isPurchase = YES;
         }else{
             self.isPurchase = NO;

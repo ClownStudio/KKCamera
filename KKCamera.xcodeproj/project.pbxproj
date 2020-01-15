@@ -519,6 +519,7 @@
 		B6EF3A432398FDEF00EE68A0 /* item3.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EF3A302398FDEF00EE68A0 /* item3.png */; };
 		B6EF3A492398FDEF00EE68A0 /* effect1.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EF3A362398FDEF00EE68A0 /* effect1.png */; };
 		B6EF3A522398FE7C00EE68A0 /* item4.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EF3A512398FE7C00EE68A0 /* item4.png */; };
+		B6F252BB23CED36000D18334 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F252BA23CED36000D18334 /* libc++abi.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1344,6 +1345,8 @@
 		B6EF3A302398FDEF00EE68A0 /* item3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item3.png; sourceTree = "<group>"; };
 		B6EF3A362398FDEF00EE68A0 /* effect1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = effect1.png; sourceTree = "<group>"; };
 		B6EF3A512398FE7C00EE68A0 /* item4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item4.png; sourceTree = "<group>"; };
+		B6F252B823CED34600D18334 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B6F252BA23CED36000D18334 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1351,6 +1354,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F252BB23CED36000D18334 /* libc++abi.tbd in Frameworks */,
 				81A60D8374B2F853C6217ACE /* libPods-KKCamera.a in Frameworks */,
 				B65C4CF8239DF9D70084E4EA /* StoreKit.framework in Frameworks */,
 			);
@@ -1362,6 +1366,8 @@
 		1E5ACBB78FD4BA85A3BE1273 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6F252BA23CED36000D18334 /* libc++abi.tbd */,
+				B6F252B823CED34600D18334 /* libc++.tbd */,
 				B65C4CF7239DF9D70084E4EA /* StoreKit.framework */,
 				AC5AB7619E7A8D9CE4CFABD0 /* libPods-KKCamera.a */,
 			);
