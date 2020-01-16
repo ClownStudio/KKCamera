@@ -61,6 +61,7 @@
 
 -(void)reset{
     [_label setText:@"50%"];
+    [self.slider setValue: 0.5];
 }
 
 -(void)dealloc{

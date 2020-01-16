@@ -102,7 +102,6 @@
 - (void)randomConfirm{
     _editImage = _imageView.image.copy;
     [(EffectItemView *)[_middleScrollView viewWithTag:_selectRandomIndex + 1] setItemSelected:NO];
-    [_randomSliderView.slider setValue:0.5];
     [_randomSliderView reset];
     [_randomSliderView.slider setEnabled:NO];
 }
@@ -256,9 +255,11 @@
                 
                 UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
                 UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"BuySingle", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
                     [self.proManager buyProduct:AD_PRODUCT_ID];
                 }];
                 UIAlertAction *allAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"BuyAll", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                    [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
                     [self.proManager buyProduct:ALL_PRODUCT_ID];
                 }];
                 
@@ -432,7 +433,6 @@
         [self onCutCancel:nil];
     }else{
         [_randomSliderView reset];
-        [_randomSliderView.slider setValue:0.5];
         _randomSliderView.slider.enabled = NO;
         [(EffectItemView *)[_middleScrollView viewWithTag:_selectRandomIndex + 1] setItemSelected:NO];
     }
@@ -718,7 +718,9 @@
             _randomSliderView = [self getRandomSliderView];
         }
         _randomSliderView.slider.enabled = NO;
+        [_randomSliderView reset];
         [_groupView addSubview:_randomSliderView];
+        [_imageView setImage:_editImage];
     }else{
         //编辑
         if (_effectSliderView == nil) {
@@ -925,7 +927,6 @@
     }
     [_imageView setImage:_editImage];
     [_randomSliderView reset];
-    [_randomSliderView.slider setValue:0.5];
     for (EffectItemView *btn in _middleScrollView.subviews) {
         if([btn isMemberOfClass:[EffectItemView class]] == NO){
             continue;

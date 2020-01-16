@@ -39,6 +39,6 @@
 #define CameraShowAdTime 60
 
 //是否解锁后才可保存 0为是 1为否
-#define IsSavedWithUnlock @"1"
+#define IsSavedWithUnlock @"0"
 
 #endif /* Macro_h */
