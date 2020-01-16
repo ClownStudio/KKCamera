@@ -81,9 +81,40 @@
             case SKPaymentTransactionStatePurchased://交易完成
                 if(transaction.originalTransaction){
                      //如果是自动续费的订单originalTransaction会有内容
-                    NSLog(@"自动续费的订单,originalTransaction = %@",transaction.originalTransaction);
+                    if ([YEAR_ID isEqualToString:transaction.payment.productIdentifier]) {
+                        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:TRY_OR_NOT];
+                        [[NSUserDefaults standardUserDefaults] synchronize];
+                    }else if ([MONTH_ID isEqualToString:transaction.payment.productIdentifier]){
+                        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:TRY_OR_NOT];
+                        [[NSUserDefaults standardUserDefaults] synchronize];
+                    }
+                    [self completeTransaction:transaction];
                 }else{
                      //普通购买，以及 第一次购买 自动订阅
+                    if ([YEAR_ID isEqualToString:transaction.payment.productIdentifier]) {
+                        NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+                        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+                        //设置时间间隔（秒）（这个我是计算出来的，不知道有没有简便的方法 )
+                        NSTimeInterval time = 365 * 24 * 60 * 60;//一年的秒数
+                        if ([@"1" isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:TRY_OR_NOT]] == NO) {
+                            time = (365 + [TRY_DATE_COUNT integerValue]) * 24 * 60 * 60;
+                        }
+                        NSDate * nextYear = [transaction.transactionDate dateByAddingTimeInterval:time];
+                        //转化为字符串
+                        NSString * endDate = [dateFormatter stringFromDate:nextYear];
+                        [[NSUserDefaults standardUserDefaults] setValue:endDate forKey:YEAR_ID];
+                        [[NSUserDefaults standardUserDefaults] synchronize];
+                    }else if ([MONTH_ID isEqualToString:transaction.payment.productIdentifier]){
+                        NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+                        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+                        //设置时间间隔（秒）（这个我是计算出来的，不知道有没有简便的方法 )
+                        NSTimeInterval time = 30 * 24 * 60 * 60;//一个月的秒数
+                        NSDate * nextMonth = [transaction.transactionDate dateByAddingTimeInterval:time];
+                        //转化为字符串
+                        NSString * endDate = [dateFormatter stringFromDate:nextMonth];
+                        [[NSUserDefaults standardUserDefaults] setValue:endDate forKey:MONTH_ID];
+                        [[NSUserDefaults standardUserDefaults] synchronize];
+                    }
                     [self completeTransaction:transaction];
                 }
                 break;
@@ -127,6 +158,10 @@
     } else {
         if ([self.managerDelegate respondsToSelector:@selector(didCancelBuyProduct:)]) {
             [self.managerDelegate didCancelBuyProduct:self.currentProductId];
+        }else{
+            if ([self.managerDelegate respondsToSelector:@selector(didFailedBuyProduct:forReason:)]) {
+                [self.managerDelegate didFailedBuyProduct:transaction.payment.productIdentifier forReason:transaction.error.userInfo.description];
+            }
         }
     }
     

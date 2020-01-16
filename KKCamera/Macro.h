@@ -20,6 +20,9 @@
 
 #define YEAR_ID [NSString stringWithFormat:@"%@.year",[[NSBundle mainBundle] bundleIdentifier]]
 
+#define TRY_OR_NOT @"TRYORNOT"
+#define TRY_DATE_COUNT @"7"
+
 #define HIDE_SETTING_ANIMATION @"HIDE_SETTING_ANIMATION"
 
 #define APP_ID @"1039766045"

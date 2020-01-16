@@ -63,12 +63,7 @@
         [_yearBtn addTarget:self action:@selector(onSelectYear:) forControlEvents:UIControlEventTouchUpInside];
         [_imageView addSubview:_yearBtn];
         
-        UIImage *confirmImage;
-        if ([ProManager isProductPaid:MONTH_ID]) {
-            confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_sub"]];
-        }else{
-            confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_trial"]];
-        }
+        UIImage *confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_sub"]];
         
         _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, _monthBtn.frame.origin.y + _monthBtn.frame.size.height + 10, _imageView.frame.size.width - 40, (_imageView.frame.size.width - 40)/confirmImage.size.width * confirmImage.size.height)];
         [_confirmBtn setBackgroundImage:confirmImage forState:UIControlStateNormal];
@@ -93,12 +88,7 @@
         [_yearBtn addTarget:self action:@selector(onSelectYear:) forControlEvents:UIControlEventTouchUpInside];
         [_imageView addSubview:_yearBtn];
         
-        UIImage *confirmImage;
-        if ([ProManager isProductPaid:MONTH_ID]) {
-            confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_sub"]];
-        }else{
-            confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_trial"]];
-        }
+        UIImage *confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_sub"]];
         
         _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, _monthBtn.frame.origin.y + _monthBtn.frame.size.height + 10, _imageView.frame.size.width - 40, (_imageView.frame.size.width - 40)/confirmImage.size.width * confirmImage.size.height)];
         [_confirmBtn setBackgroundImage:confirmImage forState:UIControlStateNormal];
@@ -157,7 +147,7 @@
 
 -(void)refreshConfirmBtn{
     UIImage *confirmImage;
-    if ([ProManager isProductPaid:_subId]) {
+    if ([MONTH_ID isEqualToString:_subId] || [@"1" isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:TRY_OR_NOT]]) {
         confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_sub"]];
     }else{
         confirmImage = [UIImage imageNamed:[self getAssetWithName:@"kk_trial"]];

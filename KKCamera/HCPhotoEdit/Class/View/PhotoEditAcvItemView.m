@@ -243,7 +243,7 @@
     self.hud.mode = MBProgressHUDModeText;
     self.hud.labelText = msg;
     
-    [self.hud hide:YES afterDelay:3.f];
+    [self.hud hide:YES afterDelay:2.f];
 }
 
 - (void)showLoading
