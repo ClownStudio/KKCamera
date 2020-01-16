@@ -17,6 +17,14 @@
 "RestoreError" = "Restore Error";
 "AlreadyPurchase" = "AlreadyPurchase!";
 "RequestRewardVideoError" = "RequestRewardVideoError";
+"CreateAlbumError" = "Create Album Error";
+"ShouldPay" = "Should Pay";
+"BuySingle" = "Buy Single";
+"BuyAll" = "Buy All";
+"SelectSaveVersion" = "Select Save Version";
+"Small" = "Small";
+"Medium" = "Medium";
+"Normal" = "Normal";
 
 "Tip" = "Tips";
 "Evaluate" = "Can you evaluate us?";

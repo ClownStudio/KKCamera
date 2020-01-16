@@ -23,6 +23,7 @@
 #import "TKImageView.h"
 #import "MBProgressHUD+RJHUD.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import <Photos/Photos.h>
 
 @interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate,GADRewardBasedVideoAdDelegate>
 
@@ -137,6 +138,7 @@
     
     _nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.bounds.size.width - 40, 0, 40, 40)];
     [_nextBtn setImage:[UIImage imageNamed:@"kk_next"] forState:UIControlStateNormal];
+    [_nextBtn addTarget:self action:@selector(onSave:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_nextBtn];
     
     _resetBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - 100)/2, 5, 100, 30)];
@@ -244,6 +246,175 @@
     }
     [_itemScrollView setContentSize:CGSizeMake(position + distance, 0)];
     [self selectEditorItemWithIndex:0];
+}
+
+-(IBAction)onSave:(id)sender{
+    if ([ProManager isFullPaid] == NO) {
+        if ([SKPaymentQueue canMakePayments]) {
+            if([@"0" isEqualToString:IsSavedWithUnlock]){
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tip", nil) message:NSLocalizedString(@"ShouldPay", nil) preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"BuySingle", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [self.proManager buyProduct:AD_PRODUCT_ID];
+                }];
+                UIAlertAction *allAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"BuyAll", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                    [self.proManager buyProduct:ALL_PRODUCT_ID];
+                }];
+                
+                [alertController addAction:okAction];
+                [alertController addAction:allAction];
+                [alertController addAction:cancelAction];
+                
+                [self presentViewController:alertController animated:YES completion:nil];
+            }else{
+                [self saveEffectImage];
+            }
+        }
+        else
+        {
+            NSLog(@"不允许程序内付费购买");
+            [MBProgressHUD showError:NSLocalizedString(@"NoPermission", nil)];
+        }
+        return;
+    }
+    [self saveEffectImage];
+}
+
+- (void)savePhoto:(UIImage *)image
+{
+    [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Saving", nil)];
+    //1 将图片保存到系统的【相机胶卷】中---调用刚才的方法
+    [self syncSaveImage:image];
+}
+
+/**同步方式保存图片到系统的相机胶卷中---返回的是当前保存成功后相册图片对象集合*/
+-(void)syncSaveImage:(UIImage *)image{
+    NSString *title = [NSBundle mainBundle].infoDictionary[(__bridge NSString*)kCFBundleNameKey];
+    //查询所有【自定义相册】
+    PHFetchResult<PHAssetCollection *> *collections = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    PHAssetCollection *createCollection = nil;
+    for (PHAssetCollection *collection in collections) {
+        if ([collection.localizedTitle isEqualToString:title]) {
+            createCollection = collection;
+            break;
+        }
+    }
+    if (createCollection == nil) {
+        //当前对应的app相册没有被创建
+        //创建一个【自定义相册】
+        NSError *error = nil;
+        [[PHPhotoLibrary sharedPhotoLibrary]performChangesAndWait:^{
+            //创建一个【自定义相册】
+            [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:title];
+        } error:&error];
+    }
+    
+    NSError *error = nil;
+    __block PHObjectPlaceholder *placeholder = nil;
+    [[PHPhotoLibrary sharedPhotoLibrary]performChangesAndWait:^{
+       placeholder =  [PHAssetChangeRequest creationRequestForAssetFromImage:image].placeholderForCreatedAsset;
+    } error:&error];
+    if (error) {
+        [MBProgressHUD hide];
+        [MBProgressHUD showError:@"Save failed"];
+        return;
+    }
+    // 2.拥有一个【自定义相册】
+    //2 拥有自定义相册（与 APP 同名，如果没有则创建）--调用刚才的方法
+    PHAssetCollection *assetCollection = [self getAssetCollectionWithAppNameAndCreateIfNo];
+    if (assetCollection == nil) {
+        [MBProgressHUD hide];
+        [MBProgressHUD showError:@"Album creation failed"];
+        return;
+    }
+    // 3.将刚才保存到【相机胶卷】里面的图片引用到【自定义相册】
+    [[PHPhotoLibrary sharedPhotoLibrary]performChangesAndWait:^{
+        PHAssetCollectionChangeRequest *requtes = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:assetCollection];
+        [requtes addAssets:@[placeholder]];
+    } error:&error];
+    if (error) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hide];
+            [MBProgressHUD showError:@"Save failed"];
+        });
+    } else {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hide];
+            [MBProgressHUD showSuccess:@"Saved successfully"];
+        });
+    }
+}
+
+/**拥有与 APP 同名的自定义相册--如果没有则创建*/
+-(PHAssetCollection *)getAssetCollectionWithAppNameAndCreateIfNo
+{
+    //1 获取以 APP 的名称
+    NSString *title = [NSBundle mainBundle].infoDictionary[(__bridge NSString *)kCFBundleNameKey];
+    //2 获取与 APP 同名的自定义相册
+    PHFetchResult<PHAssetCollection *> *collections = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    for (PHAssetCollection *collection in collections) {
+        //遍历
+        if ([collection.localizedTitle isEqualToString:title]) {
+            //找到了同名的自定义相册--返回
+            return collection;
+        }
+    }
+    
+    //说明没有找到，需要创建
+    NSError *error = nil;
+    __block NSString *createID = nil; //用来获取创建好的相册
+    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+        //发起了创建新相册的请求，并拿到ID，当前并没有创建成功，待创建成功后，通过 ID 来获取创建好的自定义相册
+        PHAssetCollectionChangeRequest *request = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:title];
+        createID = request.placeholderForCreatedAssetCollection.localIdentifier;
+    } error:&error];
+    if (error) {
+        [MBProgressHUD showError:NSLocalizedString(@"CreateAlbumError", nil)];
+        return nil;
+    }else{
+        //通过 ID 获取创建完成的相册 -- 是一个数组
+        return [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[createID] options:nil].firstObject;
+    }
+}
+
+- (void)saveEffectImage{
+    UIImage *image = _imageView.image;
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tip", nil) message:NSLocalizedString(@"SelectSaveVersion", nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *firstAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Small", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIGraphicsBeginImageContext(CGSizeMake(image.size.width * [UIScreen mainScreen].scale/3, image.size.height * [UIScreen mainScreen].scale/3));
+        [image drawInRect:CGRectMake(0, 0,image.size.width * [UIScreen mainScreen].scale/3, image.size.height * [UIScreen mainScreen].scale/3)];
+        UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        [self savePhoto:resultImage];
+    }];
+    
+    UIAlertAction *secondAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Medium", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIGraphicsBeginImageContext(CGSizeMake(image.size.width * [UIScreen mainScreen].scale/3 *2, image.size.height * [UIScreen mainScreen].scale/3 *2));
+        [image drawInRect:CGRectMake(0, 0,image.size.width * [UIScreen mainScreen].scale/3 *2, image.size.height * [UIScreen mainScreen].scale/3 *2)];
+        UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        [self savePhoto:resultImage];
+    }];
+    
+    UIAlertAction *thirdAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Normal", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIGraphicsBeginImageContext(CGSizeMake(image.size.width * [UIScreen mainScreen].scale, image.size.height * [UIScreen mainScreen].scale));
+        [image drawInRect:CGRectMake(0, 0,image.size.width * [UIScreen mainScreen].scale, image.size.height * [UIScreen mainScreen].scale)];
+        UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        [self savePhoto:resultImage];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alertController addAction:firstAction];
+    [alertController addAction:secondAction];
+    [alertController addAction:thirdAction];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)requestRewardedVideo {
