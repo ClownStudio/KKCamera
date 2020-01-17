@@ -42,6 +42,9 @@
 #define CameraShowAdTime 60
 
 //是否解锁后才可保存 0为是 1为否
-#define IsSavedWithUnlock @"0"
+#define IS_SAVED_UNLOCK @"0"
+
+//是否显示广告 0为是 1为否
+#define IS_AD_VERSION @"0"
 
 #endif /* Macro_h */

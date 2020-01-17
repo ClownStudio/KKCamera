@@ -13,15 +13,21 @@
 #import <MessageUI/MessageUI.h>
 #import "MBProgressHUD+RJHUD.h"
 #import "Macro.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
-@interface SettingViewController ()
+#define Is_iPhoneX ([UIScreen mainScreen].bounds.size.height == 812 || [UIScreen mainScreen].bounds.size.height == 896)
+
+@interface SettingViewController () <GADBannerViewDelegate>
 
 @end
 
-@implementation SettingViewController
+@implementation SettingViewController{
+    GADBannerView *_bannerView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.contentView setHidden:YES];
     if (@available(iOS 13.0, *)) {
         self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
@@ -32,11 +38,48 @@
     [self.btn3 setTitle:[[SettingModel sharedInstance] customDate] forState:UIControlStateNormal];
     [self.btn8 setOn:[[SettingModel sharedInstance] isSound]];
     
+    
     for (UIView *view in self.view.subviews) {
         if([view isMemberOfClass:[UIScrollView class]]){
             [(UIScrollView *)view setContentSize:CGSizeMake(0, 565)];
+            if ([@"0" isEqualToString:IS_AD_VERSION] && !([ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isFullPaid] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID])) {
+                CGFloat height = 50;
+                if(Is_iPhoneX){
+                    height = 85;
+                }
+                _bannerView = [self createAndLoadBannerView];
+                CGRect temp = view.frame;
+                temp.size.height = view.frame.size.height - height;
+                view.frame = temp;
+                CGRect bannerTemp = _bannerView.frame;
+                bannerTemp.origin.y = self.view.frame.size.height - height;
+                _bannerView.frame = bannerTemp;
+                [self.view addSubview:_bannerView];
+            }
         }
     }
+}
+
+- (GADBannerView *)createAndLoadBannerView{
+    GADBannerView *bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
+    bannerView.hidden = YES;
+    bannerView.rootViewController = self;
+    [bannerView setAdUnitID:AD_BANNER_ID];
+    bannerView.delegate = self;
+    [bannerView loadRequest:[GADRequest request]];
+    return bannerView;
+}
+
+- (void)adViewDidReceiveAd:(GADBannerView *)bannerView{
+    if ([ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isFullPaid] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID]) {
+        bannerView.hidden = YES;
+    }else{
+        bannerView.hidden = NO;
+    }
+}
+
+- (void)adView:(GADBannerView *)adView didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"adView:didFailToReceiveAdWithError: %@", error.localizedDescription);
 }
 
 - (IBAction)onClose:(id)sender{
@@ -108,6 +151,17 @@
 - (IBAction)onFollow:(id)sender{
     NSString *urlText = [NSString stringWithFormat:@"https://www.instagram.com"];
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:urlText]];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if ([ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isFullPaid] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID]){
+        if (_bannerView) {
+            [_bannerView removeFromSuperview];
+            _bannerView.delegate = nil;
+            _bannerView = nil;
+        }
+    }
 }
 
 @end

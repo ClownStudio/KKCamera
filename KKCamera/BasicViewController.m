@@ -9,12 +9,16 @@
 #import "BasicViewController.h"
 #import <MessageUI/MessageUI.h>
 #import "MBProgressHUD+RJHUD.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
-@interface BasicViewController ()<MFMailComposeViewControllerDelegate,ProManagerDelegate>
+@interface BasicViewController ()<MFMailComposeViewControllerDelegate,ProManagerDelegate,GADInterstitialDelegate>
 
 @end
 
-@implementation BasicViewController
+@implementation BasicViewController{
+    GADInterstitial *_interstitial;
+    NSTimer *_timer;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -140,6 +144,16 @@
     if (self.proManager) {
         self.proManager.managerDelegate = self;
     }
+    if ([ProManager isFullPaid] || [ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID]) {
+        if (_timer) {
+            [_timer invalidate];
+            _timer = nil;
+        }
+    }else{
+        if ([@"0" isEqualToString:IS_AD_VERSION]) {
+            [self startAd];
+        }
+    }
     // 在所有需要隐藏导航栏的页面加上这两行代码，所有需要显示导航栏的页面不做任何操作即可
     self.fd_prefersNavigationBarHidden = YES;
     [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -149,6 +163,36 @@
     [super viewWillDisappear:animated];
     if (self.proManager) {
         self.proManager.managerDelegate = nil;
+    }
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
+- (void)startAd{
+    if ([_interstitial isReady] == NO) {
+        _interstitial = [self createAndLoadInterstitial];
+    }
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:CameraShowAdTime target:self selector:@selector(showInterstitialAds) userInfo:nil repeats:YES];
+}
+
+- (GADInterstitial *)createAndLoadInterstitial{
+    GADInterstitial *interstitial = [[GADInterstitial alloc] initWithAdUnitID:AD_INTERSTITIAL_ID];
+    interstitial.delegate = self;
+    [interstitial loadRequest:[GADRequest request]];
+    return interstitial;
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)ad{
+    _interstitial = [self createAndLoadInterstitial];
+}
+
+- (void)showInterstitialAds{
+    NSLog(@"计时器");
+    if ([_interstitial isReady] && !([ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isFullPaid] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID])) {
+        [_interstitial presentFromRootViewController:self];
     }
 }
 

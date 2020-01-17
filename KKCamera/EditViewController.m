@@ -248,9 +248,9 @@
 }
 
 -(IBAction)onSave:(id)sender{
-    if ([ProManager isFullPaid] == NO) {
+    if (!([ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isFullPaid] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID])) {
         if ([SKPaymentQueue canMakePayments]) {
-            if([@"0" isEqualToString:IsSavedWithUnlock] && !([ProManager isProductPaid:ALL_PRODUCT_ID] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:AD_PRODUCT_ID])){
+            if([@"0" isEqualToString:IS_SAVED_UNLOCK] && !([ProManager isProductPaid:ALL_PRODUCT_ID] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:AD_PRODUCT_ID])){
                 UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tip", nil) message:NSLocalizedString(@"ShouldPay", nil) preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
