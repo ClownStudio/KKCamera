@@ -109,13 +109,13 @@
     }
     
     //未买过，进行支付
-    [self.proManager buyProduct:kProDeluxeId];
+    [self.proManager buyProduct:ALL_PRODUCT_ID];
 }
 
 -(void)didFailRestore:(NSString *)reason
 {
     [MBProgressHUD hide];
-    [self.proManager buyProduct:kProDeluxeId];
+    [self.proManager buyProduct:ALL_PRODUCT_ID];
 }
 
 -(void)didFailedBuyProduct:(NSString*)productId forReason:(NSString*)reason

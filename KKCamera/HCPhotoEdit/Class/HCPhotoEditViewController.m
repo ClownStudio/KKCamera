@@ -399,7 +399,7 @@
         
     }];
     
-    if (![ProManager isProductPaid:kProDeluxeId]) {
+    if (![ProManager isProductPaid:ALL_PRODUCT_ID]) {
         [view.scrollView purchase];
     }
 }
@@ -421,7 +421,7 @@
         
     }];
     
-    if (![ProManager isProductPaid:kProDeluxeId]) {
+    if (![ProManager isProductPaid:ALL_PRODUCT_ID]) {
         [view.scrollView purchase];
     }
 }
@@ -460,7 +460,7 @@
         
     }];
     
-    if (![ProManager isProductPaid:kProDeluxeId]) {
+    if (![ProManager isProductPaid:ALL_PRODUCT_ID]) {
         [view.scrollView purchase];
     }
 }
@@ -482,7 +482,7 @@
         
     }];
     
-    if (![ProManager isProductPaid:kProDeluxeId]) {
+    if (![ProManager isProductPaid:ALL_PRODUCT_ID]) {
         [view.scrollView purchase];
     }
 }

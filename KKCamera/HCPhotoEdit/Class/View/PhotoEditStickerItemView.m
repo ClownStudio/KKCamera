@@ -242,7 +242,13 @@
 }
 -(void)didFailedBuyProduct:(NSString*)productId forReason:(NSString*)reason
 {
-    [self showMessage:reason];
+    if ([@"" isEqualToString:reason]) {
+        [self hideHUD];
+    }else{
+        [self hideHUD];
+        [self showMessage:reason];
+    }
+    
     self.proManager = nil;
 }
 -(void)didCancelBuyProduct:(NSString*)productId

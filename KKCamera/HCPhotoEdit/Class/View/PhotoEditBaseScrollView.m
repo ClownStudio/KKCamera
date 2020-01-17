@@ -355,7 +355,7 @@
 
 - (void)showPurchase
 {
-    if ([ProManager isProductPaid:kProDeluxeId]) {
+    if ([ProManager isProductPaid:ALL_PRODUCT_ID]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"You have unlocked all the features" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             ;

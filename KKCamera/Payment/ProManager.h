@@ -10,8 +10,6 @@
 #import <StoreKit/StoreKit.h>
 #import "Macro.h"
 
-#define kProDeluxeId ALL_PRODUCT_ID
-
 //内购测试id
 //帐号：test@appstudio.com
 //密码：Hw20171122

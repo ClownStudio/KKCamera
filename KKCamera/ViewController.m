@@ -178,15 +178,15 @@
 }
 
 - (IBAction)onTakePhoto:(id)sender{
-//#warning test
-//    EditViewController *editViewController = [[EditViewController alloc] init];
-//    [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
-//    [editViewController setOrignImage:[UIImage imageNamed:@"kk_lock"]];
-//    [self.navigationController pushViewController:editViewController animated:YES];
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-    imagePicker.delegate = self;
-    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentViewController:imagePicker animated:YES completion:nil];
+#warning test
+    EditViewController *editViewController = [[EditViewController alloc] init];
+    [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
+    [editViewController setOrignImage:[UIImage imageNamed:@"kk_lock"]];
+    [self.navigationController pushViewController:editViewController animated:YES];
+//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+//    imagePicker.delegate = self;
+//    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info

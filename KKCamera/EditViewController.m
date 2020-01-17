@@ -85,7 +85,7 @@
     for(NSDictionary *dict in _selectedMiddleContent){
         NSString *isPurchase = [dict objectForKey:@"isPurchase"];
         NSString *productId = [dict objectForKey:@"productCode"];
-        if ([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase] || [ProManager isProductPaid:ALL_PRODUCT_ID]) {
+        if ([@"" isEqualToString:productId] == YES || [ProManager isProductPaid:productId] || [@"YES" isEqualToString:isPurchase] || [ProManager isProductPaid:ALL_PRODUCT_ID] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID]) {
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithDictionary:dict];
             [data setValue:[NSString stringWithFormat:@"%zd",index] forKey:@"index"];
             [content addObject:data];
@@ -250,7 +250,7 @@
 -(IBAction)onSave:(id)sender{
     if ([ProManager isFullPaid] == NO) {
         if ([SKPaymentQueue canMakePayments]) {
-            if([@"0" isEqualToString:IsSavedWithUnlock]){
+            if([@"0" isEqualToString:IsSavedWithUnlock] && !([ProManager isProductPaid:ALL_PRODUCT_ID] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:AD_PRODUCT_ID])){
                 UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tip", nil) message:NSLocalizedString(@"ShouldPay", nil) preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
@@ -921,7 +921,7 @@
 - (void)selectMiddleWithIndex:(NSInteger)index{
     NSDictionary *content = [_selectedMiddleContent objectAtIndex:index];
     NSString *productId = [content objectForKey:@"productCode"];
-    if (!([@"" isEqualToString:productId] || [ProManager isProductPaid:productId] || [@1 isEqual:[content objectForKey:@"isPurchase"]] || [ProManager isProductPaid:ALL_PRODUCT_ID])) {
+    if (!([@"" isEqualToString:productId] || [ProManager isProductPaid:productId] || [@1 isEqual:[content objectForKey:@"isPurchase"]] || [ProManager isProductPaid:ALL_PRODUCT_ID] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID])) {
         [self showBuyAlertWithIndex:index];
         return;
     }
