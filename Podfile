@@ -8,5 +8,5 @@ target 'KKCamera' do
   pod 'CGXPickerView', '~> 2.4.0'
   pod 'Masonry', '~> 1.1.0'
   pod 'FDFullscreenPopGesture', '1.1'
-  pod 'Google-Mobile-Ads-SDK', '~> 7.30.0'
+  pod 'Google-Mobile-Ads-SDK', '~> 7.52.0'
 end

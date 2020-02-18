@@ -52,7 +52,7 @@
     _isSelected = isSelect;
     if (_isSelected) {
         [_imageView setImage:[UIImage imageNamed:[_content objectForKey:@"iconSelected"]]];
-        [_label setBackgroundColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"colorSelected"]]]];
+        [_label setBackgroundColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"color_selected"]]]];
         [_label setTextColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"fontColorSelected"]]]];
     }else{
         [_imageView setImage:[UIImage imageNamed:[_content objectForKey:@"icon"]]];

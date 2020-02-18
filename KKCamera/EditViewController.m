@@ -1124,10 +1124,15 @@
             [dateString appendString:day];
         }else{
             NSString *dateStr = [[SettingModel sharedInstance] customDate];
-            NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-            [dateFormat setDateFormat:@"yyyy / MM / dd"];
-            NSDate *date = [dateFormat dateFromString:dateStr];
-            dateString = [[NSMutableString alloc] initWithString:[self getCurrentTimeWithDate:date andWhiteSpace:whiteSpace]];
+            NSArray *dateContent = [dateStr componentsSeparatedByString:@"-"];
+            if ([dateContent count] == 3) {
+                NSString *year = dateContent[0];
+                year = [NSString stringWithFormat:@"%zd",[year integerValue]%100];
+                if (year.length == 1) {
+                    year = [NSString stringWithFormat:@"0%@",year];
+                }
+                dateString = [NSMutableString stringWithString:[NSString stringWithFormat:@"' %@%@%@%@%@",year,whiteSpace,dateContent[1],whiteSpace,dateContent[2]]];
+            }
         }
         [label setText:dateString];
         [imageView addSubview:label];

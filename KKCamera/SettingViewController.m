@@ -47,13 +47,11 @@
                 if(Is_iPhoneX){
                     height = 85;
                 }
-                _bannerView = [self createAndLoadBannerView];
                 CGRect temp = view.frame;
                 temp.size.height = view.frame.size.height - height;
                 view.frame = temp;
-                CGRect bannerTemp = _bannerView.frame;
-                bannerTemp.origin.y = self.view.frame.size.height - height;
-                _bannerView.frame = bannerTemp;
+                
+                _bannerView = [self createAndLoadBannerView];
                 [self.view addSubview:_bannerView];
             }
         }
@@ -74,6 +72,13 @@
     if ([ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isFullPaid] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:MONTH_ID]) {
         bannerView.hidden = YES;
     }else{
+        CGFloat height = 50;
+        if(Is_iPhoneX){
+            height = 85;
+        }
+        CGRect bannerTemp = _bannerView.frame;
+        bannerTemp.origin.y = self.view.frame.size.height - height;
+        _bannerView.frame = bannerTemp;
         bannerView.hidden = NO;
     }
 }

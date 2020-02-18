@@ -98,7 +98,10 @@
 
 -(void)didSuccessBuyProduct:(NSString*)productId
 {
-    [MBProgressHUD showSuccess:NSLocalizedString(@"PurchaseSuccess", nil)];
+    [MBProgressHUD hide];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD showSuccess:NSLocalizedString(@"PurchaseSuccess", nil)];
+    });
 }
 
 -(void)didSuccessRestoreProducts:(NSArray*)productIds
