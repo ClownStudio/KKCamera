@@ -49,4 +49,7 @@
 //是否显示广告 0为是 1为否
 #define IS_AD_VERSION @"1"
 
+//初始化编辑界面时候默认选择的特效项，从0开始计数，以1递增，第一项为0，第二项为1，若超出最大特效项默认为0。
+#define DEFAULT_SELECT_EFFECT @"4"
+
 #endif /* Macro_h */

@@ -140,7 +140,7 @@
     [_nextBtn addTarget:self action:@selector(onSave:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_nextBtn];
     
-    _resetBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - 100)/2, 5, 100, 30)];
+    _resetBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - 100)/2, 3, 100, 30)];
     [_resetBtn setTitle:@"RESET" forState:UIControlStateNormal];
     [_resetBtn.titleLabel setFont:[UIFont systemFontOfSize:11]];
     [_resetBtn.layer setMasksToBounds:YES];
@@ -244,7 +244,12 @@
         position += itemHeight;
     }
     [_itemScrollView setContentSize:CGSizeMake(position + distance, 0)];
-    [self selectEditorItemWithIndex:0];
+    NSInteger index = [DEFAULT_SELECT_EFFECT integerValue];
+    if (index < [_effectContent count]) {
+        [self selectEditorItemWithIndex:index];
+    }else{
+        [self selectEditorItemWithIndex:0];
+    }
 }
 
 -(IBAction)onSave:(id)sender{
@@ -471,7 +476,7 @@
     [self selectEditorItemWithIndex:(int)sender.tag - 1];
 }
 
-- (void)selectEditorItemWithIndex:(int)index{
+- (void)selectEditorItemWithIndex:(NSInteger)index{
     for (UIButton *button in _itemScrollView.subviews) {
         if ([button isMemberOfClass:[UIButton class]] == NO) {
             continue;
@@ -485,7 +490,7 @@
     [self refreshMainScrollViewWithIndex:index];
 }
 
--(void)refreshMainScrollViewWithIndex:(int)index{
+-(void)refreshMainScrollViewWithIndex:(NSInteger)index{
     for (UIView * view in _topScrollView.subviews) {
         [view removeFromSuperview];
     }
@@ -545,7 +550,7 @@
         for (NSDictionary *dict in _selectedMainContent) {
             [_editContents addObject:[dict objectForKey:@"effect"]];
             position += distance;
-            EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, _middleScrollView.bounds.size.height - 16)];
+            EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, 120 - 16)];
             button.tag = tag;
             [button addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onEdit:)]];
             [button.layer setMasksToBounds:YES];
@@ -565,7 +570,7 @@
         int tag = 1;
         for (NSDictionary *dict in _selectedMainContent) {
             NSString *title = [dict objectForKey:@"title"];
-            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, 0, 80, _topScrollView.bounds.size.height)];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, 0, 80, 30)];
             [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
             [button setTitle:title forState:UIControlStateNormal];
             [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
@@ -731,13 +736,13 @@
 }
 
 - (RandomSliderView *)getRandomSliderView{
-    RandomSliderView *view = [[RandomSliderView alloc] initWithFrame:CGRectMake(0, (_groupView.bounds.size.height - 35)/2, _groupView.bounds.size.width, 35)];
+    RandomSliderView *view = [[RandomSliderView alloc] initWithFrame:CGRectMake(0, (70 - 35)/2, self.contentView.bounds.size.width, 35)];
     view.delegate = self;
     return view;
 }
 
 - (EffectSliderView *)getSliderView{
-    EffectSliderView *view = [[EffectSliderView alloc] initWithFrame:CGRectMake(0, (_groupView.bounds.size.height - 35)/2, _groupView.bounds.size.width, 35)];
+    EffectSliderView *view = [[EffectSliderView alloc] initWithFrame:CGRectMake(0, (70 - 35)/2, self.contentView.bounds.size.width, 35)];
     view.delegate = self;
     return view;
 }
@@ -768,7 +773,7 @@
     int tag = 1;
     for (NSDictionary *dict in _selectedMiddleContent) {
         position += distance;
-        EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, _middleScrollView.bounds.size.height - 16)];
+        EffectItemView *button = [[EffectItemView alloc] initWithFrame:CGRectMake(position, 8, 80, 120 - 16)];
         button.tag = tag;
         [button addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapEffect:)]];
         [button.layer setMasksToBounds:YES];

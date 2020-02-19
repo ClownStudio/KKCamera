@@ -86,7 +86,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
 #pragma mark - user-define initialization
 - (void)doRequest {
     RJWeak(self)
-    MBProgressHUD * hud =[MBProgressHUD showWaitingWithText:@"loading"];
+    [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
     [_helper getPhotoPermission:^(BOOL havePower) {
         if (havePower) {
             [weakself.helper getAllPhotoData];
@@ -97,11 +97,11 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
                 
             });
             dispatch_async(dispatch_get_main_queue(), ^{
-                [hud hideAnimated:YES];
+                [MBProgressHUD hide];
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [hud showInfo:@"Don't have Permission" detail:nil];
+                [MBProgressHUD showInfo:@"Don't have Permission"];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [weakself.presentingViewController dismissViewControllerAnimated:YES completion:nil];
                 });
