@@ -505,23 +505,13 @@
         [self clearEditFilters];
         [_topScrollView setHidden:YES];
         
-        UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.frame.size.width/4 - 50, 15, 100, 40)];
-        [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
-        [cancel.layer setMasksToBounds:YES];
-        [cancel.layer setBorderWidth:1];
-        [cancel.layer setBorderColor:[UIColor whiteColor].CGColor];
-        [cancel.layer setCornerRadius:20];
-        [cancel.titleLabel setFont:[UIFont systemFontOfSize:12]];
+        UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
+        [cancel setImage:[UIImage imageNamed:@"kk_slider_cancel"] forState:UIControlStateNormal];
         [cancel addTarget:self action:@selector(onCutCancel:) forControlEvents:UIControlEventTouchUpInside];
         [_groupView addSubview:cancel];
         
-        UIButton *ok = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.frame.size.width/4*3 - 50, 15, 100, 40)];
-        [ok setTitle:@"Confrim" forState:UIControlStateNormal];
-        [ok.layer setMasksToBounds:YES];
-        [ok.layer setBorderWidth:1];
-        [ok.layer setBorderColor:[UIColor whiteColor].CGColor];
-        [ok.layer setCornerRadius:20];
-        [ok.titleLabel setFont:[UIFont systemFontOfSize:12]];
+        UIButton *ok = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.frame.size.width - 70, 0, 70, 70)];
+        [ok setImage:[UIImage imageNamed:@"kk_slider_done"] forState:UIControlStateNormal];
         [ok addTarget:self action:@selector(onCutOk:) forControlEvents:UIControlEventTouchUpInside];
         [_groupView addSubview:ok];
         [_groupView setHidden:YES];
