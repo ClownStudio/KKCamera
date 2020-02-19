@@ -47,6 +47,6 @@
 #define IS_SAVED_UNLOCK @"0"
 
 //是否显示广告 0为是 1为否
-#define IS_AD_VERSION @"0"
+#define IS_AD_VERSION @"1"
 
 #endif /* Macro_h */
