@@ -9,6 +9,8 @@
 #ifndef Macro_h
 #define Macro_h
 
+#define kStoreProductKey [NSString stringWithFormat:@"storeProduct%@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]
+
 #define TERMS_OF_USE @"http://instagram.com"
 #define PRIVACY_POLICY @"http://instagram.com"
 #define SEARCH_ALBUM @[@"Camera Roll", @"Screenshots", @"Recently Added", @"All Photos",@"最近项目",@"截屏"]

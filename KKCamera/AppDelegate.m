@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface AppDelegate ()
 
@@ -17,15 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSArray *familyNames = [UIFont familyNames];
-    for( NSString *familyName in familyNames )
-    {
-        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
-        for( NSString *fontName in fontNames )
-        {
-            printf( "\tFont: %s \n", [fontName UTF8String] );
-        }
-    }
+    [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
 
     ViewController *viewController = [[ViewController alloc] init];
     UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];

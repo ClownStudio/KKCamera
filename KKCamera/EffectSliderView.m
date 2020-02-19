@@ -19,13 +19,13 @@
     if (self) {
         self.userInteractionEnabled = YES;
         
-        _cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(30, 0, 35, 35)];
+        _cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 0, 35, 35)];
         [_cancelBtn setImage:[UIImage imageNamed:@"kk_slider_cancel"] forState:UIControlStateNormal];
         [_cancelBtn setContentMode:UIViewContentModeScaleAspectFit];
         [_cancelBtn addTarget:self action:@selector(onCancel:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_cancelBtn];
         
-        self.slider = [[CustomSlider alloc] initWithFrame:CGRectMake(75, 0, frame.size.width - 165, 35)];
+        self.slider = [[CustomSlider alloc] initWithFrame:CGRectMake(65, 0, frame.size.width - 165, 35)];
         [self.slider setUserInteractionEnabled:YES];
         [self.slider setThumbImage:[UIImage imageNamed:@"kk_slider_circle"] forState:UIControlStateNormal];
         [self.slider addTarget:self action:@selector(onChange:) forControlEvents:UIControlEventValueChanged];
@@ -37,7 +37,7 @@
         [_label setTextAlignment:NSTextAlignmentCenter];
         [self addSubview:_label];
         
-        _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - 45, 0, 35, 35)];
+        _confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - 55, 0, 35, 35)];
         [_confirmBtn setImage:[UIImage imageNamed:@"kk_slider_done"] forState:UIControlStateNormal];
         [_confirmBtn setContentMode:UIViewContentModeScaleAspectFit];
         [_confirmBtn addTarget:self action:@selector(onConfirm:) forControlEvents:UIControlEventTouchUpInside];

@@ -43,9 +43,9 @@
         [self.slider setValue:0.5];
         [self.slider setThumbImage:[UIImage imageNamed:@"kk_slider_circle"] forState:UIControlStateNormal];
         [self.slider setValueChangedBlock:^{
-            if (_delegate && [_delegate respondsToSelector:@selector(randomSliderValueChanged:)]) {
-                [_label setText:[NSString stringWithFormat:@"%d%%",(int)((_slider.value)*100)]];
-                [_delegate randomSliderValueChanged:self.slider.value];
+            if (self->_delegate && [self->_delegate respondsToSelector:@selector(randomSliderValueChanged:)]) {
+                [self->_label setText:[NSString stringWithFormat:@"%d%%",(int)((self->_slider.value)*100)]];
+                [self->_delegate randomSliderValueChanged:self.slider.value];
             }
         }];
         [self addSubview:self.slider];

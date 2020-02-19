@@ -32,93 +32,93 @@
 
 /* Begin PBXBuildFile section */
 		03AE47DD3729906097C45AAF69473027 /* GULNetworkURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAD46DAE37001A15F8A162C68FBA9DC /* GULNetworkURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		06A4624C0490881FD7962E6F2768469F /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = E3997D27B935B1D69431B501683ECA33 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		055CE6EF1DBFC46CDAFB09026D7C8DA5 /* NSDate+CGXPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EB23C683F74FEF863015FC9833ED144 /* NSDate+CGXPicker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0820FE90DA553DDAF855312B418FE110 /* GULLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C99A5F382A27B655F15579F8005D61 /* GULLogger.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0B5C48CD6E3349F61DAC0B07C0643602 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F61C54CF07BADEA457AB195FAED78B /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0F1CEF2B08D18B900A16F3249C96DBEF /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = E9E65F62762C746489212601DB58BB65 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0904BEF4FF0B7D72D30689E99146BFAE /* CGXPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A332D570B5B7B8F428B668E001155121 /* CGXPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		115ACCE253A886181B55773DDC70D6ED /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F25FBD5D6E3128414F63BB97E9FEEBC3 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		12EC3793E2DC0CD6178FB7DA0DE35F93 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 9831A9110811937E6F8753FC7C30EB6B /* pb_common.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		12F4DF6557CFA1CE90B17A1443F6B36C /* CGXPickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D36450681D2421F4B10BA8DE6EFEF5 /* CGXPickerViewManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		13968260D90CBC7A748617652372BA7C /* GULAppDelegateSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE86DC90A108CF1D53EF25899192BF5 /* GULAppDelegateSwizzler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		147370B40CE853ADCC91F9C81FF5E5FA /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B70455449D3A7CACBC9F27D16BE7134 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1536EA10B84980038D1E9AD34C790E96 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C9332362DE3B442DB5442F697DD7AB /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1586E292781F19EAF835A40DB25964C5 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFA37CF7836F6E5E01E0E938127622 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		171F04532110EC0414BA18D8C55987FC /* GULLoggerCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A38F9FEB6A89372844788FA2126FF0E /* GULLoggerCodes.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1D12FE6ABBFFDECF65CA15759AD0E411 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F25FBD5D6E3128414F63BB97E9FEEBC3 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		223F74E3E4E30BEC4B6C8025D3B12D89 /* CGXPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE88D21082B1C4B040B1AAF45DB8ED2 /* CGXPickerView-dummy.m */; };
-		22B4060860C2CBB390BE084DCF3D226D /* CGXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 378843DF1025497FFA067D4F8C129670 /* CGXDatePickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		181B2691FF506F26F7F71F711C724B81 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = D80458E3EB333F26D2EBC10CB5075A5E /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		19019AE2EA8B13338DBCEE256D51C68C /* CGXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 378843DF1025497FFA067D4F8C129670 /* CGXDatePickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1BB0CF322DFDEC7B9231E60512B4E509 /* CGXStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0ECF2E8034E1105E7800EFD40D1631 /* CGXStringPickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		20E2F8001CC8A41A0E1B50694BE7875D /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F61C54CF07BADEA457AB195FAED78B /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		245079786C4109000259D6DC9891872D /* GULAppEnvironmentUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0202122FB88658A285E5097D0E80CB3A /* GULAppEnvironmentUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		24EAE7A7EFC1CF8745BE7991824DD440 /* CGXAddressPcikerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35F4C8C52AB756B53512BB299BD13366 /* CGXAddressPcikerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		24F67F67B66D71384E9B66CF81AF84B3 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2977BD371CE34407899022E40BDF0A96 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		27F353B72A82319F43155AE1E1DCDF6D /* CGXPickerViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8867D347C2907A641DD33D8B17FD451A /* CGXPickerViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		29214D8D2E69809E66F0C8A98A36BCCE /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B03DCD3EAA6DD004A8317CD36BBCE /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		28903904746BA694271AA9F9B50358CA /* CGXPickerUIBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D412E901CCD5D6D8A2E16FAE36C445 /* CGXPickerUIBaseView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2A331523A5B6EDD80D4561889974FCDB /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5E41D7BE54EA1E00A69C139DCE35A4 /* pb.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2CF74965CA703A04F60991AB9BFC35AE /* GULNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = A47E146B849FAE89C1335673F91CCD65 /* GULNSData+zlib.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2DCE358292A1D0325A5FD1D8BA40C46B /* GULNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = A26825EA7DA8CB03D6FF50033A1025F7 /* GULNSData+zlib.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		31385F10C1C832456A6E47EA73026761 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D76D26FFDECF93C731C378FF329B53 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2E5F3B41BD51ACE4EE3B422BB67E51DF /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFB9D44CE0F74B7E5016ADBB1AEE80 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		31064475EC704EC31BC3E2DE0DAFC72C /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54FBF2441A5D8DEA8F19F8095E0882 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		326D4FE59C3467650361EC93654B8E0D /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F648807AB34B59DC84281D1211BF3EDC /* nanopb-dummy.m */; };
-		348556118DC1DACC0BE3A597BAFA7C75 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = D80458E3EB333F26D2EBC10CB5075A5E /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		388EC8898DF3980C379556C581FC9F93 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54FCE6B56920BE37F9D1C1D10A8FE4 /* Masonry-dummy.m */; };
-		39A824514250142A8BF36DFF230D5AB5 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9ACAE5D6303EF8AF7FB3C63D8A95D /* UINavigationController+FDFullscreenPopGesture.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3E16BA3AD1C81A75B4552776E627CF1C /* CGXPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A332D570B5B7B8F428B668E001155121 /* CGXPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3430321D06CBCF49F5A7DF6A70D9BB91 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54FCE6B56920BE37F9D1C1D10A8FE4 /* Masonry-dummy.m */; };
+		34FAE22326468C1A2519D1EA75F476DD /* CGXStringPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF23F38969E2DC7C8226864CEFF2D08 /* CGXStringPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		381FADC73C7E224520FE96E540330724 /* CGXAddressModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B4517D76271EE3E9B2210D6A5034EA /* CGXAddressModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		390E8375B19FF12764C5AA730AF0F0F4 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB3DAAC699AF871009D07C0B10A78E4 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		40442014A2E1A5F48B54FF96592114C8 /* FDFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCAE3D88708E982B9CB71828591FBA0 /* FDFullscreenPopGesture-dummy.m */; };
+		42947699890A199B08A896144A878D80 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FBAF8001B80609153672E2722015DE /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		442B89D7AFD38927D1DB9956F5B8FEA1 /* GULLoggerLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4B37E1C5DC6AE1F4A64445D26E6090 /* GULLoggerLevel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		46A8CA7473ECC1095C4EC8B3342C0FF2 /* Pods-KKCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E82DEBF4507FF5288ACABAEA91607E15 /* Pods-KKCamera-dummy.m */; };
+		44A3B1A5D2C513F8FD238E3B64E4C6CF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFA37CF7836F6E5E01E0E938127622 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		46692A2E77157B00827182C8DC686F72 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C009FD146C2482A7245242887307030C /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		48F8B84DB09D7DEA028EF0D5DA408D28 /* Pods-KKCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E82DEBF4507FF5288ACABAEA91607E15 /* Pods-KKCamera-dummy.m */; };
 		4C8FC933BF9F9C0120096F8586D56CF0 /* GULNetworkMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 77DC25C4D85D43AF2F79F2ACFB820C51 /* GULNetworkMessageCode.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4DE0E730CDFB0CBB905A21C14CFB6A13 /* CGXStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0ECF2E8034E1105E7800EFD40D1631 /* CGXStringPickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4E784B30C617A383DBE5271F59C9556E /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D4464AA1D5F4A4091B235E7BEB6427 /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5A1B9BA72161B57A43420B08E1F7E27C /* CGXPickerUIBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 711D6FD20BCADA408230BF8685CEC69E /* CGXPickerUIBaseView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4CE091F886EC6324673EFE0AEBBEA0FE /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 96041C5245BC331B3BC2698254211121 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A3E297705F3A4547756B09B4044B940 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E99E9FD2C2B661BFBAF79CFCD35BBC /* MBProgressHUD-dummy.m */; };
 		5AB73EC4BADDD4B5FE53E02D9D7E0965 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = D153EA020555139CFCEF7B232120FEE1 /* pb_decode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C5C77BBF83B793B82713296519751DA /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F99840F882722CC61041325EE78D2701 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5D245254AF98313E00A5752E9B380323 /* GULReachabilityChecker+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 21A8117B4576768926F0F568BF9447F4 /* GULReachabilityChecker+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5D96BBDDB2212B09B8BFEEAA4775A10F /* CGXStringPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF23F38969E2DC7C8226864CEFF2D08 /* CGXStringPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5E44F7CFDA34CB0B1F1A65A19641AC7D /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 216E9821E314550E767BD2E1C5EE6A69 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		62ED0D1B1D2D5EF2225776A9C2BAF4DA /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FBAF8001B80609153672E2722015DE /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		65E88072A2BDC576BFC85E67EF9FBBC6 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DDABD173D18F660F6BDDD7D153CBE0B /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		67E14B855D93A399348C473AF4CE8E83 /* GULReachabilityMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F57FAD023E94CB3F10BCA4F9F77EC85 /* GULReachabilityMessageCode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68734B2FD4E55F9A95D5B416C075074A /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C9332362DE3B442DB5442F697DD7AB /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		688B8EE837A451B4AD2805D36F975291 /* GULMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E812A57EA8A5EBA5C766A1E8B623D /* GULMutableDictionary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		68A84B33C46228A574DD01B9A8FFC464 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D4464AA1D5F4A4091B235E7BEB6427 /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6CDCE9E603453D15429A88367274E821 /* GULLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A0FB171BF081D65D1B73781521D98DC2 /* GULLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6E54BAB129BC6BCF1B66804984616582 /* FDFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCAE3D88708E982B9CB71828591FBA0 /* FDFullscreenPopGesture-dummy.m */; };
-		73B185030EC76859118C1405B24B5A03 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA93E2DD348258FB4E0D9A659C97FD /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		79FC551AE0FC8B61EC09A63E569220C5 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB3DAAC699AF871009D07C0B10A78E4 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7C31AFA9C95568E16B6911B670754372 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C009FD146C2482A7245242887307030C /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7F7B162426A9033F79821A601A93785C /* CGXAddressModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B4517D76271EE3E9B2210D6A5034EA /* CGXAddressModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		834D1BB9656D3E64B2AF8C0E0119A37F /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B6423612E59F9D0B2EFE592B4017958F /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8ACC40B3B4909038106DAB7F2742962D /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F99840F882722CC61041325EE78D2701 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6FEE3FB7B20C7981A479E4215065A412 /* CGXDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A38A278025A4206EF8D092B25789D98 /* CGXDatePickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		75899AAFE0BBB695B41F38768F043F06 /* CGXAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD06B8A0B0B81A401DAC1D613450F63 /* CGXAddressModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7CF2AC7A3B3ED03B30C1E4ED662B0551 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C2592CBC01F8F0B661E2C253269C19CA /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81F811A56B6724F7E8E2D25364E595E3 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A62B22951455BE924BEFD84DB3C595D3 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8EEE0B8AB7A75FF0E0C281A7FE73FEA8 /* GULNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47E888D3DFCF3FE77BE9B992908003 /* GULNetwork.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		90DD52C51B5EE653C81BD78858A6025F /* GULOriginalIMPConvenienceMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9FF8BD304ECF65B9EC2DA70F4779E1 /* GULOriginalIMPConvenienceMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		92471D23CFDE5599F6FCC865EC711808 /* CGXDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A38A278025A4206EF8D092B25789D98 /* CGXDatePickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9194B58ACE900ED6BAE6AD92E24A2CFF /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = E3997D27B935B1D69431B501683ECA33 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		92BF70E9D3285561EB404A7C4A4A6DEE /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = E9E65F62762C746489212601DB58BB65 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		96066D29DECDB5DD8B73A5D3CCF06598 /* GULNetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = D20B27EB8DB1CD7677E687C84283BAF6 /* GULNetworkConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		96DB2AB39DFEB82319EF630730FDE4FD /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A62B22951455BE924BEFD84DB3C595D3 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		973D6711010D58D189667DA65E181A23 /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 7939626CC92BBBFC02326CC054F7AD30 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		99B62555D7C3BF2B98DFCB7334CEBF6D /* NSDate+CGXPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = FD78009A8ECEAEF57C990DD05A369CB3 /* NSDate+CGXPicker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B369AAD43832AEDBBDA8A0DF0856B4C /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA93E2DD348258FB4E0D9A659C97FD /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9FA31F226DBB254D1EACB27EACC9175E /* GULReachabilityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 27113170D1EF6EA4D6C495973347DA51 /* GULReachabilityChecker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A1DC4D5FB24FA28CDA28F6E7AB48D46A /* GULNetworkLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2BF4F943084CEF84B159000329D50F /* GULNetworkLoggerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A93E115C9F100EBEE870A6E45C102BA2 /* CGXAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD06B8A0B0B81A401DAC1D613450F63 /* CGXAddressModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A2AF00EE363E1234C4A60C45405288DF /* CGXPickerUIBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 711D6FD20BCADA408230BF8685CEC69E /* CGXPickerUIBaseView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A3307B8FB6EE0A049DBAE3AA4D2C6DA0 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 216E9821E314550E767BD2E1C5EE6A69 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AAA71A9048B26AD442747ABE245A3316 /* CGXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4205B907B907811C78CFDEE7C585EC /* CGXPickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ABC88896E09E20A0F23C983D3D70DB75 /* GULNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 0926E5D8F6880D7BB2B2F34B7CB8E26A /* GULNetwork.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AC59005EDDF0427B0D6BD020991AF224 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E99E9FD2C2B661BFBAF79CFCD35BBC /* MBProgressHUD-dummy.m */; };
-		ACED52CF045730B51EB22C047A370A59 /* NSDate+CGXPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EB23C683F74FEF863015FC9833ED144 /* NSDate+CGXPicker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B0CBAE5A30B5A55D4C4D1209D4344121 /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6AE452C916C1748C4F59D43F34095D /* pb_encode.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B20994F712F2B6A540216D3FD2BF612D /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A24A56BFE2B68F2B89C16B696B166C /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B10D11FC6935D2AD2444894A9FD5F5A1 /* CGXAddressPcikerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35F4C8C52AB756B53512BB299BD13366 /* CGXAddressPcikerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B20A0E5D8F9BCED1A82793C4BE9E7258 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = C21669EF2FB2522B87BDEC1D2ACC3AA8 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B5094903CE20ED0C29034D2F3DC329D2 /* GULReachabilityChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDDC70982FD48345BE66D65133DE829 /* GULReachabilityChecker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B54E9B3CF614D9ECF9C680A83A6E3704 /* GULAppDelegateSwizzler_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F3A7D85A7CB0ED2795D5C86F2CE3749 /* GULAppDelegateSwizzler_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BA70E4159CFEFB306273F7667ABFA9B9 /* GULSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D907DF1043BBB9DCF7554CFD922EB57 /* GULSwizzler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BDC86E9D8B124CEAB1909C4E0F6960DE /* CGXPickerViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8867D347C2907A641DD33D8B17FD451A /* CGXPickerViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C002531C6986352D871717203A0732F1 /* GULAppDelegateSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 556188C355DDF056FD7AD93F7D590FF1 /* GULAppDelegateSwizzler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C02C87EB2821A40479DFFC2ABAA28888 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 4EA2D572E09B2B9C300329919A8FA6B5 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C15855F937E8B56E0DEE1E66DF5D8BE8 /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 993B9510776412E5A03D21438DBF4FCD /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C1C295BCD795C2B6044DB474583804B1 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 96041C5245BC331B3BC2698254211121 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C23E7750CECD9E2D9FE5683079ED3F86 /* CGXAddressPcikerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 192634D309B15B294033198066BB08C9 /* CGXAddressPcikerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C3A08C3DBB5436AB883686B87C4612E9 /* CGXPickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D36450681D2421F4B10BA8DE6EFEF5 /* CGXPickerViewManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A24A56BFE2B68F2B89C16B696B166C /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C670FF126AD327BFE44F6CAFE48997E0 /* GoogleUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5449FBF627E0A10F3F49488AD73A36BB /* GoogleUtilities-dummy.m */; };
-		C7AC29F56D5F471248BBA0A724CDF3C7 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = C21669EF2FB2522B87BDEC1D2ACC3AA8 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CCA3FE6DC7E66FD60CCEB73AEEFDA09C /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFB9D44CE0F74B7E5016ADBB1AEE80 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CF2D2B858F46D667DBA7E97A917D90A9 /* CGXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4205B907B907811C78CFDEE7C585EC /* CGXPickerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C74D2E856ADC8139CD00DBD184061B23 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B70455449D3A7CACBC9F27D16BE7134 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D0C2681AEEBF914769F0516017AF1AA5 /* GULSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = A9D95D3E06E50826D66FCD2A4FAE7174 /* GULSwizzler.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D1FDE5D914D6CC684B311079E41FD5A5 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54FBF2441A5D8DEA8F19F8095E0882 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D3337165D789DA1ED0E2894FC9D9EFAA /* GULNetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F23D8206998F50BA3E6C6DB23A77392 /* GULNetworkConstants.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DAD558FD67ACC4417564EF96DC43F63A /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 08860B460FCBCC104171A3A9140E77E4 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DAF9131F1E53462480882E4C9651F582 /* CGXAddressPcikerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 192634D309B15B294033198066BB08C9 /* CGXAddressPcikerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D783A8A5A426DBF85162B92142651218 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 08860B460FCBCC104171A3A9140E77E4 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E2928F0E0B100708BCAEB668E8645573 /* GULApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = D31A6583F5D70D81FD127D81337261F7 /* GULApplication.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E94F68ABEAC53DD4556594E0EE4EAD57 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DDABD173D18F660F6BDDD7D153CBE0B /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E5C693D8B512EBA68ED04D0F06237E21 /* CGXPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE88D21082B1C4B040B1AAF45DB8ED2 /* CGXPickerView-dummy.m */; };
+		E61EF8695C44F38024CB070B111F9AD2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D76D26FFDECF93C731C378FF329B53 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E76935CFF4AF327F8D9A7C1935F7D900 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2977BD371CE34407899022E40BDF0A96 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E848C4108D4834AA905648BAE1E52A7A /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9ACAE5D6303EF8AF7FB3C63D8A95D /* UINavigationController+FDFullscreenPopGesture.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EB38D0CEF2E86421078D9B8C19E121EA /* GULMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 008B698C65C733FBD1DA31118825EDAD /* GULMutableDictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F0223A4EEF0A05E2DBC75767471884A2 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C2592CBC01F8F0B661E2C253269C19CA /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EB663E3E1EB4BB670DC29B77DB330135 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B6423612E59F9D0B2EFE592B4017958F /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F1B75048874B8773E5568E6D3ACA12E4 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B03DCD3EAA6DD004A8317CD36BBCE /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F7909D648FF966E71E21B24CDD0FA176 /* GULNetworkURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA9799207E607AF89F366AB21CF8052 /* GULNetworkURLSession.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FA62A395E6D4FD5D960D10E611E4D840 /* GULAppEnvironmentUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD35695FAB532AC1E302805A3E5C88 /* GULAppEnvironmentUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FD74D3F19733DF9046E4199F7E67B8F7 /* CGXPickerUIBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D412E901CCD5D6D8A2E16FAE36C445 /* CGXPickerUIBaseView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD20624AF5C37C138F8FB811D5EF25E8 /* NSDate+CGXPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = FD78009A8ECEAEF57C990DD05A369CB3 /* NSDate+CGXPicker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,42 +129,42 @@
 			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
 			remoteInfo = GoogleAppMeasurement;
 		};
-		0F0F8A5A112537E84BD60F1F9E7EDB2A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
-			remoteInfo = GoogleAppMeasurement;
-		};
-		1CD249160F2A709E76B1D0828EE9FF60 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8FE0EB310F454719A11FBFEAAC09FE3E;
-			remoteInfo = FDFullscreenPopGesture;
-		};
-		2E345331C4F80468AAAC67FCC217D832 /* PBXContainerItemProxy */ = {
+		34AE9814F0ACA2902A1632DB403C7BE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FEA3B3A570634836C0457F3D7CEF1699;
 			remoteInfo = "Google-Mobile-Ads-SDK";
 		};
-		468F19CCFBD1587DDED39AF035E97445 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D67AE43388D579E67C485C2A6D8D124B;
-			remoteInfo = CGXPickerView;
-		};
-		BBB170488659A159B449AB60C31B69DC /* PBXContainerItemProxy */ = {
+		39ABF56679185172962B04422AA6430A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
 			remoteInfo = nanopb;
 		};
-		CB18616C2218C5225C1B66E329CD1DFC /* PBXContainerItemProxy */ = {
+		4908E7F402354644DAB69A387B6871CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FE0EB310F454719A11FBFEAAC09FE3E;
+			remoteInfo = FDFullscreenPopGesture;
+		};
+		913A7E6E6098997626CAFB86CECDF4AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
+			remoteInfo = MBProgressHUD;
+		};
+		B4E88800A953B8043546860F54B7EED5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
+			remoteInfo = GoogleUtilities;
+		};
+		BBB170488659A159B449AB60C31B69DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -178,44 +178,44 @@
 			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
 			remoteInfo = GoogleUtilities;
 		};
-		EB3E363CB4E11E957D75E746A51B348D /* PBXContainerItemProxy */ = {
+		E79E1FF37FE80624C657E4F4EADEB029 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
-			remoteInfo = GoogleUtilities;
+			remoteGlobalIDString = D67AE43388D579E67C485C2A6D8D124B;
+			remoteInfo = CGXPickerView;
 		};
-		F0921C2191A4370AAAEF5523BAF60937 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
-			remoteInfo = MBProgressHUD;
-		};
-		F35541423C88D4BDDA896C7937F54BC9 /* PBXContainerItemProxy */ = {
+		F46AFDD5C4531AC58960FE3833E25DA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
 			remoteInfo = Masonry;
 		};
+		F6645D5224391F41219F795E7B004334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
+			remoteInfo = GoogleAppMeasurement;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008B698C65C733FBD1DA31118825EDAD /* GULMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULMutableDictionary.h; path = GoogleUtilities/Network/Private/GULMutableDictionary.h; sourceTree = "<group>"; };
 		0202122FB88658A285E5097D0E80CB3A /* GULAppEnvironmentUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppEnvironmentUtil.h; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h; sourceTree = "<group>"; };
+		06FC5C9CF96D60C50FCD47D339C91951 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libnanopb.a; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		08860B460FCBCC104171A3A9140E77E4 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		0926E5D8F6880D7BB2B2F34B7CB8E26A /* GULNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetwork.h; path = GoogleUtilities/Network/Private/GULNetwork.h; sourceTree = "<group>"; };
 		0A38A278025A4206EF8D092B25789D98 /* CGXDatePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGXDatePickerView.h; path = CGXPickerView/CGXDatePickerView.h; sourceTree = "<group>"; };
 		0AE86DC90A108CF1D53EF25899192BF5 /* GULAppDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULAppDelegateSwizzler.m; sourceTree = "<group>"; };
 		0F2FC6CB065CBCD0DF6776F232693B4F /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		13EE3F67BFE5DD163630B484C2134049 /* Pods-KKCamera-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KKCamera-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1773B61F2236DA7321AD56103945E06D /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F80CE354F1A7D829BC4C5B7F346359 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		192634D309B15B294033198066BB08C9 /* CGXAddressPcikerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXAddressPcikerView.m; path = CGXPickerView/CGXAddressPcikerView.m; sourceTree = "<group>"; };
 		1BA872BA50D15531A817262BEEC201F2 /* Pods-KKCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKCamera.release.xcconfig"; sourceTree = "<group>"; };
-		1BC0197DEE09DC7CCB20310A8417DD93 /* libPods-KKCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-KKCamera.a"; path = "libPods-KKCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D907DF1043BBB9DCF7554CFD922EB57 /* GULSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSwizzler.m; path = GoogleUtilities/MethodSwizzler/GULSwizzler.m; sourceTree = "<group>"; };
+		1FFED36A657123030ABB700256D73F15 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		216E9821E314550E767BD2E1C5EE6A69 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		21A8117B4576768926F0F568BF9447F4 /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULReachabilityChecker+Internal.h"; path = "GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
 		22FF8823B7373B4937B3DBE412E61AFA /* GoogleAppMeasurement.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAppMeasurement.xcconfig; sourceTree = "<group>"; };
@@ -255,14 +255,12 @@
 		7A38F9FEB6A89372844788FA2126FF0E /* GULLoggerCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerCodes.h; path = GoogleUtilities/Common/GULLoggerCodes.h; sourceTree = "<group>"; };
 		7F23D8206998F50BA3E6C6DB23A77392 /* GULNetworkConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkConstants.m; path = GoogleUtilities/Network/GULNetworkConstants.m; sourceTree = "<group>"; };
 		7F3A7D85A7CB0ED2795D5C86F2CE3749 /* GULAppDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h; sourceTree = "<group>"; };
-		868C5D5139AF0C9E1E11AB0766AD9048 /* libCGXPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCGXPickerView.a; path = libCGXPickerView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D03BEC2CA9B2DB28398618379E7744 /* libFDFullscreenPopGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFDFullscreenPopGesture.a; path = libFDFullscreenPopGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8867D347C2907A641DD33D8B17FD451A /* CGXPickerViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGXPickerViewManager.h; path = CGXPickerView/CGXPickerViewManager.h; sourceTree = "<group>"; };
 		8B70455449D3A7CACBC9F27D16BE7134 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		8BE598706AC5AA30B8D44850EFE512FA /* libFDFullscreenPopGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFDFullscreenPopGesture.a; path = libFDFullscreenPopGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4B37E1C5DC6AE1F4A64445D26E6090 /* GULLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerLevel.h; path = GoogleUtilities/Logger/Public/GULLoggerLevel.h; sourceTree = "<group>"; };
-		8E9821B3C7B6021B7BAF635FC82896D1 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD06B8A0B0B81A401DAC1D613450F63 /* CGXAddressModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXAddressModel.m; path = CGXPickerView/CGXAddressModel.m; sourceTree = "<group>"; };
-		95997760D0D9FE19AC16DF550DB93876 /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleUtilities.a; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		96041C5245BC331B3BC2698254211121 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		9831A9110811937E6F8753FC7C30EB6B /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
 		993B9510776412E5A03D21438DBF4FCD /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
@@ -278,7 +276,9 @@
 		A7A83807248700B673DB0DF54F04E244 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
 		A9D95D3E06E50826D66FCD2A4FAE7174 /* GULSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSwizzler.h; path = GoogleUtilities/MethodSwizzler/Private/GULSwizzler.h; sourceTree = "<group>"; };
 		AF2E812A57EA8A5EBA5C766A1E8B623D /* GULMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULMutableDictionary.m; path = GoogleUtilities/Network/GULMutableDictionary.m; sourceTree = "<group>"; };
+		B43874C6CBB50E7134FBEC24BABFE14F /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleUtilities.a; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6423612E59F9D0B2EFE592B4017958F /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		BB0139E99DE8F513A2214540E8CA586F /* libPods-KKCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-KKCamera.a"; path = "libPods-KKCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0ECF2E8034E1105E7800EFD40D1631 /* CGXStringPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXStringPickerView.m; path = CGXPickerView/CGXStringPickerView.m; sourceTree = "<group>"; };
 		BB4205B907B907811C78CFDEE7C585EC /* CGXPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGXPickerView.m; path = CGXPickerView/CGXPickerView.m; sourceTree = "<group>"; };
 		BD49E64451E3D5546C9F8B4580317454 /* GoogleUtilities-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleUtilities-prefix.pch"; sourceTree = "<group>"; };
@@ -293,6 +293,7 @@
 		D153EA020555139CFCEF7B232120FEE1 /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
 		D20B27EB8DB1CD7677E687C84283BAF6 /* GULNetworkConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkConstants.h; path = GoogleUtilities/Network/Private/GULNetworkConstants.h; sourceTree = "<group>"; };
 		D31A6583F5D70D81FD127D81337261F7 /* GULApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULApplication.h; path = GoogleUtilities/AppDelegateSwizzler/Private/GULApplication.h; sourceTree = "<group>"; };
+		D73BD00ADA696D632A4FFC3C31C4D57D /* libCGXPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCGXPickerView.a; path = libCGXPickerView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7869C80F38E91368651119B64A75B21 /* CGXPickerViewBundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = CGXPickerViewBundle.bundle; path = CGXPickerView/CGXPickerViewBundle.bundle; sourceTree = "<group>"; };
 		D80458E3EB333F26D2EBC10CB5075A5E /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		D8D4464AA1D5F4A4091B235E7BEB6427 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -300,7 +301,6 @@
 		DAF23F38969E2DC7C8226864CEFF2D08 /* CGXStringPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGXStringPickerView.h; path = CGXPickerView/CGXStringPickerView.h; sourceTree = "<group>"; };
 		DE47E888D3DFCF3FE77BE9B992908003 /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
 		DEAD46DAE37001A15F8A162C68FBA9DC /* GULNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkURLSession.h; path = GoogleUtilities/Network/Private/GULNetworkURLSession.h; sourceTree = "<group>"; };
-		DFAB75D12E704A8B1651B9AF0C744E46 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libnanopb.a; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00A7CDF7DC90BFB7161912A82F304BA /* FDFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
 		E10B03DCD3EAA6DD004A8317CD36BBCE /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		E2055DAA4B46C70D9D80752903883884 /* Google-Mobile-Ads-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.xcconfig"; sourceTree = "<group>"; };
@@ -323,28 +323,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		165B287C477D71F2C11CDBD1A20BF22E /* Frameworks */ = {
+		01095FBE532CF5AA0855A20BDA54BF0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		274C7A016FC8A143FFA4B3786E2BB198 /* Frameworks */ = {
+		34293BAE72F02CFBF74A363378B426F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F0A8E3741C526A5E692BC509794E501 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6EC712A6F1CE5D341A7CA7E15B67C401 /* Frameworks */ = {
+		705AD81C7AE8B66B7E494D566873064A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,6 +351,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCBC7FE987FB53FBB71A9E7155D9E871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8B02D37E822909A80EB82EBB074E002 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,7 +365,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC3C683DC3BF70356C73B06AF45F5109 /* Frameworks */ = {
+		F1BA94C36DC7A235872B5C45702A4961 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -458,13 +458,13 @@
 		61602C383C95C7E3CEDD6C8CE52DDD3B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				868C5D5139AF0C9E1E11AB0766AD9048 /* libCGXPickerView.a */,
-				8BE598706AC5AA30B8D44850EFE512FA /* libFDFullscreenPopGesture.a */,
-				95997760D0D9FE19AC16DF550DB93876 /* libGoogleUtilities.a */,
-				8E9821B3C7B6021B7BAF635FC82896D1 /* libMasonry.a */,
-				1773B61F2236DA7321AD56103945E06D /* libMBProgressHUD.a */,
-				DFAB75D12E704A8B1651B9AF0C744E46 /* libnanopb.a */,
-				1BC0197DEE09DC7CCB20310A8417DD93 /* libPods-KKCamera.a */,
+				D73BD00ADA696D632A4FFC3C31C4D57D /* libCGXPickerView.a */,
+				85D03BEC2CA9B2DB28398618379E7744 /* libFDFullscreenPopGesture.a */,
+				B43874C6CBB50E7134FBEC24BABFE14F /* libGoogleUtilities.a */,
+				1FFED36A657123030ABB700256D73F15 /* libMasonry.a */,
+				8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */,
+				06FC5C9CF96D60C50FCD47D339C91951 /* libnanopb.a */,
+				BB0139E99DE8F513A2214540E8CA586F /* libPods-KKCamera.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -783,55 +783,48 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0D552355D491773046966D7DE382CA1E /* Headers */ = {
+		04E6AB2BFC6F6A36FA832E5C2F224963 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E784B30C617A383DBE5271F59C9556E /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
+				68A84B33C46228A574DD01B9A8FFC464 /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EFB610621D9BAC75FB625CEB4BF9CB6 /* Headers */ = {
+		2697A8D6B2989B073B236F7B4BF67F30 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F7B162426A9033F79821A601A93785C /* CGXAddressModel.h in Headers */,
-				24EAE7A7EFC1CF8745BE7991824DD440 /* CGXAddressPcikerView.h in Headers */,
-				92471D23CFDE5599F6FCC865EC711808 /* CGXDatePickerView.h in Headers */,
-				5A1B9BA72161B57A43420B08E1F7E27C /* CGXPickerUIBaseView.h in Headers */,
-				3E16BA3AD1C81A75B4552776E627CF1C /* CGXPickerView.h in Headers */,
-				27F353B72A82319F43155AE1E1DCDF6D /* CGXPickerViewManager.h in Headers */,
-				5D96BBDDB2212B09B8BFEEAA4775A10F /* CGXStringPickerView.h in Headers */,
-				ACED52CF045730B51EB22C047A370A59 /* NSDate+CGXPicker.h in Headers */,
+				92BF70E9D3285561EB404A7C4A4A6DEE /* MASCompositeConstraint.h in Headers */,
+				4CE091F886EC6324673EFE0AEBBEA0FE /* MASConstraint+Private.h in Headers */,
+				EB663E3E1EB4BB670DC29B77DB330135 /* MASConstraint.h in Headers */,
+				9194B58ACE900ED6BAE6AD92E24A2CFF /* MASConstraintMaker.h in Headers */,
+				7CF2AC7A3B3ED03B30C1E4ED662B0551 /* MASLayoutConstraint.h in Headers */,
+				B20A0E5D8F9BCED1A82793C4BE9E7258 /* Masonry.h in Headers */,
+				65E88072A2BDC576BFC85E67EF9FBBC6 /* MASUtilities.h in Headers */,
+				42947699890A199B08A896144A878D80 /* MASViewAttribute.h in Headers */,
+				115ACCE253A886181B55773DDC70D6ED /* MASViewConstraint.h in Headers */,
+				F1B75048874B8773E5568E6D3ACA12E4 /* NSArray+MASAdditions.h in Headers */,
+				81F811A56B6724F7E8E2D25364E595E3 /* NSArray+MASShorthandAdditions.h in Headers */,
+				C74D2E856ADC8139CD00DBD184061B23 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				46692A2E77157B00827182C8DC686F72 /* View+MASAdditions.h in Headers */,
+				A3307B8FB6EE0A049DBAE3AA4D2C6DA0 /* View+MASShorthandAdditions.h in Headers */,
+				E76935CFF4AF327F8D9A7C1935F7D900 /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C2D3AEBEB1D6B66217A4F9D15428CCE /* Headers */ = {
+		31ABDFC74D139077B51C45A3BCCF0654 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		864C165B6F096A64CC321493EA8D6188 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F1CEF2B08D18B900A16F3249C96DBEF /* MASCompositeConstraint.h in Headers */,
-				C1C295BCD795C2B6044DB474583804B1 /* MASConstraint+Private.h in Headers */,
-				834D1BB9656D3E64B2AF8C0E0119A37F /* MASConstraint.h in Headers */,
-				06A4624C0490881FD7962E6F2768469F /* MASConstraintMaker.h in Headers */,
-				F0223A4EEF0A05E2DBC75767471884A2 /* MASLayoutConstraint.h in Headers */,
-				C7AC29F56D5F471248BBA0A724CDF3C7 /* Masonry.h in Headers */,
-				E94F68ABEAC53DD4556594E0EE4EAD57 /* MASUtilities.h in Headers */,
-				62ED0D1B1D2D5EF2225776A9C2BAF4DA /* MASViewAttribute.h in Headers */,
-				1D12FE6ABBFFDECF65CA15759AD0E411 /* MASViewConstraint.h in Headers */,
-				29214D8D2E69809E66F0C8A98A36BCCE /* NSArray+MASAdditions.h in Headers */,
-				96DB2AB39DFEB82319EF630730FDE4FD /* NSArray+MASShorthandAdditions.h in Headers */,
-				147370B40CE853ADCC91F9C81FF5E5FA /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				7C31AFA9C95568E16B6911B670754372 /* View+MASAdditions.h in Headers */,
-				5E44F7CFDA34CB0B1F1A65A19641AC7D /* View+MASShorthandAdditions.h in Headers */,
-				24F67F67B66D71384E9B66CF81AF84B3 /* ViewController+MASAdditions.h in Headers */,
+				381FADC73C7E224520FE96E540330724 /* CGXAddressModel.h in Headers */,
+				B10D11FC6935D2AD2444894A9FD5F5A1 /* CGXAddressPcikerView.h in Headers */,
+				6FEE3FB7B20C7981A479E4215065A412 /* CGXDatePickerView.h in Headers */,
+				A2AF00EE363E1234C4A60C45405288DF /* CGXPickerUIBaseView.h in Headers */,
+				0904BEF4FF0B7D72D30689E99146BFAE /* CGXPickerView.h in Headers */,
+				BDC86E9D8B124CEAB1909C4E0F6960DE /* CGXPickerViewManager.h in Headers */,
+				34FAE22326468C1A2519D1EA75F476DD /* CGXStringPickerView.h in Headers */,
+				055CE6EF1DBFC46CDAFB09026D7C8DA5 /* NSDate+CGXPicker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,6 +836,13 @@
 				12EC3793E2DC0CD6178FB7DA0DE35F93 /* pb_common.h in Headers */,
 				5AB73EC4BADDD4B5FE53E02D9D7E0965 /* pb_decode.h in Headers */,
 				B0CBAE5A30B5A55D4C4D1209D4344121 /* pb_encode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B1ECF60B991E62C7284451EE3E676B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,11 +872,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5321840230BB6C85C88122814CDDA46 /* Headers */ = {
+		F69A1D7D9933B5C2BFB41B06C24EC219 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20994F712F2B6A540216D3FD2BF612D /* MBProgressHUD.h in Headers */,
+				C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,11 +885,11 @@
 /* Begin PBXNativeTarget section */
 		55AF53E6C77A10ED4985E04D74A8878E /* Masonry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF625691042B208B0F87D7C89735A2BB /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildConfigurationList = 0B9F7EAACDDA564EC328F53A4AB8CF85 /* Build configuration list for PBXNativeTarget "Masonry" */;
 			buildPhases = (
-				864C165B6F096A64CC321493EA8D6188 /* Headers */,
-				BCB6E14B2F6E9B5295CB3A69EA220176 /* Sources */,
-				2F0A8E3741C526A5E692BC509794E501 /* Frameworks */,
+				2697A8D6B2989B073B236F7B4BF67F30 /* Headers */,
+				03D7E07BDB85EF20B683BD1CD95C9197 /* Sources */,
+				01095FBE532CF5AA0855A20BDA54BF0B /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -897,16 +897,16 @@
 			);
 			name = Masonry;
 			productName = Masonry;
-			productReference = 8E9821B3C7B6021B7BAF635FC82896D1 /* libMasonry.a */;
+			productReference = 1FFED36A657123030ABB700256D73F15 /* libMasonry.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EBB0D07912895BC979026B645CEDF00C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildConfigurationList = 20217F7F18136BEC6503B8147352D3E3 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				F5321840230BB6C85C88122814CDDA46 /* Headers */,
-				CA806A7E89902EAD71AAC07418CFADE6 /* Sources */,
-				EC3C683DC3BF70356C73B06AF45F5109 /* Frameworks */,
+				F69A1D7D9933B5C2BFB41B06C24EC219 /* Headers */,
+				39261A3821EA0B45F95301099852B974 /* Sources */,
+				DCBC7FE987FB53FBB71A9E7155D9E871 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -914,7 +914,7 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = 1773B61F2236DA7321AD56103945E06D /* libMBProgressHUD.a */;
+			productReference = 8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */ = {
@@ -931,16 +931,16 @@
 			);
 			name = GoogleUtilities;
 			productName = GoogleUtilities;
-			productReference = 95997760D0D9FE19AC16DF550DB93876 /* libGoogleUtilities.a */;
+			productReference = B43874C6CBB50E7134FBEC24BABFE14F /* libGoogleUtilities.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8FE0EB310F454719A11FBFEAAC09FE3E /* FDFullscreenPopGesture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7912A1788FD8E71B78393398E327ED30 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */;
+			buildConfigurationList = 814D3C2DCED5681C17EB84CCB59BD799 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */;
 			buildPhases = (
-				0D552355D491773046966D7DE382CA1E /* Headers */,
-				EABDA220FE28F6157980DD0CDD232E54 /* Sources */,
-				165B287C477D71F2C11CDBD1A20BF22E /* Frameworks */,
+				04E6AB2BFC6F6A36FA832E5C2F224963 /* Headers */,
+				92BF4BEA94EB49206398B1C30AAA1ECD /* Sources */,
+				34293BAE72F02CFBF74A363378B426F6 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -948,7 +948,7 @@
 			);
 			name = FDFullscreenPopGesture;
 			productName = FDFullscreenPopGesture;
-			productReference = 8BE598706AC5AA30B8D44850EFE512FA /* libFDFullscreenPopGesture.a */;
+			productReference = 85D03BEC2CA9B2DB28398618379E7744 /* libFDFullscreenPopGesture.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */ = {
@@ -965,16 +965,16 @@
 			);
 			name = nanopb;
 			productName = nanopb;
-			productReference = DFAB75D12E704A8B1651B9AF0C744E46 /* libnanopb.a */;
+			productReference = 06FC5C9CF96D60C50FCD47D339C91951 /* libnanopb.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D67AE43388D579E67C485C2A6D8D124B /* CGXPickerView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 367FA5FE95726FD416F63F47E03BBBB2 /* Build configuration list for PBXNativeTarget "CGXPickerView" */;
+			buildConfigurationList = B1034E189FE1C14AA423BCEF910A51F9 /* Build configuration list for PBXNativeTarget "CGXPickerView" */;
 			buildPhases = (
-				4EFB610621D9BAC75FB625CEB4BF9CB6 /* Headers */,
-				C7EA6A2B70D094DDCF54797F2EDC4DD1 /* Sources */,
-				274C7A016FC8A143FFA4B3786E2BB198 /* Frameworks */,
+				31ABDFC74D139077B51C45A3BCCF0654 /* Headers */,
+				DD763F308572564F6B6780EFD60DBFBB /* Sources */,
+				F1BA94C36DC7A235872B5C45702A4961 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -982,32 +982,32 @@
 			);
 			name = CGXPickerView;
 			productName = CGXPickerView;
-			productReference = 868C5D5139AF0C9E1E11AB0766AD9048 /* libCGXPickerView.a */;
+			productReference = D73BD00ADA696D632A4FFC3C31C4D57D /* libCGXPickerView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F488FA555DC1BC4C7DAD11F00BEF4E3D /* Pods-KKCamera */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B52EA5222B37965EBB8D8CBCB37245F9 /* Build configuration list for PBXNativeTarget "Pods-KKCamera" */;
+			buildConfigurationList = B7B96FC82983F4C7F8919205D076B230 /* Build configuration list for PBXNativeTarget "Pods-KKCamera" */;
 			buildPhases = (
-				6C2D3AEBEB1D6B66217A4F9D15428CCE /* Headers */,
-				073D6207B782842FD23BBDABDA7188FB /* Sources */,
-				6EC712A6F1CE5D341A7CA7E15B67C401 /* Frameworks */,
+				A4B1ECF60B991E62C7284451EE3E676B /* Headers */,
+				B9068FD3D4AE16318BA3A8787E9FB75F /* Sources */,
+				705AD81C7AE8B66B7E494D566873064A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				02131DD058CB859E3A6440FAE932AD75 /* PBXTargetDependency */,
-				E9C18D1DDD6043DBE47CBAAFB4A29463 /* PBXTargetDependency */,
-				D3F288F2AD96E792DF903CB7BA307FDA /* PBXTargetDependency */,
-				7574BDB47D789B02BDB18D22DEB4767C /* PBXTargetDependency */,
-				D4B1434C486087B9622D1849687C80AF /* PBXTargetDependency */,
-				5A89E4A422F060439BE3D0E1A65C1E05 /* PBXTargetDependency */,
-				C86556273EA1DFBF5FCD1E3999F36D7E /* PBXTargetDependency */,
-				E068897186333C3CB5D5CD83D7C7A09B /* PBXTargetDependency */,
+				FFF33A61484623A84E3A31CA6198AFDB /* PBXTargetDependency */,
+				C69CA2784D491F7DAAB9E164BEF66C1D /* PBXTargetDependency */,
+				528A9022315C41151F5FF2E018F048D9 /* PBXTargetDependency */,
+				BFA50D660E25B0A96898A1DBE7568E69 /* PBXTargetDependency */,
+				0F215714B15D6E3427872D5E21F267E6 /* PBXTargetDependency */,
+				CA996B420C047B5517258C2CB81AC4C1 /* PBXTargetDependency */,
+				E93F88D0F8794B802E21C0E524F1DF3B /* PBXTargetDependency */,
+				FD0B817CBCE61AB0814229A3FBE34F4F /* PBXTargetDependency */,
 			);
 			name = "Pods-KKCamera";
 			productName = "Pods-KKCamera";
-			productReference = 1BC0197DEE09DC7CCB20310A8417DD93 /* libPods-KKCamera.a */;
+			productReference = BB0139E99DE8F513A2214540E8CA586F /* libPods-KKCamera.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1016,8 +1016,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1025,6 +1025,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 61602C383C95C7E3CEDD6C8CE52DDD3B /* Products */;
@@ -1045,54 +1046,63 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		073D6207B782842FD23BBDABDA7188FB /* Sources */ = {
+		03D7E07BDB85EF20B683BD1CD95C9197 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46A8CA7473ECC1095C4EC8B3342C0FF2 /* Pods-KKCamera-dummy.m in Sources */,
+				9B369AAD43832AEDBBDA8A0DF0856B4C /* MASCompositeConstraint.m in Sources */,
+				D783A8A5A426DBF85162B92142651218 /* MASConstraint.m in Sources */,
+				181B2691FF506F26F7F71F711C724B81 /* MASConstraintMaker.m in Sources */,
+				68734B2FD4E55F9A95D5B416C075074A /* MASLayoutConstraint.m in Sources */,
+				3430321D06CBCF49F5A7DF6A70D9BB91 /* Masonry-dummy.m in Sources */,
+				2E5F3B41BD51ACE4EE3B422BB67E51DF /* MASViewAttribute.m in Sources */,
+				31064475EC704EC31BC3E2DE0DAFC72C /* MASViewConstraint.m in Sources */,
+				20E2F8001CC8A41A0E1B50694BE7875D /* NSArray+MASAdditions.m in Sources */,
+				44A3B1A5D2C513F8FD238E3B64E4C6CF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				390E8375B19FF12764C5AA730AF0F0F4 /* View+MASAdditions.m in Sources */,
+				5C5C77BBF83B793B82713296519751DA /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BCB6E14B2F6E9B5295CB3A69EA220176 /* Sources */ = {
+		39261A3821EA0B45F95301099852B974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B185030EC76859118C1405B24B5A03 /* MASCompositeConstraint.m in Sources */,
-				DAD558FD67ACC4417564EF96DC43F63A /* MASConstraint.m in Sources */,
-				348556118DC1DACC0BE3A597BAFA7C75 /* MASConstraintMaker.m in Sources */,
-				1536EA10B84980038D1E9AD34C790E96 /* MASLayoutConstraint.m in Sources */,
-				388EC8898DF3980C379556C581FC9F93 /* Masonry-dummy.m in Sources */,
-				CCA3FE6DC7E66FD60CCEB73AEEFDA09C /* MASViewAttribute.m in Sources */,
-				D1FDE5D914D6CC684B311079E41FD5A5 /* MASViewConstraint.m in Sources */,
-				0B5C48CD6E3349F61DAC0B07C0643602 /* NSArray+MASAdditions.m in Sources */,
-				1586E292781F19EAF835A40DB25964C5 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				79FC551AE0FC8B61EC09A63E569220C5 /* View+MASAdditions.m in Sources */,
-				8ACC40B3B4909038106DAB7F2742962D /* ViewController+MASAdditions.m in Sources */,
+				5A3E297705F3A4547756B09B4044B940 /* MBProgressHUD-dummy.m in Sources */,
+				E61EF8695C44F38024CB070B111F9AD2 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7EA6A2B70D094DDCF54797F2EDC4DD1 /* Sources */ = {
+		92BF4BEA94EB49206398B1C30AAA1ECD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A93E115C9F100EBEE870A6E45C102BA2 /* CGXAddressModel.m in Sources */,
-				DAF9131F1E53462480882E4C9651F582 /* CGXAddressPcikerView.m in Sources */,
-				22B4060860C2CBB390BE084DCF3D226D /* CGXDatePickerView.m in Sources */,
-				FD74D3F19733DF9046E4199F7E67B8F7 /* CGXPickerUIBaseView.m in Sources */,
-				223F74E3E4E30BEC4B6C8025D3B12D89 /* CGXPickerView-dummy.m in Sources */,
-				CF2D2B858F46D667DBA7E97A917D90A9 /* CGXPickerView.m in Sources */,
-				12F4DF6557CFA1CE90B17A1443F6B36C /* CGXPickerViewManager.m in Sources */,
-				4DE0E730CDFB0CBB905A21C14CFB6A13 /* CGXStringPickerView.m in Sources */,
-				99B62555D7C3BF2B98DFCB7334CEBF6D /* NSDate+CGXPicker.m in Sources */,
+				40442014A2E1A5F48B54FF96592114C8 /* FDFullscreenPopGesture-dummy.m in Sources */,
+				E848C4108D4834AA905648BAE1E52A7A /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA806A7E89902EAD71AAC07418CFADE6 /* Sources */ = {
+		B9068FD3D4AE16318BA3A8787E9FB75F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC59005EDDF0427B0D6BD020991AF224 /* MBProgressHUD-dummy.m in Sources */,
-				31385F10C1C832456A6E47EA73026761 /* MBProgressHUD.m in Sources */,
+				48F8B84DB09D7DEA028EF0D5DA408D28 /* Pods-KKCamera-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD763F308572564F6B6780EFD60DBFBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75899AAFE0BBB695B41F38768F043F06 /* CGXAddressModel.m in Sources */,
+				C23E7750CECD9E2D9FE5683079ED3F86 /* CGXAddressPcikerView.m in Sources */,
+				19019AE2EA8B13338DBCEE256D51C68C /* CGXDatePickerView.m in Sources */,
+				28903904746BA694271AA9F9B50358CA /* CGXPickerUIBaseView.m in Sources */,
+				E5C693D8B512EBA68ED04D0F06237E21 /* CGXPickerView-dummy.m in Sources */,
+				AAA71A9048B26AD442747ABE245A3316 /* CGXPickerView.m in Sources */,
+				C3A08C3DBB5436AB883686B87C4612E9 /* CGXPickerViewManager.m in Sources */,
+				1BB0CF322DFDEC7B9231E60512B4E509 /* CGXStringPickerView.m in Sources */,
+				FD20624AF5C37C138F8FB811D5EF25E8 /* NSDate+CGXPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,15 +1114,6 @@
 				C15855F937E8B56E0DEE1E66DF5D8BE8 /* pb_common.c in Sources */,
 				973D6711010D58D189667DA65E181A23 /* pb_decode.c in Sources */,
 				C02C87EB2821A40479DFFC2ABAA28888 /* pb_encode.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EABDA220FE28F6157980DD0CDD232E54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E54BAB129BC6BCF1B66804984616582 /* FDFullscreenPopGesture-dummy.m in Sources */,
-				39A824514250142A8BF36DFF230D5AB5 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1137,29 +1138,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		02131DD058CB859E3A6440FAE932AD75 /* PBXTargetDependency */ = {
+		0F215714B15D6E3427872D5E21F267E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = CGXPickerView;
-			target = D67AE43388D579E67C485C2A6D8D124B /* CGXPickerView */;
-			targetProxy = 468F19CCFBD1587DDED39AF035E97445 /* PBXContainerItemProxy */;
+			name = GoogleUtilities;
+			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
+			targetProxy = B4E88800A953B8043546860F54B7EED5 /* PBXContainerItemProxy */;
 		};
-		5A89E4A422F060439BE3D0E1A65C1E05 /* PBXTargetDependency */ = {
+		528A9022315C41151F5FF2E018F048D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = F0921C2191A4370AAAEF5523BAF60937 /* PBXContainerItemProxy */;
+			name = "Google-Mobile-Ads-SDK";
+			target = FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */;
+			targetProxy = 34AE9814F0ACA2902A1632DB403C7BE9 /* PBXContainerItemProxy */;
 		};
-		7574BDB47D789B02BDB18D22DEB4767C /* PBXTargetDependency */ = {
+		BFA50D660E25B0A96898A1DBE7568E69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleAppMeasurement;
 			target = B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */;
-			targetProxy = 0F0F8A5A112537E84BD60F1F9E7EDB2A /* PBXContainerItemProxy */;
+			targetProxy = F6645D5224391F41219F795E7B004334 /* PBXContainerItemProxy */;
 		};
-		C86556273EA1DFBF5FCD1E3999F36D7E /* PBXTargetDependency */ = {
+		C69CA2784D491F7DAAB9E164BEF66C1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Masonry;
-			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = F35541423C88D4BDDA896C7937F54BC9 /* PBXContainerItemProxy */;
+			name = FDFullscreenPopGesture;
+			target = 8FE0EB310F454719A11FBFEAAC09FE3E /* FDFullscreenPopGesture */;
+			targetProxy = 4908E7F402354644DAB69A387B6871CD /* PBXContainerItemProxy */;
 		};
 		C9B67B7AD978666EAB8B538DA6646A3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1167,17 +1168,11 @@
 			target = B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */;
 			targetProxy = 00C747A125DB0A6E88D0C2923AB38452 /* PBXContainerItemProxy */;
 		};
-		D3F288F2AD96E792DF903CB7BA307FDA /* PBXTargetDependency */ = {
+		CA996B420C047B5517258C2CB81AC4C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Google-Mobile-Ads-SDK";
-			target = FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */;
-			targetProxy = 2E345331C4F80468AAAC67FCC217D832 /* PBXContainerItemProxy */;
-		};
-		D4B1434C486087B9622D1849687C80AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleUtilities;
-			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
-			targetProxy = EB3E363CB4E11E957D75E746A51B348D /* PBXContainerItemProxy */;
+			name = MBProgressHUD;
+			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
+			targetProxy = 913A7E6E6098997626CAFB86CECDF4AA /* PBXContainerItemProxy */;
 		};
 		DD61449376457E003B6EDBB84E3A5FC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1185,17 +1180,17 @@
 			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
 			targetProxy = BBB170488659A159B449AB60C31B69DC /* PBXContainerItemProxy */;
 		};
-		E068897186333C3CB5D5CD83D7C7A09B /* PBXTargetDependency */ = {
+		E93F88D0F8794B802E21C0E524F1DF3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = F46AFDD5C4531AC58960FE3833E25DA4 /* PBXContainerItemProxy */;
+		};
+		FD0B817CBCE61AB0814229A3FBE34F4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = nanopb;
 			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
-			targetProxy = CB18616C2218C5225C1B66E329CD1DFC /* PBXContainerItemProxy */;
-		};
-		E9C18D1DDD6043DBE47CBAAFB4A29463 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FDFullscreenPopGesture;
-			target = 8FE0EB310F454719A11FBFEAAC09FE3E /* FDFullscreenPopGesture */;
-			targetProxy = 1CD249160F2A709E76B1D0828EE9FF60 /* PBXContainerItemProxy */;
+			targetProxy = 39ABF56679185172962B04422AA6430A /* PBXContainerItemProxy */;
 		};
 		FFD5D92930868D867B191EF21D425025 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1203,32 +1198,15 @@
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = DA0844E5D6FF45C8A237EEF0C7645E7A /* PBXContainerItemProxy */;
 		};
+		FFF33A61484623A84E3A31CA6198AFDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CGXPickerView;
+			target = D67AE43388D579E67C485C2A6D8D124B /* CGXPickerView */;
+			targetProxy = E79E1FF37FE80624C657E4F4EADEB029 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02E4A115A76E49D8C37BF250F4E9EE75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3791A89CCA581C0589B2B08C5E024AAB /* CGXPickerView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CGXPickerView/CGXPickerView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CGXPickerView;
-				PRODUCT_NAME = CGXPickerView;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		0CF4F40391A738A4A51F1C15AAEFF9F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22FF8823B7373B4937B3DBE412E61AFA /* GoogleAppMeasurement.xcconfig */;
@@ -1268,6 +1246,54 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		2713A1AD3CC7005816E6C476FEBAD19D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42431996F7204C410923E6E7A1E21F43 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2864B8151371217E5A22C6412F492423 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A83807248700B673DB0DF54F04E244 /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		2BB1F828C0A1071E6E4A57D90E4B79E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1356,92 +1382,7 @@
 			};
 			name = Debug;
 		};
-		4C441BDBCFBD071F543306B2DE7126FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFC5C8D3DA83B588D2662FC1FC425085 /* Pods-KKCamera.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6208D2133997CD893AFE9358377C4BC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3791A89CCA581C0589B2B08C5E024AAB /* CGXPickerView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CGXPickerView/CGXPickerView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CGXPickerView;
-				PRODUCT_NAME = CGXPickerView;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		69A0426AB7B78DE863678D3437E6258D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2055DAA4B46C70D9D80752903883884 /* Google-Mobile-Ads-SDK.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9C3DCCF6B5839F21EB4AC097B12672C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7A83807248700B673DB0DF54F04E244 /* Masonry.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Masonry;
-				PRODUCT_NAME = Masonry;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9FEB0548A1B1069D743010D9BFE5B767 /* Debug */ = {
+		4B73901EB9C3F7055B3C85841BEC6512 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0F098DAC2AFB66E7057EE7C0654917E /* FDFullscreenPopGesture.xcconfig */;
 			buildSettings = {
@@ -1464,7 +1405,30 @@
 			};
 			name = Debug;
 		};
-		A125ED06451AC6537CED51E940505244 /* Debug */ = {
+		5D61DC43C7DC2F90C295C51D66EEE358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A83807248700B673DB0DF54F04E244 /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		690C1B11780ABBA0F742607D082E784B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 42431996F7204C410923E6E7A1E21F43 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
@@ -1487,21 +1451,81 @@
 			};
 			name = Debug;
 		};
-		ABA8C979A684DD69A3AA77151218C58F /* Release */ = {
+		69A0426AB7B78DE863678D3437E6258D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0F098DAC2AFB66E7057EE7C0654917E /* FDFullscreenPopGesture.xcconfig */;
+			baseConfigurationReference = E2055DAA4B46C70D9D80752903883884 /* Google-Mobile-Ads-SDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		70D30245065102AF528181C3F4C56E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3791A89CCA581C0589B2B08C5E024AAB /* CGXPickerView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/CGXPickerView/CGXPickerView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FDFullscreenPopGesture;
-				PRODUCT_NAME = FDFullscreenPopGesture;
+				PRODUCT_MODULE_NAME = CGXPickerView;
+				PRODUCT_NAME = CGXPickerView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D60AA686B1A02EC9A999AC41705A038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFC5C8D3DA83B588D2662FC1FC425085 /* Pods-KKCamera.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B649B55B3AC88F0F387822DE71CB39D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3791A89CCA581C0589B2B08C5E024AAB /* CGXPickerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CGXPickerView/CGXPickerView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CGXPickerView;
+				PRODUCT_NAME = CGXPickerView;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1560,6 +1584,30 @@
 			};
 			name = Release;
 		};
+		BF3FFD8C58D4D47A29033B15571C7510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0F098DAC2AFB66E7057EE7C0654917E /* FDFullscreenPopGesture.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FDFullscreenPopGesture;
+				PRODUCT_NAME = FDFullscreenPopGesture;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		C91FF48E33524C71B223B1B43CFF3EBD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22FF8823B7373B4937B3DBE412E61AFA /* GoogleAppMeasurement.xcconfig */;
@@ -1577,48 +1625,23 @@
 			};
 			name = Release;
 		};
-		D7A2ADF8E19405B820AE14A234B07C6F /* Debug */ = {
+		D5D3E6B4264B873C96B7DF9F8B7FCD1D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7A83807248700B673DB0DF54F04E244 /* Masonry.xcconfig */;
+			baseConfigurationReference = 1BA872BA50D15531A817262BEEC201F2 /* Pods-KKCamera.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Masonry;
-				PRODUCT_NAME = Masonry;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DA717E491C58378E1A2B63B1254947EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42431996F7204C410923E6E7A1E21F43 /* MBProgressHUD.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MBProgressHUD;
-				PRODUCT_NAME = MBProgressHUD;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1684,28 +1707,6 @@
 			};
 			name = Release;
 		};
-		ED2ECA32EBC9D7BF2781A846A8CF500C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BA872BA50D15531A817262BEEC201F2 /* Pods-KKCamera.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		EDE0840A4F9FC4979EEAA0E24FDC4796 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2055DAA4B46C70D9D80752903883884 /* Google-Mobile-Ads-SDK.xcconfig */;
@@ -1726,20 +1727,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B9F7EAACDDA564EC328F53A4AB8CF85 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D61DC43C7DC2F90C295C51D66EEE358 /* Debug */,
+				2864B8151371217E5A22C6412F492423 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20217F7F18136BEC6503B8147352D3E3 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				690C1B11780ABBA0F742607D082E784B /* Debug */,
+				2713A1AD3CC7005816E6C476FEBAD19D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		24AD58548498431C008D4ED382E0D7A0 /* Build configuration list for PBXNativeTarget "GoogleUtilities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BB1F828C0A1071E6E4A57D90E4B79E2 /* Debug */,
 				B915C9197F48D76067318EB49B6060B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		367FA5FE95726FD416F63F47E03BBBB2 /* Build configuration list for PBXNativeTarget "CGXPickerView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02E4A115A76E49D8C37BF250F4E9EE75 /* Debug */,
-				6208D2133997CD893AFE9358377C4BC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1762,11 +1772,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7912A1788FD8E71B78393398E327ED30 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */ = {
+		814D3C2DCED5681C17EB84CCB59BD799 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9FEB0548A1B1069D743010D9BFE5B767 /* Debug */,
-				ABA8C979A684DD69A3AA77151218C58F /* Release */,
+				4B73901EB9C3F7055B3C85841BEC6512 /* Debug */,
+				BF3FFD8C58D4D47A29033B15571C7510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1789,29 +1799,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B52EA5222B37965EBB8D8CBCB37245F9 /* Build configuration list for PBXNativeTarget "Pods-KKCamera" */ = {
+		B1034E189FE1C14AA423BCEF910A51F9 /* Build configuration list for PBXNativeTarget "CGXPickerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C441BDBCFBD071F543306B2DE7126FC /* Debug */,
-				ED2ECA32EBC9D7BF2781A846A8CF500C /* Release */,
+				70D30245065102AF528181C3F4C56E81 /* Debug */,
+				9B649B55B3AC88F0F387822DE71CB39D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBB0D07912895BC979026B645CEDF00C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+		B7B96FC82983F4C7F8919205D076B230 /* Build configuration list for PBXNativeTarget "Pods-KKCamera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A125ED06451AC6537CED51E940505244 /* Debug */,
-				DA717E491C58378E1A2B63B1254947EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EF625691042B208B0F87D7C89735A2BB /* Build configuration list for PBXNativeTarget "Masonry" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7A2ADF8E19405B820AE14A234B07C6F /* Debug */,
-				9C3DCCF6B5839F21EB4AC097B12672C7 /* Release */,
+				8D60AA686B1A02EC9A999AC41705A038 /* Debug */,
+				D5D3E6B4264B873C96B7DF9F8B7FCD1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

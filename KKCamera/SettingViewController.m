@@ -89,6 +89,31 @@
 
 - (IBAction)onClose:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
+    [self performSelector:@selector(onAlertStoreProduct) withObject:nil afterDelay:0.3];
+}
+
+- (void)onAlertStoreProduct{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([@"1" isEqualToString:[defaults objectForKey:kStoreProductKey]]) {
+        return;
+    }
+    [self loadAppStoreController];
+}
+
+- (void)loadAppStoreController{
+    if (@available(iOS 10.3, *)) {
+        if([SKStoreReviewController respondsToSelector:@selector(requestReview)]) {
+            [[UIApplication sharedApplication].keyWindow endEditing:YES];
+            [SKStoreReviewController requestReview];
+        }else{
+            [self layoutRateAlert];
+        }
+    } else {
+        [self layoutRateAlert];
+    }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"1" forKey:kStoreProductKey];
+    [defaults synchronize];
 }
 
 - (IBAction)onAddStamp:(id)sender{
