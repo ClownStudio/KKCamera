@@ -152,7 +152,13 @@
     
     int distance = 10;
     int gap = 5;
-    CGFloat itemHeight = (self.contentView.bounds.size.width - 7 * distance)/6;
+    CGFloat width;
+    if (IS_PAD) {
+        width = 240 * [UIScreen mainScreen].scale;
+    }else{
+        width = self.contentView.frame.size.width;
+    }
+    CGFloat itemHeight = (width - 7 * distance)/6;
     _editorView = [[UIView alloc] init];
     [_editorView setBackgroundColor:[UIColor colorWithRed:0.114 green:0.133 blue:0.137 alpha:1.000]];
     [self.contentView addSubview:_editorView];
@@ -167,15 +173,28 @@
     [_itemScrollView setShowsHorizontalScrollIndicator:NO];
     [_itemScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.equalTo(self->_editorView).offset(5);
-        make.left.right.equalTo(self->_editorView);
+        CGFloat width;
+        if (IS_PAD) {
+            width = 240 * [UIScreen mainScreen].scale;
+        }else{
+            width = self.contentView.frame.size.width;
+        }
+        make.size.mas_equalTo(width);
+        make.centerX.equalTo(self.contentView);
     }];
     
     _middleScrollView = [[UIScrollView alloc] init];
     [self.contentView addSubview:_middleScrollView];
     [_middleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.contentView);
+        CGFloat width;
+        if (IS_PAD) {
+            width = 320 * [UIScreen mainScreen].scale;
+        }else{
+            width = self.contentView.frame.size.width;
+        }
         make.bottom.equalTo(_editorView.mas_top);
-        make.size.mas_equalTo(120);
+        make.size.mas_equalTo(CGSizeMake(width, 120));
+        make.centerX.equalTo(self.contentView);
     }];
     
     _groupView = [[UIView alloc] init];
@@ -736,13 +755,26 @@
 }
 
 - (RandomSliderView *)getRandomSliderView{
-    RandomSliderView *view = [[RandomSliderView alloc] initWithFrame:CGRectMake(0, (70 - 35)/2, self.contentView.bounds.size.width, 35)];
+    RandomSliderView *view;
+    if(IS_PAD){
+        CGFloat width = 320 * [UIScreen mainScreen].scale;
+        view = [[RandomSliderView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - width)/2, (70 - 35)/2, width, 35)];
+    }else{
+        view = [[RandomSliderView alloc] initWithFrame:CGRectMake(0, (70 - 35)/2, self.contentView.bounds.size.width, 35)];
+    }
     view.delegate = self;
     return view;
 }
 
 - (EffectSliderView *)getSliderView{
-    EffectSliderView *view = [[EffectSliderView alloc] initWithFrame:CGRectMake(0, (70 - 35)/2, self.contentView.bounds.size.width, 35)];
+    EffectSliderView *view;
+    if(IS_PAD){
+        CGFloat width = 320 * [UIScreen mainScreen].scale;
+        view = [[EffectSliderView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - width)/2, (70 - 35)/2, width, 35)];
+    }else{
+        view = [[EffectSliderView alloc] initWithFrame:CGRectMake(0, (70 - 35)/2, self.contentView.bounds.size.width, 35)];
+    }
+    
     view.delegate = self;
     return view;
 }
