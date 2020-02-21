@@ -175,7 +175,10 @@
         make.top.bottom.equalTo(self->_editorView).offset(5);
         CGFloat width;
         if (IS_PAD) {
-            width = 240 * [UIScreen mainScreen].scale;
+            width = itemHeight * [_effectContent count] + distance *([_effectContent count] + 1);
+            if (width > self.contentView.frame.size.width) {
+                width = self.contentView.frame.size.width;
+            }
         }else{
             width = self.contentView.frame.size.width;
         }
@@ -185,17 +188,14 @@
     
     _middleScrollView = [[UIScrollView alloc] init];
     [self.contentView addSubview:_middleScrollView];
-    [_middleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        CGFloat width;
-        if (IS_PAD) {
-            width = 320 * [UIScreen mainScreen].scale;
-        }else{
-            width = self.contentView.frame.size.width;
-        }
-        make.bottom.equalTo(_editorView.mas_top);
-        make.size.mas_equalTo(CGSizeMake(width, 120));
-        make.centerX.equalTo(self.contentView);
-    }];
+    if(!IS_PAD){
+        [_middleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(_editorView.mas_top);
+            make.size.mas_equalTo(CGSizeMake(self.contentView.frame.size.width, 120));
+            make.centerX.equalTo(self.contentView);
+        }];
+
+    }
     
     _groupView = [[UIView alloc] init];
     [_groupView setBackgroundColor:[UIColor blackColor]];
@@ -210,11 +210,13 @@
     _topScrollView = [[UIScrollView alloc]init];
     [_topScrollView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
     [self.contentView addSubview:_topScrollView];
-    [_topScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.contentView);
-        make.bottom.equalTo(_groupView.mas_top);
-        make.size.mas_equalTo(30);
-    }];
+    if(!IS_PAD){
+        [_topScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.contentView);
+            make.bottom.equalTo(_groupView.mas_top);
+            make.size.mas_equalTo(30);
+        }];
+    }
     
     _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _settingBtn.bounds.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height - (itemHeight + gap * 2 + 190) - _settingBtn.bounds.size.height)];
     [self.contentView addSubview:_imageScrollView];
@@ -558,6 +560,18 @@
             position += button.bounds.size.width;
         }
         [_middleScrollView setContentSize:CGSizeMake(position, 0)];
+        if(IS_PAD){
+            CGRect temp = _middleScrollView.frame;
+            if (_middleScrollView.contentSize.width < self.contentView.bounds.size.width) {
+                temp.size.width = _middleScrollView.contentSize.width;
+            }else{
+                temp.size.width = self.contentView.bounds.size.width;
+            }
+            temp.size.height = 120;
+            temp.origin.x = (self.contentView.bounds.size.width - temp.size.width)/2;
+            temp.origin.y = _editorView.frame.origin.y - 120;
+            _middleScrollView.frame = temp;
+        }
     }else if ([@"edit" isEqualToString:_selectedType]){
         [self refreshGroupViewWithRandom:NO];
         [_topScrollView setHidden:YES];
@@ -580,6 +594,18 @@
             position += button.bounds.size.width;
         }
         [_middleScrollView setContentSize:CGSizeMake(position, 0)];
+        if(IS_PAD){
+            CGRect temp = _middleScrollView.frame;
+            if (_middleScrollView.contentSize.width < self.contentView.bounds.size.width) {
+                temp.size.width = _middleScrollView.contentSize.width;
+            }else{
+                temp.size.width = self.contentView.bounds.size.width;
+            }
+            temp.size.height = 120;
+            temp.origin.x = (self.contentView.bounds.size.width - temp.size.width)/2;
+            temp.origin.y = _editorView.frame.origin.y - 120;
+            _middleScrollView.frame = temp;
+        }
     }else{
         [self clearEditFilters];
         [self refreshGroupViewWithRandom:YES];
@@ -601,6 +627,18 @@
             tag ++;
         }
         [_topScrollView setContentSize:CGSizeMake(position, 0)];
+        if (IS_PAD) {
+            CGRect temp = _topScrollView.frame;
+            temp.size.height = 30;
+            if (_topScrollView.contentSize.width > self.contentView.frame.size.width) {
+                temp.size.width = self.contentView.frame.size.width;
+            }else{
+                temp.size.width = _topScrollView.contentSize.width;
+            }
+            temp.origin.y = _middleScrollView.frame.origin.y - 100;
+            temp.origin.x = (self.contentView.frame.size.width - temp.size.width)/2;
+            _topScrollView.frame = temp;
+        }
         [self selectTopScrollViewWithIndex:0];
     }
 }
@@ -757,7 +795,7 @@
 - (RandomSliderView *)getRandomSliderView{
     RandomSliderView *view;
     if(IS_PAD){
-        CGFloat width = 320 * [UIScreen mainScreen].scale;
+        CGFloat width = 200 * [UIScreen mainScreen].scale;
         view = [[RandomSliderView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - width)/2, (70 - 35)/2, width, 35)];
     }else{
         view = [[RandomSliderView alloc] initWithFrame:CGRectMake(0, (70 - 35)/2, self.contentView.bounds.size.width, 35)];
@@ -769,7 +807,7 @@
 - (EffectSliderView *)getSliderView{
     EffectSliderView *view;
     if(IS_PAD){
-        CGFloat width = 320 * [UIScreen mainScreen].scale;
+        CGFloat width = 200 * [UIScreen mainScreen].scale;
         view = [[EffectSliderView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - width)/2, (70 - 35)/2, width, 35)];
     }else{
         view = [[EffectSliderView alloc] initWithFrame:CGRectMake(0, (70 - 35)/2, self.contentView.bounds.size.width, 35)];
@@ -816,6 +854,18 @@
         position += button.bounds.size.width;
     }
     [_middleScrollView setContentSize:CGSizeMake(position, 0)];
+    if(IS_PAD){
+        CGRect temp = _middleScrollView.frame;
+        if (_middleScrollView.contentSize.width < self.contentView.bounds.size.width) {
+            temp.size.width = _middleScrollView.contentSize.width;
+        }else{
+            temp.size.width = self.contentView.bounds.size.width;
+        }
+        temp.size.height = 120;
+        temp.origin.x = (self.contentView.bounds.size.width - temp.size.width)/2;
+        temp.origin.y = _editorView.frame.origin.y - 120;
+        _middleScrollView.frame = temp;
+    }
 }
 
 -(void)clearEditFilters{
@@ -1242,6 +1292,24 @@
     _imageScrollView.frame = scrollTemp;
     [_imageView setFrame:_imageScrollView.bounds];
     [_tkImageView setFrame:_imageScrollView.frame];
+    
+    int distance = 10;
+    int gap = 5;
+    CGFloat width;
+    if (IS_PAD) {
+        width = 240 * [UIScreen mainScreen].scale;
+    }else{
+        width = self.contentView.frame.size.width;
+    }
+    CGFloat itemHeight = (width - 7 * distance)/6;
+    if (IS_PAD) {
+        CGRect temp = _middleScrollView.frame;
+        temp.origin.y = self.contentView.bounds.size.height - (itemHeight + gap * 2) - 120;
+        _middleScrollView.frame = temp;
+        CGRect topTemp = _topScrollView.frame;
+        topTemp.origin.y = _middleScrollView.frame.origin.y - 100;
+        _topScrollView.frame = topTemp;
+    }
 }
 
 -(void)setOrignImage:(UIImage *)orignImage{
