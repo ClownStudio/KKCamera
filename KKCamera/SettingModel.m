@@ -27,7 +27,7 @@
         self.isSound = YES;
         NSDate *date = [NSDate date];
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-        [dateFormat setDateFormat:@"yyyy / MM / dd"];
+        [dateFormat setDateFormat:@"yyyy-MM-dd"];
         NSString* dateString = [dateFormat stringFromDate:date];
         self.customDate = dateString;
     }

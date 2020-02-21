@@ -173,13 +173,8 @@
     [_itemScrollView setShowsHorizontalScrollIndicator:NO];
     [_itemScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.equalTo(self->_editorView).offset(5);
-        CGFloat width;
-        if (IS_PAD) {
-            width = itemHeight * [_effectContent count] + distance *([_effectContent count] + 1);
-            if (width > self.contentView.frame.size.width) {
-                width = self.contentView.frame.size.width;
-            }
-        }else{
+        CGFloat width = itemHeight * [_effectContent count] + distance *([_effectContent count] + 1);
+        if (width > self.contentView.frame.size.width) {
             width = self.contentView.frame.size.width;
         }
         make.size.mas_equalTo(width);
