@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) IBOutlet UIButton *btn5;
 @property (nonatomic, strong) IBOutlet UIButton *btn6;
 @property (nonatomic, strong) IBOutlet UIButton *btn7;
-@property (nonatomic, strong) IBOutlet UISwitch *btn8;
 
 @end
 

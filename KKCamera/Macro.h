@@ -13,7 +13,7 @@
 
 #define TERMS_OF_USE @"http://instagram.com"
 #define PRIVACY_POLICY @"http://instagram.com"
-#define SEARCH_ALBUM @[@"Camera Roll", @"Screenshots", @"Recently Added", @"All Photos",@"最近项目",@"截屏"]
+#define SEARCH_ALBUM @[@"All Photos",@"Recents",@"Recently Added",@"Screenshots",@"所有照片", @"最近项目",@"最近添加",@"截屏",@"屏幕快照"]
 #define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 
 #define ALL_PRODUCT_ID [NSString stringWithFormat:@"%@.pro",[[NSBundle mainBundle] bundleIdentifier]]

@@ -17,7 +17,6 @@
                 <outlet property="btn5" destination="XiA-Aa-3uq" id="E0Q-BN-o7q"/>
                 <outlet property="btn6" destination="xge-4Y-ptq" id="Ziw-mD-wcv"/>
                 <outlet property="btn7" destination="S8n-eb-sWM" id="lrP-ad-b2T"/>
-                <outlet property="btn8" destination="AEP-F0-Vho" id="xzM-4W-ZCA"/>
                 <outlet property="closeBtn" destination="vEi-39-Teo" id="8xP-rT-J5X"/>
                 <outlet property="view" destination="zkN-Wm-i2M" id="BfB-6b-n3r"/>
             </connections>
@@ -172,28 +171,6 @@
                                                 <action selector="onFollow:" destination="-1" eventType="touchUpInside" id="cGA-dk-n5u"/>
                                             </connections>
                                         </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kjs-ll-GTh">
-                                    <rect key="frame" x="0.0" y="497" width="828" height="70"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound Enable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciW-g8-zus">
-                                            <rect key="frame" x="30" y="24" width="200" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEP-F0-Vho">
-                                            <rect key="frame" x="756" y="20" width="49" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <color key="onTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <action selector="onSound:" destination="-1" eventType="valueChanged" id="hrC-UG-kXU"/>
-                                            </connections>
-                                        </switch>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>

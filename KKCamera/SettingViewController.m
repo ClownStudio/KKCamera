@@ -36,7 +36,6 @@
     [self.btn1 setOn:[[SettingModel sharedInstance] isStamp]];
     [self.btn2 setOn:[[SettingModel sharedInstance] isRandom]];
     [self.btn3 setTitle:[[SettingModel sharedInstance] customDate] forState:UIControlStateNormal];
-    [self.btn8 setOn:[[SettingModel sharedInstance] isSound]];
     
     
     for (UIView *view in self.view.subviews) {
@@ -122,10 +121,6 @@
 
 - (IBAction)onRadom:(id)sender{
     [[SettingModel sharedInstance] setIsRandom:![[SettingModel sharedInstance] isRandom]];
-}
-
-- (IBAction)onSound:(id)sender{
-    [[SettingModel sharedInstance] setIsSound:![[SettingModel sharedInstance] isSound]];
 }
 
 - (IBAction)onCustomDate:(id)sender{

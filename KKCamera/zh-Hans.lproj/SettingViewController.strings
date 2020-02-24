@@ -14,9 +14,6 @@
 /* Class = "UILabel"; text = "Add date stamp"; ObjectID = "cTk-Bg-Zd6"; */
 "cTk-Bg-Zd6.text" = "Add date stamp";
 
-/* Class = "UILabel"; text = "Sound Enable"; ObjectID = "ciW-g8-zus"; */
-"ciW-g8-zus.text" = "Sound Enable";
-
 /* Class = "UILabel"; text = "Custom date"; ObjectID = "eGX-CX-fbW"; */
 "eGX-CX-fbW.text" = "Custom date";
 

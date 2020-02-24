@@ -24,7 +24,6 @@
     if (self) {
         self.isStamp = YES;
         self.isRandom = YES;
-        self.isSound = YES;
         NSDate *date = [NSDate date];
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
         [dateFormat setDateFormat:@"yyyy-MM-dd"];

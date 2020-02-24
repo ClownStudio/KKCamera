@@ -21,7 +21,6 @@
 		B63F19EF23A7811F00C127FB /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B63F19EE23A7811F00C127FB /* CustomSlider.m */; };
 		B6434E45239F833000778532 /* Effect.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6434E44239F833000778532 /* Effect.plist */; };
 		B6557EF52396023000636C7F /* UIImageView+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = B6557EF42396022F00636C7F /* UIImageView+GIF.m */; };
-		B65C4CF8239DF9D70084E4EA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65C4CF7239DF9D70084E4EA /* StoreKit.framework */; };
 		B67B73E1238D20A5001B1F60 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */; };
 		B67B73E2238D20A5001B1F60 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73DA238D20A5001B1F60 /* UIView+Frame.m */; };
 		B67B73E3238D20A5001B1F60 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B73DC238D20A5001B1F60 /* CircleView.m */; };
@@ -552,7 +551,6 @@
 		B6434E44239F833000778532 /* Effect.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Effect.plist; sourceTree = "<group>"; };
 		B6557EF32396022F00636C7F /* UIImageView+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GIF.h"; sourceTree = "<group>"; };
 		B6557EF42396022F00636C7F /* UIImageView+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GIF.m"; sourceTree = "<group>"; };
-		B65C4CF7239DF9D70084E4EA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B67B73D9238D20A5001B1F60 /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
 		B67B73DA238D20A5001B1F60 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		B67B73DB238D20A5001B1F60 /* StickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerView.h; sourceTree = "<group>"; };
@@ -1356,7 +1354,6 @@
 			files = (
 				B6F252BB23CED36000D18334 /* libc++abi.tbd in Frameworks */,
 				81A60D8374B2F853C6217ACE /* libPods-KKCamera.a in Frameworks */,
-				B65C4CF8239DF9D70084E4EA /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1368,7 +1365,6 @@
 			children = (
 				B6F252BA23CED36000D18334 /* libc++abi.tbd */,
 				B6F252B823CED34600D18334 /* libc++.tbd */,
-				B65C4CF7239DF9D70084E4EA /* StoreKit.framework */,
 				AC5AB7619E7A8D9CE4CFABD0 /* libPods-KKCamera.a */,
 			);
 			name = Frameworks;
@@ -3407,7 +3403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = FM78YDS6QA;
+				DEVELOPMENT_TEAM = D38C434CHM;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KKCamera/HCPhotoEdit/Class/PhotoCollage/Prefix.h";
 				INFOPLIST_FILE = KKCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3416,7 +3412,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appstudio.X2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = X2test;
+				PROVISIONING_PROFILE_SPECIFIER = YinYinPingTai;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3428,7 +3424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = FM78YDS6QA;
+				DEVELOPMENT_TEAM = D38C434CHM;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KKCamera/HCPhotoEdit/Class/PhotoCollage/Prefix.h";
 				INFOPLIST_FILE = KKCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3437,7 +3433,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appstudio.X2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = X2test;
+				PROVISIONING_PROFILE_SPECIFIER = YinYinPingTai;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
