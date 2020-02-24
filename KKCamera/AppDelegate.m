@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import <Photos/Photos.h>
 
 @interface AppDelegate ()
 
@@ -19,7 +20,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
-
     ViewController *viewController = [[ViewController alloc] init];
     UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [rootViewController setNavigationBarHidden:YES];

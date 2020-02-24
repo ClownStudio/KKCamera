@@ -32,6 +32,8 @@
 "Cancel" = "Cancel";
 "Share" = "Share";
 "Saved" = "Saved successfully";
+"SaveError" = "SaveError";
+"Cloud" = "Please Donwload iCloud Image";
 
 "Unlock" = "Unlock";
 "UnlockByAwardAd" = "UnlockByAwardAd";

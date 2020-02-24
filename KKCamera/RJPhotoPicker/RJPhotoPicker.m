@@ -16,8 +16,9 @@
 #import "RJMacro.h"
 #import "MBProgressHUD+RJHUD.h"
 #import "RJCollectionView.h"
-
+#import <Photos/Photos.h>
 #import "PHAsset+RJAsset.h"
+
 typedef void(^FinishBlock)(NSArray<PHAsset*> * assets);
 
 static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
@@ -76,7 +77,6 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
     [super viewDidLoad];
     
     [self initInterface];
-    [self configNav];
     [self doRequest];
 }
 
@@ -92,13 +92,14 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 [weakself.helper getAllPhotoData];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakself configNav];
                     [weakself configCollectionView];
                     [weakself changeAlbumWithCount:0];
                 });
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD showError:@"Don't have Permission"];
+                [MBProgressHUD showError:NSLocalizedString(@"NotSupportAlbum", nil)];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [weakself.presentingViewController dismissViewControllerAnimated:YES completion:nil];
                 });
@@ -263,7 +264,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
                 PHAsset * asset = [_helper getAssetWithCollectionCount:_helper.currentCollectionCount row:_currentSelectedIndexPath.row];
                 [asset checkIsICloudResource:^(BOOL isCloud) {
                     if (isCloud) {
-                        [MBProgressHUD showInfo:@"Please Donwload iCloud Image"];
+                        [MBProgressHUD showInfo:NSLocalizedString(@"Cloud", nil)];
                     } else {
                         [_helper setSelectIndex:_currentSelectedIndexPath];
                         NSArray * datas = [_helper getAllAssetWithSelectedArray];

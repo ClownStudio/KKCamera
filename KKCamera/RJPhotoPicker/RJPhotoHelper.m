@@ -7,9 +7,8 @@
 //
 
 #import "RJPhotoHelper.h"
-#import <Photos/Photos.h>
-#import "RJMacro.h"
 #import "Macro.h"
+#import "RJMacro.h"
 
 @implementation RJPhotoHelper
 - (instancetype)init {
@@ -81,10 +80,11 @@
 - (void)getAllPhotoData {
     NSMutableArray * tempCollectionsArray = [NSMutableArray array];
     //search collection data
-    PHFetchResult * sysfetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    PHFetchResult<PHAssetCollection *> *sysfetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
     
     //get system collection , set higher level
     NSArray * titlesArray = SEARCH_ALBUM;
+    
     for (PHAssetCollection *collection in sysfetchResult) {
         NSString * collectionTitle = collection.localizedTitle;
         NSLog(@"%@",collectionTitle);
@@ -138,15 +138,23 @@
     //set fetchoptions
     PHFetchOptions * options = [[PHFetchOptions alloc] init];
     options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
-    
+    options.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeImage];
     //search
     NSMutableArray * assetArray = [NSMutableArray array];
-    PHFetchResult * assetFetchResult = [PHAsset fetchAssetsInAssetCollection:collection options:options];
     
-    for (PHAsset * asset in assetFetchResult) {
-        [assetArray addObject:asset];
-        
+    @try{
+        PHFetchResult<PHAsset *> * assetFetchResult = [PHAsset fetchAssetsInAssetCollection:collection options:options];
+        for (PHAsset * asset in assetFetchResult) {
+            [assetArray addObject:asset];
+        }
+    }@catch(NSException *exception){
+        if([collection isMemberOfClass:[PHCollectionList class]]){
+            NSLog(@"YES ,EXCEPTION IS LIST");
+        }
+    }@finally{
+    
     }
+    
     return assetArray;
 }
 

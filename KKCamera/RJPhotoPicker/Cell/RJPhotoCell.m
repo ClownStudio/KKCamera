@@ -47,7 +47,7 @@
             RJWeak(self)
             [[NSNotificationCenter defaultCenter] postNotificationName:RJMutableCellClickID object:weakself userInfo:@{@"selected":@(sender.selected)}];
         } else {
-            [MBProgressHUD showInfo:@"iCloud请先下载到本地"];
+            [MBProgressHUD showInfo:NSLocalizedString(@"Cloud", nil)];
         }
     }];
     

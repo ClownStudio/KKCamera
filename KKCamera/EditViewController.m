@@ -339,7 +339,7 @@
     } error:&error];
     if (error) {
         [MBProgressHUD hide];
-        [MBProgressHUD showError:@"Save failed"];
+        [MBProgressHUD showError:NSLocalizedString(@"SaveError", nil)];
         return;
     }
     // 2.拥有一个【自定义相册】
@@ -347,7 +347,7 @@
     PHAssetCollection *assetCollection = [self getAssetCollectionWithAppNameAndCreateIfNo];
     if (assetCollection == nil) {
         [MBProgressHUD hide];
-        [MBProgressHUD showError:@"Album creation failed"];
+        [MBProgressHUD showError:NSLocalizedString(@"CreateAlbumError", nil)];
         return;
     }
     // 3.将刚才保存到【相机胶卷】里面的图片引用到【自定义相册】
@@ -358,12 +358,12 @@
     if (error) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [MBProgressHUD hide];
-            [MBProgressHUD showError:@"Save failed"];
+            [MBProgressHUD showError:NSLocalizedString(@"SaveError", nil)];
         });
     } else {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [MBProgressHUD hide];
-            [MBProgressHUD showSuccess:@"Saved successfully"];
+            [MBProgressHUD showError:NSLocalizedString(@"Saved", nil)];
         });
     }
 }
