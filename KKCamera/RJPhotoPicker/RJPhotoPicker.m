@@ -76,6 +76,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
     [super viewDidLoad];
     
     [self initInterface];
+    [self configNav];
     [self doRequest];
 }
 
@@ -91,7 +92,6 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 [weakself.helper getAllPhotoData];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [weakself configNav];
                     [weakself configCollectionView];
                     [weakself changeAlbumWithCount:0];
                 });
