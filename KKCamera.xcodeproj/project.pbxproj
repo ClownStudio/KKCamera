@@ -11,7 +11,6 @@
 		B6011C4523C6F9E60058925C /* TKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6011C4323C6F9E60058925C /* TKImageView.m */; };
 		B60197F7238F6DCC006ADFA7 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60197F5238F6DCC006ADFA7 /* SettingViewController.xib */; };
 		B60197FD238F6DE4006ADFA7 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B60197F9238F6DE4006ADFA7 /* SettingModel.m */; };
-		B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B601980D238F7BF7006ADFA7 /* Localizable.strings */; };
 		B6019811238FAF93006ADFA7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6019810238FAF93006ADFA7 /* SettingViewController.m */; };
 		B609D7812397425600D2877D /* SubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B609D7802397425600D2877D /* SubscriberViewController.m */; };
 		B60E14E62390159000DF057F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B60E14E82390159000DF057F /* InfoPlist.strings */; };
@@ -512,6 +511,7 @@
 		B68F61CA238D1BD7004C3DB6 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68F61C9238D1BD7004C3DB6 /* BasicViewController.m */; };
 		B698C7BE23BB2B7C00083FE6 /* RandomSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B698C7BD23BB2B7C00083FE6 /* RandomSliderView.m */; };
 		B6C38F38238E2900004797DD /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */; };
+		B6CC44CD24038E5A00E627C6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6CC44CF24038E5A00E627C6 /* Localizable.strings */; };
 		B6D672C82390A6C5007C9136 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D672C72390A6C5007C9136 /* EditViewController.m */; };
 		B6EF3A3E2398FDEF00EE68A0 /* item1.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EF3A2B2398FDEF00EE68A0 /* item1.png */; };
 		B6EF3A412398FDEF00EE68A0 /* item2.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EF3A2E2398FDEF00EE68A0 /* item2.png */; };
@@ -533,7 +533,6 @@
 		B60197FE238F6FEB006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SettingViewController.strings"; sourceTree = "<group>"; };
 		B60197FF238F6FEB006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B6019800238F6FEC006ADFA7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		B601980D238F7BF7006ADFA7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B601980F238FAF93006ADFA7 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		B6019810238FAF93006ADFA7 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		B609D77F2397425600D2877D /* SubscriberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubscriberViewController.h; sourceTree = "<group>"; };
@@ -1336,6 +1335,8 @@
 		B698C7BD23BB2B7C00083FE6 /* RandomSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomSliderView.m; sourceTree = "<group>"; };
 		B6C38F36238E2900004797DD /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		B6C38F37238E2900004797DD /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		B6CC44D024038E6100E627C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6CC44D124038E7C00E627C6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B6D672C62390A6C5007C9136 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		B6D672C72390A6C5007C9136 /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		B6EF3A2B2398FDEF00EE68A0 /* item1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item1.png; sourceTree = "<group>"; };
@@ -1804,7 +1805,7 @@
 				B68F5D78238CB333004C3DB6 /* Info.plist */,
 				B68F5D79238CB333004C3DB6 /* main.m */,
 				B68F6186238CD054004C3DB6 /* HomePage.plist */,
-				B601980D238F7BF7006ADFA7 /* Localizable.strings */,
+				B6CC44CF24038E5A00E627C6 /* Localizable.strings */,
 				B60E14E82390159000DF057F /* InfoPlist.strings */,
 				B6434E44239F833000778532 /* Effect.plist */,
 			);
@@ -2835,7 +2836,7 @@
 				B68F609D238CBF38004C3DB6 /* CHPhotoEditResource.bundle in Resources */,
 				B68B5D8C23A9DF14007B7787 /* B_1_3.png in Resources */,
 				B67B74C2238D20DE001B1F60 /* style3_7.plist in Resources */,
-				B601980E238F7BF7006ADFA7 /* Localizable.strings in Resources */,
+				B6CC44CD24038E5A00E627C6 /* Localizable.strings in Resources */,
 				B67B74B1238D20DE001B1F60 /* A_Marks_5.png in Resources */,
 				B67B74E6238D20DE001B1F60 /* iRate.bundle in Resources */,
 				B67B749F238D20DE001B1F60 /* Filter 14.acv in Resources */,
@@ -3279,6 +3280,15 @@
 				B6019800238F6FEC006ADFA7 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B6CC44CF24038E5A00E627C6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6CC44D024038E6100E627C6 /* en */,
+				B6CC44D124038E7C00E627C6 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

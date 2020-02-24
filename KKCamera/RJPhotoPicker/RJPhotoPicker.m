@@ -89,14 +89,14 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
     [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
     [_helper getPhotoPermission:^(BOOL havePower) {
         if (havePower) {
+            NSLock *lock = [[NSLock alloc] init];
+            [lock lock];
             [weakself.helper getAllPhotoData];
+            [lock unlock];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.02 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [weakself configNav];
                 [weakself configCollectionView];
                 [weakself changeAlbumWithCount:0];
-                
-            });
-            dispatch_async(dispatch_get_main_queue(), ^{
                 [MBProgressHUD hide];
             });
         } else {
