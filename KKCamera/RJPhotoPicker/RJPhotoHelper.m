@@ -85,7 +85,7 @@
     
     //get system collection , set higher level
     NSArray * titlesArray = SEARCH_ALBUM;
-    [sysfetchResult enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection *collection, NSUInteger idx, BOOL * _Nonnull stop) {
+    for (PHAssetCollection *collection in sysfetchResult) {
         NSString * collectionTitle = collection.localizedTitle;
         NSLog(@"%@",collectionTitle);
         NSArray* data = [self getAssetWithCollection:collection];
@@ -102,18 +102,18 @@
                 }
             }
         }
-    }];
+    }
     
     //get user collection
     PHFetchResult * userfetchResult = [PHCollectionList fetchTopLevelUserCollectionsWithOptions:nil];
     
-    [userfetchResult enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection *collection, NSUInteger idx, BOOL * _Nonnull stop) {
+    for (PHAssetCollection *collection in userfetchResult) {
         NSString * collectionTitle = collection.localizedTitle;
         NSArray * assets = [self getAssetWithCollection:collection];
         if (assets.count != 0) {
             [tempCollectionsArray addObject:@{collectionTitle:assets}];
         }
-    }];
+    }
     
     _collectionData = [NSArray arrayWithArray:tempCollectionsArray];
     if (_collectionData.count > 0 && !_currentCollectionTitle) {
@@ -154,16 +154,9 @@
 /**check permission*/
 - (void)getPhotoPermission:(void(^)(BOOL havePower))resultBlock {
     if (NSClassFromString(@"PHAsset")) {
-        //        PHAuthorizationStatus state = [PHPhotoLibrary authorizationStatus];
-        //        if (state == PHAuthorizationStatusAuthorized) {
-        //            resultBlock(YES);
-        //        } else if (state == PHAuthorizationStatusNotDetermined) {
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
             resultBlock(status == PHAuthorizationStatusAuthorized);
         }];
-        //        } else {
-        //            resultBlock(NO);
-        //        }
     } else {
         resultBlock(NO);
     }
