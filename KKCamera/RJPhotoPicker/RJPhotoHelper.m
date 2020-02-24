@@ -61,7 +61,7 @@
     options.synchronous = YES;
     
     [options setProgressHandler:^(double progress, NSError *error, BOOL *stop, NSDictionary *info) {
-//        [weakself requestProgress:progress];
+        //        [weakself requestProgress:progress];
     }];
     _imagesArray = [NSMutableArray array];
     for (PHAsset * asset in _currentCollectionData) {
@@ -70,7 +70,7 @@
                                                   contentMode:PHImageContentModeAspectFill
                                                       options:options
                                                 resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-            [_imagesArray addObject:result];
+            [self->_imagesArray addObject:result];
         }];
     }
     
@@ -85,37 +85,35 @@
     
     //get system collection , set higher level
     NSArray * titlesArray = SEARCH_ALBUM;
-    for (PHAssetCollection * assetCollection in sysfetchResult) {
-        NSString * collectionTitle = assetCollection.localizedTitle;
+    [sysfetchResult enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection *collection, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString * collectionTitle = collection.localizedTitle;
         NSLog(@"%@",collectionTitle);
-        NSArray* data = [self getAssetWithCollection:assetCollection];
-        if (data.count == 0) {
-            continue;
-        }
-        if ([titlesArray indexOfObject:collectionTitle] != NSNotFound) {
-            
-            if ([collectionTitle isEqualToString:@"Recently Added"]) {
-                [tempCollectionsArray insertObject:@{collectionTitle:data} atIndex:0];
-            } else {
-                [tempCollectionsArray addObject:@{collectionTitle:data}];
-                if ([collectionTitle isEqualToString:@"Camera Roll"]) {
-                    _currentCollectionTitle = collectionTitle;
-                    _currentCollectionData = data;
+        NSArray* data = [self getAssetWithCollection:collection];
+        if (data.count != 0) {
+            if ([titlesArray indexOfObject:collectionTitle] != NSNotFound) {
+                if ([collectionTitle isEqualToString:@"Recently Added"]) {
+                    [tempCollectionsArray insertObject:@{collectionTitle:data} atIndex:0];
+                } else {
+                    [tempCollectionsArray addObject:@{collectionTitle:data}];
+                    if ([collectionTitle isEqualToString:@"Camera Roll"]) {
+                        self->_currentCollectionTitle = collectionTitle;
+                        self->_currentCollectionData = data;
+                    }
                 }
             }
         }
-    }
+    }];
     
     //get user collection
     PHFetchResult * userfetchResult = [PHCollectionList fetchTopLevelUserCollectionsWithOptions:nil];
     
-    for (PHAssetCollection * assetCollection in userfetchResult) {
-        NSString * collectionTitle = assetCollection.localizedTitle;
-        NSArray * assets = [self getAssetWithCollection:assetCollection];
+    [userfetchResult enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection *collection, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString * collectionTitle = collection.localizedTitle;
+        NSArray * assets = [self getAssetWithCollection:collection];
         if (assets.count != 0) {
             [tempCollectionsArray addObject:@{collectionTitle:assets}];
         }
-    }
+    }];
     
     _collectionData = [NSArray arrayWithArray:tempCollectionsArray];
     if (_collectionData.count > 0 && !_currentCollectionTitle) {
@@ -156,16 +154,16 @@
 /**check permission*/
 - (void)getPhotoPermission:(void(^)(BOOL havePower))resultBlock {
     if (NSClassFromString(@"PHAsset")) {
-//        PHAuthorizationStatus state = [PHPhotoLibrary authorizationStatus];
-//        if (state == PHAuthorizationStatusAuthorized) {
-//            resultBlock(YES);
-//        } else if (state == PHAuthorizationStatusNotDetermined) {
-            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-                resultBlock(status == PHAuthorizationStatusAuthorized);
-            }];
-//        } else {
-//            resultBlock(NO);
-//        }
+        //        PHAuthorizationStatus state = [PHPhotoLibrary authorizationStatus];
+        //        if (state == PHAuthorizationStatusAuthorized) {
+        //            resultBlock(YES);
+        //        } else if (state == PHAuthorizationStatusNotDetermined) {
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            resultBlock(status == PHAuthorizationStatusAuthorized);
+        }];
+        //        } else {
+        //            resultBlock(NO);
+        //        }
     } else {
         resultBlock(NO);
     }

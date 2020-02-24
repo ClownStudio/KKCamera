@@ -86,22 +86,19 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
 #pragma mark - user-define initialization
 - (void)doRequest {
     RJWeak(self)
-    [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
     [_helper getPhotoPermission:^(BOOL havePower) {
         if (havePower) {
-            NSLock *lock = [[NSLock alloc] init];
-            [lock lock];
-            [weakself.helper getAllPhotoData];
-            [lock unlock];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.02 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [weakself configNav];
-                [weakself configCollectionView];
-                [weakself changeAlbumWithCount:0];
-                [MBProgressHUD hide];
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [weakself.helper getAllPhotoData];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakself configNav];
+                    [weakself configCollectionView];
+                    [weakself changeAlbumWithCount:0];
+                });
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD showInfo:@"Don't have Permission"];
+                [MBProgressHUD showError:@"Don't have Permission"];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [weakself.presentingViewController dismissViewControllerAnimated:YES completion:nil];
                 });
@@ -123,7 +120,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
     _dragDirection = RJDirectionUnknow;
     CGFloat size = [UIScreen mainScreen].bounds.size.width / _helper.lineNum;
     _targetSize = CGSizeMake(size, size);
-
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(collectionDataDidChange:) name:RJCollectionChangeID object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mutableClickCell:) name:RJMutableCellClickID object:nil];
     
@@ -137,7 +134,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
 
 #pragma mark - function
 - (void)checkTouchEndPosition:(RJDirection)direction {
-
+    
     RJWeak(self)
     [UIView animateWithDuration:0.15 animations:^{
         CGFloat newTop;
@@ -331,7 +328,7 @@ static NSString * const RJPhotoPickerCellID = @"RJPhotoPickerCellID";
 
 #pragma mark - getter
 - (void)configCollectionView {
-
+    
     [self configCollectionViewLayout];
     [_collectionView setDelegate:self];
     [_collectionView setDataSource:self];
