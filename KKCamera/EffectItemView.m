@@ -77,7 +77,7 @@
     [_imageView setImage:[UIImage imageNamed:[_content objectForKey:@"icon"]]];
     [_label setBackgroundColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"color"]]]];
     [_label setTextColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"fontColor"]]]];
-    [_label setText:[_content objectForKey:@"name"]];
+    [_label setText:NSLocalizedString([_content objectForKey:@"name"], nil)];
 }
 
 @end

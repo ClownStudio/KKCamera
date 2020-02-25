@@ -39,3 +39,6 @@
 "UnlockByAwardAd" = "UnlockByAwardAd";
 "UnlockByPurchase" = "UnlockByPurchase";
 "UnlockSuccess" = "UnlockSuccess";
+
+"AUTO" = "AUTO RANDOM";
+"LUMEN" = "LUMEN EFFECT";

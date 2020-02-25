@@ -24,7 +24,7 @@
         [_randomBtn.layer setBorderWidth:1];
         [_randomBtn.layer setBorderColor:[UIColor whiteColor].CGColor];
         [_randomBtn.titleLabel setFont:[UIFont systemFontOfSize:10]];
-        [_randomBtn setTitle:@"AUTO RANDOM" forState:UIControlStateNormal];
+        [_randomBtn setTitle:NSLocalizedString(@"AUTO", nil) forState:UIControlStateNormal];
         [_randomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_randomBtn addTarget:self action:@selector(onRandom:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_randomBtn];

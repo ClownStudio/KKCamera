@@ -23,7 +23,6 @@
 #define YEAR_ID [NSString stringWithFormat:@"%@.year",[[NSBundle mainBundle] bundleIdentifier]]
 
 #define TRY_OR_NOT @"TRYORNOT"
-#define TRY_DATE_COUNT @"7"
 
 #define HIDE_SETTING_ANIMATION @"HIDE_SETTING_ANIMATION"
 
@@ -51,5 +50,8 @@
 
 //初始化编辑界面时候默认选择的特效项，从0开始计数，以1递增，第一项为0，第二项为1，若超出最大特效项默认为0。
 #define DEFAULT_SELECT_EFFECT @"4"
+
+//用户包年赠送免费试用的天数
+#define TRY_DATE_COUNT @"7"
 
 #endif /* Macro_h */
