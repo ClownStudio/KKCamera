@@ -141,7 +141,7 @@
     [self.contentView addSubview:_nextBtn];
     
     _resetBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.contentView.bounds.size.width - 100)/2, 3, 100, 30)];
-    [_resetBtn setTitle:@"RESET" forState:UIControlStateNormal];
+    [_resetBtn setTitle:NSLocalizedString(@"RESET", nil) forState:UIControlStateNormal];
     [_resetBtn.titleLabel setFont:[UIFont systemFontOfSize:11]];
     [_resetBtn.layer setMasksToBounds:YES];
     [_resetBtn.layer setBorderWidth:1];
@@ -609,7 +609,7 @@
         CGFloat position = 0;
         int tag = 1;
         for (NSDictionary *dict in _selectedMainContent) {
-            NSString *title = [dict objectForKey:@"title"];
+            NSString *title = [dict objectForKey:NSLocalizedString(@"title", nil)];
             UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, 0, 80, 30)];
             [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
             [button setTitle:title forState:UIControlStateNormal];

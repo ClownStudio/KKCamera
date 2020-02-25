@@ -13,7 +13,7 @@
 
 #define TERMS_OF_USE @"http://instagram.com"
 #define PRIVACY_POLICY @"http://instagram.com"
-#define SEARCH_ALBUM @[@"All Photos",@"Recents",@"Recently Added",@"Screenshots",@"所有照片", @"最近项目",@"最近添加",@"截屏",@"屏幕快照"]
+
 #define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 
 #define ALL_PRODUCT_ID [NSString stringWithFormat:@"%@.pro",[[NSBundle mainBundle] bundleIdentifier]]
@@ -27,6 +27,9 @@
 #define HIDE_SETTING_ANIMATION @"HIDE_SETTING_ANIMATION"
 
 #define APP_ID @"1039766045"
+
+//需要首要显示的相册名字
+#define SEARCH_ALBUM @[@"All Photos",@"Recents",@"所有照片", @"最近项目",@"最近項目"]
 
 //广告产品id
 #define AD_PRODUCT_ID @"com.appstudio.X2.ad"

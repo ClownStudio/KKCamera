@@ -83,23 +83,15 @@
     PHFetchResult<PHAssetCollection *> *sysfetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
     
     //get system collection , set higher level
-    NSArray * titlesArray = SEARCH_ALBUM;
-    
     for (PHAssetCollection *collection in sysfetchResult) {
         NSString * collectionTitle = collection.localizedTitle;
         NSLog(@"%@",collectionTitle);
         NSArray* data = [self getAssetWithCollection:collection];
         if (data.count != 0) {
-            if ([titlesArray indexOfObject:collectionTitle] != NSNotFound) {
-                if ([collectionTitle isEqualToString:@"Recently Added"]) {
-                    [tempCollectionsArray insertObject:@{collectionTitle:data} atIndex:0];
-                } else {
-                    [tempCollectionsArray addObject:@{collectionTitle:data}];
-                    if ([collectionTitle isEqualToString:@"Camera Roll"]) {
-                        self->_currentCollectionTitle = collectionTitle;
-                        self->_currentCollectionData = data;
-                    }
-                }
+            if ([SEARCH_ALBUM containsObject:collectionTitle]) {
+                [tempCollectionsArray insertObject:@{collectionTitle:data} atIndex:0];
+            } else {
+                [tempCollectionsArray addObject:@{collectionTitle:data}];
             }
         }
     }

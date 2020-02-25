@@ -40,5 +40,9 @@
 "UnlockByPurchase" = "UnlockByPurchase";
 "UnlockSuccess" = "UnlockSuccess";
 
+//AUTO RANDOM 和 RESET 按钮本地化语言
 "AUTO" = "AUTO RANDOM";
+"RESET" = "RESET";
+
+//下面为编辑界面自定义的名字。需要和Effect.plist中的title或者name一致，且不能和上方的命名冲突。
 "LUMEN" = "LUMEN EFFECT";
