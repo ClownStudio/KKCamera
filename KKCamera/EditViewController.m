@@ -1126,7 +1126,7 @@
     
     [stillImageSource processImage];
     [overImageSource processImage];
-    UIImage *newImage = [blendTextureFilter imageFromCurrentFramebufferWithOrientation:_oriImage.imageOrientation];
+    UIImage *newImage = [blendTextureFilter imageFromCurrentFramebufferWithOrientation:UIImageOrientationUp];
     if (newImage) {
         return newImage;
     }
