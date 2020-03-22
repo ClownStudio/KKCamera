@@ -16,6 +16,12 @@
     return CGRectInset ([super thumbRectForBounds:bounds trackRect:rect value:value], 10 , 10);
 }
 
+- (CGRect)trackRectForBounds:(CGRect)bounds
+{
+    bounds = [super trackRectForBounds:bounds]; // 必须通过调用父类的trackRectForBounds 获取一个 bounds 值，否则 Autolayout 会失效，UISlider 的位置会跑偏。
+    return CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, 10); // 这里面的h即为你想要设置的高度。
+}
+
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesEnded:touches withEvent:event];

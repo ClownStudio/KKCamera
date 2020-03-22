@@ -26,6 +26,7 @@
         [_randomBtn.titleLabel setFont:[UIFont systemFontOfSize:10]];
         [_randomBtn setTitle:NSLocalizedString(@"AUTO", nil) forState:UIControlStateNormal];
         [_randomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_randomBtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
         [_randomBtn addTarget:self action:@selector(onRandom:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_randomBtn];
         
@@ -40,8 +41,12 @@
         [self.slider setUserInteractionEnabled:YES];
         [self.slider setMaximumValue:1];
         [self.slider setMinimumValue:0];
-        [self.slider setValue:0.5];
+        [self.slider setValue:1];
         [self.slider setThumbImage:[UIImage imageNamed:@"kk_slider_circle"] forState:UIControlStateNormal];
+        //滑杆左侧颜色
+        self.slider.minimumTrackTintColor = [UIColor whiteColor];
+        //滑杆右侧颜色
+        self.slider.maximumTrackTintColor = [UIColor whiteColor];
         [self.slider setValueChangedBlock:^{
             if (self->_delegate && [self->_delegate respondsToSelector:@selector(randomSliderValueChanged:)]) {
                 [self->_label setText:[NSString stringWithFormat:@"%d%%",(int)((self->_slider.value)*100)]];
@@ -60,8 +65,8 @@
 }
 
 -(void)reset{
-    [_label setText:@"50%"];
-    [self.slider setValue: 0.5];
+    [_label setText:@"100%"];
+    [self.slider setValue: 1];
 }
 
 -(void)dealloc{

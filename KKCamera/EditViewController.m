@@ -109,7 +109,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fd_interactivePopDisabled = YES;
-    
     [GADRewardBasedVideoAd sharedInstance].delegate = self;
     
     if (![[GADRewardBasedVideoAd sharedInstance] isReady]) {
@@ -147,6 +146,8 @@
     [_resetBtn.layer setBorderWidth:1];
     [_resetBtn.layer setBorderColor:[UIColor whiteColor].CGColor];
     [_resetBtn.layer setCornerRadius:15];
+    [_resetBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_resetBtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     [_resetBtn addTarget:self action:@selector(onReset:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_resetBtn];
     
@@ -609,7 +610,7 @@
         CGFloat position = 0;
         int tag = 1;
         for (NSDictionary *dict in _selectedMainContent) {
-            NSString *title = [dict objectForKey:NSLocalizedString(@"title", nil)];
+            NSString *title = NSLocalizedString([dict objectForKey:@"title"],nil);
             UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(position, 0, 80, 30)];
             [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
             [button setTitle:title forState:UIControlStateNormal];
@@ -1065,6 +1066,9 @@
     if ([filterName hasSuffix:@".acv"]) {
         _randomSliderView.slider.enabled = YES;
         PhotoXAcvFilter *acvFilter = [[PhotoXAcvFilter alloc]initWithACVData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:filterName ofType:nil]]];
+        if (_effectValue == 0) {
+            _effectValue = _randomSliderView.slider.value;
+        }
         acvFilter.mix = 0.5 + _effectValue;
         [pic addTarget:acvFilter];
         [acvFilter useNextFrameForImageCapture];
@@ -1092,6 +1096,9 @@
     GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:image];
     GPUImageLookupFilter *lookUpFilter = [[GPUImageLookupFilter alloc] init];
     GPUImagePicture *lookupImg = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed: lutName]];
+    if (_effectValue == 0) {
+        _effectValue = _randomSliderView.slider.value;
+    }
     [lookUpFilter setIntensity:_effectValue];
     [lookupImg addTarget:lookUpFilter atTextureLocation:1];
     [stillImageSource addTarget:lookUpFilter atTextureLocation:0];
@@ -1111,7 +1118,9 @@
     [stillImageSource addTarget:blendTextureFilter atTextureLocation:0];
     GPUImagePicture *overImageSource = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:haloName]];
     [overImageSource addTarget:blendTextureFilter atTextureLocation:1];
-    
+    if (_effectValue == 0) {
+        _effectValue = _randomSliderView.slider.value;
+    }
     blendTextureFilter.mix = 0.1 + 0.9*_effectValue;
     [blendTextureFilter useNextFrameForImageCapture];
     

@@ -29,6 +29,10 @@
         [self.slider setUserInteractionEnabled:YES];
         [self.slider setThumbImage:[UIImage imageNamed:@"kk_slider_circle"] forState:UIControlStateNormal];
         [self.slider addTarget:self action:@selector(onChange:) forControlEvents:UIControlEventValueChanged];
+        //滑杆左侧颜色
+        self.slider.minimumTrackTintColor = [UIColor whiteColor];
+        //滑杆右侧颜色
+        self.slider.maximumValue = [UIColor whiteColor];
         [self addSubview:self.slider];
         
         _label = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width - 90, 0, 35, 35)];

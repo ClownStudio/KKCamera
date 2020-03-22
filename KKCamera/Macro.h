@@ -28,8 +28,12 @@
 
 #define APP_ID @"1039766045"
 
+//需要显示的系统相册名字
+#define SEARCH_ALBUM @[@"All Photos",@"Recents",@"Recently Added",@"Screenshots",@"所有照片", @"最近项目",@"最近項⽬",@"最近添加",@"最近加入",@"截屏",@"屏幕快照",@"截圖"]
+
+
 //需要首要显示的相册名字
-#define SEARCH_ALBUM @[@"All Photos",@"Recents",@"所有照片", @"最近项目",@"最近項目"]
+#define FIRST_ALBUM @[@"All Photos",@"Recents",@"所有照片", @"最近项目",@"最近項目"]
 
 //广告产品id
 #define AD_PRODUCT_ID @"com.appstudio.X2.ad"

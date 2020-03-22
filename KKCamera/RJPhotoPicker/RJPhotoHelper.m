@@ -88,10 +88,12 @@
         NSLog(@"%@",collectionTitle);
         NSArray* data = [self getAssetWithCollection:collection];
         if (data.count != 0) {
-            if ([SEARCH_ALBUM containsObject:collectionTitle]) {
-                [tempCollectionsArray insertObject:@{collectionTitle:data} atIndex:0];
-            } else {
-                [tempCollectionsArray addObject:@{collectionTitle:data}];
+            if ([SEARCH_ALBUM indexOfObject:collectionTitle] != NSNotFound) {
+                if ([FIRST_ALBUM containsObject:collectionTitle]) {
+                    [tempCollectionsArray insertObject:@{collectionTitle:data} atIndex:0];
+                } else {
+                    [tempCollectionsArray addObject:@{collectionTitle:data}];
+                }
             }
         }
     }
