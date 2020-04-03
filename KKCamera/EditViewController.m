@@ -72,6 +72,7 @@
     UIView *_alphaView;
     UIImageView *_purchaseImageView;
     NSInteger _preSelectIndex;
+    NSInteger _selectTopIndex;
 }
 
 - (void)randomSliderValueChanged:(CGFloat)value{
@@ -273,7 +274,7 @@
 }
 
 -(void)onRefresh{
-    [(EffectItemView *)[_middleScrollView viewWithTag:_selectEditIndex + 1] hideLockView];
+    [self refreshMiddleScrollWithIndex:_selectTopIndex];
 }
 
 -(IBAction)onSave:(id)sender{
@@ -825,6 +826,7 @@
 }
 
 -(void)selectTopScrollViewWithIndex:(NSInteger)index{
+    _selectTopIndex = index;
     for (UIButton *button in _topScrollView.subviews) {
         if ([button isMemberOfClass:[UIButton class]]) {
             if (button.tag == index + 1) {
@@ -837,6 +839,10 @@
         }
     }
     
+    [self refreshMiddleScrollWithIndex:index];
+}
+
+-(void)refreshMiddleScrollWithIndex:(NSInteger)index{
     for (UIView *view in _middleScrollView.subviews) {
         [view removeFromSuperview];
     }
@@ -1338,6 +1344,11 @@
 
 -(IBAction)onBack:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:PURCHASE_TRANSACTION object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:RESTORE_TRANSACTION object:nil];
 }
 
 @end
