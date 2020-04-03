@@ -267,6 +267,13 @@
     }else{
         [self selectEditorItemWithIndex:0];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRefresh) name:PURCHASE_TRANSACTION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRefresh) name:RESTORE_TRANSACTION object:nil];
+}
+
+-(void)onRefresh{
+    [(EffectItemView *)[_middleScrollView viewWithTag:_selectEditIndex + 1] hideLockView];
 }
 
 -(IBAction)onSave:(id)sender{

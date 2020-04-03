@@ -162,7 +162,6 @@
                 break;
                 
             case SKPaymentTransactionStateRestored://已经购买过该商品
-                [self restoreTransaction:transaction];
                 break;
                 
             case SKPaymentTransactionStatePurchasing://商品添加进列表

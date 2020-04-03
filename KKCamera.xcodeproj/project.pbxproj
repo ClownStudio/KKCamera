@@ -1812,10 +1812,10 @@
 				B68F5D75238CB333004C3DB6 /* LaunchScreen.storyboard */,
 				B68F5D78238CB333004C3DB6 /* Info.plist */,
 				B68F5D79238CB333004C3DB6 /* main.m */,
+				B6434E44239F833000778532 /* Effect.plist */,
 				B68F6186238CD054004C3DB6 /* HomePage.plist */,
 				B6CC44CF24038E5A00E627C6 /* Localizable.strings */,
 				B60E14E82390159000DF057F /* InfoPlist.strings */,
-				B6434E44239F833000778532 /* Effect.plist */,
 			);
 			path = KKCamera;
 			sourceTree = "<group>";

@@ -10,6 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import "MBProgressHUD+RJHUD.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import "Macro.h"
 
 @interface BasicViewController ()<MFMailComposeViewControllerDelegate,ProManagerDelegate,GADInterstitialDelegate>
 
@@ -102,27 +103,27 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD showSuccess:NSLocalizedString(@"PurchaseSuccess", nil)];
     });
+    [[NSNotificationCenter defaultCenter] postNotificationName:PURCHASE_TRANSACTION object:nil];
 }
 
 -(void)didSuccessRestoreProducts:(NSArray*)productIds
 {
     [MBProgressHUD hide];
-    if ([ProManager isFullPaid])
+    if ([ProManager isFullPaid] || [ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID])
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD showSuccess:NSLocalizedString(@"RestoreSuccess", nil)];
         });
         return ;
     }
-    
-    //未买过，进行支付
-    [self.proManager buyProduct:ALL_PRODUCT_ID];
+    [[NSNotificationCenter defaultCenter] postNotificationName:RESTORE_TRANSACTION object:nil];
 }
 
 -(void)didFailRestore:(NSString *)reason
 {
-    [MBProgressHUD hide];
-    [self.proManager buyProduct:ALL_PRODUCT_ID];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD showError:reason];
+    });
 }
 
 -(void)didFailedBuyProduct:(NSString*)productId forReason:(NSString*)reason
