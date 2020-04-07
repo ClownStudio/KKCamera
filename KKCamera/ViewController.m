@@ -15,7 +15,7 @@
 #import "EditViewController.h"
 #import "SubscriberViewController.h"
 
-@interface ViewController () <SKStoreProductViewControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ViewController () <SKStoreProductViewControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate,ProManagerDelegate>
 
 @end
 
@@ -108,6 +108,8 @@
             if ([ProManager isFullPaid] || [ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:[data objectForKey:@"content"]]) {
                 [MBProgressHUD showSuccess:NSLocalizedString(@"AlreadyPurchase", nil)];
             }else{
+                self.proManager = [[ProManager alloc] init];
+                self.proManager.managerDelegate = self;
                 [self.proManager buyProduct:[data objectForKey:@"content"]];
                 [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
             }

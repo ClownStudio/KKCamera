@@ -32,9 +32,6 @@
     self.contentView = [[UIView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.contentView];
     [self.view setBackgroundColor:[UIColor blackColor]];
-    
-    self.proManager = [[ProManager alloc] init];
-    self.proManager.managerDelegate = self;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -94,11 +91,15 @@
 
 - (void)onRestore{
     [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+    self.proManager = [[ProManager alloc] init];
+    self.proManager.managerDelegate = self;
+    //先尝试恢复
     [self.proManager restorePro];
 }
 
 -(void)didSuccessBuyProduct:(NSString*)productId
 {
+    self.proManager = nil;
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hide];
         [MBProgressHUD showSuccess:NSLocalizedString(@"PurchaseSuccess", nil)];
@@ -108,12 +109,13 @@
 
 -(void)didSuccessRestoreProducts:(NSArray*)productIds
 {
+    self.proManager = nil;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hide];
+        [MBProgressHUD showSuccess:NSLocalizedString(@"RestoreSuccess", nil)];
+    });
     if ([ProManager isFullPaid] || [ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID])
     {
-        [MBProgressHUD hide];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD showSuccess:NSLocalizedString(@"RestoreSuccess", nil)];
-        });
         return ;
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:RESTORE_TRANSACTION object:nil];
@@ -121,6 +123,7 @@
 
 -(void)didFailRestore:(NSString *)reason
 {
+    self.proManager = nil;
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hide];
         [MBProgressHUD showError:reason];
@@ -129,6 +132,7 @@
 
 -(void)didFailedBuyProduct:(NSString*)productId forReason:(NSString*)reason
 {
+    self.proManager = nil;
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hide];
         [MBProgressHUD showError:reason];
@@ -137,6 +141,7 @@
 
 -(void)didCancelBuyProduct:(NSString*)productId
 {
+    self.proManager = nil;
     [MBProgressHUD hide];
 }
 
@@ -147,9 +152,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    if (self.proManager) {
-        self.proManager.managerDelegate = self;
-    }
     if ([ProManager isFullPaid] || [ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID]) {
         if (_timer) {
             [_timer invalidate];
@@ -167,9 +169,6 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    if (self.proManager) {
-        self.proManager.managerDelegate = nil;
-    }
     if (_timer) {
         [_timer invalidate];
         _timer = nil;

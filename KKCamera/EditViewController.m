@@ -25,7 +25,7 @@
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import <Photos/Photos.h>
 
-@interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate,GADRewardBasedVideoAdDelegate>
+@interface EditViewController () <UIScrollViewDelegate,EffectSliderViewDelegate,RandomSliderViewDelegate,GADRewardBasedVideoAdDelegate,ProManagerDelegate>
 
 @end
 
@@ -286,10 +286,14 @@
                 UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
                 UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"BuySingle", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+                    self.proManager = [[ProManager alloc] init];
+                    self.proManager.managerDelegate = self;
                     [self.proManager buyProduct:AD_PRODUCT_ID];
                 }];
                 UIAlertAction *allAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"BuyAll", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
                     [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+                    self.proManager = [[ProManager alloc] init];
+                    self.proManager.managerDelegate = self;
                     [self.proManager buyProduct:ALL_PRODUCT_ID];
                 }];
                 
@@ -1041,6 +1045,8 @@
     NSDictionary *content = [_selectedMiddleContent objectAtIndex:index];
     if ([content objectForKey:@"picture"] == nil || [@"" isEqualToString:[content objectForKey:@"picture"]]) {
         [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+        self.proManager = [[ProManager alloc] init];
+        self.proManager.managerDelegate = self;
         [self.proManager buyProduct:[content objectForKey:@"productCode"]];
         return;
     }
@@ -1071,6 +1077,8 @@
     NSInteger tag = tap.view.tag;
     NSDictionary *content = [_selectedMiddleContent objectAtIndex:tag - 1];
     [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+    self.proManager = [[ProManager alloc] init];
+    self.proManager.managerDelegate = self;
     [self.proManager buyProduct:[content objectForKey:@"productCode"]];
 }
 

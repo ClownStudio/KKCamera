@@ -9,7 +9,7 @@
 #import "SubscriberViewController.h"
 #import "MBProgressHUD+RJHUD.h"
 
-@interface SubscriberViewController ()
+@interface SubscriberViewController () <ProManagerDelegate>
 
 @end
 
@@ -120,6 +120,8 @@
         return;
     }
     [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+    self.proManager = [[ProManager alloc] init];
+    self.proManager.managerDelegate = self;
     [self.proManager buyProduct:_subId];
 }
 
