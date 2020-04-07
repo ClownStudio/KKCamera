@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -176,12 +176,8 @@
                                 </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <viewLayoutGuide key="safeArea" id="4Vy-61-kfn"/>
                         </view>
                     </subviews>
-                    <viewLayoutGuide key="safeArea" id="zb2-4R-R3R"/>
-                    <viewLayoutGuide key="contentLayoutGuide" id="31E-s0-cjh"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="uIb-st-oDG"/>
                 </scrollView>
                 <view tag="1" contentMode="scaleToFill" id="nhm-RG-SLn">
                     <rect key="frame" x="0.0" y="0.0" width="828" height="146"/>
@@ -204,12 +200,11 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <viewLayoutGuide key="safeArea" id="a8A-Ao-b7X"/>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="2fi-Z9-qTt"/>
+            <viewLayoutGuide key="safeArea" id="Gs1-57-Cb9"/>
             <point key="canvasLocation" x="371.01449275362324" y="-689.67391304347836"/>
         </view>
     </objects>

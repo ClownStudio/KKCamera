@@ -52,13 +52,22 @@
     _isSelected = isSelect;
     if (_isSelected) {
         [_imageView setImage:[UIImage imageNamed:[_content objectForKey:@"iconSelected"]]];
-        [_label setBackgroundColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"color_selected"]]]];
-        [_label setTextColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"fontColorSelected"]]]];
+        [_label setBackgroundColor:[self colorWithColorString:[_content objectForKey:@"color_selected"]]];
+        [_label setTextColor:[self colorWithColorString:[_content objectForKey:@"fontColorSelected"]]];
     }else{
         [_imageView setImage:[UIImage imageNamed:[_content objectForKey:@"icon"]]];
-        [_label setBackgroundColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"color"]]]];
-        [_label setTextColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"fontColor"]]]];
+        [_label setBackgroundColor:[self colorWithColorString:[_content objectForKey:@"color"]]];
+        [_label setTextColor:[self colorWithColorString:[_content objectForKey:@"fontColor"]]];
     }
+}
+
+- (UIColor *)colorWithColorString:(NSString *)stringToConvert {
+    NSArray *array = [stringToConvert componentsSeparatedByString:@","];
+    UIColor *color = [UIColor blackColor];
+    if ([array count] == 4) {
+        color = [UIColor colorWithRed:[[array objectAtIndex:0] floatValue]/255 green:[[array objectAtIndex:1] floatValue]/255 blue:[[array objectAtIndex:2] floatValue]/255 alpha:[[array objectAtIndex:3] floatValue]];
+    }
+    return color;
 }
 
 - (void)setItemWithData:(NSDictionary *)dict{
@@ -75,8 +84,8 @@
     [_lockView setHidden:self.isPurchase];
     self.isAward = [@"YES" isEqualToString:[dict objectForKey:@"isAward"]]? YES : NO;
     [_imageView setImage:[UIImage imageNamed:[_content objectForKey:@"icon"]]];
-    [_label setBackgroundColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"color"]]]];
-    [_label setTextColor:[UIColor colorWithString:[NSString stringWithFormat:@"{%@}",[_content objectForKey:@"fontColor"]]]];
+    [_label setBackgroundColor:[self colorWithColorString:[_content objectForKey:@"color"]]];
+    [_label setTextColor:[self colorWithColorString:[_content objectForKey:@"fontColor"]]];
     [_label setText:NSLocalizedString([_content objectForKey:@"name"], nil)];
 }
 

@@ -19,11 +19,11 @@
 				<key>color</key>
 				<string>0,0,0,1</string>
 				<key>color_selected</key>
-				<string>0,0,0,1</string>
+				<string>125,125,100,1</string>
 				<key>fontColor</key>
 				<string>255,255,255,1</string>
 				<key>fontColorSelected</key>
-				<string>255,255,255,1</string>
+				<string>25,25,100,1</string>
 			</dict>
 			<dict>
 				<key>effect</key>
