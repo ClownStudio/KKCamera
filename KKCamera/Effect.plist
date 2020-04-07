@@ -180,7 +180,7 @@
 						<key>isPurchase</key>
 						<true/>
 						<key>isAdAward</key>
-						<false/>
+						<true/>
 						<key>name</key>
 						<string>LUMEN</string>
 						<key>icon</key>
@@ -237,7 +237,66 @@
 						<key>productCode</key>
 						<string></string>
 						<key>isPurchase</key>
+						<false/>
+						<key>isAdAward</key>
 						<true/>
+						<key>name</key>
+						<string>LUMEN</string>
+						<key>icon</key>
+						<string>effect1</string>
+						<key>iconSelected</key>
+						<string>effect1</string>
+						<key>color</key>
+						<string>255,0,0,1</string>
+						<key>color_selected</key>
+						<string>0,255,0,1</string>
+						<key>fontColor</key>
+						<string>255,255,255,1</string>
+						<key>fontColorSelected</key>
+						<string>255,255,255,1</string>
+					</dict>
+					<dict>
+						<key>lut</key>
+						<string>L_1_1.png</string>
+						<key>filter</key>
+						<string>F_1_1.acv</string>
+						<key>bonder</key>
+						<string>B_1_1.png</string>
+						<key>halo</key>
+						<string>H_1_1.jpg</string>
+						<key>FontProperty</key>
+						<dict>
+							<key>position</key>
+							<string>{70,120}</string>
+							<key>distance</key>
+							<string>3</string>
+							<key>fontName</key>
+							<string>CapsuleXProMediumUC</string>
+							<key>fontSize</key>
+							<string>50</string>
+							<key>fontColor</key>
+							<string>255,255,255,1</string>
+							<key>shadowOffset</key>
+							<string>{2.0,2.0}</string>
+							<key>shadowColor</key>
+							<string>255,255,255,1</string>
+							<key>shadowRadius</key>
+							<string>2</string>
+							<key>shadowOpacity</key>
+							<string>0</string>
+							<key>strokeWidth</key>
+							<string>1.0</string>
+							<key>strokeColor</key>
+							<string>255,255,255,1</string>
+						</dict>
+						<key>value</key>
+						<string>50</string>
+						<key>picture</key>
+						<string>item1</string>
+						<key>productCode</key>
+						<string></string>
+						<key>isPurchase</key>
+						<false/>
 						<key>isAdAward</key>
 						<false/>
 						<key>name</key>
@@ -296,7 +355,7 @@
 						<key>productCode</key>
 						<string></string>
 						<key>isPurchase</key>
-						<true/>
+						<false/>
 						<key>isAdAward</key>
 						<false/>
 						<key>name</key>
@@ -355,66 +414,7 @@
 						<key>productCode</key>
 						<string></string>
 						<key>isPurchase</key>
-						<true/>
-						<key>isAdAward</key>
 						<false/>
-						<key>name</key>
-						<string>LUMEN</string>
-						<key>icon</key>
-						<string>effect1</string>
-						<key>iconSelected</key>
-						<string>effect1</string>
-						<key>color</key>
-						<string>255,0,0,1</string>
-						<key>color_selected</key>
-						<string>0,255,0,1</string>
-						<key>fontColor</key>
-						<string>255,255,255,1</string>
-						<key>fontColorSelected</key>
-						<string>255,255,255,1</string>
-					</dict>
-					<dict>
-						<key>lut</key>
-						<string>L_1_1.png</string>
-						<key>filter</key>
-						<string>F_1_1.acv</string>
-						<key>bonder</key>
-						<string>B_1_1.png</string>
-						<key>halo</key>
-						<string>H_1_1.jpg</string>
-						<key>FontProperty</key>
-						<dict>
-							<key>position</key>
-							<string>{70,120}</string>
-							<key>distance</key>
-							<string>3</string>
-							<key>fontName</key>
-							<string>CapsuleXProMediumUC</string>
-							<key>fontSize</key>
-							<string>50</string>
-							<key>fontColor</key>
-							<string>255,255,255,1</string>
-							<key>shadowOffset</key>
-							<string>{2.0,2.0}</string>
-							<key>shadowColor</key>
-							<string>255,255,255,1</string>
-							<key>shadowRadius</key>
-							<string>2</string>
-							<key>shadowOpacity</key>
-							<string>0</string>
-							<key>strokeWidth</key>
-							<string>1.0</string>
-							<key>strokeColor</key>
-							<string>255,255,255,1</string>
-						</dict>
-						<key>value</key>
-						<string>50</string>
-						<key>picture</key>
-						<string>item1</string>
-						<key>productCode</key>
-						<string></string>
-						<key>isPurchase</key>
-						<true/>
 						<key>isAdAward</key>
 						<false/>
 						<key>name</key>

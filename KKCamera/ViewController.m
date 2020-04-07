@@ -104,8 +104,15 @@
 - (void)selectItemWithData:(NSDictionary *)data{
     NSString *type = [data objectForKey:@"type"];
     if ([@"purchase" isEqualToString:type]) {
-        [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
-        [self.proManager buyProduct:[data objectForKey:@"content"]];
+        if([data objectForKey:@"content"] != nil && [@"" isEqualToString:[data objectForKey:@"content"]] == NO){
+            if ([ProManager isFullPaid] || [ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID] || [ProManager isProductPaid:[data objectForKey:@"content"]]) {
+                [MBProgressHUD showSuccess:NSLocalizedString(@"AlreadyPurchase", nil)];
+            }else{
+                [self.proManager buyProduct:[data objectForKey:@"content"]];
+                [MBProgressHUD showWaitingWithText:NSLocalizedString(@"Loading", nil)];
+            }
+        }
+        
     }else if ([@"recommend" isEqualToString:type]){
         [self recommendToAppStoreWithAppId:[data objectForKey:@"content"]];
     }
@@ -178,11 +185,6 @@
 }
 
 - (IBAction)onTakePhoto:(id)sender{
-//#warning test
-//    EditViewController *editViewController = [[EditViewController alloc] init];
-//    [editViewController setModalPresentationStyle:UIModalPresentationFullScreen];
-//    [editViewController setOrignImage:[UIImage imageNamed:@"kk_lock"]];
-//    [self.navigationController pushViewController:editViewController animated:YES];
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
     imagePicker.delegate = self;
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;

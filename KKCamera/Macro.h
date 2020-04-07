@@ -14,6 +14,9 @@
 #define TERMS_OF_USE @"http://instagram.com"
 #define PRIVACY_POLICY @"http://instagram.com"
 
+#define PURCHASE_TRANSACTION @"PURCHASE_TRANSACTION"
+#define RESTORE_TRANSACTION @"RESTORE_TRANSACTION"
+
 #define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 
 #define ALL_PRODUCT_ID [NSString stringWithFormat:@"%@.pro",[[NSBundle mainBundle] bundleIdentifier]]

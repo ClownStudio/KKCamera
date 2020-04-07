@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setItemWithData:(NSDictionary *)dict;
 - (void)setItemSelected:(BOOL)isSelect;
+- (void)hideLockView;
 @property (nonatomic,assign)BOOL isPurchase;
-@property (nonatomic,assign)BOOL isAward;
 
 @end
 

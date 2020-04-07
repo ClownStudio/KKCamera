@@ -192,6 +192,7 @@
     [self refreshDataPurchaseStatus];
     self.proManager = nil;
 }
+
 -(void)didSuccessRestoreProducts:(NSArray*)productIds
 {
     if ([ProManager isFullPaid])
