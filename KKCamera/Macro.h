@@ -19,11 +19,14 @@
 
 #define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 
-#define ALL_PRODUCT_ID [NSString stringWithFormat:@"%@.pro",[[NSBundle mainBundle] bundleIdentifier]]
+#define ALL_PRODUCT_ID @"com.appstudio1020.7.pro"
 
-#define MONTH_ID [NSString stringWithFormat:@"%@.month",[[NSBundle mainBundle] bundleIdentifier]]
+#define MONTH_ID @"com.appstudio1020.7.month"
 
-#define YEAR_ID [NSString stringWithFormat:@"%@.year",[[NSBundle mainBundle] bundleIdentifier]]
+#define YEAR_ID @"com.appstudio1020.7.year"
+
+//广告产品id
+#define AD_PRODUCT_ID @"com.appstudio1020.7.ad"
 
 #define TRY_OR_NOT @"TRYORNOT"
 
@@ -38,8 +41,6 @@
 //需要首要显示的相册名字
 #define FIRST_ALBUM @[@"All Photos",@"Recents",@"所有照片", @"最近项目",@"最近項目"]
 
-//广告产品id
-#define AD_PRODUCT_ID @"com.appstudio.X2.ad"
 //应⽤程式ID
 #define AD_APP_ID @"ca-app-pub-3553919144267977~5799280260"
 //插⻚广告ID

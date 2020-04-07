@@ -99,8 +99,8 @@
 
 -(void)didSuccessBuyProduct:(NSString*)productId
 {
-    [MBProgressHUD hide];
     dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hide];
         [MBProgressHUD showSuccess:NSLocalizedString(@"PurchaseSuccess", nil)];
     });
     [[NSNotificationCenter defaultCenter] postNotificationName:PURCHASE_TRANSACTION object:nil];
@@ -108,9 +108,9 @@
 
 -(void)didSuccessRestoreProducts:(NSArray*)productIds
 {
-    [MBProgressHUD hide];
     if ([ProManager isFullPaid] || [ProManager isProductPaid:AD_PRODUCT_ID] || [ProManager isProductPaid:MONTH_ID] || [ProManager isProductPaid:YEAR_ID])
     {
+        [MBProgressHUD hide];
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD showSuccess:NSLocalizedString(@"RestoreSuccess", nil)];
         });
@@ -122,6 +122,7 @@
 -(void)didFailRestore:(NSString *)reason
 {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hide];
         [MBProgressHUD showError:reason];
     });
 }
@@ -129,6 +130,7 @@
 -(void)didFailedBuyProduct:(NSString*)productId forReason:(NSString*)reason
 {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hide];
         [MBProgressHUD showError:reason];
     });
 }
