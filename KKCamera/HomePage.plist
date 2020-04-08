@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>content</key>
-		<string>com.appstudio.X2.1</string>
+		<string>com.appstudio1020.7.1</string>
 		<key>picture</key>
 		<string>item1</string>
 		<key>type</key>
@@ -12,7 +12,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>com.appstudio.X2.ad</string>
+		<string>com.appstudio1020.7.2</string>
 		<key>picture</key>
 		<string>item2</string>
 		<key>type</key>
@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>com.appstudio.X2.1</string>
+		<string>com.appstudio1020.7.3</string>
 		<key>picture</key>
 		<string>item3</string>
 		<key>type</key>
@@ -36,7 +36,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>com.appstudio.X2.3</string>
+		<string>com.appstudio1020.7.4</string>
 		<key>picture</key>
 		<string>item1</string>
 		<key>type</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>com.appstudio.X2.4</string>
+		<string>com.appstudio1020.7.5</string>
 		<key>picture</key>
 		<string>item2</string>
 		<key>type</key>
@@ -52,17 +52,9 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>com.appstudio.X2.5</string>
+		<string>com.appstudio1020.7.6</string>
 		<key>picture</key>
 		<string>item1</string>
-		<key>type</key>
-		<string>purchase</string>
-	</dict>
-	<dict>
-		<key>content</key>
-		<string>com.appstudio.X2.6</string>
-		<key>picture</key>
-		<string>item3</string>
 		<key>type</key>
 		<string>purchase</string>
 	</dict>

@@ -129,7 +129,10 @@
                             [ProManager addProductId:MONTH_ID];
                         }
                     }
-                    [self completeTransaction:transaction];
+                    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+                    if ([self.managerDelegate respondsToSelector:@selector(didSuccessBuyProduct:)]) {
+                        [self.managerDelegate didSuccessBuyProduct:self.currentProductId];
+                    }
                 }else{
                      //普通购买，以及 第一次购买 自动订阅
                     if ([YEAR_ID isEqualToString:transaction.payment.productIdentifier]) {
@@ -150,10 +153,7 @@
                         [[NSUserDefaults standardUserDefaults] setValue:endDate forKey:MONTH_ID];
                         [[NSUserDefaults standardUserDefaults] synchronize];
                     }
-                    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
-                    if ([self.managerDelegate respondsToSelector:@selector(didSuccessBuyProduct:)]) {
-                        [self.managerDelegate didSuccessBuyProduct:self.currentProductId];
-                    }
+                    [self completeTransaction:transaction];
                 }
                 break;
                 
@@ -286,6 +286,7 @@
     
     if (productId) [ma addObject:productId];
     [[NSUserDefaults standardUserDefaults] setValue:ma forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 +(void)removeProductId:(NSString*)productId
@@ -307,6 +308,7 @@
     }
     
     [[NSUserDefaults standardUserDefaults] setValue:content forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 +(BOOL)isFullPaid
